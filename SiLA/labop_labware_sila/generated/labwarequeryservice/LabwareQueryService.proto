@@ -1,0 +1,20 @@
+syntax = "proto3";
+
+import "SiLAFramework.proto";
+
+package sila2.de.unigreifswald.labware.labwarequeryservice.v1;
+
+/* SPARQL querying the Labware Ontology. */
+service LabwareQueryService {
+  /* SPARQL query the Labware Ontology. */
+  rpc SPARQLQuery (sila2.de.unigreifswald.labware.labwarequeryservice.v1.SPARQLQuery_Parameters) returns (sila2.de.unigreifswald.labware.labwarequeryservice.v1.SPARQLQuery_Responses) {}
+}
+
+/* Parameters for SPARQLQuery */
+message SPARQLQuery_Parameters {
+  sila2.org.silastandard.String Query = 1;  /* SPARQL query. */
+}
+
+/* Responses of SPARQLQuery */
+message SPARQLQuery_Responses {
+}

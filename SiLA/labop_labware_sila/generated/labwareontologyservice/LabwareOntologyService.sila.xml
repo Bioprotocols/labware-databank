@@ -1,0 +1,19 @@
+<Feature xmlns="http://www.sila-standard.org" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" Category="labware" FeatureVersion="1.0" MaturityLevel="Draft" Originator="de.unigreifswald" SiLA2Version="1.0" xsi:schemaLocation="http://www.sila-standard.org https://gitlab.com/SiLA2/sila_base/raw/master/schema/FeatureDefinition.xsd">
+  <Identifier>LabwareOntologyService</Identifier>
+  <DisplayName>Labware Ontology Service</DisplayName>
+  <Description>CRUD operations on the labware ontology.</Description>
+  <Command>
+    <Identifier>CreateLabware</Identifier>
+    <DisplayName>Create Labware</DisplayName>
+    <Description>Creates Labware individual in Labware ontology.</Description>
+    <Observable>No</Observable>
+    <Parameter>
+      <Identifier>Name</Identifier>
+      <DisplayName>Name</DisplayName>
+      <Description>Name of the labware.</Description>
+      <DataType>
+        <Basic>String</Basic>
+      </DataType>
+    </Parameter>
+  </Command>
+</Feature>

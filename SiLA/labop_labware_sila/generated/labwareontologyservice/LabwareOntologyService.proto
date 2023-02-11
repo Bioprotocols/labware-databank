@@ -1,0 +1,20 @@
+syntax = "proto3";
+
+import "SiLAFramework.proto";
+
+package sila2.de.unigreifswald.labware.labwareontologyservice.v1;
+
+/* CRUD operations on the labware ontology. */
+service LabwareOntologyService {
+  /* Creates Labware individual in Labware ontology. */
+  rpc CreateLabware (sila2.de.unigreifswald.labware.labwareontologyservice.v1.CreateLabware_Parameters) returns (sila2.de.unigreifswald.labware.labwareontologyservice.v1.CreateLabware_Responses) {}
+}
+
+/* Parameters for CreateLabware */
+message CreateLabware_Parameters {
+  sila2.org.silastandard.String Name = 1;  /* Name of the labware. */
+}
+
+/* Responses of CreateLabware */
+message CreateLabware_Responses {
+}

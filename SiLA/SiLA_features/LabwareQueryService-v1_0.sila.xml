@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Feature SiLA2Version="1.0" MaturityLevel="Draft" Originator="de.unigreifswald" Category="labware" FeatureVersion="1.0" xmlns="http://www.sila-standard.org" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sila-standard.org https://gitlab.com/SiLA2/sila_base/raw/master/schema/FeatureDefinition.xsd">
+    <Identifier>LabwareQueryService</Identifier>
+    <DisplayName>Labware Query Service</DisplayName>
+    <Description>
+        SPARQL querying the Labware Ontology.
+    </Description>
+    <Command>
+        <Identifier>SPARQLQuery</Identifier>
+        <DisplayName>SPARQLQuery</DisplayName>
+        <Description>SPARQL query the Labware Ontology.</Description>
+        <Observable>No</Observable>
+        <Parameter>
+            <Identifier>Query</Identifier>
+            <DisplayName>Query</DisplayName>
+            <Description>SPARQL query.</Description>
+            <DataType>
+                <Basic>String</Basic>
+            </DataType>
+        </Parameter>
+    </Command>
+    
+</Feature>

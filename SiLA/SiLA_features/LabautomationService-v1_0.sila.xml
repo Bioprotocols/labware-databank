@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Feature SiLA2Version="1.0" MaturityLevel="Draft" Originator="de.unigreifswald" Category="labware" FeatureVersion="1.0" xmlns="http://www.sila-standard.org" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sila-standard.org https://gitlab.com/SiLA2/sila_base/raw/master/schema/FeatureDefinition.xsd">
+    <Identifier>LabwareAutomationService</Identifier>
+    <DisplayName>Labautomation Labware Ontology Service</DisplayName>
+    <Description>
+        Simplified query of the LabOP Labware ontology individuals.
+    </Description>
+    <Command>
+        <Identifier>GetLabwareDimensions</Identifier>
+        <DisplayName>GetLabwareDimensions</DisplayName>
+        <Description>Get Labware Dimensions.</Description>
+        <Observable>No</Observable>
+        <Parameter>
+            <Identifier>Vendor</Identifier>
+            <DisplayName>Vendor name</DisplayName>
+            <Description>Name of the labware vendor.</Description>
+            <DataType>
+                <Basic>String</Basic>
+            </DataType>
+        </Parameter>
+        <Parameter>
+            <Identifier>ProductNumber</Identifier>
+            <DisplayName>Product number</DisplayName>
+            <Description>Product number of the labware.</Description>
+            <DataType>
+                <Basic>String</Basic>
+            </DataType>
+        </Parameter>
+        <Response>
+            <Identifier>Dimensions</Identifier>
+            <DisplayName>Dimensions</DisplayName>
+            <Description>Dimensions of the labware.</Description>
+            <DataType>
+                <Basic>String</Basic>
+            </DataType>
+        </Response>
+    </Command>
+    
+</Feature>

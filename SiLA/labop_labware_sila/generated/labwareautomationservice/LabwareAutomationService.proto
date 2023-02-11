@@ -1,0 +1,22 @@
+syntax = "proto3";
+
+import "SiLAFramework.proto";
+
+package sila2.de.unigreifswald.labware.labwareautomationservice.v1;
+
+/* Simplified query of the LabOP Labware ontology individuals. */
+service LabwareAutomationService {
+  /* Get Labware Dimensions. */
+  rpc GetLabwareDimensions (sila2.de.unigreifswald.labware.labwareautomationservice.v1.GetLabwareDimensions_Parameters) returns (sila2.de.unigreifswald.labware.labwareautomationservice.v1.GetLabwareDimensions_Responses) {}
+}
+
+/* Parameters for GetLabwareDimensions */
+message GetLabwareDimensions_Parameters {
+  sila2.org.silastandard.String Vendor = 1;  /* Name of the labware vendor. */
+  sila2.org.silastandard.String ProductNumber = 2;  /* Product number of the labware. */
+}
+
+/* Responses of GetLabwareDimensions */
+message GetLabwareDimensions_Responses {
+  sila2.org.silastandard.String Dimensions = 1;  /* Dimensions of the labware. */
+}
