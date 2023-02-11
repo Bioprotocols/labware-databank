@@ -1,0 +1,61 @@
+#--------------------------- setuptools ----------------------------- 
+
+[build-system]
+requires = ["setuptools>=42"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "labop_labware_ontology"
+version = "0.0.1"
+readme = "README.md"
+license = {text = "MIT"}
+classifiers=[
+    'Development Status :: 2 - Pre-Alpha',
+    'Intended Audience :: Developers',
+    'Intended Audience :: Science/Research',
+    'Intended Audience :: Education',
+    'License :: OSI Approved :: MIT License',
+    'Operating System :: OS Independent',
+    'Natural Language :: English',
+    'Programming Language :: Python :: 3',
+    'Programming Language :: Python :: 3.9',
+    'Programming Language :: Python :: 3.10',
+    'Topic :: Scientific/Engineering',
+    'Topic :: Scientific/Engineering :: Information Analysis',
+    'Topic :: Scientific/Engineering :: Visualization',
+    'Topic :: Scientific/Engineering :: Bio-Informatics',
+    'Topic :: Scientific/Engineering :: Chemistry'
+]
+#packages = [
+#    { include = "labop_labware_ontology" },
+#]
+
+# uncomment to enable commandline access of the module via its name
+#[project.scripts]
+#labop_labware_ontology = "labop_labware_ontology.__main__:main"
+
+[tool.pytest.ini_options]
+minversion = "6.0"
+filterwarnings = "ignore::DeprecationWarning"
+addopts = [
+    "-v",
+    #"-n=auto",
+]
+
+[tool.black]
+line-length = 120
+
+[tool.isort]
+profile = "black"
+
+[tool.coverage.report]
+exclude_lines = ["if __name__ == .__main__.:"]
+skip_empty = true
+
+[tool.bandit]
+exclude_dirs = ["tests"]
+skips = ["B101"] 
+# end setuptools
+
+
+

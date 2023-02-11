@@ -1,0 +1,31 @@
+# docker-compose.yml for LabOP Labware Ontology
+# to build the images:  docker-compose build
+# to build start everything: docker-compose up --build
+# to build start everything after code change: docker-compose up --build
+
+version: '3.9'
+
+#networks:
+  #container_network
+
+services:
+    labware:
+    build:
+      context: . 
+    #image: registry.gitlab.com/
+    #volumes:
+    #  - :
+    #ports:
+    #  - 8000:8000
+    #expose:
+    #  - 8000
+    #networks:
+    #  - container_network
+    env_file:
+      - ./.env.dev
+    command: 
+      #sh -c ""
+
+#volumes:
+ 
+

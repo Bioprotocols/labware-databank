@@ -1,0 +1,157 @@
+# Config file for GitLab CI pipeline
+
+image: python:latest
+
+# Change pip's cache directory to be inside the project directory since we can
+# only cache local items.
+variables:
+    PIP_CACHE_DIR: "$CI_PROJECT_DIR/.cache/pip"
+    SOURCE_DIR : "$CI_PROJECT_DIR/labop_labware_ontology"
+    DOCS_DIR : "docs"
+    DOCS_SOURCE_DIR : "docs/source"
+    DOCS_BUILD_DIR : "docs/_build"
+
+stages:
+    - build
+    - compliance
+    - test
+    - build_and_publish_docs
+    - publish_pypi
+
+# Configuration --------------------------------------------------------------------
+
+# Pip's cache doesn't store the python packages
+# https://pip.pypa.io/en/stable/reference/pip_install/#caching
+#
+# If you want to also cache the installed packages, you have to install
+# them in a virtualenv and cache it as well.
+cache:
+    paths:
+        - .cache/pip
+        - venv/
+
+before_script:
+    - python -V # Print out python version for debugging
+    - pip install virtualenv
+    - virtualenv venv
+    - source venv/bin/activate
+
+.parallel_python_jobs:
+    parallel:
+        matrix:
+            - python_version: ["3.9", "3.10"]
+
+.run_on_all_branches:
+    only:
+        refs:
+            - develop
+            - merge_requests
+            - triggers
+            - master
+            - main
+            - tags
+            - /^v[0-9]+.[0-9]+.*/
+
+.run_on_master:
+    only:
+        refs:
+            - triggers
+            - master
+            - main
+
+.run_on_release_tag:
+    only:
+        refs:
+            - tags
+            - /^v[0-9]+.[0-9]+.*/
+
+.run_on_manual:
+    only:
+        refs:
+            - manual
+
+# Jobs: Build -----------------------------------------------------------------
+
+build-package:
+  stage: build
+  image: python:latest
+  script:
+    - pip install twine
+    - python setup.py  bdist_wheel
+    - TWINE_PASSWORD=${CI_JOB_TOKEN} TWINE_USERNAME=gitlab-ci-token python -m twine upload --repository-url ${CI_API_V4_URL}/projects/${CI_PROJECT_ID}/packages/pypi dist/*
+  only:
+    - tags
+
+# build:
+#   stage: build
+#   script:
+#     - PYTHON_VERSION=${python_version} PYPI_URL=${pip_repository_index} make pull
+#     - PYTHON_VERSION=${python_version} PYPI_URL=${pip_repository_index} make build
+#     - PYTHON_VERSION=${python_version} PYPI_URL=${pip_repository_index} make push
+#   extends:
+#     - .docker_login
+#     - .run_on_all_branches
+#     - .parallel_python_jobs
+
+# Jobs: Compliance ------------------------------------------------------------
+
+#compliance:
+#    stage: compliance
+#    script:
+#        - poetry run invoke format --check
+#        - poetry run invoke lint
+#        - poetry run invoke security-bandit
+#    extends:
+#        - .run_on_all_branches
+#        - .parallel_python_jobs
+#        - .use_generated_docker_image
+
+# Jobs: Test ------------------------------------------------------------------
+
+# ============================= TEST ========================
+test:
+    script:
+        #- pip install tox flake8
+        #- tox -e py39,flake8
+        - pip install pytest
+        - pytest
+    extends:
+        - .run_on_all_branches
+        - .parallel_python_jobs
+
+# Jobs: Docs -----------------------------------------------------------------------
+
+pages:
+    stage: build_and_publish_docs
+    script:
+        - pip install sphinx myst_parser python_docs_theme
+        - pip install .
+        #- cd docs ; make html
+        - sphinx-apidoc -e -P -o $DOCS_SOURCE_DIR $SOURCE_DIR
+        - sphinx-build -b html $DOCS_DIR $DOCS_BUILD_DIR
+        - mv $DOCS_BUILD_DIR public
+    artifacts:
+        paths:
+            - public
+    extends:
+        - .run_on_master
+
+# Jobs: Publish ---------------------------------------------------------------
+
+
+release_pypi:
+  variables:
+    python_version: "3.9"
+  stage: publish_pypi
+  script:
+    - |
+      poetry run invoke release-twine \
+        --tag_name="${tag_name}" \
+        --pypi_user="${pypi_user}" \
+        --pypi_pass="${pypi_pass}" \
+        --pypi_publish_repository="${pypi_publish_repository}" \
+        --pip_repository_index="${pip_repository_index}"
+  extends:
+    #- .run_on_release_tag
+    - .run_on_manual
+    #- .use_generated_docker_image

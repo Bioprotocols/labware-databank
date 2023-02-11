@@ -1,0 +1,8 @@
+-r requirements.txt
+invoke
+bumpversion
+pytest
+tox
+sphinx
+myst_parser
+python_docs_theme
