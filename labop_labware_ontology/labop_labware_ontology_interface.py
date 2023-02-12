@@ -22,21 +22,16 @@ ________________________________________________________________________
 # here is a 
 from abc import ABCMeta, abstractclassmethod
 
-class GreeterInterface(metaclass=ABCMeta):
-    """ Greeter formal Interface
-        TODO: test, if ABC baseclass is wor
+class LOLabwareInterface(metaclass=ABCMeta):
+    """ OSO formal Interface
+        TODO: test, if ABC baseclass is working
     """
     @classmethod
     def __subclasshook__(cls, subclass):
-        return (hasattr(subclass, 'greet_the_world') and 
-                callable(subclass.greet_the_world) or 
+        return (hasattr(subclass, 'save_ontology') and 
+                callable(subclass.save_ontology) or 
                 NotImplemented)
         
     @abstractclassmethod 
-    def greet_the_world(self, name: str) -> str:
-        """greeting module - adds a name to a greeting
-
-        :param name: person to greet
-        :type name: str
-        """
-
+    def save_ontology(self, filename : str = None,  format='turtle') -> None:
+        """ save ontology"""
