@@ -5,26 +5,42 @@
 
 version: '3.9'
 
-#networks:
-  #container_network
+networks:
+  container_network
 
 services:
-    labware:
-    build:
-      context: . 
-    #image: registry.gitlab.com/
-    #volumes:
-    #  - :
-    #ports:
-    #  - 8000:8000
-    #expose:
-    #  - 8000
-    #networks:
-    #  - container_network
-    env_file:
-      - ./.env.dev
-    command: 
-      #sh -c ""
+    labware-sila:
+      #build:
+      #  context: . 
+      image: ghcr.io/bioprotocols/labop_labware_databank:develop
+      #volumes:
+      #  - :
+      ports:
+        - 52001:52001
+      #expose:
+      #  - 8000
+      networks:
+        - container_network
+      #env_file:
+      #  - ./.env.dev
+      #command: 
+        #sh -c ""
+    jupyter:
+      #build:
+      #  context: . 
+      image: jupyter/base-notebook
+      #volumes:
+      #  - :
+      ports:
+        - 10000:8888
+      #expose:
+      #  - 8888
+      #networks:
+      #  - container_network
+      #env_file:
+      #  - ./.env.dev
+      #command: 
+        #sh -c ""
 
 #volumes:
  
