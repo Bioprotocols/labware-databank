@@ -17,4 +17,5 @@ message SPARQLQuery_Parameters {
 
 /* Responses of SPARQLQuery */
 message SPARQLQuery_Responses {
+  sila2.org.silastandard.String Result = 1;  /* SPARQL query result. */
 }

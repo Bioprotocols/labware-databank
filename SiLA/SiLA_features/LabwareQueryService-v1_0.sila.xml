@@ -18,6 +18,14 @@
                 <Basic>String</Basic>
             </DataType>
         </Parameter>
+        <Response>
+            <Identifier>Result</Identifier>
+            <DisplayName>Result</DisplayName>
+            <Description>SPARQL query result.</Description>
+            <DataType>
+                <Basic>String</Basic>
+            </DataType>
+        </Response>
     </Command>
     
 </Feature>

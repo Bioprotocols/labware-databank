@@ -6,7 +6,9 @@
 version: '3.9'
 
 networks:
-  container_network
+  container-network:
+    #driver: bridge
+
 
 services:
     labware-sila:
@@ -15,33 +17,34 @@ services:
       image: ghcr.io/bioprotocols/labop_labware_databank:develop
       #volumes:
       #  - :
-      ports:
-        - 52001:52001
+      #ports:
+      #  - 50052:50052
       #expose:
       #  - 8000
       networks:
-        - container_network
+        - container-network
       #env_file:
       #  - ./.env.dev
       #command: 
         #sh -c ""
     jupyter:
       #build:
-      #  context: . 
+      #  context: .
       image: jupyter/base-notebook
-      #volumes:
-      #  - :
+      volumes:
+        - ./notebooks:/home/jovyan/work
       ports:
         - 10000:8888
       #expose:
-      #  - 8888
-      #networks:
-      #  - container_network
+      #  - 50052
+      networks:
+        - container-network
       #env_file:
       #  - ./.env.dev
       #command: 
         #sh -c ""
 
 #volumes:
+  #notebooks
  
 
