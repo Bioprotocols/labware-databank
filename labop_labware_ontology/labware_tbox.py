@@ -37,8 +37,8 @@ def pl(s):
 class LOLabwareTBox:
     def __init__(self, emmo_world=None) -> None:
 
-        self.labop_labware_base_iri = 'http://www.oso.org/oso/labware-t#'
-        self.labop_labware_version_iri = f'http://www.oso.org/{__version__}/oso/labware-t'
+        self.labop_labware_base_iri = 'http://www.labop.org/labware'
+        self.labop_labware_version_iri = f'http://www.labop.org/{__version__}/labware'
 
         output_filename_base = os.path.join('labop_labware_tbox')
         self.labop_labware_owl_filename = f'{output_filename_base}-v{__version__}.owl'
