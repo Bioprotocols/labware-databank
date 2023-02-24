@@ -19,12 +19,11 @@ on:
 #env:
   # PACKAGE_NAME: labop_labware_sila
 
+
 jobs:
   deploy:
 
     runs-on: ubuntu-latest
-    outputs:
-      hash: ${{ steps.hash.outputs.hash }}
 
     steps:
     - uses: actions/checkout@v3
@@ -32,16 +31,12 @@ jobs:
       uses: actions/setup-python@v3
       with:
         python-version: '3.x'
-        cache: 'pip'
-          cache-dependency-path: 'requirements/*.txt'
     - name: Install dependencies
       run: |
         python -m pip install --upgrade pip
         pip install build
-        pip install -r requirements/build.txt
     - name: Build package
       run: python -m build
-      run: echo "SOURCE_DATE_EPOCH=$(git log -1 --pretty=%ct)" >> $GITHUB_ENV
     # Generate hashes used for provenance.
     - name: generate hash
       id: hash
@@ -49,29 +44,4 @@ jobs:
     - uses: actions/upload-artifact@0b7f8abb1508181956e8e162db84b466c27e18ce
       with:
         path: ./dist
-    provenance:
-      needs: ['build']
-      permissions:
-        actions: read
-        id-token: write
-        contents: write
-      # Can't pin with hash due to how this workflow works.
-      uses: slsa-framework/slsa-github-generator/.github/workflows/generator_generic_slsa3.yml@v1.4.0
-      with:
-        base64-subjects: ${{ needs.build.outputs.hash }}
-    create-release:
-      # Upload the sdist, wheels, and provenance to a GitHub release. They remain
-      # available as build artifacts for a while as well.
-      needs: ['provenance']
-      runs-on: ubuntu-latest
-      permissions:
-        contents: write
-      steps:
-        - uses: actions/download-artifact@9bc31d5ccc31df68ecc42ccf4149144866c47d8a
-        - name: create release
-          run: >
-            gh release create --draft --repo ${{ github.repository }}
-            ${{ github.ref_name }}
-            *.intoto.jsonl/* artifact/*
-          env:
-            GH_TOKEN: ${{ github.token }}
+
