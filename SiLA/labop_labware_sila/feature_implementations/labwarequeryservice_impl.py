@@ -3,6 +3,7 @@ from __future__ import annotations
 
 import os
 import logging
+import re
 import pandas as pd
 
 from typing import TYPE_CHECKING
@@ -80,7 +81,16 @@ class LabwareQueryServiceImpl(LabwareQueryServiceBase):
         logging.info(f"SPARQLQuery called with Query: {Query}")
 
         results = list(self.lw.emmo_world.sparql(Query))
+        #select_statement = re.findall(r"SELECT.*\n", Query)[0]
+        #variable_names = re.findall(r"\?(\w+)", select_statement)
 
-        #res = F"{Query} -> {self.lw.lolw.mtp_96_flat_uv.is_a} "
+        # pandas dataframe from res_list with header df_head
+
+        #res_df = pd.DataFrame(columns=variable_names, data=results)
+
+        #results_json = res_df.to_json(orient="records")
+
+        #logging.info(f"SPARQLQuery - res json: {results_json}")
 
         return SPARQLQuery_Responses(Result=str(results))
+        #return SPARQLQuery_Responses(Result=results_json)

@@ -23,7 +23,7 @@ ________________________________________________________________________
 from abc import ABCMeta, abstractclassmethod
 
 class LOLabwareInterface(metaclass=ABCMeta):
-    """ OSO formal Interface
+    """ LabOP Labware Ontology formal Interface
         TODO: test, if ABC baseclass is working
     """
     @classmethod
