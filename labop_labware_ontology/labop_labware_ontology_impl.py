@@ -15,6 +15,8 @@ import os
 import pathlib
 import logging
 from enum import Enum, auto
+import rdflib  # noqa: E402, F401
+
 from ontopy import World
 from ontopy.utils import write_catalog
 
@@ -34,6 +36,18 @@ class UsedOntologies(Enum):
     DEVICES: int = auto()
     DUBLIN_CORE: int = auto()
     FOAF: int = auto()
+
+
+# --- ontology definition helper functions
+
+def en(s):
+    """Returns `s` as an English location string."""
+    return owlready2.locstr(s, lang='en')
+
+
+def pl(s):
+    """Returns `s` as a plain literal string."""
+    return owlready2.locstr(s, lang='')
 
 
 class LOLabware(LOLabwareInterface):
@@ -106,9 +120,9 @@ class LOLabware(LOLabwareInterface):
 
         # importing labOP ontology modules
 
-        lolw_tbox = LOLabwareTBox(self.emmo_world)
-        lolw_tbox.define_ontology()
-        self.lolw.imported_ontologies.append(lolw_tbox.lolw)
+        self.lolw_tbox = LOLabwareTBox(self.emmo_world)
+        self.lolw_tbox.define_ontology()
+        self.lolw.imported_ontologies.append(self.lolw_tbox.lolw)
         self.lolw.sync_python_names()
 
     def save_ontology(self, filename: str = None, format='turtle'):
@@ -119,4 +133,66 @@ class LOLabware(LOLabwareInterface):
         """
         if filename is None:
             filename = self.lolw_ttl_filename
-        self.lolw.save(file=filename, format=format)
+        #self.lolw.save(file=filename, format=format)
+
+        # Save new ontology as owl
+        self.lolw.sync_attributes(name_policy='uuid', class_docstring='elucidation',
+                            name_prefix='labop_')
+        
+        self.lolw.set_version(version_iri=self.lolw_version_iri)
+        self.lolw.dir_label = False
+
+        self.lolw_tbox.catalog_mappings[self.lolw_version_iri] = self.lolw_ttl_filename 
+
+        #################################################################
+        # Annotate the ontology metadata
+        #################################################################
+
+        self.lolw.metadata.abstract.append(en(
+                'An EMMO-based domain ontology for scientific labware.'
+                'olw-measurement is released under the Creative Commons Attribution 4.0 '
+                'International license (CC BY 4.0).'))
+
+        self.lolw.metadata.title.append(en('LabOP-Labware'))
+        self.lolw.metadata.creator.append(en('mark doerr'))
+        self.lolw.metadata.contributor.append(en('university greifswald'))
+        self.lolw.metadata.publisher.append(en(''))
+        self.lolw.metadata.license.append(en(
+            'https://creativecommons.org/licenses/by/4.0/legalcode'))
+        self.lolw.metadata.versionInfo.append(en(lw.__version__))
+        self.lolw.metadata.comment.append(en(
+            'The EMMO requires FaCT++ reasoner plugin in order to visualize all'
+            'inferences and class hierarchy (ctrl+R hotkey in Protege).'))
+        self.lolw.metadata.comment.append(en(
+            'This ontology is generated with data from the ASE Python package.'))
+        self.lolw.metadata.comment.append(en(
+            'Contacts:\n'
+            'mark doerr\n'
+            'University Greifswald\n'
+            'email: mark.doerr@suni-greifswald.de\n'
+            '\n'
+            ))
+
+        self.lolw.save(self.lolw_ttl_filename , overwrite=True)
+        #olw.save(labop_measurement_owl_filename, overwrite=True)
+        write_catalog(self.lolw_tbox.catalog_mappings)
+        # olw.sync_reasoner()
+        # olw.save('olw-measurement-inferred.ttl', overwrite=True)
+        # ...and to the sqlite3 database.
+        # world.save()
+
+
+        # Manually change url of EMMO to `emmo_url` when importing it to make
+        # it resolvable without consulting the catalog file.  This makes it possible
+        # to open the ontology from url in Protege
+        
+        g = rdflib.Graph()
+        g.parse(self.lolw_ttl_filename , format='turtle')
+        for s, p, o in g.triples(
+                (None, rdflib.URIRef('http://www.w3.org/2002/07/owl#imports'), None)):
+            if 'emmo-inferred' in o:
+                g.remove((s, p, o))
+                g.add((s, p, rdflib.URIRef(self.emmo_url)))
+        g.serialize(destination=self.lolw_ttl_filename, format='turtle')
+
+
