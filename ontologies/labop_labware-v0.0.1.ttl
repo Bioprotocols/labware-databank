@@ -1,0 +1,945 @@
+@prefix : <http://www.oso.org/oso/labware#> .
+@prefix core: <http://www.w3.org/2004/02/skos/core#> .
+@prefix emmo: <http://emmo.info/emmo#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix term: <http://purl.org/dc/terms/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://www.oso.org/oso/labware> a owl:Ontology ;
+    emmo:EMMO_5525a055_dda5_4556_8b91_f0d22fa676cc "https://creativecommons.org/licenses/by/4.0/legalcode"@en ;
+    term:abstract "An EMMO-based domain ontology for scientific labware.olw-measurement is released under the Creative Commons Attribution 4.0 International license (CC BY 4.0)."@en ;
+    term:contributor "university greifswald"@en ;
+    term:creator "mark doerr"@en ;
+    term:publisher ""@en ;
+    term:title "LabOP-Labware"@en ;
+    rdfs:comment """Contacts:
+mark doerr
+University Greifswald
+email: mark.doerr@suni-greifswald.de
+
+"""@en,
+        "The EMMO requires FaCT++ reasoner plugin in order to visualize allinferences and class hierarchy (ctrl+R hotkey in Protege)."@en,
+        "This ontology is generated with data from the ASE Python package."@en ;
+    owl:imports <https://raw.githubusercontent.com/emmo-repo/emmo-repo.github.io/master/versions/1.0.0-beta/emmo-inferred-chemistry2.ttl> ;
+    owl:versionIRI <http://www.oso.org/0.0.1/oso/labware> ;
+    owl:versionInfo "0.0.1"@en .
+
+:labop_00f39163-c56a-5be3-bbed-0c097a32db19 a :labop_1d4c2a98-e5bd-5154-8fc8-3c33118e9019,
+        owl:NamedIndividual ;
+    :labop_360645fc-419c-54b2-ad91-3488723c86d9 8.0 ;
+    :labop_6566af27-0790-5221-adcd-96cf059d1416 12 ;
+    :labop_795abf15-9bbd-5ca5-8df9-103f6e9d86b3 "Corning"^^xsd:string ;
+    :labop_90e743d1-69e7-5230-a9a3-31502bdde25f "14.22"^^xsd:string ;
+    :labop_c29c7399-f254-5730-90a9-17fb19e8aee6 340.0 ;
+    :labop_e777604a-bf8b-5bd9-bba6-3afadc690f19 96 ;
+    core:prefLabel "96-flat-uv"@en .
+
+:labop_09d28426-e773-545d-b6e1-24bd583adffb a :labop_1d4c2a98-e5bd-5154-8fc8-3c33118e9019,
+        owl:NamedIndividual ;
+    :labop_360645fc-419c-54b2-ad91-3488723c86d9 16.0 ;
+    :labop_6566af27-0790-5221-adcd-96cf059d1416 24 ;
+    :labop_795abf15-9bbd-5ca5-8df9-103f6e9d86b3 "Eppendorf"^^xsd:string ;
+    :labop_90e743d1-69e7-5230-a9a3-31502bdde25f "10.6"^^xsd:string ;
+    :labop_c29c7399-f254-5730-90a9-17fb19e8aee6 40.0 ;
+    :labop_e777604a-bf8b-5bd9-bba6-3afadc690f19 384 ;
+    core:prefLabel "384-pcr"@en .
+
+:labop_0a01364b-3379-5120-8c42-2944c8d8c04c a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 "3D model of Well shape"@en ;
+    rdfs:domain :labop_1d4c2a98-e5bd-5154-8fc8-3c33118e9019 ;
+    rdfs:range xsd:string ;
+    core:prefLabel "hasShapeModel3D"@en .
+
+:labop_0ff72e72-b1d3-5873-921e-0fa3fe9bcdbb a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 "Labware radius of a round shape in XY direction "@en ;
+    rdfs:domain :labop_1d4c2a98-e5bd-5154-8fc8-3c33118e9019 ;
+    rdfs:range xsd:decimal ;
+    core:prefLabel "hasRadiusZ"@en .
+
+:labop_11cfc4b9-39e2-5f4d-a7b2-041afdbec557 a :labop_1d4c2a98-e5bd-5154-8fc8-3c33118e9019,
+        owl:NamedIndividual ;
+    :labop_360645fc-419c-54b2-ad91-3488723c86d9 16.0 ;
+    :labop_6566af27-0790-5221-adcd-96cf059d1416 24 ;
+    :labop_795abf15-9bbd-5ca5-8df9-103f6e9d86b3 "Corning"^^xsd:string ;
+    :labop_90e743d1-69e7-5230-a9a3-31502bdde25f "14.2"^^xsd:string ;
+    :labop_c29c7399-f254-5730-90a9-17fb19e8aee6 80.0 ;
+    :labop_e777604a-bf8b-5bd9-bba6-3afadc690f19 384 ;
+    core:prefLabel "384-flat-clear-clear"@en .
+
+:labop_1518b48e-991c-50bb-8acb-77325d4b5816 a :labop_1d4c2a98-e5bd-5154-8fc8-3c33118e9019,
+        owl:NamedIndividual ;
+    :labop_360645fc-419c-54b2-ad91-3488723c86d9 16.0 ;
+    :labop_6566af27-0790-5221-adcd-96cf059d1416 24 ;
+    :labop_795abf15-9bbd-5ca5-8df9-103f6e9d86b3 "Corning"^^xsd:string ;
+    :labop_90e743d1-69e7-5230-a9a3-31502bdde25f "14.22"^^xsd:string ;
+    :labop_c29c7399-f254-5730-90a9-17fb19e8aee6 90.0 ;
+    :labop_e777604a-bf8b-5bd9-bba6-3afadc690f19 384 ;
+    core:prefLabel "384-flat"@en .
+
+:labop_1a433174-abf9-5631-bb75-f14fceb01589 a :labop_1d4c2a98-e5bd-5154-8fc8-3c33118e9019,
+        owl:NamedIndividual ;
+    :labop_360645fc-419c-54b2-ad91-3488723c86d9 1.0 ;
+    :labop_6566af27-0790-5221-adcd-96cf059d1416 1 ;
+    :labop_795abf15-9bbd-5ca5-8df9-103f6e9d86b3 "USA Scientific"^^xsd:string ;
+    :labop_90e743d1-69e7-5230-a9a3-31502bdde25f "-"^^xsd:string ;
+    :labop_c29c7399-f254-5730-90a9-17fb19e8aee6 1650.0 ;
+    :labop_e777604a-bf8b-5bd9-bba6-3afadc690f19 1 ;
+    core:prefLabel "micro-1.5"@en .
+
+:labop_1adffef1-a592-521f-a885-76cf01b90784 a :labop_1d4c2a98-e5bd-5154-8fc8-3c33118e9019,
+        owl:NamedIndividual ;
+    :labop_360645fc-419c-54b2-ad91-3488723c86d9 8.0 ;
+    :labop_6566af27-0790-5221-adcd-96cf059d1416 12 ;
+    :labop_795abf15-9bbd-5ca5-8df9-103f6e9d86b3 "Eppendorf"^^xsd:string ;
+    :labop_90e743d1-69e7-5230-a9a3-31502bdde25f "14.4"^^xsd:string ;
+    :labop_c29c7399-f254-5730-90a9-17fb19e8aee6 340.0 ;
+    :labop_e777604a-bf8b-5bd9-bba6-3afadc690f19 96 ;
+    core:prefLabel "96-flat-clear-clear-tc"@en .
+
+:labop_24e3aff3-ddf9-5d3f-954e-0a6b63a82795 a :labop_1d4c2a98-e5bd-5154-8fc8-3c33118e9019,
+        owl:NamedIndividual ;
+    :labop_360645fc-419c-54b2-ad91-3488723c86d9 1.0 ;
+    :labop_6566af27-0790-5221-adcd-96cf059d1416 1 ;
+    :labop_795abf15-9bbd-5ca5-8df9-103f6e9d86b3 "unknown"^^xsd:string ;
+    :labop_90e743d1-69e7-5230-a9a3-31502bdde25f "33.73"^^xsd:string ;
+    :labop_c29c7399-f254-5730-90a9-17fb19e8aee6 2000.0 ;
+    :labop_e777604a-bf8b-5bd9-bba6-3afadc690f19 1 ;
+    core:prefLabel "hplc-vial"@en .
+
+:labop_28c451e5-6a8e-5f58-a51c-b6e956057f20 a :labop_1d4c2a98-e5bd-5154-8fc8-3c33118e9019,
+        owl:NamedIndividual ;
+    :labop_360645fc-419c-54b2-ad91-3488723c86d9 1.0 ;
+    :labop_6566af27-0790-5221-adcd-96cf059d1416 1 ;
+    :labop_795abf15-9bbd-5ca5-8df9-103f6e9d86b3 "not_applicable"^^xsd:string ;
+    :labop_90e743d1-69e7-5230-a9a3-31502bdde25f "-"^^xsd:string ;
+    :labop_c29c7399-f254-5730-90a9-17fb19e8aee6 500000.0 ;
+    :labop_e777604a-bf8b-5bd9-bba6-3afadc690f19 1 ;
+    core:prefLabel "bottle-500"@en .
+
+:labop_29816674-967e-5c23-8092-d79768a82bbc a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 "Labware color in RGB hex encoding"@en ;
+    rdfs:domain :labop_1d4c2a98-e5bd-5154-8fc8-3c33118e9019 ;
+    rdfs:range xsd:string ;
+    core:prefLabel "hasColor"@en .
+
+:labop_2a3bd32d-0305-5d54-9d57-5116daf80fe1 a :labop_1d4c2a98-e5bd-5154-8fc8-3c33118e9019,
+        owl:NamedIndividual ;
+    :labop_360645fc-419c-54b2-ad91-3488723c86d9 8.0 ;
+    :labop_6566af27-0790-5221-adcd-96cf059d1416 12 ;
+    :labop_795abf15-9bbd-5ca5-8df9-103f6e9d86b3 "ThermoFisher"^^xsd:string ;
+    :labop_90e743d1-69e7-5230-a9a3-31502bdde25f "14.6"^^xsd:string ;
+    :labop_c29c7399-f254-5730-90a9-17fb19e8aee6 320.0 ;
+    :labop_e777604a-bf8b-5bd9-bba6-3afadc690f19 96 ;
+    core:prefLabel "96-flat-white-dc"@en .
+
+:labop_2c7d4900-6f1a-52c8-9d84-c00c7d05473f a :labop_1d4c2a98-e5bd-5154-8fc8-3c33118e9019,
+        owl:NamedIndividual ;
+    :labop_360645fc-419c-54b2-ad91-3488723c86d9 1.0 ;
+    :labop_6566af27-0790-5221-adcd-96cf059d1416 1 ;
+    :labop_795abf15-9bbd-5ca5-8df9-103f6e9d86b3 "E&K Scientific"^^xsd:string ;
+    :labop_90e743d1-69e7-5230-a9a3-31502bdde25f "-"^^xsd:string ;
+    :labop_c29c7399-f254-5730-90a9-17fb19e8aee6 2200.0 ;
+    :labop_e777604a-bf8b-5bd9-bba6-3afadc690f19 1 ;
+    core:prefLabel "micro-2.0"@en .
+
+:labop_2d7bae90-2718-5b84-b148-8d934ce83ed2 a :labop_1d4c2a98-e5bd-5154-8fc8-3c33118e9019,
+        owl:NamedIndividual ;
+    :labop_360645fc-419c-54b2-ad91-3488723c86d9 1.0 ;
+    :labop_6566af27-0790-5221-adcd-96cf059d1416 1 ;
+    :labop_795abf15-9bbd-5ca5-8df9-103f6e9d86b3 "Chemspeed"^^xsd:string ;
+    :labop_90e743d1-69e7-5230-a9a3-31502bdde25f "32"^^xsd:string ;
+    :labop_c29c7399-f254-5730-90a9-17fb19e8aee6 9000.0 ;
+    :labop_e777604a-bf8b-5bd9-bba6-3afadc690f19 1 ;
+    core:prefLabel "chemspeed-sealed-pin"@en .
+
+:labop_2e31d9b7-b1b4-5069-8645-a79ca2349a5a a :labop_1d4c2a98-e5bd-5154-8fc8-3c33118e9019,
+        owl:NamedIndividual ;
+    :labop_360645fc-419c-54b2-ad91-3488723c86d9 1.0 ;
+    :labop_6566af27-0790-5221-adcd-96cf059d1416 1 ;
+    :labop_795abf15-9bbd-5ca5-8df9-103f6e9d86b3 "Greiner"^^xsd:string ;
+    :labop_90e743d1-69e7-5230-a9a3-31502bdde25f "-"^^xsd:string ;
+    :labop_c29c7399-f254-5730-90a9-17fb19e8aee6 15000.0 ;
+    :labop_e777604a-bf8b-5bd9-bba6-3afadc690f19 1 ;
+    core:prefLabel "conical-15"@en .
+
+:labop_2e527ee2-3f34-5eb4-8320-952b69fdbc71 a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 "\"Well-to-well distance in column direction"@en ;
+    rdfs:domain :labop_1d4c2a98-e5bd-5154-8fc8-3c33118e9019 ;
+    rdfs:range xsd:decimal ;
+    core:prefLabel "hasWellDistCol"@en .
+
+:labop_2eb7b549-48c8-515a-925e-f3edbc8db960 a :labop_1d4c2a98-e5bd-5154-8fc8-3c33118e9019,
+        owl:NamedIndividual ;
+    :labop_360645fc-419c-54b2-ad91-3488723c86d9 8.0 ;
+    :labop_6566af27-0790-5221-adcd-96cf059d1416 12 ;
+    :labop_795abf15-9bbd-5ca5-8df9-103f6e9d86b3 "Fisher"^^xsd:string ;
+    :labop_90e743d1-69e7-5230-a9a3-31502bdde25f "14.5"^^xsd:string ;
+    :labop_c29c7399-f254-5730-90a9-17fb19e8aee6 200.0 ;
+    :labop_e777604a-bf8b-5bd9-bba6-3afadc690f19 96 ;
+    core:prefLabel "96-v-kf"@en .
+
+:labop_2f57b082-2346-56b0-93f3-5c0c00deea14 a :labop_1d4c2a98-e5bd-5154-8fc8-3c33118e9019,
+        owl:NamedIndividual ;
+    :labop_360645fc-419c-54b2-ad91-3488723c86d9 16.0 ;
+    :labop_6566af27-0790-5221-adcd-96cf059d1416 24 ;
+    :labop_795abf15-9bbd-5ca5-8df9-103f6e9d86b3 "Corning"^^xsd:string ;
+    :labop_90e743d1-69e7-5230-a9a3-31502bdde25f "14.22"^^xsd:string ;
+    :labop_c29c7399-f254-5730-90a9-17fb19e8aee6 80.0 ;
+    :labop_e777604a-bf8b-5bd9-bba6-3afadc690f19 384 ;
+    core:prefLabel "384-flat-white-white-tc"@en .
+
+:labop_304b569e-f9b7-596d-ae46-c19221f92328 a :labop_1d4c2a98-e5bd-5154-8fc8-3c33118e9019,
+        owl:NamedIndividual ;
+    :labop_360645fc-419c-54b2-ad91-3488723c86d9 16.0 ;
+    :labop_6566af27-0790-5221-adcd-96cf059d1416 24 ;
+    :labop_795abf15-9bbd-5ca5-8df9-103f6e9d86b3 "Corning"^^xsd:string ;
+    :labop_90e743d1-69e7-5230-a9a3-31502bdde25f "12.19"^^xsd:string ;
+    :labop_c29c7399-f254-5730-90a9-17fb19e8aee6 40.0 ;
+    :labop_e777604a-bf8b-5bd9-bba6-3afadc690f19 384 ;
+    core:prefLabel "384-flat-white-white-lv"@en .
+
+:labop_3298b5c8-a934-5349-ab1f-e54ec86b73b2 a :labop_1d4c2a98-e5bd-5154-8fc8-3c33118e9019,
+        owl:NamedIndividual ;
+    :labop_360645fc-419c-54b2-ad91-3488723c86d9 16.0 ;
+    :labop_6566af27-0790-5221-adcd-96cf059d1416 24 ;
+    :labop_795abf15-9bbd-5ca5-8df9-103f6e9d86b3 "Sumitomo Bakelite Co."^^xsd:string ;
+    :labop_90e743d1-69e7-5230-a9a3-31502bdde25f "14.4"^^xsd:string ;
+    :labop_c29c7399-f254-5730-90a9-17fb19e8aee6 100.0 ;
+    :labop_e777604a-bf8b-5bd9-bba6-3afadc690f19 384 ;
+    core:prefLabel "384-ubottom-white-tc"@en .
+
+:labop_34ef6b32-1ae5-5219-bc6a-f4bd4bd2aedc a :labop_1d4c2a98-e5bd-5154-8fc8-3c33118e9019,
+        owl:NamedIndividual ;
+    :labop_360645fc-419c-54b2-ad91-3488723c86d9 1.0 ;
+    :labop_6566af27-0790-5221-adcd-96cf059d1416 1 ;
+    :labop_795abf15-9bbd-5ca5-8df9-103f6e9d86b3 "Tradewinds"^^xsd:string ;
+    :labop_90e743d1-69e7-5230-a9a3-31502bdde25f "63"^^xsd:string ;
+    :labop_c29c7399-f254-5730-90a9-17fb19e8aee6 25900.0 ;
+    :labop_e777604a-bf8b-5bd9-bba6-3afadc690f19 1 ;
+    core:prefLabel "d1-vial"@en .
+
+:labop_360645fc-419c-54b2-ad91-3488723c86d9 a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 "Number of Rows of Labware"@en ;
+    rdfs:domain :labop_1d4c2a98-e5bd-5154-8fc8-3c33118e9019 ;
+    rdfs:range xsd:integer ;
+    core:prefLabel "hasNumRows"@en .
+
+:labop_36c27902-e7c5-5f95-ba87-ccfd79716d4a a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 "Radius of a round bottom in xy plane / direction."@en ;
+    rdfs:domain :labop_1d4c2a98-e5bd-5154-8fc8-3c33118e9019 ;
+    rdfs:range xsd:decimal ;
+    core:prefLabel "hasBottomRadiusXY"@en .
+
+:labop_382fb7b0-64ee-5015-907f-aea0914cef09 a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 "container is sealable"@en ;
+    rdfs:domain :labop_1d4c2a98-e5bd-5154-8fc8-3c33118e9019 ;
+    rdfs:range xsd:boolean ;
+    core:prefLabel "isSealable"@en .
+
+:labop_39f56071-bd5f-5b53-b47c-fedfac21b9a8 a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 "Labware product Type"@en ;
+    rdfs:domain :labop_1d4c2a98-e5bd-5154-8fc8-3c33118e9019 ;
+    rdfs:range xsd:string ;
+    core:prefLabel "isProductType"@en .
+
+:labop_3a3dec58-9669-5c5e-b74e-be29637b2943 a :labop_1d4c2a98-e5bd-5154-8fc8-3c33118e9019,
+        owl:NamedIndividual ;
+    :labop_360645fc-419c-54b2-ad91-3488723c86d9 1.0 ;
+    :labop_6566af27-0790-5221-adcd-96cf059d1416 1 ;
+    :labop_795abf15-9bbd-5ca5-8df9-103f6e9d86b3 "unknown"^^xsd:string ;
+    :labop_90e743d1-69e7-5230-a9a3-31502bdde25f "83.5"^^xsd:string ;
+    :labop_c29c7399-f254-5730-90a9-17fb19e8aee6 5000.0 ;
+    :labop_e777604a-bf8b-5bd9-bba6-3afadc690f19 1 ;
+    core:prefLabel "mrv-medium"@en .
+
+:labop_3d0faaa4-36a6-5246-9c5b-ee56e10c5ba8 a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 "Manufacturer Product Number of the Labware"@en ;
+    rdfs:domain :labop_1d4c2a98-e5bd-5154-8fc8-3c33118e9019 ;
+    rdfs:range xsd:string ;
+    core:prefLabel "hasProductNumber"@en .
+
+:labop_44329015-214d-545c-b99d-cb66173b623d a :labop_1d4c2a98-e5bd-5154-8fc8-3c33118e9019,
+        owl:NamedIndividual ;
+    :labop_360645fc-419c-54b2-ad91-3488723c86d9 1.0 ;
+    :labop_6566af27-0790-5221-adcd-96cf059d1416 1 ;
+    :labop_795abf15-9bbd-5ca5-8df9-103f6e9d86b3 "Axygen"^^xsd:string ;
+    :labop_90e743d1-69e7-5230-a9a3-31502bdde25f "43.92"^^xsd:string ;
+    :labop_c29c7399-f254-5730-90a9-17fb19e8aee6 280000.0 ;
+    :labop_e777604a-bf8b-5bd9-bba6-3afadc690f19 1 ;
+    core:prefLabel "res-sw96-hp"@en .
+
+:labop_45a65e84-0cd1-5d59-9f17-b86024348dda a :labop_1d4c2a98-e5bd-5154-8fc8-3c33118e9019,
+        owl:NamedIndividual ;
+    :labop_360645fc-419c-54b2-ad91-3488723c86d9 8.0 ;
+    :labop_6566af27-0790-5221-adcd-96cf059d1416 12 ;
+    :labop_795abf15-9bbd-5ca5-8df9-103f6e9d86b3 "Mesoscale"^^xsd:string ;
+    :labop_90e743d1-69e7-5230-a9a3-31502bdde25f "14.35"^^xsd:string ;
+    :labop_c29c7399-f254-5730-90a9-17fb19e8aee6 410.0 ;
+    :labop_e777604a-bf8b-5bd9-bba6-3afadc690f19 96 ;
+    core:prefLabel "96-10-spot-vplex-m-pro-inflamm1-MSD"@en .
+
+:labop_4606e99e-76aa-5cbc-bbe7-2f1222be31d7 a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 "Labware stacking height without any additions, like lids."@en ;
+    rdfs:domain :labop_1d4c2a98-e5bd-5154-8fc8-3c33118e9019 ;
+    rdfs:range xsd:decimal ;
+    core:prefLabel "hasHightStacked"@en .
+
+:labop_49c9af30-5a5e-5c0a-b5e4-586b9dcb9131 a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 "Opening angle of cone in deg."@en ;
+    rdfs:domain :labop_1d4c2a98-e5bd-5154-8fc8-3c33118e9019 ;
+    rdfs:range xsd:decimal ;
+    core:prefLabel "hasConeAngle"@en .
+
+:labop_4adfeae2-33c8-5050-9634-a9b1e767a0b2 a :labop_1d4c2a98-e5bd-5154-8fc8-3c33118e9019,
+        owl:NamedIndividual ;
+    :labop_360645fc-419c-54b2-ad91-3488723c86d9 8.0 ;
+    :labop_6566af27-0790-5221-adcd-96cf059d1416 12 ;
+    :labop_795abf15-9bbd-5ca5-8df9-103f6e9d86b3 "Corning"^^xsd:string ;
+    :labop_90e743d1-69e7-5230-a9a3-31502bdde25f "14.6"^^xsd:string ;
+    :labop_c29c7399-f254-5730-90a9-17fb19e8aee6 320.0 ;
+    :labop_e777604a-bf8b-5bd9-bba6-3afadc690f19 96 ;
+    core:prefLabel "96-ubottom-clear-tc"@en .
+
+:labop_4b24eaf1-ccaf-5aaa-a347-ebab531e7e79 a :labop_1d4c2a98-e5bd-5154-8fc8-3c33118e9019,
+        owl:NamedIndividual ;
+    :labop_360645fc-419c-54b2-ad91-3488723c86d9 16.0 ;
+    :labop_6566af27-0790-5221-adcd-96cf059d1416 24 ;
+    :labop_795abf15-9bbd-5ca5-8df9-103f6e9d86b3 "PerkinElmer"^^xsd:string ;
+    :labop_90e743d1-69e7-5230-a9a3-31502bdde25f "14.35"^^xsd:string ;
+    :labop_c29c7399-f254-5730-90a9-17fb19e8aee6 28.0 ;
+    :labop_e777604a-bf8b-5bd9-bba6-3afadc690f19 384 ;
+    core:prefLabel "384-flat-white-white-proxiplate-plus"@en .
+
+:labop_4d2cf79a-18a2-5a15-bdda-7789d84f7292 a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 "Labware stacking height with additions, like lids."@en ;
+    rdfs:domain :labop_1d4c2a98-e5bd-5154-8fc8-3c33118e9019 ;
+    rdfs:range xsd:decimal ;
+    core:prefLabel "hasHightStackedLidded"@en .
+
+:labop_4e018a96-9b39-5c78-8a86-5da8d6d5417a a :labop_1d4c2a98-e5bd-5154-8fc8-3c33118e9019,
+        owl:NamedIndividual ;
+    :labop_360645fc-419c-54b2-ad91-3488723c86d9 8.0 ;
+    :labop_6566af27-0790-5221-adcd-96cf059d1416 12 ;
+    :labop_795abf15-9bbd-5ca5-8df9-103f6e9d86b3 "Costar"^^xsd:string ;
+    :labop_90e743d1-69e7-5230-a9a3-31502bdde25f "14.22"^^xsd:string ;
+    :labop_c29c7399-f254-5730-90a9-17fb19e8aee6 360.0 ;
+    :labop_e777604a-bf8b-5bd9-bba6-3afadc690f19 96 ;
+    core:prefLabel "96-flat-clear-costar-3590"@en .
+
+:labop_50185da6-ef4e-52ed-8cc0-b507b505e467 a :labop_1d4c2a98-e5bd-5154-8fc8-3c33118e9019,
+        owl:NamedIndividual ;
+    :labop_360645fc-419c-54b2-ad91-3488723c86d9 8.0 ;
+    :labop_6566af27-0790-5221-adcd-96cf059d1416 1 ;
+    :labop_795abf15-9bbd-5ca5-8df9-103f6e9d86b3 "Axygen"^^xsd:string ;
+    :labop_90e743d1-69e7-5230-a9a3-31502bdde25f "43.8"^^xsd:string ;
+    :labop_c29c7399-f254-5730-90a9-17fb19e8aee6 32000.0 ;
+    :labop_e777604a-bf8b-5bd9-bba6-3afadc690f19 8 ;
+    core:prefLabel "res-mw8-hp"@en .
+
+:labop_51e9c6ee-065c-5edc-8f7e-f0adabdbfb28 a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 "Well radius of a round well at the top opening in x-y plane."@en ;
+    rdfs:domain :labop_1d4c2a98-e5bd-5154-8fc8-3c33118e9019 ;
+    rdfs:range xsd:decimal ;
+    core:prefLabel "hasTopRadiusXY"@en .
+
+:labop_545b98a5-1a84-5b75-9e0c-f75f7a11f04e a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 "Well total well depth=hight"@en ;
+    rdfs:domain :labop_1d4c2a98-e5bd-5154-8fc8-3c33118e9019 ;
+    rdfs:range xsd:decimal ;
+    core:prefLabel "hasDepthWell"@en .
+
+:labop_5888cd5c-7ba4-531e-a919-a149e499071b a :labop_1d4c2a98-e5bd-5154-8fc8-3c33118e9019,
+        owl:NamedIndividual ;
+    :labop_360645fc-419c-54b2-ad91-3488723c86d9 1.0 ;
+    :labop_6566af27-0790-5221-adcd-96cf059d1416 12 ;
+    :labop_795abf15-9bbd-5ca5-8df9-103f6e9d86b3 "Axygen"^^xsd:string ;
+    :labop_90e743d1-69e7-5230-a9a3-31502bdde25f "44.04"^^xsd:string ;
+    :labop_c29c7399-f254-5730-90a9-17fb19e8aee6 21000.0 ;
+    :labop_e777604a-bf8b-5bd9-bba6-3afadc690f19 12 ;
+    core:prefLabel "res-mw12-hp"@en .
+
+:labop_58dcb413-f46e-56f5-be1b-3617cc6ffe30 a :labop_1d4c2a98-e5bd-5154-8fc8-3c33118e9019,
+        owl:NamedIndividual ;
+    :labop_360645fc-419c-54b2-ad91-3488723c86d9 16.0 ;
+    :labop_6566af27-0790-5221-adcd-96cf059d1416 24 ;
+    :labop_795abf15-9bbd-5ca5-8df9-103f6e9d86b3 "Corning"^^xsd:string ;
+    :labop_90e743d1-69e7-5230-a9a3-31502bdde25f "14.35"^^xsd:string ;
+    :labop_c29c7399-f254-5730-90a9-17fb19e8aee6 80.0 ;
+    :labop_e777604a-bf8b-5bd9-bba6-3afadc690f19 384 ;
+    core:prefLabel "384-flat-white-white-nbs"@en .
+
+:labop_63cb2947-6e8c-5aff-abc4-380f474ea3ca a :labop_1d4c2a98-e5bd-5154-8fc8-3c33118e9019,
+        owl:NamedIndividual ;
+    :labop_360645fc-419c-54b2-ad91-3488723c86d9 1.0 ;
+    :labop_6566af27-0790-5221-adcd-96cf059d1416 1 ;
+    :labop_795abf15-9bbd-5ca5-8df9-103f6e9d86b3 "Greiner"^^xsd:string ;
+    :labop_90e743d1-69e7-5230-a9a3-31502bdde25f "-"^^xsd:string ;
+    :labop_c29c7399-f254-5730-90a9-17fb19e8aee6 2200.0 ;
+    :labop_e777604a-bf8b-5bd9-bba6-3afadc690f19 1 ;
+    core:prefLabel "tube-15"@en .
+
+:labop_650b9839-f274-5e87-8aaf-4c809233f3df a :labop_1d4c2a98-e5bd-5154-8fc8-3c33118e9019,
+        owl:NamedIndividual ;
+    :labop_360645fc-419c-54b2-ad91-3488723c86d9 16.0 ;
+    :labop_6566af27-0790-5221-adcd-96cf059d1416 24 ;
+    :labop_795abf15-9bbd-5ca5-8df9-103f6e9d86b3 "Labcyte"^^xsd:string ;
+    :labop_90e743d1-69e7-5230-a9a3-31502bdde25f "14.4"^^xsd:string ;
+    :labop_c29c7399-f254-5730-90a9-17fb19e8aee6 135.0 ;
+    :labop_e777604a-bf8b-5bd9-bba6-3afadc690f19 384 ;
+    core:prefLabel "384-echo"@en .
+
+:labop_6566af27-0790-5221-adcd-96cf059d1416 a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 "Number of Columns of muti-well labware"@en ;
+    rdfs:domain :labop_1d4c2a98-e5bd-5154-8fc8-3c33118e9019 ;
+    rdfs:range xsd:integer ;
+    core:prefLabel "hasNumCols"@en .
+
+:labop_6b22776a-3224-5812-bf71-83d9ce23ae38 a :labop_1d4c2a98-e5bd-5154-8fc8-3c33118e9019,
+        owl:NamedIndividual ;
+    :labop_360645fc-419c-54b2-ad91-3488723c86d9 16.0 ;
+    :labop_6566af27-0790-5221-adcd-96cf059d1416 24 ;
+    :labop_795abf15-9bbd-5ca5-8df9-103f6e9d86b3 "PerkinElmer"^^xsd:string ;
+    :labop_90e743d1-69e7-5230-a9a3-31502bdde25f "14.4"^^xsd:string ;
+    :labop_c29c7399-f254-5730-90a9-17fb19e8aee6 105.0 ;
+    :labop_e777604a-bf8b-5bd9-bba6-3afadc690f19 384 ;
+    core:prefLabel "384-flat-white-white-optiplate"@en .
+
+:labop_6ceaee21-25b7-57b4-8eb5-8b9edfb4749d a :labop_1d4c2a98-e5bd-5154-8fc8-3c33118e9019,
+        owl:NamedIndividual ;
+    :labop_360645fc-419c-54b2-ad91-3488723c86d9 8.0 ;
+    :labop_6566af27-0790-5221-adcd-96cf059d1416 12 ;
+    :labop_795abf15-9bbd-5ca5-8df9-103f6e9d86b3 "Corning"^^xsd:string ;
+    :labop_90e743d1-69e7-5230-a9a3-31502bdde25f "3.25"^^xsd:string ;
+    :labop_c29c7399-f254-5730-90a9-17fb19e8aee6 200.0 ;
+    :labop_e777604a-bf8b-5bd9-bba6-3afadc690f19 96 ;
+    core:prefLabel "96-well-v-bottom"@en .
+
+:labop_702945ce-3530-51e0-95b9-eed9503d5790 a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 "Labware model number"@en ;
+    rdfs:domain :labop_1d4c2a98-e5bd-5154-8fc8-3c33118e9019 ;
+    rdfs:range xsd:string ;
+    core:prefLabel "hasModelNumber"@en .
+
+:labop_70543c1d-a01f-52c1-aac7-d0b38091f6e1 a :labop_1d4c2a98-e5bd-5154-8fc8-3c33118e9019,
+        owl:NamedIndividual ;
+    :labop_360645fc-419c-54b2-ad91-3488723c86d9 16.0 ;
+    :labop_6566af27-0790-5221-adcd-96cf059d1416 24 ;
+    :labop_795abf15-9bbd-5ca5-8df9-103f6e9d86b3 "Corning"^^xsd:string ;
+    :labop_90e743d1-69e7-5230-a9a3-31502bdde25f "14.22"^^xsd:string ;
+    :labop_c29c7399-f254-5730-90a9-17fb19e8aee6 70.0 ;
+    :labop_e777604a-bf8b-5bd9-bba6-3afadc690f19 384 ;
+    core:prefLabel "384-round-clear-clear"@en .
+
+:labop_71b68d12-f079-5318-bbc9-5c1282825a54 a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 "wWll-to-well distance in row direction"@en ;
+    rdfs:domain :labop_1d4c2a98-e5bd-5154-8fc8-3c33118e9019 ;
+    rdfs:range xsd:decimal ;
+    core:prefLabel "hasWellDistRow"@en .
+
+:labop_71c0a9dc-d2b7-5245-8821-009fcd7a4778 a :labop_1d4c2a98-e5bd-5154-8fc8-3c33118e9019,
+        owl:NamedIndividual ;
+    :labop_360645fc-419c-54b2-ad91-3488723c86d9 1.0 ;
+    :labop_6566af27-0790-5221-adcd-96cf059d1416 1 ;
+    :labop_795abf15-9bbd-5ca5-8df9-103f6e9d86b3 "not_applicable"^^xsd:string ;
+    :labop_90e743d1-69e7-5230-a9a3-31502bdde25f "-"^^xsd:string ;
+    :labop_c29c7399-f254-5730-90a9-17fb19e8aee6 25000.0 ;
+    :labop_e777604a-bf8b-5bd9-bba6-3afadc690f19 1 ;
+    core:prefLabel "flask-25"@en .
+
+:labop_77fde989-da83-5225-b780-be36f3944fd9 a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 "Radius of a round bottom in z (hight) direction."@en ;
+    rdfs:domain :labop_1d4c2a98-e5bd-5154-8fc8-3c33118e9019 ;
+    rdfs:range xsd:decimal ;
+    core:prefLabel "hasBottomRadiusZ"@en .
+
+:labop_795abf15-9bbd-5ca5-8df9-103f6e9d86b3 a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 "Name of the Manufacturer "@en ;
+    rdfs:domain :labop_1d4c2a98-e5bd-5154-8fc8-3c33118e9019 ;
+    rdfs:range xsd:string ;
+    core:prefLabel "hasManifacturer"@en .
+
+:labop_7f399301-aeb4-5273-abdb-d0a4334ac141 a :labop_1d4c2a98-e5bd-5154-8fc8-3c33118e9019,
+        owl:NamedIndividual ;
+    :labop_360645fc-419c-54b2-ad91-3488723c86d9 32.0 ;
+    :labop_6566af27-0790-5221-adcd-96cf059d1416 48 ;
+    :labop_795abf15-9bbd-5ca5-8df9-103f6e9d86b3 "Greiner"^^xsd:string ;
+    :labop_90e743d1-69e7-5230-a9a3-31502bdde25f "10.4"^^xsd:string ;
+    :labop_c29c7399-f254-5730-90a9-17fb19e8aee6 10.0 ;
+    :labop_e777604a-bf8b-5bd9-bba6-3afadc690f19 1536 ;
+    core:prefLabel "1536-white-tc"@en .
+
+:labop_7fa8aea2-613f-5c20-9320-07f43f7ec7b2 a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 "Generalized shape polygon for more complex well shapes, in z direction = rotation axis."@en ;
+    rdfs:domain :labop_1d4c2a98-e5bd-5154-8fc8-3c33118e9019 ;
+    rdfs:range xsd:string ;
+    core:prefLabel "hasShapePolygonZ"@en .
+
+:labop_82608f92-af4a-5917-8969-3d9c30958440 a :labop_1d4c2a98-e5bd-5154-8fc8-3c33118e9019,
+        owl:NamedIndividual ;
+    :labop_360645fc-419c-54b2-ad91-3488723c86d9 8.0 ;
+    :labop_6566af27-0790-5221-adcd-96cf059d1416 12 ;
+    :labop_795abf15-9bbd-5ca5-8df9-103f6e9d86b3 "Fisher"^^xsd:string ;
+    :labop_90e743d1-69e7-5230-a9a3-31502bdde25f "44"^^xsd:string ;
+    :labop_c29c7399-f254-5730-90a9-17fb19e8aee6 1000.0 ;
+    :labop_e777604a-bf8b-5bd9-bba6-3afadc690f19 96 ;
+    core:prefLabel "96-deep-kf"@en .
+
+:labop_845af61e-12ab-5432-8de0-dec754b6dec2 a :labop_1d4c2a98-e5bd-5154-8fc8-3c33118e9019,
+        owl:NamedIndividual ;
+    :labop_360645fc-419c-54b2-ad91-3488723c86d9 1.0 ;
+    :labop_6566af27-0790-5221-adcd-96cf059d1416 1 ;
+    :labop_795abf15-9bbd-5ca5-8df9-103f6e9d86b3 "not_applicable"^^xsd:string ;
+    :labop_90e743d1-69e7-5230-a9a3-31502bdde25f "-"^^xsd:string ;
+    :labop_c29c7399-f254-5730-90a9-17fb19e8aee6 250000.0 ;
+    :labop_e777604a-bf8b-5bd9-bba6-3afadc690f19 1 ;
+    core:prefLabel "bottle-250"@en .
+
+:labop_8904e3dc-de7a-54ea-a607-8a554ccb044d a :labop_1d4c2a98-e5bd-5154-8fc8-3c33118e9019,
+        owl:NamedIndividual ;
+    :labop_360645fc-419c-54b2-ad91-3488723c86d9 1.0 ;
+    :labop_6566af27-0790-5221-adcd-96cf059d1416 1 ;
+    :labop_795abf15-9bbd-5ca5-8df9-103f6e9d86b3 "unknown"^^xsd:string ;
+    :labop_90e743d1-69e7-5230-a9a3-31502bdde25f "14.7"^^xsd:string ;
+    :labop_c29c7399-f254-5730-90a9-17fb19e8aee6 400.0 ;
+    :labop_e777604a-bf8b-5bd9-bba6-3afadc690f19 1 ;
+    core:prefLabel "single-vbottom-microwell"@en .
+
+:labop_898678fe-fd38-5e62-9da0-df970662ee06 a :labop_1d4c2a98-e5bd-5154-8fc8-3c33118e9019,
+        owl:NamedIndividual ;
+    :labop_360645fc-419c-54b2-ad91-3488723c86d9 1.0 ;
+    :labop_6566af27-0790-5221-adcd-96cf059d1416 1 ;
+    :labop_795abf15-9bbd-5ca5-8df9-103f6e9d86b3 "Fisher"^^xsd:string ;
+    :labop_90e743d1-69e7-5230-a9a3-31502bdde25f "17.3"^^xsd:string ;
+    :labop_c29c7399-f254-5730-90a9-17fb19e8aee6 90000.0 ;
+    :labop_e777604a-bf8b-5bd9-bba6-3afadc690f19 1 ;
+    core:prefLabel "1-flat"@en .
+
+:labop_8b3c1ae0-7735-5dc0-ab3b-28145ab29c19 a :labop_1d4c2a98-e5bd-5154-8fc8-3c33118e9019,
+        owl:NamedIndividual ;
+    :labop_360645fc-419c-54b2-ad91-3488723c86d9 8.0 ;
+    :labop_6566af27-0790-5221-adcd-96cf059d1416 12 ;
+    :labop_795abf15-9bbd-5ca5-8df9-103f6e9d86b3 "Chemspeed"^^xsd:string ;
+    :labop_90e743d1-69e7-5230-a9a3-31502bdde25f "36"^^xsd:string ;
+    :labop_c29c7399-f254-5730-90a9-17fb19e8aee6 9000.0 ;
+    :labop_e777604a-bf8b-5bd9-bba6-3afadc690f19 96 ;
+    core:prefLabel "chemspeed-96-sealed-pin-rack"@en .
+
+:labop_8c26202c-ad47-5791-b734-addbf9ffa924 a :labop_1d4c2a98-e5bd-5154-8fc8-3c33118e9019,
+        owl:NamedIndividual ;
+    :labop_360645fc-419c-54b2-ad91-3488723c86d9 4.0 ;
+    :labop_6566af27-0790-5221-adcd-96cf059d1416 6 ;
+    :labop_795abf15-9bbd-5ca5-8df9-103f6e9d86b3 "E&K Scientific"^^xsd:string ;
+    :labop_90e743d1-69e7-5230-a9a3-31502bdde25f "44.04"^^xsd:string ;
+    :labop_c29c7399-f254-5730-90a9-17fb19e8aee6 10000.0 ;
+    :labop_e777604a-bf8b-5bd9-bba6-3afadc690f19 24 ;
+    core:prefLabel "24-deep"@en .
+
+:labop_90e743d1-69e7-5230-a9a3-31502bdde25f a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 "Labware total hight, without  any additions, like lids etc. "@en ;
+    rdfs:domain :labop_1d4c2a98-e5bd-5154-8fc8-3c33118e9019 ;
+    rdfs:range xsd:decimal ;
+    core:prefLabel "hasHeight"@en .
+
+:labop_914371a5-137f-5fea-868a-cd8e217c9b66 a :labop_1d4c2a98-e5bd-5154-8fc8-3c33118e9019,
+        owl:NamedIndividual ;
+    :labop_360645fc-419c-54b2-ad91-3488723c86d9 1.0 ;
+    :labop_6566af27-0790-5221-adcd-96cf059d1416 1 ;
+    :labop_795abf15-9bbd-5ca5-8df9-103f6e9d86b3 "not_applicable"^^xsd:string ;
+    :labop_90e743d1-69e7-5230-a9a3-31502bdde25f "-"^^xsd:string ;
+    :labop_c29c7399-f254-5730-90a9-17fb19e8aee6 999999999.0 ;
+    :labop_e777604a-bf8b-5bd9-bba6-3afadc690f19 1 ;
+    core:prefLabel "vendor-tube"@en .
+
+:labop_92b00d80-39b5-596c-844e-1bf02461a9ce a :labop_1d4c2a98-e5bd-5154-8fc8-3c33118e9019,
+        owl:NamedIndividual ;
+    :labop_360645fc-419c-54b2-ad91-3488723c86d9 16.0 ;
+    :labop_6566af27-0790-5221-adcd-96cf059d1416 24 ;
+    :labop_795abf15-9bbd-5ca5-8df9-103f6e9d86b3 "Greiner"^^xsd:string ;
+    :labop_90e743d1-69e7-5230-a9a3-31502bdde25f "14.4"^^xsd:string ;
+    :labop_c29c7399-f254-5730-90a9-17fb19e8aee6 120.0 ;
+    :labop_e777604a-bf8b-5bd9-bba6-3afadc690f19 384 ;
+    core:prefLabel "384-v-clear-clear"@en .
+
+:labop_99819c07-7dd6-54e8-9618-9d69f5599afe a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 "Labware total width, "@en ;
+    rdfs:domain :labop_1d4c2a98-e5bd-5154-8fc8-3c33118e9019 ;
+    rdfs:range xsd:decimal ;
+    core:prefLabel "hasWidth"@en .
+
+:labop_9b0659c3-0cb6-5c08-99ee-e0155eab2539 a :labop_1d4c2a98-e5bd-5154-8fc8-3c33118e9019,
+        owl:NamedIndividual ;
+    :labop_360645fc-419c-54b2-ad91-3488723c86d9 8.0 ;
+    :labop_6566af27-0790-5221-adcd-96cf059d1416 12 ;
+    :labop_795abf15-9bbd-5ca5-8df9-103f6e9d86b3 "Corning"^^xsd:string ;
+    :labop_90e743d1-69e7-5230-a9a3-31502bdde25f "43.8"^^xsd:string ;
+    :labop_c29c7399-f254-5730-90a9-17fb19e8aee6 2000.0 ;
+    :labop_e777604a-bf8b-5bd9-bba6-3afadc690f19 96 ;
+    core:prefLabel "96-deep"@en .
+
+:labop_9da87440-6661-5e35-b235-4a88eecdd071 a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 "Total Labware volume "@en ;
+    rdfs:domain :labop_1d4c2a98-e5bd-5154-8fc8-3c33118e9019 ;
+    rdfs:range xsd:decimal ;
+    core:prefLabel "hasVolume"@en .
+
+:labop_9e93f04c-527b-5415-b284-61ba4f0a9f8c a :labop_1d4c2a98-e5bd-5154-8fc8-3c33118e9019,
+        owl:NamedIndividual ;
+    :labop_360645fc-419c-54b2-ad91-3488723c86d9 8.0 ;
+    :labop_6566af27-0790-5221-adcd-96cf059d1416 12 ;
+    :labop_795abf15-9bbd-5ca5-8df9-103f6e9d86b3 "Corning"^^xsd:string ;
+    :labop_90e743d1-69e7-5230-a9a3-31502bdde25f "14.22"^^xsd:string ;
+    :labop_c29c7399-f254-5730-90a9-17fb19e8aee6 340.0 ;
+    :labop_e777604a-bf8b-5bd9-bba6-3afadc690f19 96 ;
+    core:prefLabel "96-flat"@en .
+
+:labop_a62c3197-4c2a-5cb3-89d7-46590914bbc2 a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 "Well, bottom shape, flat, round, conical-"@en ;
+    rdfs:domain :labop_1d4c2a98-e5bd-5154-8fc8-3c33118e9019 ;
+    rdfs:range xsd:string ;
+    core:prefLabel "hasShapeWellBottom"@en .
+
+:labop_abcdfdfc-83a9-56cc-9b73-2a6cfa0e09be a :labop_1d4c2a98-e5bd-5154-8fc8-3c33118e9019,
+        owl:NamedIndividual ;
+    :labop_360645fc-419c-54b2-ad91-3488723c86d9 1.0 ;
+    :labop_6566af27-0790-5221-adcd-96cf059d1416 1 ;
+    :labop_795abf15-9bbd-5ca5-8df9-103f6e9d86b3 "USA Scientific"^^xsd:string ;
+    :labop_90e743d1-69e7-5230-a9a3-31502bdde25f "-"^^xsd:string ;
+    :labop_c29c7399-f254-5730-90a9-17fb19e8aee6 500.0 ;
+    :labop_e777604a-bf8b-5bd9-bba6-3afadc690f19 1 ;
+    core:prefLabel "pcr-0.5"@en .
+
+:labop_b3693b79-61fe-51a9-a1f3-ac3382abd5a9 a :labop_1d4c2a98-e5bd-5154-8fc8-3c33118e9019,
+        owl:NamedIndividual ;
+    :labop_360645fc-419c-54b2-ad91-3488723c86d9 1.0 ;
+    :labop_6566af27-0790-5221-adcd-96cf059d1416 1 ;
+    :labop_795abf15-9bbd-5ca5-8df9-103f6e9d86b3 "unknown"^^xsd:string ;
+    :labop_90e743d1-69e7-5230-a9a3-31502bdde25f "83"^^xsd:string ;
+    :labop_c29c7399-f254-5730-90a9-17fb19e8aee6 20000.0 ;
+    :labop_e777604a-bf8b-5bd9-bba6-3afadc690f19 1 ;
+    core:prefLabel "mrv-large"@en .
+
+:labop_b441bf24-6f7f-5295-83bf-33338e579fce a owl:DatatypeProperty ;
+    emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 "Polymer, properties, like solvent tolerance, transparency, ...."@en ;
+    rdfs:domain :labop_1d4c2a98-e5bd-5154-8fc8-3c33118e9019 ;
+    rdfs:range xsd:string ;
+    core:prefLabel "hasMaterial"@en .
+
+:labop_b552f1b1-cae6-5075-aa2e-084e9dacf91f a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 "container is liddable"@en ;
+    rdfs:domain :labop_1d4c2a98-e5bd-5154-8fc8-3c33118e9019 ;
+    rdfs:range xsd:boolean ;
+    core:prefLabel "isLiddable"@en .
+
+:labop_b98e8a2a-37c2-5754-82c1-7752fd8c2d19 a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 "Labware radius of a round shape in XY direction "@en ;
+    rdfs:domain :labop_1d4c2a98-e5bd-5154-8fc8-3c33118e9019 ;
+    rdfs:range xsd:decimal ;
+    core:prefLabel "hasRadiusXY"@en .
+
+:labop_b9e52c8a-8030-5d79-941e-6bbf8baee86e a :labop_1d4c2a98-e5bd-5154-8fc8-3c33118e9019,
+        owl:NamedIndividual ;
+    :labop_360645fc-419c-54b2-ad91-3488723c86d9 16.0 ;
+    :labop_6566af27-0790-5221-adcd-96cf059d1416 24 ;
+    :labop_795abf15-9bbd-5ca5-8df9-103f6e9d86b3 "PerkinElmer"^^xsd:string ;
+    :labop_90e743d1-69e7-5230-a9a3-31502bdde25f "14.35"^^xsd:string ;
+    :labop_c29c7399-f254-5730-90a9-17fb19e8aee6 28.0 ;
+    :labop_e777604a-bf8b-5bd9-bba6-3afadc690f19 384 ;
+    core:prefLabel "384-flat-black-black-proxiplate-plus-f"@en .
+
+:labop_c29c7399-f254-5730-90a9-17fb19e8aee6 a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 "Total Labware volume "@en ;
+    rdfs:domain :labop_1d4c2a98-e5bd-5154-8fc8-3c33118e9019 ;
+    rdfs:range xsd:decimal ;
+    core:prefLabel "hasWellVolume"@en .
+
+:labop_c4151f73-e6f3-57fd-a738-8532f995d693 a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 "Well overall / top well shape,e.g. round, square, buffeled,..."@en ;
+    rdfs:domain :labop_1d4c2a98-e5bd-5154-8fc8-3c33118e9019 ;
+    rdfs:range xsd:string ;
+    core:prefLabel "hasShapeWell"@en .
+
+:labop_cfb6b47e-215a-5fad-b1cc-6ab314812564 a :labop_1d4c2a98-e5bd-5154-8fc8-3c33118e9019,
+        owl:NamedIndividual ;
+    :labop_360645fc-419c-54b2-ad91-3488723c86d9 2.0 ;
+    :labop_6566af27-0790-5221-adcd-96cf059d1416 3 ;
+    :labop_795abf15-9bbd-5ca5-8df9-103f6e9d86b3 "Eppendorf"^^xsd:string ;
+    :labop_90e743d1-69e7-5230-a9a3-31502bdde25f "19"^^xsd:string ;
+    :labop_c29c7399-f254-5730-90a9-17fb19e8aee6 5000.0 ;
+    :labop_e777604a-bf8b-5bd9-bba6-3afadc690f19 6 ;
+    core:prefLabel "6-flat-tc"@en .
+
+:labop_d002400e-1ded-5748-8ecf-18483d1fc572 a :labop_1d4c2a98-e5bd-5154-8fc8-3c33118e9019,
+        owl:NamedIndividual ;
+    :labop_360645fc-419c-54b2-ad91-3488723c86d9 16.0 ;
+    :labop_6566af27-0790-5221-adcd-96cf059d1416 24 ;
+    :labop_795abf15-9bbd-5ca5-8df9-103f6e9d86b3 "Corning"^^xsd:string ;
+    :labop_90e743d1-69e7-5230-a9a3-31502bdde25f "14.22"^^xsd:string ;
+    :labop_c29c7399-f254-5730-90a9-17fb19e8aee6 90.0 ;
+    :labop_e777604a-bf8b-5bd9-bba6-3afadc690f19 384 ;
+    core:prefLabel "384-flat-white-clear"@en .
+
+:labop_d25c7d4b-e740-509d-b09e-de9b8f400876 a :labop_1d4c2a98-e5bd-5154-8fc8-3c33118e9019,
+        owl:NamedIndividual ;
+    :labop_360645fc-419c-54b2-ad91-3488723c86d9 16.0 ;
+    :labop_6566af27-0790-5221-adcd-96cf059d1416 24 ;
+    :labop_795abf15-9bbd-5ca5-8df9-103f6e9d86b3 "Corning"^^xsd:string ;
+    :labop_90e743d1-69e7-5230-a9a3-31502bdde25f "14.22"^^xsd:string ;
+    :labop_c29c7399-f254-5730-90a9-17fb19e8aee6 35.0 ;
+    :labop_e777604a-bf8b-5bd9-bba6-3afadc690f19 384 ;
+    core:prefLabel "384-round-black-black-lv-nbs"@en .
+
+:labop_d399020b-5067-5c72-bf40-e8ad160d49b6 a :labop_1d4c2a98-e5bd-5154-8fc8-3c33118e9019,
+        owl:NamedIndividual ;
+    :labop_360645fc-419c-54b2-ad91-3488723c86d9 2.0 ;
+    :labop_6566af27-0790-5221-adcd-96cf059d1416 3 ;
+    :labop_795abf15-9bbd-5ca5-8df9-103f6e9d86b3 "Eppendorf"^^xsd:string ;
+    :labop_90e743d1-69e7-5230-a9a3-31502bdde25f "19"^^xsd:string ;
+    :labop_c29c7399-f254-5730-90a9-17fb19e8aee6 5000.0 ;
+    :labop_e777604a-bf8b-5bd9-bba6-3afadc690f19 6 ;
+    core:prefLabel "6-flat"@en .
+
+:labop_d6391933-31c9-5bdd-b995-d8faae9a7059 a :labop_1d4c2a98-e5bd-5154-8fc8-3c33118e9019,
+        owl:NamedIndividual ;
+    :labop_360645fc-419c-54b2-ad91-3488723c86d9 1.0 ;
+    :labop_6566af27-0790-5221-adcd-96cf059d1416 1 ;
+    :labop_795abf15-9bbd-5ca5-8df9-103f6e9d86b3 "Tradewinds"^^xsd:string ;
+    :labop_90e743d1-69e7-5230-a9a3-31502bdde25f "42"^^xsd:string ;
+    :labop_c29c7399-f254-5730-90a9-17fb19e8aee6 3500.0 ;
+    :labop_e777604a-bf8b-5bd9-bba6-3afadc690f19 1 ;
+    core:prefLabel "a1-vial"@en .
+
+:labop_dc7d3c33-0983-56d6-bac0-505baa4e9b8d a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 "Generalized shape polygon for more complex well shapes, in xy plane / direction."@en ;
+    rdfs:domain :labop_1d4c2a98-e5bd-5154-8fc8-3c33118e9019 ;
+    rdfs:range xsd:decimal ;
+    core:prefLabel "hasShapePolygonXY"@en .
+
+:labop_dd5fe552-568f-57bd-b228-4aa74cce58b3 a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 "Depth of cone from beginning of conical shape."@en ;
+    rdfs:domain :labop_1d4c2a98-e5bd-5154-8fc8-3c33118e9019 ;
+    rdfs:range xsd:decimal ;
+    core:prefLabel "hasConeDepth"@en .
+
+:labop_de813e60-4405-5749-9e27-d237789d9ce2 a :labop_1d4c2a98-e5bd-5154-8fc8-3c33118e9019,
+        owl:NamedIndividual ;
+    :labop_360645fc-419c-54b2-ad91-3488723c86d9 1.0 ;
+    :labop_6566af27-0790-5221-adcd-96cf059d1416 1 ;
+    :labop_795abf15-9bbd-5ca5-8df9-103f6e9d86b3 "unknown"^^xsd:string ;
+    :labop_90e743d1-69e7-5230-a9a3-31502bdde25f "95.3"^^xsd:string ;
+    :labop_c29c7399-f254-5730-90a9-17fb19e8aee6 40000.0 ;
+    :labop_e777604a-bf8b-5bd9-bba6-3afadc690f19 1 ;
+    core:prefLabel "d2-vial"@en .
+
+:labop_df850393-1724-55f6-a0a6-7241eb8011c6 a :labop_1d4c2a98-e5bd-5154-8fc8-3c33118e9019,
+        owl:NamedIndividual ;
+    :labop_360645fc-419c-54b2-ad91-3488723c86d9 192 ;
+    :labop_6566af27-0790-5221-adcd-96cf059d1416 16 ;
+    :labop_e777604a-bf8b-5bd9-bba6-3afadc690f19 384 ;
+    core:prefLabel "Greiner_384_V"@en .
+
+:labop_df936d31-b5f6-5fbc-a9f5-3d8a2a8bd057 a :labop_1d4c2a98-e5bd-5154-8fc8-3c33118e9019,
+        owl:NamedIndividual ;
+    :labop_360645fc-419c-54b2-ad91-3488723c86d9 16.0 ;
+    :labop_6566af27-0790-5221-adcd-96cf059d1416 24 ;
+    :labop_795abf15-9bbd-5ca5-8df9-103f6e9d86b3 "ThermoFisher"^^xsd:string ;
+    :labop_90e743d1-69e7-5230-a9a3-31502bdde25f "14.4"^^xsd:string ;
+    :labop_c29c7399-f254-5730-90a9-17fb19e8aee6 120.0 ;
+    :labop_e777604a-bf8b-5bd9-bba6-3afadc690f19 384 ;
+    core:prefLabel "384-ubottom-clear-polypropylene-nunc-264573"@en .
+
+:labop_e4685444-e906-5e3b-81eb-4ce078367a95 a :labop_1d4c2a98-e5bd-5154-8fc8-3c33118e9019,
+        owl:NamedIndividual ;
+    :labop_360645fc-419c-54b2-ad91-3488723c86d9 1.0 ;
+    :labop_6566af27-0790-5221-adcd-96cf059d1416 1 ;
+    :labop_795abf15-9bbd-5ca5-8df9-103f6e9d86b3 "Greiner"^^xsd:string ;
+    :labop_90e743d1-69e7-5230-a9a3-31502bdde25f "-"^^xsd:string ;
+    :labop_c29c7399-f254-5730-90a9-17fb19e8aee6 50000.0 ;
+    :labop_e777604a-bf8b-5bd9-bba6-3afadc690f19 1 ;
+    core:prefLabel "conical-50"@en .
+
+:labop_e777604a-bf8b-5bd9-bba6-3afadc690f19 a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 "Number of Wells of muti-well labware"@en ;
+    rdfs:domain :labop_1d4c2a98-e5bd-5154-8fc8-3c33118e9019 ;
+    rdfs:range xsd:integer ;
+    core:prefLabel "hasNumWells"@en .
+
+:labop_e7a25cc5-6ae8-5bbc-a723-27a426ffb38c a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 "Labware total hight, with additions, like lids etc."@en ;
+    rdfs:domain :labop_1d4c2a98-e5bd-5154-8fc8-3c33118e9019 ;
+    rdfs:range xsd:decimal ;
+    core:prefLabel "hasHigthLidded"@en .
+
+:labop_e889a659-217c-5df9-8a5a-70debd34bc10 a :labop_1d4c2a98-e5bd-5154-8fc8-3c33118e9019,
+        owl:NamedIndividual ;
+    :labop_360645fc-419c-54b2-ad91-3488723c86d9 1.0 ;
+    :labop_6566af27-0790-5221-adcd-96cf059d1416 1 ;
+    :labop_795abf15-9bbd-5ca5-8df9-103f6e9d86b3 "not_applicable"^^xsd:string ;
+    :labop_90e743d1-69e7-5230-a9a3-31502bdde25f "-"^^xsd:string ;
+    :labop_c29c7399-f254-5730-90a9-17fb19e8aee6 250000.0 ;
+    :labop_e777604a-bf8b-5bd9-bba6-3afadc690f19 1 ;
+    core:prefLabel "flask-250"@en .
+
+:labop_eb11a326-7155-52ac-8cd0-ccef5e57a36c a :labop_1d4c2a98-e5bd-5154-8fc8-3c33118e9019,
+        owl:NamedIndividual ;
+    :labop_360645fc-419c-54b2-ad91-3488723c86d9 8.0 ;
+    :labop_6566af27-0790-5221-adcd-96cf059d1416 12 ;
+    :labop_795abf15-9bbd-5ca5-8df9-103f6e9d86b3 "Fisher"^^xsd:string ;
+    :labop_90e743d1-69e7-5230-a9a3-31502bdde25f "14.7"^^xsd:string ;
+    :labop_c29c7399-f254-5730-90a9-17fb19e8aee6 400.0 ;
+    :labop_e777604a-bf8b-5bd9-bba6-3afadc690f19 96 ;
+    core:prefLabel "96-vbottom-microwell"@en .
+
+:labop_ec1118d9-fdfd-5f05-9cc0-0f63b9055052 a :labop_1d4c2a98-e5bd-5154-8fc8-3c33118e9019,
+        owl:NamedIndividual ;
+    :labop_360645fc-419c-54b2-ad91-3488723c86d9 16.0 ;
+    :labop_6566af27-0790-5221-adcd-96cf059d1416 24 ;
+    :labop_795abf15-9bbd-5ca5-8df9-103f6e9d86b3 "Labcyte"^^xsd:string ;
+    :labop_90e743d1-69e7-5230-a9a3-31502bdde25f "10.48"^^xsd:string ;
+    :labop_c29c7399-f254-5730-90a9-17fb19e8aee6 14.0 ;
+    :labop_e777604a-bf8b-5bd9-bba6-3afadc690f19 384 ;
+    core:prefLabel "384-echo-ldv"@en .
+
+:labop_ee4213b2-cd8b-50c1-8732-88504c4bd47a a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 "2D model of Well shape"@en ;
+    rdfs:domain :labop_1d4c2a98-e5bd-5154-8fc8-3c33118e9019 ;
+    rdfs:range xsd:string ;
+    core:prefLabel "hasShapeModel2D"@en .
+
+:labop_eecd6011-cedb-585d-aaba-ff59a0c283c8 a :labop_1d4c2a98-e5bd-5154-8fc8-3c33118e9019,
+        owl:NamedIndividual ;
+    :labop_360645fc-419c-54b2-ad91-3488723c86d9 8.0 ;
+    :labop_6566af27-0790-5221-adcd-96cf059d1416 12 ;
+    :labop_795abf15-9bbd-5ca5-8df9-103f6e9d86b3 "Greiner"^^xsd:string ;
+    :labop_90e743d1-69e7-5230-a9a3-31502bdde25f "14.22"^^xsd:string ;
+    :labop_c29c7399-f254-5730-90a9-17fb19e8aee6 340.0 ;
+    :labop_e777604a-bf8b-5bd9-bba6-3afadc690f19 96 ;
+    core:prefLabel "96-flat-black-black-fluotrac-600"@en .
+
+:labop_f4ac6699-90bc-5ba0-b681-d9fc94a8dd51 a :labop_1d4c2a98-e5bd-5154-8fc8-3c33118e9019,
+        owl:NamedIndividual ;
+    :labop_360645fc-419c-54b2-ad91-3488723c86d9 32.0 ;
+    :labop_6566af27-0790-5221-adcd-96cf059d1416 48 ;
+    :labop_795abf15-9bbd-5ca5-8df9-103f6e9d86b3 "Corning"^^xsd:string ;
+    :labop_90e743d1-69e7-5230-a9a3-31502bdde25f "10.4"^^xsd:string ;
+    :labop_c29c7399-f254-5730-90a9-17fb19e8aee6 12.5 ;
+    :labop_e777604a-bf8b-5bd9-bba6-3afadc690f19 1536 ;
+    core:prefLabel "1536-tc-white-corning-3727"@en .
+
+:labop_f62753e9-65fc-5e4e-978c-012af5393189 a :labop_1d4c2a98-e5bd-5154-8fc8-3c33118e9019,
+        owl:NamedIndividual ;
+    :labop_360645fc-419c-54b2-ad91-3488723c86d9 1.0 ;
+    :labop_6566af27-0790-5221-adcd-96cf059d1416 1 ;
+    :labop_795abf15-9bbd-5ca5-8df9-103f6e9d86b3 "unknown"^^xsd:string ;
+    :labop_90e743d1-69e7-5230-a9a3-31502bdde25f "117.2"^^xsd:string ;
+    :labop_c29c7399-f254-5730-90a9-17fb19e8aee6 600.0 ;
+    :labop_e777604a-bf8b-5bd9-bba6-3afadc690f19 1 ;
+    core:prefLabel "nmr-tube-5mm"@en .
+
+:labop_f85a8b2a-df61-54c9-a9f2-39207fcd1df4 a :labop_1d4c2a98-e5bd-5154-8fc8-3c33118e9019,
+        owl:NamedIndividual ;
+    :labop_360645fc-419c-54b2-ad91-3488723c86d9 8.0 ;
+    :labop_6566af27-0790-5221-adcd-96cf059d1416 12 ;
+    :labop_795abf15-9bbd-5ca5-8df9-103f6e9d86b3 "Mesoscale"^^xsd:string ;
+    :labop_90e743d1-69e7-5230-a9a3-31502bdde25f "14.35"^^xsd:string ;
+    :labop_c29c7399-f254-5730-90a9-17fb19e8aee6 410.0 ;
+    :labop_e777604a-bf8b-5bd9-bba6-3afadc690f19 96 ;
+    core:prefLabel "96-10-spot-uplex-MSD"@en .
+
+:labop_f9b62170-e705-5576-97a3-3864710e5bdc a :labop_1d4c2a98-e5bd-5154-8fc8-3c33118e9019,
+        owl:NamedIndividual ;
+    :labop_360645fc-419c-54b2-ad91-3488723c86d9 1.0 ;
+    :labop_6566af27-0790-5221-adcd-96cf059d1416 1 ;
+    :labop_795abf15-9bbd-5ca5-8df9-103f6e9d86b3 "Axygen"^^xsd:string ;
+    :labop_90e743d1-69e7-5230-a9a3-31502bdde25f "19.05"^^xsd:string ;
+    :labop_c29c7399-f254-5730-90a9-17fb19e8aee6 92000.0 ;
+    :labop_e777604a-bf8b-5bd9-bba6-3afadc690f19 1 ;
+    core:prefLabel "res-sw384-lp"@en .
+
+:labop_f9c37ff6-a248-50c1-aeda-81ce43ca1edd a :labop_1d4c2a98-e5bd-5154-8fc8-3c33118e9019,
+        owl:NamedIndividual ;
+    :labop_360645fc-419c-54b2-ad91-3488723c86d9 8.0 ;
+    :labop_6566af27-0790-5221-adcd-96cf059d1416 12 ;
+    :labop_795abf15-9bbd-5ca5-8df9-103f6e9d86b3 "Eppendorf"^^xsd:string ;
+    :labop_90e743d1-69e7-5230-a9a3-31502bdde25f "15.9"^^xsd:string ;
+    :labop_c29c7399-f254-5730-90a9-17fb19e8aee6 160.0 ;
+    :labop_e777604a-bf8b-5bd9-bba6-3afadc690f19 96 ;
+    core:prefLabel "96-pcr"@en .
+
+:labop_fc5afaee-dc3c-50c3-a325-248a2e5cda8e a :labop_1d4c2a98-e5bd-5154-8fc8-3c33118e9019,
+        owl:NamedIndividual ;
+    :labop_360645fc-419c-54b2-ad91-3488723c86d9 8.0 ;
+    :labop_6566af27-0790-5221-adcd-96cf059d1416 12 ;
+    :labop_795abf15-9bbd-5ca5-8df9-103f6e9d86b3 "Mesoscale"^^xsd:string ;
+    :labop_90e743d1-69e7-5230-a9a3-31502bdde25f "14.35"^^xsd:string ;
+    :labop_c29c7399-f254-5730-90a9-17fb19e8aee6 410.0 ;
+    :labop_e777604a-bf8b-5bd9-bba6-3afadc690f19 96 ;
+    core:prefLabel "96-4-spot-mMIP3a-MSD"@en .
+
+:labop_fc87b9df-96da-5084-bdf2-99fe2cf61083 a :labop_1d4c2a98-e5bd-5154-8fc8-3c33118e9019,
+        owl:NamedIndividual ;
+    :labop_360645fc-419c-54b2-ad91-3488723c86d9 1.0 ;
+    :labop_6566af27-0790-5221-adcd-96cf059d1416 1 ;
+    :labop_795abf15-9bbd-5ca5-8df9-103f6e9d86b3 "unknown"^^xsd:string ;
+    :labop_90e743d1-69e7-5230-a9a3-31502bdde25f "83.35"^^xsd:string ;
+    :labop_c29c7399-f254-5730-90a9-17fb19e8aee6 2000.0 ;
+    :labop_e777604a-bf8b-5bd9-bba6-3afadc690f19 1 ;
+    core:prefLabel "mrv-small"@en .
+
+:labop_fe483b78-bc24-5d98-8f04-13a62a56ae99 a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 "Mass of the Labware "@en ;
+    rdfs:domain :labop_1d4c2a98-e5bd-5154-8fc8-3c33118e9019 ;
+    rdfs:range xsd:decimal ;
+    core:prefLabel "hasMass"@en .
+
+:labop_70ca96fb-1da5-580f-aa9c-73499f6f0228 a owl:ObjectProperty ;
+    emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 "Associates a property to a type (string, number...)."@en ;
+    rdfs:subPropertyOf emmo:EMMO_eb3518bf_f799_4f9e_8c3e_ce59af11453b ;
+    owl:inverseOf :labop_fa27cacb-a570-5c40-be2c-ac7bd2087feb ;
+    core:prefLabel "isTypeOf"@en .
+
+:labop_fa27cacb-a570-5c40-be2c-ac7bd2087feb a owl:ObjectProperty ;
+    emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 "Associates a type (string, number...) to a property."@en ;
+    rdfs:subPropertyOf emmo:EMMO_eb3518bf_f799_4f9e_8c3e_ce59af11453b ;
+    owl:inverseOf :labop_70ca96fb-1da5-580f-aa9c-73499f6f0228 ;
+    core:prefLabel "hasType"@en .
+
+:labop_1d4c2a98-e5bd-5154-8fc8-3c33118e9019 a owl:Class ;
+    emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 "Labware is a utility device that all experiments are done with and which is not actively measuring. Examples: a container, a pipette tip, a reactor, ... "@en ;
+    rdfs:subClassOf emmo:EMMO_494b372c_cfdf_47d3_a4de_5e037c540de8 ;
+    core:prefLabel "Labware"@en .
+
