@@ -16,7 +16,7 @@
 # to get the digest (=sha fingerprint) run:
 # docker images --digests | grep python
 
-FROM python:3.10-slim-buster
+FROM python:3.10-slim-buster as build_image
 # to minimize image size one could build like (https://mherman.org/presentations/dockercon-2018/#39):
 # FROM python:3.6 as base
 # COPY requirements.txt /
@@ -80,6 +80,32 @@ RUN pip install --no-cache-dir --upgrade pip \
 #     psutil==$PYTHON_PSUTIL_VERSION \
 # ; fi \
 
+RUN ls -Al .
+
+FROM build_image AS production-build
+ENV PATH="$VIRTUAL_ENV/bin:$PATH"
+RUN pip install --no-cache-dir -r $PROJECT_ROOT/requirements/production.txt
+
+FROM python:3.10-slim-buster@sha256:9727fe7eede2069dc15287e17eadd709a43094a4062a8cbd74d4504a8270d1f8 as production
+
+LABEL maintainer="mark doerr mark.doerr@uni-greifswald.de"
+LABEL version="0.0.1"
+LABEL description="Labware Database Dockerfile (Production)"
+
+ENV LANG=C.UTF-8\
+    PYTHONUNBUFFERED=1 \
+    PYTHONDONTWRITEBYTECODE=1\
+    PROJECT_ROOT=/opt/labwaredb
+
+ENV VIRTUAL_ENV=$PROJECT_ROOT/venv \
+    DJANGO_MEDIA_PATH=/srv/media \
+    DEBIAN_FRONTEND=noninteractive 
+
+ENV PATH="$VIRTUAL_ENV/bin:$PATH"
+
+RUN set -x \
+    && adduser lara --disabled-password --disabled-login --no-create-home --gecos ""
+   
 
 WORKDIR ${PROJECT_ROOT}
 # copy main lara-django script
@@ -90,10 +116,9 @@ USER lara
 
 RUN ls ${PROJECT_ROOT}
 
-EXPOSE 8000
-CMD ["rdflib-endpoint", "serve", "--host", "0.0.0.0", "--port", "8000",  "*.ttl"]
+#CMD ["rdflib-endpoint", "serve", "*.ttl"]
 
-#CMD ["ls" , "-al"]
+CMD ["ls" , "-al"]
 
 
 #ENTRYPOINT ["gunicorn", "--bind", ]

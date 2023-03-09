@@ -1,0 +1,53 @@
+# docker-compose.yml for LabOP Labware Ontology
+# to build the images:  docker-compose build
+# to build start everything: docker-compose up --build
+# to build start everything after code change: docker-compose up --build
+
+version: '3.9'
+
+networks:
+  container-network:
+    #driver: bridge
+
+
+services:
+    labware-databank:
+      build:
+        context: .
+      #image: ghcr.io/bioprotocols/labop_labware_databank:develop
+      #restart: unless-stopped
+      #volumes:
+      #  - :
+      #ports:
+      #  - 50052:50052
+      ports:
+        - 8000:8000
+      #expose:
+      #  - 8000
+      networks:
+        - container-network
+      #env_file:
+      #  - ./.env.dev
+      #command: 
+        #sh -c ""
+    jupyter:
+      #build:
+      #  context: .
+      image: jupyter/base-notebook
+      volumes:
+        - ./notebooks:/home/jovyan/work
+      ports:
+        - 10000:8888
+      #expose:
+      #  - 50052
+      networks:
+        - container-network
+      #env_file:
+      #  - ./.env.dev
+      #command: 
+        #sh -c ""
+
+#volumes:
+  #notebooks
+ 
+
