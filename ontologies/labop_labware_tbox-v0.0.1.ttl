@@ -1,0 +1,522 @@
+@prefix : <http://www.labop.org/labware#> .
+@prefix core: <http://www.w3.org/2004/02/skos/core#> .
+@prefix emmo: <http://emmo.info/emmo#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix term: <http://purl.org/dc/terms/> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://www.labop.org/labware> a owl:Ontology ;
+    emmo:EMMO_c7b62dd7_063a_4c2a_8504_42f7264ba83f """Contacts:
+mark doerr
+University Greifswald
+email: mark.doerr@suni-greifswald.de
+
+"""@en,
+        "The EMMO requires FaCT++ reasoner plugin in order to visualize allinferences and class hierarchy (ctrl+R hotkey in Protege)."@en,
+        "This ontology is generated with data from the ASE Python package."@en ;
+    term:abstract "An EMMO-based domain ontology for scientific labware.olw-measurement is released under the Creative Commons Attribution 4.0 International license (CC BY 4.0)."@en ;
+    term:contributor "university greifswald"@en ;
+    term:creator "mark doerr"@en ;
+    term:license "https://creativecommons.org/licenses/by/4.0/legalcode"@en ;
+    term:publisher ""@en ;
+    term:title "LabOP-Labware"@en ;
+    owl:imports <emmo-development> ;
+    owl:versionIRI <http://www.labop.org/0.0.1/labware> ;
+    owl:versionInfo "0.0.1"@en .
+
+:labop_0ff72e72-b1d3-5873-921e-0fa3fe9bcdbb a owl:FunctionalProperty,
+        owl:ObjectProperty ;
+    emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 "Labware radius of a round shape in XY direction "@en ;
+    rdfs:domain :labop_1d4c2a98-e5bd-5154-8fc8-3c33118e9019 ;
+    rdfs:range <http://emmo.info/emmo-inferredLength> ;
+    core:prefLabel "hasRadiusZ"@en .
+
+:labop_18392791-c37e-5a29-b763-c6c22101df27 a owl:Class ;
+    emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 "Position of first interaction point of a pipette tip with a well or a needle with a septum, rel. to the upper left corner of the labware. - what about round labware?"@en ;
+    rdfs:subClassOf emmo:EMMO_06658d8d_dcde_4fc9_aae1_17f71c0bcdec ;
+    core:prefLabel "FirstInteractionPosition"@en .
+
+:labop_197e48a1-5e8c-5604-8781-40f7f78a0e66 a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 "Labware relative length tolerance (= measured width/target width)."@en ;
+    rdfs:domain <http://emmo.info/emmo-inferredLength> ;
+    rdfs:range xsd:decimal ;
+    core:prefLabel "hasLengthTolerance"@en .
+
+:labop_345e97e9-1d8a-5cfa-b572-64f05fa15a50 a owl:FunctionalProperty,
+        owl:ObjectProperty ;
+    emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 "Labware total hight, without  any additions, like lids etc. "@en ;
+    rdfs:domain :labop_1d4c2a98-e5bd-5154-8fc8-3c33118e9019 ;
+    rdfs:range <http://emmo.info/emmo-inferredLength> ;
+    core:prefLabel "hasGrippingHeightWithLid"@en .
+
+:labop_4606e99e-76aa-5cbc-bbe7-2f1222be31d7 a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 "Labware stacking height without any additions, like lids."@en ;
+    rdfs:domain :labop_1d4c2a98-e5bd-5154-8fc8-3c33118e9019 ;
+    rdfs:range xsd:decimal ;
+    core:prefLabel "hasHightStacked"@en .
+
+:labop_4825afcf-3c27-57f1-975c-0bd1b4ef1753 a owl:FunctionalProperty,
+        owl:ObjectProperty ;
+    emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 "Labware total hight, without  any additions, like lids etc. "@en ;
+    rdfs:domain :labop_1d4c2a98-e5bd-5154-8fc8-3c33118e9019 ;
+    rdfs:range <http://emmo.info/emmo-inferredLength> ;
+    core:prefLabel "hasGrippingHeightLidding"@en .
+
+:labop_4942438f-0f92-58ff-8c65-596d76aa8a9b a owl:FunctionalProperty,
+        owl:ObjectProperty ;
+    emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 "Labware total length, without  any additions, like lids etc."@en ;
+    rdfs:domain :labop_1d4c2a98-e5bd-5154-8fc8-3c33118e9019 ;
+    rdfs:range <http://emmo.info/emmo-inferredLength> ;
+    core:prefLabel "hasLength"@en .
+
+:labop_4d2cf79a-18a2-5a15-bdda-7789d84f7292 a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 "Labware stacking height with additions, like lids."@en ;
+    rdfs:domain :labop_1d4c2a98-e5bd-5154-8fc8-3c33118e9019 ;
+    rdfs:range xsd:decimal ;
+    core:prefLabel "hasHightStackedLidded"@en .
+
+:labop_614fa651-7b58-51fe-ab13-19088d5f8526 a owl:Class ;
+    emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 "Radius of a round bottom in z (hight) direction."@en ;
+    rdfs:subClassOf <http://emmo.info/emmo-inferredLength> ;
+    core:prefLabel "BottomRadiusZ"@en .
+
+:labop_676d559d-02bb-5227-8e55-5a1124718989 a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 "Labware height tolerance."@en ;
+    rdfs:domain <http://emmo.info/emmo-inferredLength> ;
+    rdfs:range xsd:decimal ;
+    core:prefLabel "hasHeightTolerance"@en .
+
+:labop_75e8594c-c339-54bd-a68c-769cfe6d7855 a owl:FunctionalProperty,
+        owl:ObjectProperty ;
+    emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 "Labware total hight, without  any additions, like lids etc. "@en ;
+    rdfs:domain :labop_1d4c2a98-e5bd-5154-8fc8-3c33118e9019 ;
+    rdfs:range <http://emmo.info/emmo-inferredLength> ;
+    core:prefLabel "hasGrippingHeight"@en .
+
+:labop_76ec7e9e-f7d3-5125-9654-3ca413af8db0 a owl:Class ;
+    emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 "Well radius of a round well at the top opening in x-y plane."@en ;
+    rdfs:subClassOf <http://emmo.info/emmo-inferredLength> ;
+    core:prefLabel "TopRadiusXY"@en .
+
+:labop_79eb92b3-72d5-5cc2-b7f4-d1b2c3ab840f a owl:Class ;
+    emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 "Well total well depth=hight"@en ;
+    rdfs:subClassOf <http://emmo.info/emmo-inferredLength> ;
+    core:prefLabel "DepthWell"@en .
+
+:labop_90e743d1-69e7-5230-a9a3-31502bdde25f a owl:FunctionalProperty,
+        owl:ObjectProperty ;
+    emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 "Labware total hight, without  any additions, like lids etc. "@en ;
+    rdfs:domain :labop_1d4c2a98-e5bd-5154-8fc8-3c33118e9019 ;
+    rdfs:range <http://emmo.info/emmo-inferredLength> ;
+    core:prefLabel "hasHeight"@en .
+
+:labop_99819c07-7dd6-54e8-9618-9d69f5599afe a owl:FunctionalProperty,
+        owl:ObjectProperty ;
+    emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 "Labware total width, without  any additions, like lids etc."@en ;
+    rdfs:domain :labop_1d4c2a98-e5bd-5154-8fc8-3c33118e9019 ;
+    rdfs:range <http://emmo.info/emmo-inferredLength> ;
+    core:prefLabel "hasWidth"@en .
+
+:labop_9da87440-6661-5e35-b235-4a88eecdd071 a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 "Total Labware volume "@en ;
+    rdfs:domain :labop_1d4c2a98-e5bd-5154-8fc8-3c33118e9019 ;
+    rdfs:range xsd:decimal ;
+    core:prefLabel "hasVolume"@en .
+
+:labop_b8565913-53b0-55b3-8d1f-3d4b0a82c7f7 a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 "Labware total hight, with additions, like lids etc."@en ;
+    rdfs:domain :labop_1d4c2a98-e5bd-5154-8fc8-3c33118e9019 ;
+    rdfs:range xsd:decimal ;
+    core:prefLabel "hasHightLidded"@en .
+
+:labop_b98e8a2a-37c2-5754-82c1-7752fd8c2d19 a owl:FunctionalProperty,
+        owl:ObjectProperty ;
+    emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 "Labware radius of a round shape in XY direction "@en ;
+    rdfs:domain :labop_1d4c2a98-e5bd-5154-8fc8-3c33118e9019 ;
+    rdfs:range <http://emmo.info/emmo-inferredLength> ;
+    core:prefLabel "hasRadiusXY"@en .
+
+:labop_be350462-d675-55b8-b008-8053db4e8333 a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 "Labware relative width tolerance (= measured width/target width)."@en ;
+    rdfs:domain <http://emmo.info/emmo-inferredLength> ;
+    rdfs:range xsd:decimal ;
+    core:prefLabel "hasWidthTolerance"@en .
+
+:labop_c223f054-e921-5423-9b62-3d19c5161445 a owl:Class ;
+    emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 "Radius of a round bottom in xy plane / direction."@en ;
+    rdfs:subClassOf <http://emmo.info/emmo-inferredLength> ;
+    core:prefLabel "BottomRadiusXY"@en .
+
+:labop_c740a1d4-7867-5d6a-9db6-6ceaa92acecd a owl:Class ;
+    emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 "Opening angle of cone in deg."@en ;
+    rdfs:subClassOf emmo:EMMO_f3dd74c0_f480_49e8_9764_33b78638c235 ;
+    core:prefLabel "ConeAngle"@en .
+
+:labop_dce294a6-2049-50f0-a0b7-e2f5712ebbd9 a owl:Class ;
+    emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 "96 Well Microtiter Plate according to SLAS 4-2004 standard"@en ;
+    rdfs:subClassOf :labop_1d4c2a98-e5bd-5154-8fc8-3c33118e9019 ;
+    owl:equivalentClass [ a owl:Class ;
+            owl:intersectionOf ( :labop_1d4c2a98-e5bd-5154-8fc8-3c33118e9019 [ a owl:Restriction ;
+                        owl:hasValue 12 ;
+                        owl:onProperty :labop_6566af27-0790-5221-adcd-96cf059d1416 ] [ a owl:Restriction ;
+                        owl:hasValue 8 ;
+                        owl:onProperty :labop_360645fc-419c-54b2-ad91-3488723c86d9 ] [ a owl:Restriction ;
+                        owl:hasValue 96 ;
+                        owl:onProperty :labop_e777604a-bf8b-5bd9-bba6-3afadc690f19 ] [ a owl:Restriction ;
+                        owl:hasValue 100 ;
+                        owl:onProperty :labop_c29c7399-f254-5730-90a9-17fb19e8aee6 ] [ a owl:Restriction ;
+                        owl:hasValue 9 ;
+                        owl:onProperty :labop_71b68d12-f079-5318-bbc9-5c1282825a54 ] [ a owl:Restriction ;
+                        owl:hasValue 9 ;
+                        owl:onProperty :labop_2e527ee2-3f34-5eb4-8320-952b69fdbc71 ] [ a owl:Restriction ;
+                        owl:hasValue 14.5 ;
+                        owl:onProperty :labop_545b98a5-1a84-5b75-9e0c-f75f7a11f04e ] [ a owl:Restriction ;
+                        owl:hasValue "round"^^xsd:string ;
+                        owl:onProperty :labop_c4151f73-e6f3-57fd-a738-8532f995d693 ] [ a owl:Restriction ;
+                        owl:hasValue "flat"^^xsd:string ;
+                        owl:onProperty :labop_a62c3197-4c2a-5cb3-89d7-46590914bbc2 ] [ a owl:Restriction ;
+                        owl:hasValue 4.5 ;
+                        owl:onProperty :labop_51e9c6ee-065c-5edc-8f7e-f0adabdbfb28 ] [ a owl:Restriction ;
+                        owl:hasValue 4.5 ;
+                        owl:onProperty :labop_36c27902-e7c5-5f95-ba87-ccfd79716d4a ] [ a owl:Restriction ;
+                        owl:hasValue 0 ;
+                        owl:onProperty :labop_77fde989-da83-5225-b780-be36f3944fd9 ] [ a owl:Restriction ;
+                        owl:hasValue 0 ;
+                        owl:onProperty :labop_49c9af30-5a5e-5c0a-b5e4-586b9dcb9131 ] [ a owl:Restriction ;
+                        owl:hasValue 0 ;
+                        owl:onProperty :labop_dd5fe552-568f-57bd-b228-4aa74cce58b3 ] [ a owl:Restriction ;
+                        owl:hasValue 0 ;
+                        owl:onProperty :labop_dc7d3c33-0983-56d6-bac0-505baa4e9b8d ] [ a owl:Restriction ;
+                        owl:hasValue 0 ;
+                        owl:onProperty :labop_7fa8aea2-613f-5c20-9320-07f43f7ec7b2 ] [ a owl:Restriction ;
+                        owl:hasValue "circle"^^xsd:string ;
+                        owl:onProperty :labop_ee4213b2-cd8b-50c1-8732-88504c4bd47a ] [ a owl:Restriction ;
+                        owl:hasValue "cylinder"^^xsd:string ;
+                        owl:onProperty :labop_0a01364b-3379-5120-8c42-2944c8d8c04c ] [ a owl:Restriction ;
+                        owl:hasValue false ;
+                        owl:onProperty :labop_661e6a1f-0e75-5d78-8d40-9e330c5f628d ] [ a owl:Restriction ;
+                        owl:hasValue "N/A"^^xsd:string ;
+                        owl:onProperty :labop_774e4608-d026-5ae4-932f-4bffb647a815 ] [ a owl:Restriction ;
+                        owl:hasValue "N/A"^^xsd:string ;
+                        owl:onProperty :labop_825301df-2b1b-5070-8c7e-19a72967755c ] [ a owl:Restriction ;
+                        owl:hasValue "#FFFFFF"^^xsd:string ;
+                        owl:onProperty :labop_29816674-967e-5c23-8092-d79768a82bbc ] [ a owl:Restriction ;
+                        owl:hasValue "polystyrene"^^xsd:string ;
+                        owl:onProperty :labop_b441bf24-6f7f-5295-83bf-33338e579fce ] [ a owl:Restriction ;
+                        owl:hasValue 0 ;
+                        owl:onProperty :labop_fe483b78-bc24-5d98-8f04-13a62a56ae99 ] [ a owl:Restriction ;
+                        owl:hasValue 0 ;
+                        owl:onProperty :labop_ccba7794-6244-59bd-aa4a-b95f7fdf8a30 ] [ a owl:Restriction ;
+                        owl:hasValue "N/A"^^xsd:string ;
+                        owl:onProperty :labop_24908c61-0564-5961-a09c-a01feb0a6639 ] [ a owl:Restriction ;
+                        owl:hasValue false ;
+                        owl:onProperty :labop_a1ac469d-c767-5878-939a-e4fc61b846be ] [ a owl:Restriction ;
+                        owl:hasValue "N/A"^^xsd:string ;
+                        owl:onProperty :labop_1c2951ae-5f9f-58f2-8ac0-fe1fea2a39e3 ] [ a owl:Restriction ;
+                        owl:hasValue 0 ;
+                        owl:onProperty :labop_1dc5a136-a81c-5118-8b49-29fb72793259 ] [ a owl:Restriction ;
+                        owl:hasValue false ;
+                        owl:onProperty :labop_b552f1b1-cae6-5075-aa2e-084e9dacf91f ] [ a owl:Restriction ;
+                        owl:hasValue true ;
+                        owl:onProperty :labop_3dbbe6b5-19c0-5ef2-8f5f-320a1044074b ] [ a owl:Restriction ;
+                        owl:hasValue false ;
+                        owl:onProperty :labop_382fb7b0-64ee-5015-907f-aea0914cef09 ] [ a owl:Restriction ;
+                        owl:hasValue "N/A"^^xsd:string ;
+                        owl:onProperty :labop_795abf15-9bbd-5ca5-8df9-103f6e9d86b3 ] [ a owl:Restriction ;
+                        owl:hasValue "N/A"^^xsd:string ;
+                        owl:onProperty :labop_39f56071-bd5f-5b53-b47c-fedfac21b9a8 ] [ a owl:Restriction ;
+                        owl:hasValue "N/A"^^xsd:string ;
+                        owl:onProperty :labop_702945ce-3530-51e0-95b9-eed9503d5790 ] [ a owl:Restriction ;
+                        owl:hasValue "N/A"^^xsd:string ;
+                        owl:onProperty :labop_3d0faaa4-36a6-5246-9c5b-ee56e10c5ba8 ] ) ] ;
+    core:prefLabel "SLAS_4_2004_96_Well_Plate"@en .
+
+:labop_e9a79238-6198-50c9-9599-a8168d278322 a owl:Class ;
+    emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 "Depth of cone from beginning of conical shape."@en ;
+    rdfs:subClassOf <http://emmo.info/emmo-inferredLength> ;
+    core:prefLabel "ConeDepth"@en .
+
+:labop_0a01364b-3379-5120-8c42-2944c8d8c04c a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 "3D model of Well shape"@en ;
+    rdfs:domain :labop_1d4c2a98-e5bd-5154-8fc8-3c33118e9019 ;
+    rdfs:range xsd:string ;
+    core:prefLabel "hasShapeModel3D"@en .
+
+:labop_0f8b1a08-707a-5941-ae31-21232cef51f7 a owl:Class ;
+    emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 "Total Labware volume "@en ;
+    rdfs:subClassOf <http://emmo.info/emmo-inferredVolume> ;
+    core:prefLabel "WellVolume"@en .
+
+:labop_1c2951ae-5f9f-58f2-8ac0-fe1fea2a39e3 a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 "Septum material"@en ;
+    rdfs:domain :labop_1d4c2a98-e5bd-5154-8fc8-3c33118e9019 ;
+    rdfs:range xsd:string ;
+    core:prefLabel "hasSeptumMaterial"@en .
+
+:labop_1dc5a136-a81c-5118-8b49-29fb72793259 a owl:FunctionalProperty,
+        owl:ObjectProperty ;
+    emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 "Septum penetration force"@en ;
+    rdfs:domain :labop_1d4c2a98-e5bd-5154-8fc8-3c33118e9019 ;
+    rdfs:range <http://emmo.info/emmo-inferredForce> ;
+    core:prefLabel "hasSeptumPenetrationForce"@en .
+
+:labop_24908c61-0564-5961-a09c-a01feb0a6639 a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 "Labware coating material"@en ;
+    rdfs:domain :labop_1d4c2a98-e5bd-5154-8fc8-3c33118e9019 ;
+    rdfs:range xsd:string ;
+    core:prefLabel "hasCoatingMaterial"@en .
+
+:labop_29816674-967e-5c23-8092-d79768a82bbc a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 "Labware color in RGB hex encoding"@en ;
+    rdfs:domain :labop_1d4c2a98-e5bd-5154-8fc8-3c33118e9019 ;
+    rdfs:range xsd:string ;
+    core:prefLabel "hasColor"@en .
+
+:labop_2e527ee2-3f34-5eb4-8320-952b69fdbc71 a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 "\"Well-to-well distance in column direction"@en ;
+    rdfs:domain :labop_1d4c2a98-e5bd-5154-8fc8-3c33118e9019 ;
+    rdfs:range xsd:decimal ;
+    core:prefLabel "hasWellDistCol"@en .
+
+:labop_360645fc-419c-54b2-ad91-3488723c86d9 a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 "Number of Rows of Labware"@en ;
+    rdfs:domain :labop_1d4c2a98-e5bd-5154-8fc8-3c33118e9019 ;
+    rdfs:range xsd:integer ;
+    core:prefLabel "hasNumRows"@en .
+
+:labop_36c27902-e7c5-5f95-ba87-ccfd79716d4a a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 "Radius of a round bottom in xy plane / direction."@en ;
+    rdfs:domain :labop_1d4c2a98-e5bd-5154-8fc8-3c33118e9019 ;
+    rdfs:range xsd:decimal ;
+    core:prefLabel "hasBottomRadiusXY"@en .
+
+:labop_382fb7b0-64ee-5015-907f-aea0914cef09 a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 "container is sealable"@en ;
+    rdfs:domain :labop_1d4c2a98-e5bd-5154-8fc8-3c33118e9019 ;
+    rdfs:range xsd:boolean ;
+    core:prefLabel "isSealable"@en .
+
+:labop_39f56071-bd5f-5b53-b47c-fedfac21b9a8 a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 "Labware product Type"@en ;
+    rdfs:domain :labop_1d4c2a98-e5bd-5154-8fc8-3c33118e9019 ;
+    rdfs:range xsd:string ;
+    core:prefLabel "isProductType"@en .
+
+:labop_3d0faaa4-36a6-5246-9c5b-ee56e10c5ba8 a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 "Manufacturer Product Number of the Labware"@en ;
+    rdfs:domain :labop_1d4c2a98-e5bd-5154-8fc8-3c33118e9019 ;
+    rdfs:range xsd:string ;
+    core:prefLabel "hasProductNumber"@en .
+
+:labop_3dbbe6b5-19c0-5ef2-8f5f-320a1044074b a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 "labware is stackable"@en ;
+    rdfs:domain :labop_1d4c2a98-e5bd-5154-8fc8-3c33118e9019 ;
+    rdfs:range xsd:boolean ;
+    core:prefLabel "isStackable"@en .
+
+:labop_49c9af30-5a5e-5c0a-b5e4-586b9dcb9131 a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 "Opening angle of cone in deg."@en ;
+    rdfs:domain :labop_1d4c2a98-e5bd-5154-8fc8-3c33118e9019 ;
+    rdfs:range xsd:decimal ;
+    core:prefLabel "hasConeAngle"@en .
+
+:labop_51e9c6ee-065c-5edc-8f7e-f0adabdbfb28 a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 "Well radius of a round well at the top opening in x-y plane."@en ;
+    rdfs:domain :labop_1d4c2a98-e5bd-5154-8fc8-3c33118e9019 ;
+    rdfs:range xsd:decimal ;
+    core:prefLabel "hasTopRadiusXY"@en .
+
+:labop_545b98a5-1a84-5b75-9e0c-f75f7a11f04e a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 "Well total well depth=hight"@en ;
+    rdfs:domain :labop_1d4c2a98-e5bd-5154-8fc8-3c33118e9019 ;
+    rdfs:range xsd:decimal ;
+    core:prefLabel "hasDepthWell"@en .
+
+:labop_6566af27-0790-5221-adcd-96cf059d1416 a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 "Number of Columns of muti-well labware"@en ;
+    rdfs:domain :labop_1d4c2a98-e5bd-5154-8fc8-3c33118e9019 ;
+    rdfs:range xsd:integer ;
+    core:prefLabel "hasNumCols"@en .
+
+:labop_661e6a1f-0e75-5d78-8d40-9e330c5f628d a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 "Screw cap type"@en ;
+    rdfs:domain :labop_1d4c2a98-e5bd-5154-8fc8-3c33118e9019 ;
+    rdfs:range xsd:boolean ;
+    core:prefLabel "hasScrewCap"@en .
+
+:labop_702945ce-3530-51e0-95b9-eed9503d5790 a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 "Labware model number"@en ;
+    rdfs:domain :labop_1d4c2a98-e5bd-5154-8fc8-3c33118e9019 ;
+    rdfs:range xsd:string ;
+    core:prefLabel "hasModelNumber"@en .
+
+:labop_71b68d12-f079-5318-bbc9-5c1282825a54 a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 "wWll-to-well distance in row direction"@en ;
+    rdfs:domain :labop_1d4c2a98-e5bd-5154-8fc8-3c33118e9019 ;
+    rdfs:range xsd:decimal ;
+    core:prefLabel "hasWellDistRow"@en .
+
+:labop_774e4608-d026-5ae4-932f-4bffb647a815 a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 "Screw cap material"@en ;
+    rdfs:domain :labop_1d4c2a98-e5bd-5154-8fc8-3c33118e9019 ;
+    rdfs:range xsd:string ;
+    core:prefLabel "hasScrewCapMaterial"@en .
+
+:labop_77fde989-da83-5225-b780-be36f3944fd9 a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 "Radius of a round bottom in z (hight) direction."@en ;
+    rdfs:domain :labop_1d4c2a98-e5bd-5154-8fc8-3c33118e9019 ;
+    rdfs:range xsd:decimal ;
+    core:prefLabel "hasBottomRadiusZ"@en .
+
+:labop_795abf15-9bbd-5ca5-8df9-103f6e9d86b3 a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 "Name of the Manufacturer "@en ;
+    rdfs:domain :labop_1d4c2a98-e5bd-5154-8fc8-3c33118e9019 ;
+    rdfs:range xsd:string ;
+    core:prefLabel "hasManifacturer"@en .
+
+:labop_7fa8aea2-613f-5c20-9320-07f43f7ec7b2 a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 "Generalized shape polygon for more complex well shapes, in z direction = rotation axis."@en ;
+    rdfs:domain :labop_1d4c2a98-e5bd-5154-8fc8-3c33118e9019 ;
+    rdfs:range xsd:string ;
+    core:prefLabel "hasShapePolygonZ"@en .
+
+:labop_825301df-2b1b-5070-8c7e-19a72967755c a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 "Screw cap color"@en ;
+    rdfs:domain :labop_1d4c2a98-e5bd-5154-8fc8-3c33118e9019 ;
+    rdfs:range xsd:string ;
+    core:prefLabel "hasScrewCapColor"@en .
+
+:labop_a1ac469d-c767-5878-939a-e4fc61b846be a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 "Setptum of the Labware"@en ;
+    rdfs:domain :labop_1d4c2a98-e5bd-5154-8fc8-3c33118e9019 ;
+    rdfs:range xsd:boolean ;
+    core:prefLabel "hasSetptum"@en .
+
+:labop_a62c3197-4c2a-5cb3-89d7-46590914bbc2 a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 "Well, bottom shape, flat, round, conical-"@en ;
+    rdfs:domain :labop_1d4c2a98-e5bd-5154-8fc8-3c33118e9019 ;
+    rdfs:range xsd:string ;
+    core:prefLabel "hasShapeWellBottom"@en .
+
+:labop_a7445579-3955-5e91-a5fa-284d668bb94e a owl:Class ;
+    emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 "wWll-to-well distance in row direction"@en ;
+    rdfs:subClassOf <http://emmo.info/emmo-inferredLength> ;
+    core:prefLabel "WellDistRow"@en .
+
+:labop_b441bf24-6f7f-5295-83bf-33338e579fce a owl:DatatypeProperty ;
+    emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 "Polymer, properties, like solvent tolerance, transparency, ...."@en ;
+    rdfs:domain :labop_1d4c2a98-e5bd-5154-8fc8-3c33118e9019 ;
+    rdfs:range xsd:string ;
+    core:prefLabel "hasMaterial"@en .
+
+:labop_b552f1b1-cae6-5075-aa2e-084e9dacf91f a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 "labware is liddable"@en ;
+    rdfs:domain :labop_1d4c2a98-e5bd-5154-8fc8-3c33118e9019 ;
+    rdfs:range xsd:boolean ;
+    core:prefLabel "isLiddable"@en .
+
+:labop_c29c7399-f254-5730-90a9-17fb19e8aee6 a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 "Total Labware volume "@en ;
+    rdfs:domain :labop_1d4c2a98-e5bd-5154-8fc8-3c33118e9019 ;
+    rdfs:range xsd:decimal ;
+    core:prefLabel "hasWellVolume"@en .
+
+:labop_c4151f73-e6f3-57fd-a738-8532f995d693 a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 "Well overall / top well shape,e.g. round, square, buffeled,..."@en ;
+    rdfs:domain :labop_1d4c2a98-e5bd-5154-8fc8-3c33118e9019 ;
+    rdfs:range xsd:string ;
+    core:prefLabel "hasShapeWell"@en .
+
+:labop_c950b55d-3d97-54c3-93ad-0ea98462a3d0 a owl:Class ;
+    emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 "\"Well-to-well distance in column direction"@en ;
+    rdfs:subClassOf <http://emmo.info/emmo-inferredLength> ;
+    core:prefLabel "WellDistCol"@en .
+
+:labop_ccba7794-6244-59bd-aa4a-b95f7fdf8a30 a owl:FunctionalProperty,
+        owl:ObjectProperty ;
+    emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 "Max sheer force of the Labware, e.g. during centrifugation"@en ;
+    rdfs:domain :labop_1d4c2a98-e5bd-5154-8fc8-3c33118e9019 ;
+    rdfs:range <http://emmo.info/emmo-inferredForce> ;
+    core:prefLabel "hasMaxSheerForce"@en .
+
+:labop_dc7d3c33-0983-56d6-bac0-505baa4e9b8d a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 "Generalized shape polygon for more complex well shapes, in xy plane / direction."@en ;
+    rdfs:domain :labop_1d4c2a98-e5bd-5154-8fc8-3c33118e9019 ;
+    rdfs:range xsd:decimal ;
+    core:prefLabel "hasShapePolygonXY"@en .
+
+:labop_dd5fe552-568f-57bd-b228-4aa74cce58b3 a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 "Depth of cone from beginning of conical shape."@en ;
+    rdfs:domain :labop_1d4c2a98-e5bd-5154-8fc8-3c33118e9019 ;
+    rdfs:range xsd:decimal ;
+    core:prefLabel "hasConeDepth"@en .
+
+:labop_e777604a-bf8b-5bd9-bba6-3afadc690f19 a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 "Number of Wells of muti-well labware"@en ;
+    rdfs:domain :labop_1d4c2a98-e5bd-5154-8fc8-3c33118e9019 ;
+    rdfs:range xsd:integer ;
+    core:prefLabel "hasNumWells"@en .
+
+:labop_ee4213b2-cd8b-50c1-8732-88504c4bd47a a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 "2D model of Well shape"@en ;
+    rdfs:domain :labop_1d4c2a98-e5bd-5154-8fc8-3c33118e9019 ;
+    rdfs:range xsd:string ;
+    core:prefLabel "hasShapeModel2D"@en .
+
+:labop_fe483b78-bc24-5d98-8f04-13a62a56ae99 a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 "Mass of the Labware "@en ;
+    rdfs:domain :labop_1d4c2a98-e5bd-5154-8fc8-3c33118e9019 ;
+    rdfs:range xsd:decimal ;
+    core:prefLabel "hasMass"@en .
+
+:labop_1d4c2a98-e5bd-5154-8fc8-3c33118e9019 a owl:Class ;
+    emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 "Labware is a utility device that all experiments are done with and which is not actively measuring. Examples: a container, a pipette tip, a reactor, ... "@en ;
+    rdfs:subClassOf emmo:EMMO_494b372c_cfdf_47d3_a4de_5e037c540de8 ;
+    core:prefLabel "Labware"@en .
+
+[] a owl:AllDisjointClasses ;
+    owl:members ( :labop_0f8b1a08-707a-5941-ae31-21232cef51f7 :labop_a7445579-3955-5e91-a5fa-284d668bb94e :labop_c950b55d-3d97-54c3-93ad-0ea98462a3d0 ) .
+

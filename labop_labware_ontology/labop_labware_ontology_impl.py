@@ -25,6 +25,7 @@ import owlready2
 from .labop_labware_ontology_interface import LOLabwareInterface
 from .__init__ import __version__  # Version of this ontology
 
+from .emmo_extension_tbox import EMMOExtensionTBox
 from .labware_tbox import LOLabwareTBox
 
 logger = logging.getLogger(__name__)
@@ -55,13 +56,14 @@ class LOLabware(LOLabwareInterface):
         """Implementation of the LOLabwareInterface
         """
 
-        print("++++:", __version__)
+        self.__version__ = __version__
+        print("++++:", self.__version__)
 
         db_name_full = None
 
 
         # TODO: in later versions, we need to distinguish between top-level, mid-level and specific ontologies 
-        output_filename_base = os.path.join('..', '..', 'labop_labware')
+        output_filename_base = os.path.join('..', 'ontologies', 'labop_labware_tbox')
         self.lolw_owl_filename = f'{output_filename_base}-v{__version__}.owl'
         self.lolw_ttl_filename = f'{output_filename_base}-v{__version__}.ttl'
 
@@ -88,11 +90,11 @@ class LOLabware(LOLabwareInterface):
         # TODO: use main EMMO ontology :       
         # alternative url   "https://raw.githubusercontent.com/emmo-repo/EMMO/master/self.emmo.ttl"
 
-        self.emmo_url = (
-            'https://raw.githubusercontent.com/emmo-repo/emmo-repo.github.io/'
-            'master/versions/1.0.0-beta/emmo-inferred-chemistry2.ttl')
+        self.emmo_url = "emmo-development" # (
+        #    'https://raw.githubusercontent.com/emmo-repo/emmo-repo.github.io/'
+        #    'master/versions/1.0.0-beta/emmo-inferred-chemistry2.ttl')
         self.emmo_url_local = os.path.join(pathlib.Path(
-            __file__).parent.resolve(), "emmo", "emmo-inferred-chemistry2")
+            __file__).parent.resolve(), "emmo", "emmo-inferred")
 
         if os.path.isfile(self.emmo_url_local + '.ttl'):
             self.emmo_url = self.emmo_url_local
@@ -118,12 +120,16 @@ class LOLabware(LOLabwareInterface):
         self.lolw.imported_ontologies.append(self.emmo)
         self.lolw.sync_python_names()
 
+        # extending EMMO
+
+        self.emmo_ext_tbox = EMMOExtensionTBox(self.emmo)
+
         # importing labOP ontology modules
 
-        self.lolw_tbox = LOLabwareTBox(self.emmo_world)
-        self.lolw_tbox.define_ontology()
-        self.lolw.imported_ontologies.append(self.lolw_tbox.lolw)
-        self.lolw.sync_python_names()
+        self.lolw_tbox = LOLabwareTBox(self.emmo, self.lolw)
+        #self.lolw_tbox.define_ontology()
+        #self.lolw.imported_ontologies.append(self.lolw_tbox.lolw)
+        self.lolw.sync_python_names() 
 
     def save_ontology(self, filename: str = None, format='turtle'):
         """Save the ontology to file.
@@ -142,7 +148,7 @@ class LOLabware(LOLabwareInterface):
         self.lolw.set_version(version_iri=self.lolw_version_iri)
         self.lolw.dir_label = False
 
-        self.lolw_tbox.catalog_mappings[self.lolw_version_iri] = self.lolw_ttl_filename 
+        #!self.lolw_tbox.catalog_mappings[self.lolw_version_iri] = self.lolw_ttl_filename 
 
         #################################################################
         # Annotate the ontology metadata
@@ -159,7 +165,7 @@ class LOLabware(LOLabwareInterface):
         self.lolw.metadata.publisher.append(en(''))
         self.lolw.metadata.license.append(en(
             'https://creativecommons.org/licenses/by/4.0/legalcode'))
-        self.lolw.metadata.versionInfo.append(en(lw.__version__))
+        self.lolw.metadata.versionInfo.append(en(self.__version__))
         self.lolw.metadata.comment.append(en(
             'The EMMO requires FaCT++ reasoner plugin in order to visualize all'
             'inferences and class hierarchy (ctrl+R hotkey in Protege).'))
@@ -175,7 +181,7 @@ class LOLabware(LOLabwareInterface):
 
         self.lolw.save(self.lolw_ttl_filename , overwrite=True)
         #olw.save(labop_measurement_owl_filename, overwrite=True)
-        write_catalog(self.lolw_tbox.catalog_mappings)
+        #!write_catalog(self.lolw_tbox.catalog_mappings)
         # olw.sync_reasoner()
         # olw.save('olw-measurement-inferred.ttl', overwrite=True)
         # ...and to the sqlite3 database.

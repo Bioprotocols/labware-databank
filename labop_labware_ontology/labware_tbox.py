@@ -35,46 +35,16 @@ def pl(s):
 
 
 class LOLabwareTBox:
-    def __init__(self, emmo_world=None) -> None:
+    def __init__(self, emmo=None, lolw=None) -> None:
 
-        self.labop_labware_base_iri = 'http://www.labop.org/labware'
-        self.labop_labware_version_iri = f'http://www.labop.org/{__version__}/labware'
 
-        output_filename_base = os.path.join('labop_labware_tbox')
-        self.labop_labware_owl_filename = f'{output_filename_base}-v{__version__}.owl'
-        self.labop_labware_ttl_filename = f'{output_filename_base}-v{__version__}.ttl'
+        self.emmo = emmo
+        self.lolw = lolw
 
-        # TODO: use main EMMO ontology :  https://raw.githubusercontent.com/emmo-repo/EMMO/master/emmo-inferred.ttl
-        # alternative url   "https://raw.githubusercontent.com/emmo-repo/EMMO/master/self.emmo.ttl"
+        # --- ontology definition
 
-        self.emmo_url = (
-            'https://raw.githubusercontent.com/emmo-repo/emmo-repo.github.io/'
-            'master/versions/1.0.0-beta/emmo-inferred-chemistry2.ttl')
-
-        self.emmo_url_local = os.path.join(pathlib.Path(
-            __file__).parent.resolve(), "emmo", "emmo-inferred-chemistry2")
-
-        if os.path.isfile(self.emmo_url_local + '.ttl'):
-            self.emmo_url = self.emmo_url_local
-
-        #self.emmo_world = World(filename="emmo_labware.sqlite3")
-        if emmo_world is not None:
-            self.emmo_world = emmo_world
-        else:
-            self.emmo_world = World()
-            # self.emmo_world.onto_path.append("../emmo")
-
-            self.emmo = self.emmo_world.get_ontology(self.emmo_url)
-            self.emmo.load()  # reload_if_newer = True
-            self.emmo.sync_python_names()  # Synchronize annotations
-            self.emmo.base_iri = self.emmo.base_iri.rstrip('/#')
-            self.catalog_mappings = {self.emmo.base_iri: self.emmo_url}
-
-                # Create new ontology: labOP-labware - lolw
-        self.lolw = self.emmo_world.get_ontology(self.labop_labware_base_iri)
-        if emmo_world is None:
-            self.lolw.imported_ontologies.append(self.emmo)
-        self.lolw.sync_python_names()
+        # define the ontology
+        self.define_ontology()
 
     # defining the  labOP-labware ontology
     def define_ontology(self):
@@ -82,7 +52,7 @@ class LOLabwareTBox:
 
         with self.lolw:
 
-            # Terminology Component (TBox) 
+            # Terminology Components (TBox) 
 
 
             # labware visual representation
@@ -197,38 +167,38 @@ class LOLabwareTBox:
             # class hasLengthTolerance(Labware >> self.emmo.Length, FunctionalProperty, ObjectProperty):
             #     """Labware length tolerance."""
 
-            class hasLength(Labware >> Length, FunctionalProperty, ObjectProperty):
+            class hasLength(Labware >> self.emmo.Length, FunctionalProperty, ObjectProperty):
                 """Labware total length, without  any additions, like lids etc."""
                 
 
-            class hasLengthTolerance(Length >> float, FunctionalProperty, DatatypeProperty):
+            class hasLengthTolerance(self.emmo.Length >> float, FunctionalProperty, DatatypeProperty):
                 """Labware relative length tolerance (= measured width/target width)."""
             
-            class hasWidth(Labware >> Length, FunctionalProperty, ObjectProperty):
+            class hasWidth(Labware >> self.emmo.Length, FunctionalProperty, ObjectProperty):
                 """Labware total width, without  any additions, like lids etc."""
             
-            class hasWidthTolerance(Length >> float, FunctionalProperty, DatatypeProperty):
+            class hasWidthTolerance(self.emmo.Length >> float, FunctionalProperty, DatatypeProperty):
                 """Labware relative width tolerance (= measured width/target width)."""
             
-            class hasHeight(Labware >> Length, FunctionalProperty, ObjectProperty):
+            class hasHeight(Labware >> self.emmo.Length, FunctionalProperty, ObjectProperty):
                 """Labware total hight, without  any additions, like lids etc. """
 
-            class hasHeightTolerance(Length >> float, FunctionalProperty, DatatypeProperty):
+            class hasHeightTolerance(self.emmo.Length >> float, FunctionalProperty, DatatypeProperty):
                 """Labware height tolerance."""
 
-            class hasGrippingHeight(Labware >> Length, FunctionalProperty, ObjectProperty):
+            class hasGrippingHeight(Labware >> self.emmo.Length, FunctionalProperty, ObjectProperty):
                 """Labware total hight, without  any additions, like lids etc. """
 
-            class hasGrippingHeightLidding(Labware >> Length, FunctionalProperty, ObjectProperty):
+            class hasGrippingHeightLidding(Labware >> self.emmo.Length, FunctionalProperty, ObjectProperty):
                 """Labware total hight, without  any additions, like lids etc. """
             
-            class hasGrippingHeightWithLid(Labware >> Length, FunctionalProperty, ObjectProperty):
+            class hasGrippingHeightWithLid(Labware >> self.emmo.Length, FunctionalProperty, ObjectProperty):
                 """Labware total hight, without  any additions, like lids etc. """
 
-            class hasRadiusXY(Labware >> Length, FunctionalProperty, ObjectProperty):
+            class hasRadiusXY(Labware >> self.emmo.Length, FunctionalProperty, ObjectProperty):
                 """Labware radius of a round shape in XY direction """
 
-            class hasRadiusZ(Labware >> Length, FunctionalProperty, ObjectProperty):
+            class hasRadiusZ(Labware >> self.emmo.Length, FunctionalProperty, ObjectProperty):
                 """Labware radius of a round shape in XY direction """
 
             class hasVolume(Labware >> float, FunctionalProperty):
