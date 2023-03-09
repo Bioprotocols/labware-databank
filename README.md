@@ -2,8 +2,24 @@
 
 LabOP open ontology for scientific labware.
 
+
+## Usage
+
+### Installation
+
+With docker-compose:
+
+```bash
+ curl https://raw.githubusercontent.com/Bioprotocols/labware-databank/main/docker/docker-compose.yml -o docker-compose.yml
+
+ docker-compose up
+```
+ 
 ## Features
 
+ * Labware Ontology
+ * SPARQL endpoint for querying the labware ontology
+ * SiLA 2.0 compliant endpoint for querying the labware ontology
 
 ## Documentation
 
