@@ -70,6 +70,17 @@ class EMMOExtensionTBox:
 
                 length = 0.0
 
+            class Area(self.emmo.Area):
+                """Area
+                extends EMMO:Area
+                """
+                wikipediaEntry = en("https://en.wikipedia.org/wiki/Area")
+
+                # add reference SI unit
+                referenceUnit = self.emmo.SquareMetre
+
+                area = 0.0
+
             class Volume(self.emmo.Volume):
                 """Volume
                 extends EMMO:Volume """
@@ -109,6 +120,14 @@ class EMMOExtensionTBox:
 
                 # reference SI unit
                 referenceUnit = self.emmo.Newton
+
+            class Pressure(self.emmo.Pressure):
+                """Pressure of a labware, e.g. for screw caps""" 
+                # add quantity“Scoping:
+                wikipediaEntry = en("https://en.wikipedia.org/wiki/Pressure")
+
+                # reference SI unit
+                referenceUnit = self.emmo.Pascal
 
             class Torque(self.emmo.Torque):
                 """Torque of a labware, e.g. for screw caps""" 
@@ -206,7 +225,54 @@ class EMMOExtensionTBox:
             #             ImpactStrength, Hardness, ModulusOfElasticity, MeltingPoint, BoilingPoint, FlashPoint, 
             #             RefractiveIndex, AbsorptionSpectrum])
 
+
+            # Coordinate Systems
+
+            class CoordinateSystem:
+                """Coordinate System"""
+                wikipediaEntry = en("https://en.wikipedia.org/wiki/Coordinate_system")
+
+            class CartesianCoordinateSystem(CoordinateSystem):
+                """Cartesian Coordinate System"""
+                wikipediaEntry = en("https://en.wikipedia.org/wiki/Cartesian_coordinate_system")
+
+            class CylindricalCoordinateSystem(CoordinateSystem):
+                """Cylindrical Coordinate System"""
+                wikipediaEntry = en("https://en.wikipedia.org/wiki/Cylindrical_coordinate_system")
+
+            class SphericalCoordinateSystem(CoordinateSystem):
+                """Spherical Coordinate System"""
+                wikipediaEntry = en("https://en.wikipedia.org/wiki/Spherical_coordinate_system")
+
+            class PolarCoordinateSystem(CoordinateSystem):
+                """Polar Coordinate System"""
+                wikipediaEntry = en("https://en.wikipedia.org/wiki/Polar_coordinate_system")
+
+            # Quaternions
+
+            class Quaternion:
+                """Quaternion"""
+                wikipediaEntry = en("https://en.wikipedia.org/wiki/Quaternion")
+
+            class QuaternionRotation(Quaternion):
+                """Quaternion Rotation"""
+                wikipediaEntry = en("https://en.wikipedia.org/wiki/Quaternion#Rotation")
+
+            class QuaternionTranslation(Quaternion):
+                """Quaternion Translation"""
+                wikipediaEntry = en("https://en.wikipedia.org/wiki/Quaternion#Translation")
+
+
+            # Coordinate System Transformations
+
+            class CoordinateSystemTransformation:
+                """Coordinate System Transformation"""
+                wikipediaEntry = en("https://en.wikipedia.org/wiki/Coordinate_system_transformation")
+
+                
+
             # substance extension of EMMO 
+            # ===========================
 
             class Substance(self.emmo.ChemicalSubstance):
                 """Polymer, properties, like solvent tolerance, transparency, ...."""

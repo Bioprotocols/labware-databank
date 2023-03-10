@@ -22,7 +22,7 @@ import sys
 import logging
 from .__init__ import __version__
 
-from .labop_labware_ontology_impl import HelloWorld
+from .labop_labware_ontology_impl import LOLabware
 
 logging.basicConfig(
     format="%(levelname)-4s| %(module)s.%(funcName)s: %(message)s",
@@ -38,7 +38,11 @@ def parse_command_line():
     parser.add_argument("_", nargs="*")
 
     parser.add_argument(
-        "-n", "--name", action="store", default="yvain", help="name to greet"
+        "-i", "--import-csv", action="store", default="labware_catalogue.csv", help="import labware csv catalogue file"
+    )
+
+    parser.add_argument(
+        "-f", "--output-format", action="store", help="save all labware ontologies in the given format"
     )
 
     parser.add_argument('-v', '--version', action='version', version='%(prog)s ' + __version__)
@@ -63,9 +67,10 @@ def main():
     print("Arguments: " + str(args._))
     print("Replace this message by putting your code into labop_labware_ontology.__main__")
     
-    hw = HelloWorld()
-    greeting = hw.greet_the_world(args.name)
-    logging.debug(greeting)
+    lolw = LOLabware()
+    if args.output_format:
+        lolw.save_ontologies(format=args.output_format)
+    #logging.debug(greeting)
     
     return 0
 

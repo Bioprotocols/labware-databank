@@ -9,13 +9,13 @@ networks:
   container-network:
     #driver: bridge
 
-
 services:
     labware-databank:
-      #build:
-      #  context: .
-      image: ghcr.io/bioprotocols/labop_labware_databank:develop
-      restart: unless-stopped
+      build:
+        context: .
+        dockerfile: Dockerfile.databank
+      #image: ghcr.io/bioprotocols/labop_labware_databank:develop
+      #restart: unless-stopped
       #volumes:
       #  - :
       #ports:
@@ -31,9 +31,10 @@ services:
       #command: 
         #sh -c ""
     jupyter:
-      #build:
-      #  context: .
-      image: ghcr.io/bioprotocols/labop_labware_jupyterlab:develop
+      build:
+        context: .
+        dockerfile: Dockerfile.jupyter
+      #image: ghcr.io/bioprotocols/labop_labware_databank:develop
       #image: jupyter/base-notebook
       volumes:
         - ./notebooks:/home/jovyan/work

@@ -11,17 +11,14 @@ networks:
 
 
 services:
-    labware-databank:
-      build:
-        context: .
-      #image: ghcr.io/bioprotocols/labop_labware_databank:develop
-      #restart: unless-stopped
+    labware-sila:
+      #build:
+      #  context: . 
+      image: ghcr.io/bioprotocols/labop_labware_databank:develop
       #volumes:
       #  - :
       #ports:
       #  - 50052:50052
-      ports:
-        - 8000:8000
       #expose:
       #  - 8000
       networks:

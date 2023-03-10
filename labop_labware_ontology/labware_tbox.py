@@ -129,7 +129,27 @@ class LOLabwareTBox:
 
             #AllDisjoint([DepthWell, ShapeWell, ShapeWellBottom, TopRadiusXY, BottomRadiusXY, BottomRadiusZ, ConeAngle, ConeDepth, ShapePolygonXY, ShapePolygonZ, ShapeModel2D, ShapeModel3D, FirstInteractionPosition])
 
-            
+
+            # Labware Vendor related properties
+            # =================================
+
+            class Vendor:
+                """Labware Vendor"""
+
+            class VendorProductNumber:
+                """Labware Vendor Product Number"""
+
+            # UNSPSC
+            class UNSPSC:
+                """United Nations Standard Products and Services Code (UNSPSC) for labware"""
+                wikipediaEntry = en("https://en.wikipedia.org/wiki/UNSPSC")
+
+            # eCl@ss
+            class EClass:
+                """eCl@ss for labware"""
+                wikipediaEntry = en("https://en.wikipedia.org/wiki/EClass")
+
+
             # Labware Classes
             # ====================
 
@@ -329,6 +349,10 @@ class LOLabwareTBox:
             
             class hasScrewCapColor(Labware >> str, FunctionalProperty):
                 """Screw cap color"""
+
+
+            # labware with snap cap
+
 
             
             # further properties:

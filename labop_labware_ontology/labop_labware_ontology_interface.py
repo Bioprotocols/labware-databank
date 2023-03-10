@@ -28,10 +28,10 @@ class LOLabwareInterface(metaclass=ABCMeta):
     """
     @classmethod
     def __subclasshook__(cls, subclass):
-        return (hasattr(subclass, 'save_ontology') and 
-                callable(subclass.save_ontology) or 
+        return (hasattr(subclass, 'save_ontologies') and 
+                callable(subclass.save_ontologies) or 
                 NotImplemented)
         
     @abstractclassmethod 
-    def save_ontology(self, filename : str = None,  format='turtle') -> None:
+    def save_ontologies(self, path: str = None, filename : str = None,  format='turtle') -> None:
         """ save ontology"""

@@ -4,10 +4,15 @@
 The LabOP Labware Ontology project thanks
 
 
-Contributors
-------------
+Contributors (alphabetical order)
+---------------------------------
 
+* Jakob (Jake) Beal
+* Robert Goldman
+* Timothy R. Fallon
 * Mickey Kim <mickey.kim@genomicsengland.co.uk>  ! Thanks for the phantastic cookiecutter template !
+* Adám Wolf
+* SiLA Working Group
 
 
 Development Lead
