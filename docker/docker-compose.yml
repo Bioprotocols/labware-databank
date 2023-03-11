@@ -36,7 +36,7 @@ services:
       image: ghcr.io/bioprotocols/labop_labware_jupyterlab:develop
       #image: jupyter/base-notebook
       volumes:
-        - ./notebooks:/home/jovyan/work
+        - ./notebooks:/home/jovyan/local_notebooks
       ports:
         - 8009:8888
       #expose:
@@ -45,6 +45,8 @@ services:
         - container-network
       #env_file:
       #  - ./.env.dev
+      env:
+        
       #command: 
         #sh -c ""
 

@@ -1,5 +1,5 @@
 # s. https://github.com/pallets/flask
-name: Labware Ontology Python Package Push
+name: Labware SiLA Python Package Push
 
 on:
   push:
@@ -38,6 +38,8 @@ jobs:
     - uses: actions/checkout@v3
     - name: Build package
       run: |
+        cd SiLA
+        echo "Building SiLA python package ...."
         ls -Al
         python -m build
     # Generate hashes used for provenance.
