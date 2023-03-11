@@ -35,15 +35,17 @@ With docker-compose:
  # or with curl:
  curl -O https://raw.githubusercontent.com/Bioprotocols/labware-databank/main/docker/docker-compose.yml
 
- # to build the docker containers, run in the directory where the docker-compose file is located:
- docker-compose build
+ # to pull the docker containers from the github container registry, run in the directory where the docker-compose file is located:
+ docker-compose pull
 
- # to start the docker containers, run in the directory where the docker-compose file is located:
+ # to start the docker containers, run in the directory where the docker-compose file is located (add -d to run in the background):
  docker-compose up
 ```
 
 Now you can access the SPARQL endpoint web interface at [localhost:8008](http://localhost:8008/).
+
 The jupyter-lab notebook is available at [localhost:8009](http://localhost:8009/).
+The default password for the jupyter server is `labware`.
 
 The SiLA 2.0 server listens at [localhost:50052](http://localhost:50052/).
 

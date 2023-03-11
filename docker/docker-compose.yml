@@ -45,8 +45,6 @@ services:
         - container-network
       #env_file:
       #  - ./.env.dev
-      env:
-        
       #command: 
         #sh -c ""
 

@@ -4,8 +4,11 @@ FROM jupyter/base-notebook
 
 # Install Python 3 packages with pip
 
-RUN pip install --no-cache-dir sila2 && \
+RUN pip install --no-cache-dir sila2 sparqlwrapper && \
     fix-permissions "${CONDA_DIR}" && \
     fix-permissions "/home/${NB_USER}"
+
+# setting default password to 'labware'
+COPY jupyter_server_config.json /home/jovyan/.jupyter/jupyter_server_config.json
 
 COPY notebooks/* /home/jovyan/work
