@@ -19,7 +19,7 @@ from ontopy.utils import write_catalog
 import owlready2
 from owlready2 import DatatypeProperty, FunctionalProperty, ObjectProperty, AllDisjoint
 
-from labop_labware_ontology.__init__ import __version__  # Version of this ontology
+from labop_labware_ontology import __version__ # Version of this ontology
 
 
 # --- ontology definition helper functions

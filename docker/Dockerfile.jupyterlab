@@ -11,4 +11,4 @@ RUN pip install --no-cache-dir sila2 sparqlwrapper && \
 # setting default password to 'labware'
 COPY jupyter_server_config.json /home/jovyan/.jupyter/jupyter_server_config.json
 
-COPY notebooks/* /home/jovyan/work
+COPY jupyter/*_explorer.ipynb /home/jovyan/work

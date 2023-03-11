@@ -82,6 +82,10 @@ RUN pip install --no-cache-dir --upgrade pip \
 
 
 WORKDIR ${PROJECT_ROOT}
+# copy entrypoint.sh
+
+COPY --chown=lara:lara entrypoint_databank.sh ${PROJECT_ROOT}/entrypoint.sh
+
 # copy main lara-django script
 COPY --chown=lara:lara ontologies ${PROJECT_ROOT}/
 #COPY  --chown=lara:lara --from=production-build ${VIRTUAL_ENV} ./venv
@@ -91,15 +95,6 @@ USER lara
 RUN ls ${PROJECT_ROOT}
 
 EXPOSE 8000
-CMD ["rdflib-endpoint", "serve", "--host", "0.0.0.0", "--port", "8000",  "*.ttl"]
 
-#CMD ["ls" , "-al"]
-
-
-#ENTRYPOINT ["gunicorn", "--bind", ]
-#CMD [ "0.0.0.0:8000", "lara_django.wsgi" ]
-#ENTRYPOINT ["/opt/labdb/entrypoint.sh"]
-#ENTRYPOINT exec "${PROJECT_ROOT}/entrypoint.sh"
-
-# CMD python -m django --version
-# CMD lara-django.py runserver 0.0.0.0:8080
+#CMD ["rdflib-endpoint", "serve", "--host", "0.0.0.0", "--port", "8000",  "*.ttl"]
+ENTRYPOINT exec "${PROJECT_ROOT}/entrypoint.sh"

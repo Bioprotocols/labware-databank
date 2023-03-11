@@ -22,12 +22,12 @@ from ontopy.utils import write_catalog
 
 import owlready2
 
-from .labop_labware_ontology_interface import LOLabwareInterface
-from .__init__ import __version__  # Version of this ontology
+from labop_labware_ontology.labop_labware_ontology_interface import LOLabwareInterface
+from labop_labware_ontology import __version__  # Version of this ontology
 
-from .emmo_extension_tbox import EMMOExtensionTBox
-from .labware_tbox import LOLabwareTBox
-from .labware_abox import LOLabwareABox
+from labop_labware_ontology.emmo_extension_tbox import EMMOExtensionTBox
+from labop_labware_ontology.labware_tbox import LOLabwareTBox
+from labop_labware_ontology.labware_abox import LOLabwareABox
 
 logger = logging.getLogger(__name__)
 
@@ -44,7 +44,7 @@ def pl(s):
     return owlready2.locstr(s, lang='')
 
 
-class LOLabware(LOLabwareInterface):
+class LabwareInterface(LOLabwareInterface):
     def __init__(self, db_path: str = None, db_name: str = None) -> None:
         """Implementation of the LOLabwareInterface
         """
@@ -130,10 +130,10 @@ class LOLabware(LOLabwareInterface):
     def save_ontologies(self, path: str = ".", format='turtle') -> None:
         """save all ontologies """
 
-        self.save_ontology(ontology=self.lolw, path=path, onto_filename='labop_labware_tbox', format=format)
+        self.save_ontology(onto=self.lolw, path=path, onto_filename='labop_labware_tbox', format=format)
 
 
-    def save_ontology(self, ontology = None, path: str = None, onto_filename: str = None, format='turtle'):
+    def save_ontology(self, onto = None, path: str = None, onto_filename: str = None, format='turtle'):
         """Save the ontology to file.
 
         :param filename: Filename to save the ontology to.
@@ -142,17 +142,17 @@ class LOLabware(LOLabwareInterface):
         :TODO: add prefix mapping
         """
         
-        print("base iri: ---->", ontology.base_iri)
+        print("base iri: ---->", onto.base_iri)
 
         # Save new ontology as owl
-        ontology.sync_attributes(name_policy='uuid', 
+        onto.sync_attributes(name_policy='uuid', 
                                  class_docstring='elucidation',
                                  name_prefix='labop_')
         
         version_iri = f"http://www.labop.org/{self.__version__}/{onto_filename}"
 
-        ontology.set_version(version_iri=version_iri)
-        ontology.dir_label = False
+        onto.set_version(version_iri=version_iri)
+        onto.dir_label = False
 
         #!self.lolw_tbox.catalog_mappings[self.lolw_version_iri] = self.lolw_ttl_filename 
 
@@ -160,24 +160,24 @@ class LOLabware(LOLabwareInterface):
         # Annotate the ontology metadata
         #################################################################
 
-        ontology.metadata.abstract.append(en(
+        onto.metadata.abstract.append(en(
                 'An EMMO-based domain ontology for scientific labware.'
                 'labop-labware is released under the Creative Commons Attribution 4.0 '
                 'International license (CC BY 4.0).'))
 
-        ontology.metadata.title.append(en('LabOP-Labware'))
-        ontology.metadata.creator.append(en('mark doerr'))
-        ontology.metadata.contributor.append(en('university greifswald'))
-        ontology.metadata.publisher.append(en('mark doerr'))
-        ontology.metadata.license.append(en(
+        onto.metadata.title.append(en('LabOP-Labware'))
+        onto.metadata.creator.append(en('mark doerr'))
+        onto.metadata.contributor.append(en('university greifswald'))
+        onto.metadata.publisher.append(en('mark doerr'))
+        onto.metadata.license.append(en(
             'https://creativecommons.org/licenses/by/4.0/legalcode'))
-        ontology.metadata.versionInfo.append(en(self.__version__))
-        ontology.metadata.comment.append(en(
+        onto.metadata.versionInfo.append(en(self.__version__))
+        onto.metadata.comment.append(en(
             'The EMMO requires FaCT++ reasoner plugin in order to visualize all'
             'inferences and class hierarchy (ctrl+R hotkey in Protege).'))
-        ontology.metadata.comment.append(en(
+        onto.metadata.comment.append(en(
             'This ontology is generated with data from the ASE Python package.'))
-        ontology.metadata.comment.append(en(
+        onto.metadata.comment.append(en(
             'Contacts:\n'
             'mark doerr\n'
             'University Greifswald\n'
@@ -185,7 +185,7 @@ class LOLabware(LOLabwareInterface):
             '\n'
             ))
 
-        ontology.save(onto_filename, overwrite=True)
+        onto.save(onto_filename, overwrite=True)
         #olw.save(labop_measurement_owl_filename, overwrite=True)
         #!write_catalog(self.lolw_tbox.catalog_mappings)
         # olw.sync_reasoner()

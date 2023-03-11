@@ -2,22 +2,21 @@
 """Tests for `labop_labware_ontology` package."""
 # pylint: disable=redefined-outer-name
 from labop_labware_ontology import __version__
-from labop_labware_ontology.labop_labware_ontology_interface import GreeterInterface
-from labop_labware_ontology.labop_labware_ontology_impl import HelloWorld
+from labop_labware_ontology.labop_labware_ontology_interface import LOLabwareInterface
+from labop_labware_ontology.labop_labware_ontology_impl import LabwareInterface
 
 def test_version():
     """Sample pytest test function."""
     assert __version__ == "0.0.1"
 
-def test_GreeterInterface():
+def test_LOLabwareInterface():
     """ testing the formal interface (GreeterInterface)
     """
-    assert issubclass(HelloWorld, GreeterInterface)
+    assert issubclass(LabwareInterface, LOLabwareInterface)
 
-def test_HelloWorld():
-    """ Testing HelloWorld class
+def test_LabwareInterface():
+    """ Testing LabwareInterface class
     """
-    hw = HelloWorld()
-    name = 'yvain'
-    assert hw.greet_the_world(name) == f"Hello world, {name} !"
+    lwi = LabwareInterface()
+    assert lwi.lolw_base_iri == "http://www.labop.org/labware#"
 

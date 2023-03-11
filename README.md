@@ -53,6 +53,10 @@ The SiLA 2.0 server listens at [localhost:50052](http://localhost:50052/).
 
 ```bash
    curl -X POST -H "Content-Type: application/sparql-query" -H "Accept: application/sparql-results+json" --data "SELECT * WHERE { ?s ?p ?o } LIMIT 10" http://localhost:8008/sparql
+    curl --header "Accept: application/sparql-results+json"  -G 'http://localhost:8008/sparql' --data-urlencode query='
+SELECT ?s WHERE {
+ ?s ?p ?o
+} LIMIT 10'
 ```
 
 
