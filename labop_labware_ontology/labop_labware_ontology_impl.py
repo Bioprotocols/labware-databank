@@ -35,19 +35,7 @@ class LabwareInterface(LOLabwareInterface):
     def __init__(self, db_path: str = None, db_name: str = None) -> None:
         """Implementation of the LOLabwareInterface
         """
-
-        print("++++:", __version__)
-
         db_name_full = None
-
-
-        # TODO: in later versions, we need to distinguish between top-level, mid-level and specific ontologies 
-        output_filename_base = os.path.join('..', 'ontologies', 'labop_labware_tbox')
-        self.lolw_owl_filename = f'{output_filename_base}-v{__version__}.owl'
-        self.lolw_ttl_filename = f'{output_filename_base}-v{__version__}.ttl'
-
-        self.lolw_base_iri = 'http://www.labop.org/labware#'
-        self.lolw_version_iri = f'http://www.labop.org/{__version__}/labware'
 
         # might be moved to export_ontology.py
         self.prefix_dict = {
@@ -66,60 +54,53 @@ class LabwareInterface(LOLabwareInterface):
             'emmo': "http://emmo.info/emmo#",
         }
 
-
-        # TODO: use main EMMO ontology :       
-        # alternative url   "https://raw.githubusercontent.com/emmo-repo/EMMO/master/self.emmo.ttl"
-
-        self.emmo_url = "emmo-development" # (
-        #    'https://raw.githubusercontent.com/emmo-repo/emmo-repo.github.io/'
-        #    'master/versions/1.0.0-beta/emmo-inferred-chemistry2.ttl')
+        # using latest EMMO ontology
+        self.emmo_url = "emmo-development"  
+        
+        # in case of a local copy of EMMO
         self.emmo_url_local = os.path.join(pathlib.Path(
-            __file__).parent.resolve(), "emmo", "emmo-inferred")
-
+            __file__).parent.resolve(), "emmo")
         if os.path.isfile(self.emmo_url_local + '.ttl'):
             self.emmo_url = self.emmo_url_local
 
         # for persistent storage of ontology:
-        #self.emmo_world = World(filename="emmo_labop_labware.sqlite3")
-        if db_path is not None:
+        
+        if db_path is not None and db_name is not None:
             if not os.path.exists(db_path):
                 os.makedirs(db_path)
-            db_name_full = os.path.join(db_path, db_name)
-
+            db_name_full = os.path.join(db_path, db_name) 
         if db_name_full is not None:
             self.emmo_world = World(filename=db_name_full)
         else:  # in memory SQLITE database
             self.emmo_world = World()
+
+        # create EMMO ontology object 
         self.emmo = self.emmo_world.get_ontology(self.emmo_url)
-        self.emmo.load()  # reload_if_newer = True
-        self.emmo.sync_python_names()  # Synchronize annotations
+        self.emmo.load()               # reload_if_newer = True
+        self.emmo.sync_python_names()  # synchronize annotations
         self.emmo.base_iri = self.emmo.base_iri.rstrip('/#')
         self.catalog_mappings = {self.emmo.base_iri: self.emmo_url}
 
-        self.lolw = self.emmo_world.get_ontology(self.lolw_base_iri)
-        self.lolw.imported_ontologies.append(self.emmo)
-        self.lolw.sync_python_names()
 
         # extending EMMO with Labware specific classes and properties
-        self.emmo_ext_tbox = EMMOExtensionTBox(self.emmo)
+        self.emmo_ext_tbox = EMMOExtensionTBox(self.emmo, self.emmo_url)
 
-        # importing labOP ontology modules
-
-        self.lolw_tbox = LOLabwareTBox(self.emmo, self.lolw)
-        #self.lolw_tbox.define_ontology()
+        # create Labware Terminology box object
+        self.lolw_tbox = LOLabwareTBox(self.emmo_world, self.emmo, self.emmo_url)
+        
         #self.lolw.imported_ontologies.append(self.lolw_tbox.lolw)
+        
+        # create Labware Assertion Box  (ABox) object
+        self.lolw_abox = LOLabwareABox(emmo_world=self.emmo_world, emmo=self.emmo, emmo_url=self.emmo_url, lw_tbox=self.lolw_tbox)
 
-        self.lolw_abox = LOLabwareABox(self.emmo, self.lolw)
+        #self.lolw.sync_python_names()
 
-        self.lolw.sync_python_names()
-
-    def save_ontologies(self, path: str = "../ontologies/", format='turtle') -> None:
+    def export_ontologies(self, path: str = "../ontologies/", format='turtle') -> None:
         """save all ontologies """
 
-        export_ontology(ontology=self.emmo, path=path, onto_filename='labop_labware_emmo', format=format, emmo_url=self.emmo_url)
-        export_ontology(ontology=self.lolw, path=path, onto_filename='labop_labware_tbox', format=format, emmo_url=self.emmo_url)
+        self.emmo_ext_tbox.export(path=path, format=format)
+        self.lolw_tbox.export(path=path, format=format)
+        #self.lolw_abox.export(path=path, format=format)
 
-
-    
 
 

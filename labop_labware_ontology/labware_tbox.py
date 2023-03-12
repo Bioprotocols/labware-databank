@@ -35,25 +35,35 @@ from labop_labware_ontology.emmo_utils import en, pl
 from owlready2 import DatatypeProperty, FunctionalProperty, ObjectProperty, AllDisjoint
 
 from labop_labware_ontology import __version__ # Version of this ontology
-
+from labop_labware_ontology.export_ontology import export_ontology
 
 class LOLabwareTBox:
-    def __init__(self, emmo=None, lolw=None) -> None:
-
+    def __init__(self, emmo_world=None, emmo=None, emmo_url: str = None) -> None:
 
         self.emmo = emmo
-        self.lolw = lolw
+        self.emmo_url = emmo_url
+        
+        self.lolwt_base_iri = 'http://www.labop.org/labware-t#'
+        self.lolwt_version_iri = f'http://www.labop.org/{__version__}/labware'
 
+        self.lolwt = emmo_world.get_ontology(self.lolwt_base_iri)
+        self.emmo.imported_ontologies.append(self.lolwt)
+        self.emmo.sync_python_names()
+        
         # --- ontology definition
 
         # define the ontology
         self.define_ontology()
 
-    # defining the  labOP-labware ontology
+    def export(self, path: str = "../ontologies/", format='turtle') -> None:
+        """save ontology """
+        export_ontology(ontology=self.lolwt, path=path, onto_base_filename='labop_labware_tbox', format=format, emmo_url=self.emmo_url)
+
     def define_ontology(self):
+        """defining the  labOP-labware ontology Terminology Box (TBox) """
         logging.debug('defining labware ontology')
 
-        with self.lolw:
+        with self.lolwt:
 
             # Terminology Components (TBox) 
 
@@ -158,7 +168,7 @@ class LOLabwareTBox:
 
             # Basic ------
 
-            class Labware(self.lolw.Device):
+            class Labware(self.lolwt.Device):
                 """Labware is a utility device that all experiments are done with and which is not actively measuring. Examples: a container, a pipette tip, a reactor, ... """
                 wikipediaEntry = en("https://en.wikipedia.org/wiki/Labware")
 

@@ -19,16 +19,30 @@ import pathlib
 import logging
 import pandas as pd
 
+from labop_labware_ontology import __version__ # Version of this ontology
 from labop_labware_ontology.emmo_utils import en, pl
+from labop_labware_ontology.export_ontology import export_ontology
 
 class LOLabwareABox:
-    def __init__(self, emmo=None, lolwt=None, lolwa=None) -> None:
+    def __init__(self, emmo_world=None, emmo=None, emmo_url: str = None, lw_tbox=None) -> None:
 
         # TDOO: move ontolgy definition to here
 
         self.emmo = emmo
-        self.lolwt = lolwt
-        self.lolwa = lolwa
+        self.emmo_url = emmo_url
+        self.lolwt = lw_tbox.lolwt
+        
+        self.lolwa_base_iri = 'http://www.labop.org/labware-a#'
+        self.lolwa_version_iri = f'http://www.labop.org/{__version__}/labware-a'
+
+        self.lolwa = emmo_world.get_ontology(self.lolwa_base_iri)
+        self.emmo.imported_ontologies.append(self.lolwa)
+        self.emmo.sync_python_names()
+
+    def export(self, path: str = "../ontologies/", format='turtle') -> None:
+        """save ontology """
+        export_ontology(ontology=self.lolwa, path=path, onto_base_filename='labop_labware_abox', format=format, emmo_url=self.emmo_url)
+
 
     def import_csv(self, csv_filename="labware_catalogue.csv"):
         

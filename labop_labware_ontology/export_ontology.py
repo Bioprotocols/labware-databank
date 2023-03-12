@@ -23,21 +23,25 @@ from labop_labware_ontology import __author__, __contributors__, __version__  # 
 from labop_labware_ontology.emmo_utils import en, pl
 
 def export_ontology(ontology = None, path: str = None, 
-                    onto_filename: str = None, 
+                    onto_base_filename: str = None, 
                     format='turtle', emmo_url: str = "http://emmo.info/emmo#") -> None:
         """Export/save the ontology to file.
 
         :param filename: Filename to save the ontology to.
-        :param format: Format to save the ontology in.
+        :param format: Format to save the ontology in [turtle, rdfxml, owlxml, ntriples, json-ld].
 
         :TODO: add prefix mapping
         """
+
+        # output_filename_base = os.path.join('..', 'ontologies', 'labop_labware_tbox')
+        # self.lolw_owl_filename = f'{output_filename_base}-v{__version__}.owl'
+        # self.lolw_ttl_filename = f'{output_filename_base}-v{__version__}.ttl'
 
         # ontology file ending dictionary, based on rdflib formats
         onto_file_ending = { 'turtle': '.ttl', 'rdfxml': '.rdf', 'owlxml': '.owl', 'ntriples': '.nt', 'json-ld': '.jsonld' }
 
 
-        onto_filename_full = os.path.join(path, onto_filename) + onto_file_ending[format]
+        onto_filename_full = os.path.join(path, onto_base_filename) + onto_file_ending[format]
         
         print("base iri: ---->", onto_filename_full, ontology.base_iri)
 
@@ -46,7 +50,7 @@ def export_ontology(ontology = None, path: str = None,
                                  class_docstring='elucidation',
                                  name_prefix='labop_')
         
-        version_iri = f"http://www.labop.org/{__version__}/{onto_filename}"
+        version_iri = f"http://www.labop.org/{__version__}/{onto_base_filename}"
 
         ontology.set_version(version_iri=version_iri)
         ontology.dir_label = False

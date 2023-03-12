@@ -34,23 +34,27 @@ from labop_labware_ontology import __version__ # Version of this ontology
 
 from labop_labware_ontology.emmo_utils import en, pl
 
+from labop_labware_ontology.export_ontology import export_ontology
 
 class EMMOExtensionTBox:
-    def __init__(self, emmo_ontology=None) -> None:
+    def __init__(self, emmo_ontology=None, emmo_url: str = None) -> None:
 
-      
         self.emmo = emmo_ontology
-
+        self.emmo_url = emmo_url
         # --- ontology definition
 
         # define the ontology
         self.define_ontology()
 
-        
 
-    # defining the  labOP-labware ontology
+    def export(self, path: str = "../ontologies/", format='turtle') -> None:
+        """save ontology """
+        export_ontology(ontology=self.emmo, path=path, onto_base_filename='labop_labware_emmo', format=format, emmo_url=self.emmo_url)
+    
+
     def define_ontology(self):
-        logging.debug('defining labware ontology')
+        """defining the EMMO ontology extensions"""
+        logging.debug('extending EMMO ontology')
 
         with self.emmo:
 

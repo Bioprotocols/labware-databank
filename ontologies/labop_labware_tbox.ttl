@@ -1,4 +1,4 @@
-@prefix : <http://www.labop.org/labware#> .
+@prefix : <http://www.labop.org/labware-t#> .
 @prefix core: <http://www.w3.org/2004/02/skos/core#> .
 @prefix emmo: <http://emmo.info/emmo#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
@@ -7,7 +7,7 @@
 @prefix term: <http://purl.org/dc/terms/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<http://www.labop.org/labware> a owl:Ontology ;
+<http://www.labop.org/labware-t> a owl:Ontology ;
     emmo:labop_fc098d8e-4702-5e22-b016-bff1036279b5 """Contacts:
 mark doerr
 University Greifswald
@@ -22,7 +22,6 @@ email: mark.doerr@suni-greifswald.de
     term:labop_491691b0-5368-59d7-ab05-2654b00cd186 "LabOP-Labware"@en ;
     term:labop_d8c9835b-cded-51e5-a098-9ec1475e5824 "https://creativecommons.org/licenses/by/4.0/legalcode"@en ;
     term:labop_f6f34439-8e9f-573b-9761-7d62b1eb5dad "mark doerr"@en ;
-    owl:imports <emmo-development> ;
     owl:versionIRI <http://www.labop.org/0.0.1/labop_labware_tbox> ;
     owl:versionInfo "0.0.1"@en .
 

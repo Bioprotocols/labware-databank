@@ -18,5 +18,6 @@ def test_LabwareInterface():
     """ Testing LabwareInterface class
     """
     lwi = LabwareInterface()
-    assert lwi.lolw_base_iri == "http://www.labop.org/labware#"
+     
+    assert lwi.lolw_tbox.lolwt_base_iri == 'http://www.labop.org/labware-t#'
 
