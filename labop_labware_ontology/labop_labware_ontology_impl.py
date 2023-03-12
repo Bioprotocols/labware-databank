@@ -2,9 +2,9 @@
 
 :PROJECT: LabOP Labware Ontology
 
-* Main module implementation *
+* Labop labware interface implementation *
 
-:details:  Main module implementation.
+:details:  Main module LabwareInterface implementation.
 
 .. note:: -
 .. todo:: - 
@@ -14,13 +14,11 @@ ________________________________________________________________________
 import os
 import pathlib
 import logging
-from enum import Enum, auto
-import rdflib  # noqa: E402, F401
 
 from ontopy import World
 from ontopy.utils import write_catalog
 
-import owlready2
+#import owlready2
 
 from labop_labware_ontology.labop_labware_ontology_interface import LOLabwareInterface
 from labop_labware_ontology import __version__  # Version of this ontology
@@ -29,28 +27,16 @@ from labop_labware_ontology.emmo_extension_tbox import EMMOExtensionTBox
 from labop_labware_ontology.labware_tbox import LOLabwareTBox
 from labop_labware_ontology.labware_abox import LOLabwareABox
 
+from labop_labware_ontology.export_ontology import export_ontology
+
 logger = logging.getLogger(__name__)
-
-
-# --- ontology definition helper functions
-
-def en(s):
-    """Returns `s` as an English location string."""
-    return owlready2.locstr(s, lang='en')
-
-
-def pl(s):
-    """Returns `s` as a plain literal string."""
-    return owlready2.locstr(s, lang='')
-
 
 class LabwareInterface(LOLabwareInterface):
     def __init__(self, db_path: str = None, db_name: str = None) -> None:
         """Implementation of the LOLabwareInterface
         """
 
-        self.__version__ = __version__
-        print("++++:", self.__version__)
+        print("++++:", __version__)
 
         db_name_full = None
 
@@ -63,6 +49,7 @@ class LabwareInterface(LOLabwareInterface):
         self.lolw_base_iri = 'http://www.labop.org/labware#'
         self.lolw_version_iri = f'http://www.labop.org/{__version__}/labware'
 
+        # might be moved to export_ontology.py
         self.prefix_dict = {
             'rdf': "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
             'rdfs': "http://www.w3.org/2000/01/rdf-schema#",
@@ -113,8 +100,7 @@ class LabwareInterface(LOLabwareInterface):
         self.lolw.imported_ontologies.append(self.emmo)
         self.lolw.sync_python_names()
 
-        # extending EMMO
-
+        # extending EMMO with Labware specific classes and properties
         self.emmo_ext_tbox = EMMOExtensionTBox(self.emmo)
 
         # importing labOP ontology modules
@@ -130,84 +116,10 @@ class LabwareInterface(LOLabwareInterface):
     def save_ontologies(self, path: str = "../ontologies/", format='turtle') -> None:
         """save all ontologies """
 
-        self.save_ontology(onto=self.emmo, path=path, onto_filename='labop_labware_emmo', format=format)
-        self.save_ontology(onto=self.lolw, path=path, onto_filename='labop_labware_tbox', format=format)
+        export_ontology(ontology=self.emmo, path=path, onto_filename='labop_labware_emmo', format=format, emmo_url=self.emmo_url)
+        export_ontology(ontology=self.lolw, path=path, onto_filename='labop_labware_tbox', format=format, emmo_url=self.emmo_url)
 
 
-    def save_ontology(self, onto = None, path: str = None, onto_filename: str = None, format='turtle'):
-        """Save the ontology to file.
-
-        :param filename: Filename to save the ontology to.
-        :param format: Format to save the ontology in.
-
-        :TODO: add prefix mapping
-        """
-        onto_filename_full = os.path.join(path, onto_filename) + ".ttl"
-        
-        print("base iri: ---->", onto_filename_full, onto.base_iri)
-
-        # Save new ontology as owl
-        onto.sync_attributes(name_policy='uuid', 
-                                 class_docstring='elucidation',
-                                 name_prefix='labop_')
-        
-        version_iri = f"http://www.labop.org/{self.__version__}/{onto_filename}"
-
-        onto.set_version(version_iri=version_iri)
-        onto.dir_label = False
-
-        #!self.lolw_tbox.catalog_mappings[self.lolw_version_iri] = self.lolw_ttl_filename 
-
-        #################################################################
-        # Annotate the ontology metadata
-        #################################################################
-
-        onto.metadata.abstract.append(en(
-                'An EMMO-based domain ontology for scientific labware.'
-                'labop-labware is released under the Creative Commons Attribution 4.0 '
-                'International license (CC BY 4.0).'))
-
-        onto.metadata.title.append(en('LabOP-Labware'))
-        onto.metadata.creator.append(en('mark doerr'))
-        onto.metadata.contributor.append(en('university greifswald'))
-        onto.metadata.publisher.append(en('mark doerr'))
-        onto.metadata.license.append(en(
-            'https://creativecommons.org/licenses/by/4.0/legalcode'))
-        onto.metadata.versionInfo.append(en(self.__version__))
-        onto.metadata.comment.append(en(
-            'The EMMO requires FaCT++ reasoner plugin in order to visualize all'
-            'inferences and class hierarchy (ctrl+R hotkey in Protege).'))
-        onto.metadata.comment.append(en(
-            'This ontology is generated with data from the ASE Python package.'))
-        onto.metadata.comment.append(en(
-            'Contacts:\n'
-            'mark doerr\n'
-            'University Greifswald\n'
-            'email: mark.doerr@suni-greifswald.de\n'
-            '\n'
-            ))
-        
-       
-        onto.save(onto_filename_full, overwrite=True, format=format)
-        #olw.save(labop_measurement_owl_filename, overwrite=True)
-        #!write_catalog(self.lolw_tbox.catalog_mappings)
-        # olw.sync_reasoner()
-        # olw.save('olw-measurement-inferred.ttl', overwrite=True)
-        # ...and to the sqlite3 database.
-        # world.save()
-
-
-        # Manually change url of EMMO to `emmo_url` when importing it to make
-        # it resolvable without consulting the catalog file.  This makes it possible
-        # to open the ontology from url in Protege
-        
-        g = rdflib.Graph()
-        g.parse(onto_filename_full, format='turtle')
-        for s, p, o in g.triples(
-                (None, rdflib.URIRef('http://www.w3.org/2002/07/owl#imports'), None)):
-            if 'emmo-inferred' in o:
-                g.remove((s, p, o))
-                g.add((s, p, rdflib.URIRef(self.emmo_url)))
-        g.serialize(destination=onto_filename_full, format='turtle')
+    
 
 

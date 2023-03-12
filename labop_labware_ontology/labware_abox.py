@@ -1,5 +1,17 @@
+"""_____________________________________________________________________
 
-# python module that defines the individuals of the labware ontology. Since it contains the individuals, it is called the ABox ("A" for "assertions").
+:PROJECT: LabOP Labware Ontology
+
+* Main module implementation *
+
+:details: python module that defines the individuals of the labware ontology. 
+          Since it contains the individuals, it is called the ABox ("A" for "assertions").
+
+.. note:: -
+.. todo:: - 
+________________________________________________________________________
+"""
+
 
 
 import os
@@ -7,6 +19,7 @@ import pathlib
 import logging
 import pandas as pd
 
+from labop_labware_ontology.emmo_utils import en, pl
 
 class LOLabwareABox:
     def __init__(self, emmo=None, lolwt=None, lolwa=None) -> None:

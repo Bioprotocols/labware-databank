@@ -33,5 +33,5 @@ class LOLabwareInterface(metaclass=ABCMeta):
                 NotImplemented)
         
     @abstractclassmethod 
-    def save_ontologies(self, path: str = None, filename : str = None,  format='turtle') -> None:
+    def save_ontologies(self, ontology=None, path: str = None, filename : str = None,  format: str ='turtle', emmo_url:str = "") -> None:
         """ save ontology"""

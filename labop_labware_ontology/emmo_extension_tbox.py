@@ -1,13 +1,24 @@
-# python module that defines an ontology of common labware classes that are used in a scientific lab, based on EMMOntoPy
-# it should be possible to use this ontology to automatically get the right SI units for the properties of the labware
-# and to automatically get the right EMMO classes for the labware
-# as much as possible, the ontology should be based on EMMO, but it may be necessary to add some classes and properties
-# that are not in EMMO
-# as much as possible should be inferred from EMMO, but it may be necessary to add some axioms
-# the ontology should be able to be used in a lab notebook, and should be able to be used to automatically generate
-# a labware inventory
-# the ontology should be able to be used to automatically generate a labware database
+"""_____________________________________________________________________
 
+:PROJECT: LabOP Labware Ontology
+
+* EMMO extensions that are required by the labware ontology *
+
+:details: python module that defines an ontology of common labware classes that are used in a scientific lab, based on EMMOntoPy
+            it should be possible to use this ontology to automatically get the right SI units for the properties of the labware
+            and to automatically get the right EMMO classes for the labware
+            as much as possible, the ontology should be based on EMMO, but it may be necessary to add some classes and properties
+            that are not in EMMO
+            as much as possible should be inferred from EMMO, but it may be necessary to add some axioms
+            the ontology should be able to be used in a lab notebook, and should be able to be used to automatically generate
+            a labware inventory
+            the ontology should be able to be used to automatically generate a labware database
+
+
+.. note:: -
+.. todo:: - 
+________________________________________________________________________
+"""
 
 import os
 import pathlib
@@ -16,22 +27,12 @@ import logging
 from ontopy import World
 from ontopy.utils import write_catalog
 
-import owlready2
+#import owlready2
 from owlready2 import DatatypeProperty, FunctionalProperty, ObjectProperty, AllDisjoint
 
 from labop_labware_ontology import __version__ # Version of this ontology
 
-
-# --- ontology definition helper functions
-
-def en(s):
-    """Returns `s` as an English location string."""
-    return owlready2.locstr(s, lang='en')
-
-
-def pl(s):
-    """Returns `s` as a plain literal string."""
-    return owlready2.locstr(s, lang='')
+from labop_labware_ontology.emmo_utils import en, pl
 
 
 class EMMOExtensionTBox:

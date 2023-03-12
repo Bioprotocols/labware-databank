@@ -15,8 +15,8 @@ email: mark.doerr@suni-greifswald.de
 
 """@en,
         "The EMMO requires FaCT++ reasoner plugin in order to visualize allinferences and class hierarchy (ctrl+R hotkey in Protege)."@en,
-        "This ontology is generated with data from the ASE Python package."@en ;
-    term:labop_03788c5a-00c7-5206-b7d9-96d753ab60bb "university greifswald"@en ;
+        "This ontology is generated with data from the EMMOntoPy Python package."@en ;
+    term:labop_03788c5a-00c7-5206-b7d9-96d753ab60bb "mark doerr, Robert Goldman, Timmothy (Tim) Fallon"@en ;
     term:labop_2b27718e-b640-5f37-bd9e-00f7172798db "mark doerr"@en ;
     term:labop_3186479c-7332-56d4-955c-82e62afeca5b "An EMMO-based domain ontology for scientific labware.labop-labware is released under the Creative Commons Attribution 4.0 International license (CC BY 4.0)."@en ;
     term:labop_491691b0-5368-59d7-ab05-2654b00cd186 "LabOP-Labware"@en ;
