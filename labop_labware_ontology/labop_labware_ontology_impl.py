@@ -127,9 +127,10 @@ class LabwareInterface(LOLabwareInterface):
 
         self.lolw.sync_python_names()
 
-    def save_ontologies(self, path: str = ".", format='turtle') -> None:
+    def save_ontologies(self, path: str = "../ontologies/", format='turtle') -> None:
         """save all ontologies """
 
+        self.save_ontology(onto=self.emmo, path=path, onto_filename='labop_labware_emmo', format=format)
         self.save_ontology(onto=self.lolw, path=path, onto_filename='labop_labware_tbox', format=format)
 
 
@@ -141,8 +142,9 @@ class LabwareInterface(LOLabwareInterface):
 
         :TODO: add prefix mapping
         """
+        onto_filename_full = os.path.join(path, onto_filename) + ".ttl"
         
-        print("base iri: ---->", onto.base_iri)
+        print("base iri: ---->", onto_filename_full, onto.base_iri)
 
         # Save new ontology as owl
         onto.sync_attributes(name_policy='uuid', 
@@ -184,8 +186,9 @@ class LabwareInterface(LOLabwareInterface):
             'email: mark.doerr@suni-greifswald.de\n'
             '\n'
             ))
-
-        onto.save(onto_filename, overwrite=True)
+        
+       
+        onto.save(onto_filename_full, overwrite=True, format=format)
         #olw.save(labop_measurement_owl_filename, overwrite=True)
         #!write_catalog(self.lolw_tbox.catalog_mappings)
         # olw.sync_reasoner()
@@ -198,13 +201,13 @@ class LabwareInterface(LOLabwareInterface):
         # it resolvable without consulting the catalog file.  This makes it possible
         # to open the ontology from url in Protege
         
-        # g = rdflib.Graph()
-        # g.parse(onto_filename , format='turtle')
-        # for s, p, o in g.triples(
-        #         (None, rdflib.URIRef('http://www.w3.org/2002/07/owl#imports'), None)):
-        #     if 'emmo-inferred' in o:
-        #         g.remove((s, p, o))
-        #         g.add((s, p, rdflib.URIRef(self.emmo_url)))
-        # g.serialize(destination=onto_filename, format='turtle')
+        g = rdflib.Graph()
+        g.parse(onto_filename_full, format='turtle')
+        for s, p, o in g.triples(
+                (None, rdflib.URIRef('http://www.w3.org/2002/07/owl#imports'), None)):
+            if 'emmo-inferred' in o:
+                g.remove((s, p, o))
+                g.add((s, p, rdflib.URIRef(self.emmo_url)))
+        g.serialize(destination=onto_filename_full, format='turtle')
 
 
