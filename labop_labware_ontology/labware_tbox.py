@@ -256,7 +256,10 @@ class LOLabwareTBox:
                 """Labware coating material"""
 
             
-            class hasColor(Labware >> str, FunctionalProperty):
+            class hasColorDescription(Labware >> str, FunctionalProperty):
+                """Labware color description, e.g. white, black, opaque, blue, transparent, ..."""
+
+            class hasColorRGB(Labware >> str, FunctionalProperty):
                 """Labware color in RGB hex encoding"""
 
             class isLiddable(Labware >> bool, FunctionalProperty):
@@ -300,14 +303,19 @@ class LOLabwareTBox:
             class isProductType(Labware >> str, FunctionalProperty):
                 """Labware product Type"""
 
-            class hasModelNumber(Labware >> str, FunctionalProperty):
-                """Labware model number"""
+            class hasModelID(Labware >> str, FunctionalProperty):
+                """Labware model ID/number"""
 
-            class hasProductNumber(Labware >> str, FunctionalProperty):
-                """Manufacturer Product Number of the Labware"""
+            class hasProductID(Labware >> str, FunctionalProperty):
+                """Manufacturer Product ID/Number of the Labware"""
+
+            # multiwell labware properties
 
             class hasWellVolume(Labware >> float, FunctionalProperty):
                 """Total Labware volume """
+
+            class hasA1Position(Labware >> str, FunctionalProperty):
+                """Labware A1 position"""
 
             class hasWellDistRow(Labware >> float, FunctionalProperty):
                 """wWll-to-well distance in row direction"""
@@ -352,6 +360,9 @@ class LOLabwareTBox:
             class hasShapeModel3D(Labware >> str, FunctionalProperty):
                 """3D model of Well shape"""
 
+            class hasImageLink(Labware >> str, FunctionalProperty):
+                """Link to image of the Labware"""
+
             # labware with screw cap
 
             class hasScrewCap(Labware >> bool, FunctionalProperty):
@@ -366,6 +377,20 @@ class LOLabwareTBox:
 
             # labware with snap cap
 
+
+            # vendor specific properties
+            class hasVendorName(Labware >> str, FunctionalProperty):
+                """Vendor name"""
+            class hasVendorProductID(Labware >> str, FunctionalProperty):
+                """Vendor Product ID"""
+            class hasUNSPSC(Labware >> str, FunctionalProperty):
+                """UNSPSC code"""
+
+            class hasEClass(Labware >> str, FunctionalProperty):
+                """EClass code"""
+
+            class hasEAN(Labware >> str, FunctionalProperty):
+                """EAN code"""
 
             
             # further properties:
@@ -391,10 +416,10 @@ class LOLabwareTBox:
                                 & hasConeAngle.value(0) & hasConeDepth.value(0) & hasShapePolygonXY.value(0) 
                                 & hasShapePolygonZ.value(0) & hasShapeModel2D.value("circle") & hasShapeModel3D.value("cylinder") 
                                 & hasScrewCap.value(False) & hasScrewCapMaterial.value("N/A") & hasScrewCapColor.value("N/A") 
-                                & hasColor.value("#FFFFFF") & hasMaterial.value("polystyrene") & hasMass.value(0) 
+                                & hasColorRGB.value("#FFFFFF") & hasMaterial.value("polystyrene") & hasMass.value(0) 
                                 & hasMaxSheerForce.value(0) & hasCoatingMaterial.value("N/A") & hasSetptum.value(False) 
                                 & hasSeptumMaterial.value("N/A") & hasSeptumPenetrationForce.value(0) & isLiddable.value(False) & isStackable.value(True) 
-                                & isSealable.value(False) & hasManifacturer.value("N/A") & isProductType.value("N/A") & hasModelNumber.value("N/A") & hasProductNumber.value("N/A") ]
+                                & isSealable.value(False) & hasManifacturer.value("N/A") & isProductType.value("N/A") & hasModelID.value("N/A") & hasProductID.value("N/A") ]
                 
             
 

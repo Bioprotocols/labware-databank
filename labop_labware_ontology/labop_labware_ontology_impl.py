@@ -100,7 +100,7 @@ class LabwareInterface(LOLabwareInterface):
 
         self.emmo_ext_tbox.export(path=path, format=format)
         self.lolw_tbox.export(path=path, format=format)
-        #self.lolw_abox.export(path=path, format=format)
+        self.lolw_abox.export(path=path, format=format)
 
 
 

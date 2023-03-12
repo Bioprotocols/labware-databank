@@ -53,42 +53,44 @@ class LOLabwareABox:
         with self.lolwa:
             for index,row in labware_cat_df.iterrows():
                 print(row['Id'], "-- >", row['Manifacturer'], row['ProductID'] )
-                law = self.lolwa.Labware( row['Id'],
-                                        #Id;Manifacturer;
+                law = self.lolwt.Labware( row['Id'],
                                         hasManifacturer=row['Manifacturer'],
-                                        #ProductID;
                                         hasProductID=row['ProductID'],
                                         # Description
-                                        # ImageLink[URL]
-                                        # UNSPSC
-                                        # eCl@ss
-                                        # Vendor
-                                        # CatalogueNumber
-                                        # WellCount
+                                        hasImageLink=row['ImageLink[URL]'],
+                                        hasUNSPSC=row['UNSPSC'],
+                                        hasEClass=row['eCl@ss'],
+                                        #hasVendorName=row['Vendor'],
+                                        #hasVendorProductID=row['CatalogueNumber'],
                                         hasNumWells=row['WellCount'],
-                                        # ColumnCount;
                                         hasNumCols=row['ColumnCount'],
-                                        # RowCount
-                                        hasNumRows=row['RowCount'],
-                                        # LabwareLength[mm]
-                                        # LabwareWidth[mm]
-                                        # LabwareHeight[mm]
-                                        hasHeight=row['LabwareHeight[mm]'],
-                                        # Weight[g]
-                                        hasWeight=row['Weight[g]'],
-                                        # LabwareMaterial
-                                        # SurfaceTreatment;
-                                        # Color
-                                        # WellVolume[ul]
-                                        # A1Position[col,row];
-                                        # WellColDistance[mm]
-                                        # WellRowDistance[mm]
-                                        # WellDepth[mm]
-                                        # WellShape
-                                        # WellBottomShape
-                                        # Liddable[bool]
-                                        # Lid[[Manufacturer,ProdNumber]];
-                                        # Applications;
-                                        # Notes
-                                    )
+                                        hasNumRows=row['RowCount'])
+                                        #hasLength=row['LabwareLength[mm]'],
+                                        #hasWidth=row['LabwareWidth[mm]'])
+                #                         hasHeight=row['LabwareHeight[mm]'],
+                #                         hasMass=row['Weight[g]'],
+                #                         # LabwareMaterial
+                #                         # SurfaceTreatment;
+                #                         # Color
+                #                         hasColorDescription=row['Color'],
+                #                         # WellVolume[ul]
+                #                         hasWellVolume=row['WellVolume[ul]'],
+                #                         # A1Position[col,row];
+                #                         hasA1Position=row['A1Position[col,row]'],
+                #                         # WellColDistance[mm]
+                #                         hasWellDistanceRow=row['WellRowDistance[mm]'],
+                #                         # WellRowDistance[mm]
+                #                         hasWellDistanceCol=row['WellColDistance[mm]'],
+                #                         # WellDepth[mm]
+                #                         hasWellDepth=row['WellDepth[mm]'],
+                #                         # WellShape
+                #                         hasShapeWell=row['WellShape'],
+                #                         # WellBottomShape
+                #                         hasShapeWellBottom=row['WellBottomShape'],
+                #                         # Liddable[bool]
+                #                         isLiddable=row['Liddable[bool]'],
+                #                         # Lid[[Manufacturer,ProdNumber]];
+                #                         # Applications;
+                #                         # Notes
+                #                     )
                 

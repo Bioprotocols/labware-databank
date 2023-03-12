@@ -32,6 +32,13 @@ email: mark.doerr@suni-greifswald.de
     rdfs:range <http://emmo.info/emmo-inferredlabop_719a638a-e204-51f4-9cb0-48549e5c34bc> ;
     core:labop_6487502b-8c4d-5c97-932a-e6b54098f53b "hasRadiusZ"@en .
 
+:labop_102e11f9-bbc7-5ba7-8b99-e7c773bbf722 a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    emmo:labop_d1e9a166-fdc4-5ab0-be3a-23ede9e11070 "EClass code"@en ;
+    rdfs:domain :labop_1d4c2a98-e5bd-5154-8fc8-3c33118e9019 ;
+    rdfs:range xsd:string ;
+    core:labop_6487502b-8c4d-5c97-932a-e6b54098f53b "hasEClass"@en .
+
 :labop_18392791-c37e-5a29-b763-c6c22101df27 a owl:Class ;
     emmo:labop_d1e9a166-fdc4-5ab0-be3a-23ede9e11070 "Position of first interaction point of a pipette tip with a well or a needle with a septum, rel. to the upper left corner of the labware. - what about round labware?"@en ;
     rdfs:subClassOf emmo:labop_46f75b35-e50b-5d4b-8207-882dd7a8c27f ;
@@ -43,6 +50,27 @@ email: mark.doerr@suni-greifswald.de
     rdfs:domain <http://emmo.info/emmo-inferredlabop_719a638a-e204-51f4-9cb0-48549e5c34bc> ;
     rdfs:range xsd:decimal ;
     core:labop_6487502b-8c4d-5c97-932a-e6b54098f53b "hasLengthTolerance"@en .
+
+:labop_253d3d8f-aa5f-538b-9c70-6c4c275f0163 a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    emmo:labop_d1e9a166-fdc4-5ab0-be3a-23ede9e11070 "Labware color description, e.g. white, black, opaque, blue, transparent, ..."@en ;
+    rdfs:domain :labop_1d4c2a98-e5bd-5154-8fc8-3c33118e9019 ;
+    rdfs:range xsd:string ;
+    core:labop_6487502b-8c4d-5c97-932a-e6b54098f53b "hasColorDescription"@en .
+
+:labop_25ad0a5c-6453-5fd0-a8ea-a5a4bc50b12c a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    emmo:labop_d1e9a166-fdc4-5ab0-be3a-23ede9e11070 "Vendor name"@en ;
+    rdfs:domain :labop_1d4c2a98-e5bd-5154-8fc8-3c33118e9019 ;
+    rdfs:range xsd:string ;
+    core:labop_6487502b-8c4d-5c97-932a-e6b54098f53b "hasVendorName"@en .
+
+:labop_310b66ee-7fde-5409-9db4-aa2f639c8d5f a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    emmo:labop_d1e9a166-fdc4-5ab0-be3a-23ede9e11070 "Link to image of the Labware"@en ;
+    rdfs:domain :labop_1d4c2a98-e5bd-5154-8fc8-3c33118e9019 ;
+    rdfs:range xsd:string ;
+    core:labop_6487502b-8c4d-5c97-932a-e6b54098f53b "hasImageLink"@en .
 
 :labop_345e97e9-1d8a-5cfa-b572-64f05fa15a50 a owl:FunctionalProperty,
         owl:ObjectProperty ;
@@ -57,6 +85,13 @@ email: mark.doerr@suni-greifswald.de
     rdfs:domain :labop_1d4c2a98-e5bd-5154-8fc8-3c33118e9019 ;
     rdfs:range xsd:decimal ;
     core:labop_6487502b-8c4d-5c97-932a-e6b54098f53b "hasHightStacked"@en .
+
+:labop_470dc19d-e3f7-57ff-be4a-ce60e2d08291 a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    emmo:labop_d1e9a166-fdc4-5ab0-be3a-23ede9e11070 "UNSPSC code"@en ;
+    rdfs:domain :labop_1d4c2a98-e5bd-5154-8fc8-3c33118e9019 ;
+    rdfs:range xsd:string ;
+    core:labop_6487502b-8c4d-5c97-932a-e6b54098f53b "hasUNSPSC"@en .
 
 :labop_4825afcf-3c27-57f1-975c-0bd1b4ef1753 a owl:FunctionalProperty,
         owl:ObjectProperty ;
@@ -78,6 +113,13 @@ email: mark.doerr@suni-greifswald.de
     rdfs:domain :labop_1d4c2a98-e5bd-5154-8fc8-3c33118e9019 ;
     rdfs:range xsd:decimal ;
     core:labop_6487502b-8c4d-5c97-932a-e6b54098f53b "hasHightStackedLidded"@en .
+
+:labop_4fae8d58-cf6e-53e4-a90d-9b5f1bbbe33b a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    emmo:labop_d1e9a166-fdc4-5ab0-be3a-23ede9e11070 "EAN code"@en ;
+    rdfs:domain :labop_1d4c2a98-e5bd-5154-8fc8-3c33118e9019 ;
+    rdfs:range xsd:string ;
+    core:labop_6487502b-8c4d-5c97-932a-e6b54098f53b "hasEAN"@en .
 
 :labop_614fa651-7b58-51fe-ab13-19088d5f8526 a owl:Class ;
     emmo:labop_d1e9a166-fdc4-5ab0-be3a-23ede9e11070 "Radius of a round bottom in z (hight) direction."@en ;
@@ -160,6 +202,13 @@ email: mark.doerr@suni-greifswald.de
     rdfs:subClassOf emmo:labop_f41996d3-bd1b-51cd-b2f9-9083b777b5af ;
     core:labop_6487502b-8c4d-5c97-932a-e6b54098f53b "ConeAngle"@en .
 
+:labop_d9878762-5347-5048-95be-9fec65b41825 a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    emmo:labop_d1e9a166-fdc4-5ab0-be3a-23ede9e11070 "Vendor Product ID"@en ;
+    rdfs:domain :labop_1d4c2a98-e5bd-5154-8fc8-3c33118e9019 ;
+    rdfs:range xsd:string ;
+    core:labop_6487502b-8c4d-5c97-932a-e6b54098f53b "hasVendorProductID"@en .
+
 :labop_dce294a6-2049-50f0-a0b7-e2f5712ebbd9 a owl:Class ;
     emmo:labop_d1e9a166-fdc4-5ab0-be3a-23ede9e11070 "96 Well Microtiter Plate according to SLAS 4-2004 standard"@en ;
     rdfs:subClassOf :labop_1d4c2a98-e5bd-5154-8fc8-3c33118e9019 ;
@@ -208,7 +257,7 @@ email: mark.doerr@suni-greifswald.de
                         owl:hasValue "N/A"^^xsd:string ;
                         owl:onProperty :labop_825301df-2b1b-5070-8c7e-19a72967755c ] [ a owl:Restriction ;
                         owl:hasValue "#FFFFFF"^^xsd:string ;
-                        owl:onProperty :labop_29816674-967e-5c23-8092-d79768a82bbc ] [ a owl:Restriction ;
+                        owl:onProperty :labop_f89e593f-2fc4-5a8a-819c-e698faf6d746 ] [ a owl:Restriction ;
                         owl:hasValue "polystyrene"^^xsd:string ;
                         owl:onProperty :labop_b441bf24-6f7f-5295-83bf-33338e579fce ] [ a owl:Restriction ;
                         owl:hasValue 0 ;
@@ -234,15 +283,22 @@ email: mark.doerr@suni-greifswald.de
                         owl:hasValue "N/A"^^xsd:string ;
                         owl:onProperty :labop_39f56071-bd5f-5b53-b47c-fedfac21b9a8 ] [ a owl:Restriction ;
                         owl:hasValue "N/A"^^xsd:string ;
-                        owl:onProperty :labop_702945ce-3530-51e0-95b9-eed9503d5790 ] [ a owl:Restriction ;
+                        owl:onProperty :labop_3c2f2772-8597-5018-b0ac-af81c09ce43e ] [ a owl:Restriction ;
                         owl:hasValue "N/A"^^xsd:string ;
-                        owl:onProperty :labop_3d0faaa4-36a6-5246-9c5b-ee56e10c5ba8 ] ) ] ;
+                        owl:onProperty :labop_7121bf4c-9c61-563b-924f-508202ea2844 ] ) ] ;
     core:labop_6487502b-8c4d-5c97-932a-e6b54098f53b "SLAS_4_2004_96_Well_Plate"@en .
 
 :labop_e9a79238-6198-50c9-9599-a8168d278322 a owl:Class ;
     emmo:labop_d1e9a166-fdc4-5ab0-be3a-23ede9e11070 "Depth of cone from beginning of conical shape."@en ;
     rdfs:subClassOf <http://emmo.info/emmo-inferredlabop_719a638a-e204-51f4-9cb0-48549e5c34bc> ;
     core:labop_6487502b-8c4d-5c97-932a-e6b54098f53b "ConeDepth"@en .
+
+:labop_f3cfc6a9-5914-58a8-a85c-4a4219b97dc0 a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    emmo:labop_d1e9a166-fdc4-5ab0-be3a-23ede9e11070 "Labware A1 position"@en ;
+    rdfs:domain :labop_1d4c2a98-e5bd-5154-8fc8-3c33118e9019 ;
+    rdfs:range xsd:string ;
+    core:labop_6487502b-8c4d-5c97-932a-e6b54098f53b "hasA1Position"@en .
 
 :labop_0a01364b-3379-5120-8c42-2944c8d8c04c a owl:DatatypeProperty,
         owl:FunctionalProperty ;
@@ -276,13 +332,6 @@ email: mark.doerr@suni-greifswald.de
     rdfs:domain :labop_1d4c2a98-e5bd-5154-8fc8-3c33118e9019 ;
     rdfs:range xsd:string ;
     core:labop_6487502b-8c4d-5c97-932a-e6b54098f53b "hasCoatingMaterial"@en .
-
-:labop_29816674-967e-5c23-8092-d79768a82bbc a owl:DatatypeProperty,
-        owl:FunctionalProperty ;
-    emmo:labop_d1e9a166-fdc4-5ab0-be3a-23ede9e11070 "Labware color in RGB hex encoding"@en ;
-    rdfs:domain :labop_1d4c2a98-e5bd-5154-8fc8-3c33118e9019 ;
-    rdfs:range xsd:string ;
-    core:labop_6487502b-8c4d-5c97-932a-e6b54098f53b "hasColor"@en .
 
 :labop_2e527ee2-3f34-5eb4-8320-952b69fdbc71 a owl:DatatypeProperty,
         owl:FunctionalProperty ;
@@ -319,12 +368,12 @@ email: mark.doerr@suni-greifswald.de
     rdfs:range xsd:string ;
     core:labop_6487502b-8c4d-5c97-932a-e6b54098f53b "isProductType"@en .
 
-:labop_3d0faaa4-36a6-5246-9c5b-ee56e10c5ba8 a owl:DatatypeProperty,
+:labop_3c2f2772-8597-5018-b0ac-af81c09ce43e a owl:DatatypeProperty,
         owl:FunctionalProperty ;
-    emmo:labop_d1e9a166-fdc4-5ab0-be3a-23ede9e11070 "Manufacturer Product Number of the Labware"@en ;
+    emmo:labop_d1e9a166-fdc4-5ab0-be3a-23ede9e11070 "Labware model ID/number"@en ;
     rdfs:domain :labop_1d4c2a98-e5bd-5154-8fc8-3c33118e9019 ;
     rdfs:range xsd:string ;
-    core:labop_6487502b-8c4d-5c97-932a-e6b54098f53b "hasProductNumber"@en .
+    core:labop_6487502b-8c4d-5c97-932a-e6b54098f53b "hasModelID"@en .
 
 :labop_3dbbe6b5-19c0-5ef2-8f5f-320a1044074b a owl:DatatypeProperty,
         owl:FunctionalProperty ;
@@ -368,12 +417,12 @@ email: mark.doerr@suni-greifswald.de
     rdfs:range xsd:boolean ;
     core:labop_6487502b-8c4d-5c97-932a-e6b54098f53b "hasScrewCap"@en .
 
-:labop_702945ce-3530-51e0-95b9-eed9503d5790 a owl:DatatypeProperty,
+:labop_7121bf4c-9c61-563b-924f-508202ea2844 a owl:DatatypeProperty,
         owl:FunctionalProperty ;
-    emmo:labop_d1e9a166-fdc4-5ab0-be3a-23ede9e11070 "Labware model number"@en ;
+    emmo:labop_d1e9a166-fdc4-5ab0-be3a-23ede9e11070 "Manufacturer Product ID/Number of the Labware"@en ;
     rdfs:domain :labop_1d4c2a98-e5bd-5154-8fc8-3c33118e9019 ;
     rdfs:range xsd:string ;
-    core:labop_6487502b-8c4d-5c97-932a-e6b54098f53b "hasModelNumber"@en .
+    core:labop_6487502b-8c4d-5c97-932a-e6b54098f53b "hasProductID"@en .
 
 :labop_71b68d12-f079-5318-bbc9-5c1282825a54 a owl:DatatypeProperty,
         owl:FunctionalProperty ;
@@ -502,6 +551,13 @@ email: mark.doerr@suni-greifswald.de
     rdfs:domain :labop_1d4c2a98-e5bd-5154-8fc8-3c33118e9019 ;
     rdfs:range xsd:string ;
     core:labop_6487502b-8c4d-5c97-932a-e6b54098f53b "hasShapeModel2D"@en .
+
+:labop_f89e593f-2fc4-5a8a-819c-e698faf6d746 a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    emmo:labop_d1e9a166-fdc4-5ab0-be3a-23ede9e11070 "Labware color in RGB hex encoding"@en ;
+    rdfs:domain :labop_1d4c2a98-e5bd-5154-8fc8-3c33118e9019 ;
+    rdfs:range xsd:string ;
+    core:labop_6487502b-8c4d-5c97-932a-e6b54098f53b "hasColorRGB"@en .
 
 :labop_fe483b78-bc24-5d98-8f04-13a62a56ae99 a owl:DatatypeProperty,
         owl:FunctionalProperty ;

@@ -1,0 +1,998 @@
+@prefix : <http://www.labop.org/labware-a#> .
+@prefix core: <http://www.w3.org/2004/02/skos/core#> .
+@prefix emmo: <http://emmo.info/emmo#> .
+@prefix labw: <http://www.labop.org/labware-t#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix term: <http://purl.org/dc/terms/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://www.labop.org/labware-a> a owl:Ontology ;
+    emmo:labop_fc098d8e-4702-5e22-b016-bff1036279b5 """Contacts:
+mark doerr
+University Greifswald
+email: mark.doerr@suni-greifswald.de
+
+"""@en,
+        "The EMMO requires FaCT++ reasoner plugin in order to visualize allinferences and class hierarchy (ctrl+R hotkey in Protege)."@en,
+        "This ontology is generated with data from the EMMOntoPy Python package."@en ;
+    term:labop_03788c5a-00c7-5206-b7d9-96d753ab60bb "mark doerr, Robert Goldman, Timmothy (Tim) Fallon"@en ;
+    term:labop_2b27718e-b640-5f37-bd9e-00f7172798db "mark doerr"@en ;
+    term:labop_3186479c-7332-56d4-955c-82e62afeca5b "An EMMO-based domain ontology for scientific labware.labop-labware is released under the Creative Commons Attribution 4.0 International license (CC BY 4.0)."@en ;
+    term:labop_491691b0-5368-59d7-ab05-2654b00cd186 "LabOP-Labware"@en ;
+    term:labop_d8c9835b-cded-51e5-a098-9ec1475e5824 "https://creativecommons.org/licenses/by/4.0/legalcode"@en ;
+    term:labop_f6f34439-8e9f-573b-9761-7d62b1eb5dad "mark doerr"@en ;
+    owl:versionIRI <http://www.labop.org/0.0.1/labop_labware_abox> ;
+    owl:versionInfo "0.0.1"@en .
+
+:labop_09823f09-de61-563d-8743-3be99a1b8e3a a labw:labop_1d4c2a98-e5bd-5154-8fc8-3c33118e9019,
+        owl:NamedIndividual ;
+    labw:labop_102e11f9-bbc7-5ba7-8b99-e7c773bbf722 "None"^^xsd:decimal ;
+    labw:labop_310b66ee-7fde-5409-9db4-aa2f639c8d5f "None"^^xsd:decimal ;
+    labw:labop_360645fc-419c-54b2-ad91-3488723c86d9 16.0 ;
+    labw:labop_470dc19d-e3f7-57ff-be4a-ce60e2d08291 "None"^^xsd:decimal ;
+    labw:labop_6566af27-0790-5221-adcd-96cf059d1416 24.0 ;
+    labw:labop_7121bf4c-9c61-563b-924f-508202ea2844 "3830"^^xsd:string ;
+    labw:labop_795abf15-9bbd-5ca5-8df9-103f6e9d86b3 "Corning"^^xsd:string ;
+    labw:labop_e777604a-bf8b-5bd9-bba6-3afadc690f19 384.0 ;
+    core:labop_6487502b-8c4d-5c97-932a-e6b54098f53b "384-ubottom-black-clear-tc"@en .
+
+:labop_0ee15def-c52f-59be-a144-891dc3d0d405 a labw:labop_1d4c2a98-e5bd-5154-8fc8-3c33118e9019,
+        owl:NamedIndividual ;
+    labw:labop_102e11f9-bbc7-5ba7-8b99-e7c773bbf722 "None"^^xsd:decimal ;
+    labw:labop_310b66ee-7fde-5409-9db4-aa2f639c8d5f "None"^^xsd:decimal ;
+    labw:labop_360645fc-419c-54b2-ad91-3488723c86d9 1.0 ;
+    labw:labop_470dc19d-e3f7-57ff-be4a-ce60e2d08291 "None"^^xsd:decimal ;
+    labw:labop_6566af27-0790-5221-adcd-96cf059d1416 1.0 ;
+    labw:labop_7121bf4c-9c61-563b-924f-508202ea2844 "None"^^xsd:decimal ;
+    labw:labop_795abf15-9bbd-5ca5-8df9-103f6e9d86b3 "unknown"^^xsd:string ;
+    labw:labop_e777604a-bf8b-5bd9-bba6-3afadc690f19 1.0 ;
+    core:labop_6487502b-8c4d-5c97-932a-e6b54098f53b "single_vbottom_microwell"@en .
+
+:labop_0f3b0c4c-0549-5c9b-be68-d129d67797f3 a labw:labop_1d4c2a98-e5bd-5154-8fc8-3c33118e9019,
+        owl:NamedIndividual ;
+    labw:labop_102e11f9-bbc7-5ba7-8b99-e7c773bbf722 "None"^^xsd:decimal ;
+    labw:labop_310b66ee-7fde-5409-9db4-aa2f639c8d5f "None"^^xsd:decimal ;
+    labw:labop_360645fc-419c-54b2-ad91-3488723c86d9 8.0 ;
+    labw:labop_470dc19d-e3f7-57ff-be4a-ce60e2d08291 "None"^^xsd:decimal ;
+    labw:labop_6566af27-0790-5221-adcd-96cf059d1416 12.0 ;
+    labw:labop_7121bf4c-9c61-563b-924f-508202ea2844 "33096"^^xsd:string ;
+    labw:labop_795abf15-9bbd-5ca5-8df9-103f6e9d86b3 "SPL Life Sciences"^^xsd:string ;
+    labw:labop_e777604a-bf8b-5bd9-bba6-3afadc690f19 96.0 ;
+    core:labop_6487502b-8c4d-5c97-932a-e6b54098f53b "96-flat-uv-ps"@en .
+
+:labop_11cfc4b9-39e2-5f4d-a7b2-041afdbec557 a labw:labop_1d4c2a98-e5bd-5154-8fc8-3c33118e9019,
+        owl:NamedIndividual ;
+    labw:labop_102e11f9-bbc7-5ba7-8b99-e7c773bbf722 "None"^^xsd:decimal ;
+    labw:labop_310b66ee-7fde-5409-9db4-aa2f639c8d5f "None"^^xsd:decimal ;
+    labw:labop_360645fc-419c-54b2-ad91-3488723c86d9 16.0 ;
+    labw:labop_470dc19d-e3f7-57ff-be4a-ce60e2d08291 "None"^^xsd:decimal ;
+    labw:labop_6566af27-0790-5221-adcd-96cf059d1416 24.0 ;
+    labw:labop_7121bf4c-9c61-563b-924f-508202ea2844 "3700"^^xsd:string ;
+    labw:labop_795abf15-9bbd-5ca5-8df9-103f6e9d86b3 "Corning"^^xsd:string ;
+    labw:labop_e777604a-bf8b-5bd9-bba6-3afadc690f19 384.0 ;
+    core:labop_6487502b-8c4d-5c97-932a-e6b54098f53b "384-flat-clear-clear"@en .
+
+:labop_13c623e6-a350-56a9-951f-a6fbac28108e a labw:labop_1d4c2a98-e5bd-5154-8fc8-3c33118e9019,
+        owl:NamedIndividual ;
+    labw:labop_102e11f9-bbc7-5ba7-8b99-e7c773bbf722 "None"^^xsd:decimal ;
+    labw:labop_310b66ee-7fde-5409-9db4-aa2f639c8d5f "None"^^xsd:decimal ;
+    labw:labop_360645fc-419c-54b2-ad91-3488723c86d9 8.0 ;
+    labw:labop_470dc19d-e3f7-57ff-be4a-ce60e2d08291 "None"^^xsd:decimal ;
+    labw:labop_6566af27-0790-5221-adcd-96cf059d1416 12.0 ;
+    labw:labop_7121bf4c-9c61-563b-924f-508202ea2844 "3635"^^xsd:string ;
+    labw:labop_795abf15-9bbd-5ca5-8df9-103f6e9d86b3 "Corning"^^xsd:string ;
+    labw:labop_e777604a-bf8b-5bd9-bba6-3afadc690f19 96.0 ;
+    core:labop_6487502b-8c4d-5c97-932a-e6b54098f53b "mtp_96_flat_uv"@en .
+
+:labop_1518b48e-991c-50bb-8acb-77325d4b5816 a labw:labop_1d4c2a98-e5bd-5154-8fc8-3c33118e9019,
+        owl:NamedIndividual ;
+    labw:labop_102e11f9-bbc7-5ba7-8b99-e7c773bbf722 "None"^^xsd:decimal ;
+    labw:labop_310b66ee-7fde-5409-9db4-aa2f639c8d5f "None"^^xsd:decimal ;
+    labw:labop_360645fc-419c-54b2-ad91-3488723c86d9 16.0 ;
+    labw:labop_470dc19d-e3f7-57ff-be4a-ce60e2d08291 "None"^^xsd:decimal ;
+    labw:labop_6566af27-0790-5221-adcd-96cf059d1416 24.0 ;
+    labw:labop_7121bf4c-9c61-563b-924f-508202ea2844 "3706"^^xsd:string ;
+    labw:labop_795abf15-9bbd-5ca5-8df9-103f6e9d86b3 "Corning"^^xsd:string ;
+    labw:labop_e777604a-bf8b-5bd9-bba6-3afadc690f19 384.0 ;
+    core:labop_6487502b-8c4d-5c97-932a-e6b54098f53b "384-flat"@en .
+
+:labop_1a433174-abf9-5631-bb75-f14fceb01589 a labw:labop_1d4c2a98-e5bd-5154-8fc8-3c33118e9019,
+        owl:NamedIndividual ;
+    labw:labop_102e11f9-bbc7-5ba7-8b99-e7c773bbf722 "None"^^xsd:decimal ;
+    labw:labop_310b66ee-7fde-5409-9db4-aa2f639c8d5f "None"^^xsd:decimal ;
+    labw:labop_360645fc-419c-54b2-ad91-3488723c86d9 1.0 ;
+    labw:labop_470dc19d-e3f7-57ff-be4a-ce60e2d08291 "None"^^xsd:decimal ;
+    labw:labop_6566af27-0790-5221-adcd-96cf059d1416 1.0 ;
+    labw:labop_7121bf4c-9c61-563b-924f-508202ea2844 "1615-5500"^^xsd:string ;
+    labw:labop_795abf15-9bbd-5ca5-8df9-103f6e9d86b3 "USA Scientific"^^xsd:string ;
+    labw:labop_e777604a-bf8b-5bd9-bba6-3afadc690f19 1.0 ;
+    core:labop_6487502b-8c4d-5c97-932a-e6b54098f53b "micro-1.5"@en .
+
+:labop_1adffef1-a592-521f-a885-76cf01b90784 a labw:labop_1d4c2a98-e5bd-5154-8fc8-3c33118e9019,
+        owl:NamedIndividual ;
+    labw:labop_102e11f9-bbc7-5ba7-8b99-e7c773bbf722 "None"^^xsd:decimal ;
+    labw:labop_310b66ee-7fde-5409-9db4-aa2f639c8d5f "None"^^xsd:decimal ;
+    labw:labop_360645fc-419c-54b2-ad91-3488723c86d9 8.0 ;
+    labw:labop_470dc19d-e3f7-57ff-be4a-ce60e2d08291 "None"^^xsd:decimal ;
+    labw:labop_6566af27-0790-5221-adcd-96cf059d1416 12.0 ;
+    labw:labop_7121bf4c-9c61-563b-924f-508202ea2844 "30730119"^^xsd:string ;
+    labw:labop_795abf15-9bbd-5ca5-8df9-103f6e9d86b3 "Eppendorf"^^xsd:string ;
+    labw:labop_e777604a-bf8b-5bd9-bba6-3afadc690f19 96.0 ;
+    core:labop_6487502b-8c4d-5c97-932a-e6b54098f53b "96-flat-clear-clear-tc"@en .
+
+:labop_1efc32f4-c9e9-5e11-a917-be17584f01e5 a labw:labop_1d4c2a98-e5bd-5154-8fc8-3c33118e9019,
+        owl:NamedIndividual ;
+    labw:labop_102e11f9-bbc7-5ba7-8b99-e7c773bbf722 "None"^^xsd:decimal ;
+    labw:labop_310b66ee-7fde-5409-9db4-aa2f639c8d5f "None"^^xsd:decimal ;
+    labw:labop_360645fc-419c-54b2-ad91-3488723c86d9 8.0 ;
+    labw:labop_470dc19d-e3f7-57ff-be4a-ce60e2d08291 "None"^^xsd:decimal ;
+    labw:labop_6566af27-0790-5221-adcd-96cf059d1416 12.0 ;
+    labw:labop_7121bf4c-9c61-563b-924f-508202ea2844 "PCR-96-FS-C"^^xsd:string ;
+    labw:labop_795abf15-9bbd-5ca5-8df9-103f6e9d86b3 "Axygen"^^xsd:string ;
+    labw:labop_e777604a-bf8b-5bd9-bba6-3afadc690f19 96.0 ;
+    core:labop_6487502b-8c4d-5c97-932a-e6b54098f53b "96-pcr-fs-clear"@en .
+
+:labop_24e3aff3-ddf9-5d3f-954e-0a6b63a82795 a labw:labop_1d4c2a98-e5bd-5154-8fc8-3c33118e9019,
+        owl:NamedIndividual ;
+    labw:labop_102e11f9-bbc7-5ba7-8b99-e7c773bbf722 "None"^^xsd:decimal ;
+    labw:labop_310b66ee-7fde-5409-9db4-aa2f639c8d5f "None"^^xsd:decimal ;
+    labw:labop_360645fc-419c-54b2-ad91-3488723c86d9 1.0 ;
+    labw:labop_470dc19d-e3f7-57ff-be4a-ce60e2d08291 "None"^^xsd:decimal ;
+    labw:labop_6566af27-0790-5221-adcd-96cf059d1416 1.0 ;
+    labw:labop_7121bf4c-9c61-563b-924f-508202ea2844 "unknown"^^xsd:string ;
+    labw:labop_795abf15-9bbd-5ca5-8df9-103f6e9d86b3 "unknown"^^xsd:string ;
+    labw:labop_e777604a-bf8b-5bd9-bba6-3afadc690f19 1.0 ;
+    core:labop_6487502b-8c4d-5c97-932a-e6b54098f53b "hplc-vial"@en .
+
+:labop_258da480-8342-5902-9d1d-b08dd5990e86 a labw:labop_1d4c2a98-e5bd-5154-8fc8-3c33118e9019,
+        owl:NamedIndividual ;
+    labw:labop_102e11f9-bbc7-5ba7-8b99-e7c773bbf722 "None"^^xsd:decimal ;
+    labw:labop_310b66ee-7fde-5409-9db4-aa2f639c8d5f "https://avantorsciences.com/images/aasg-adf.png"^^xsd:string ;
+    labw:labop_360645fc-419c-54b2-ad91-3488723c86d9 16.0 ;
+    labw:labop_470dc19d-e3f7-57ff-be4a-ce60e2d08291 "None"^^xsd:decimal ;
+    labw:labop_6566af27-0790-5221-adcd-96cf059d1416 24.0 ;
+    labw:labop_7121bf4c-9c61-563b-924f-508202ea2844 "951020539"^^xsd:string ;
+    labw:labop_795abf15-9bbd-5ca5-8df9-103f6e9d86b3 "Eppendorf"^^xsd:string ;
+    labw:labop_e777604a-bf8b-5bd9-bba6-3afadc690f19 384.0 ;
+    core:labop_6487502b-8c4d-5c97-932a-e6b54098f53b "384_pcr"@en .
+
+:labop_28c451e5-6a8e-5f58-a51c-b6e956057f20 a labw:labop_1d4c2a98-e5bd-5154-8fc8-3c33118e9019,
+        owl:NamedIndividual ;
+    labw:labop_102e11f9-bbc7-5ba7-8b99-e7c773bbf722 "None"^^xsd:decimal ;
+    labw:labop_310b66ee-7fde-5409-9db4-aa2f639c8d5f "None"^^xsd:decimal ;
+    labw:labop_360645fc-419c-54b2-ad91-3488723c86d9 1.0 ;
+    labw:labop_470dc19d-e3f7-57ff-be4a-ce60e2d08291 "None"^^xsd:decimal ;
+    labw:labop_6566af27-0790-5221-adcd-96cf059d1416 1.0 ;
+    labw:labop_7121bf4c-9c61-563b-924f-508202ea2844 "not_applicable"^^xsd:string ;
+    labw:labop_795abf15-9bbd-5ca5-8df9-103f6e9d86b3 "not_applicable"^^xsd:string ;
+    labw:labop_e777604a-bf8b-5bd9-bba6-3afadc690f19 1.0 ;
+    core:labop_6487502b-8c4d-5c97-932a-e6b54098f53b "bottle-500"@en .
+
+:labop_2c7d4900-6f1a-52c8-9d84-c00c7d05473f a labw:labop_1d4c2a98-e5bd-5154-8fc8-3c33118e9019,
+        owl:NamedIndividual ;
+    labw:labop_102e11f9-bbc7-5ba7-8b99-e7c773bbf722 "None"^^xsd:decimal ;
+    labw:labop_310b66ee-7fde-5409-9db4-aa2f639c8d5f "None"^^xsd:decimal ;
+    labw:labop_360645fc-419c-54b2-ad91-3488723c86d9 1.0 ;
+    labw:labop_470dc19d-e3f7-57ff-be4a-ce60e2d08291 "None"^^xsd:decimal ;
+    labw:labop_6566af27-0790-5221-adcd-96cf059d1416 1.0 ;
+    labw:labop_7121bf4c-9c61-563b-924f-508202ea2844 "280200"^^xsd:string ;
+    labw:labop_795abf15-9bbd-5ca5-8df9-103f6e9d86b3 "E&K Scientific"^^xsd:string ;
+    labw:labop_e777604a-bf8b-5bd9-bba6-3afadc690f19 1.0 ;
+    core:labop_6487502b-8c4d-5c97-932a-e6b54098f53b "micro-2.0"@en .
+
+:labop_2d7bae90-2718-5b84-b148-8d934ce83ed2 a labw:labop_1d4c2a98-e5bd-5154-8fc8-3c33118e9019,
+        owl:NamedIndividual ;
+    labw:labop_102e11f9-bbc7-5ba7-8b99-e7c773bbf722 "None"^^xsd:decimal ;
+    labw:labop_310b66ee-7fde-5409-9db4-aa2f639c8d5f "None"^^xsd:decimal ;
+    labw:labop_360645fc-419c-54b2-ad91-3488723c86d9 1.0 ;
+    labw:labop_470dc19d-e3f7-57ff-be4a-ce60e2d08291 "None"^^xsd:decimal ;
+    labw:labop_6566af27-0790-5221-adcd-96cf059d1416 1.0 ;
+    labw:labop_7121bf4c-9c61-563b-924f-508202ea2844 "unknown"^^xsd:string ;
+    labw:labop_795abf15-9bbd-5ca5-8df9-103f6e9d86b3 "Chemspeed"^^xsd:string ;
+    labw:labop_e777604a-bf8b-5bd9-bba6-3afadc690f19 1.0 ;
+    core:labop_6487502b-8c4d-5c97-932a-e6b54098f53b "chemspeed-sealed-pin"@en .
+
+:labop_2e31d9b7-b1b4-5069-8645-a79ca2349a5a a labw:labop_1d4c2a98-e5bd-5154-8fc8-3c33118e9019,
+        owl:NamedIndividual ;
+    labw:labop_102e11f9-bbc7-5ba7-8b99-e7c773bbf722 "None"^^xsd:decimal ;
+    labw:labop_310b66ee-7fde-5409-9db4-aa2f639c8d5f "None"^^xsd:decimal ;
+    labw:labop_360645fc-419c-54b2-ad91-3488723c86d9 1.0 ;
+    labw:labop_470dc19d-e3f7-57ff-be4a-ce60e2d08291 "None"^^xsd:decimal ;
+    labw:labop_6566af27-0790-5221-adcd-96cf059d1416 1.0 ;
+    labw:labop_7121bf4c-9c61-563b-924f-508202ea2844 "188261"^^xsd:string ;
+    labw:labop_795abf15-9bbd-5ca5-8df9-103f6e9d86b3 "Greiner"^^xsd:string ;
+    labw:labop_e777604a-bf8b-5bd9-bba6-3afadc690f19 1.0 ;
+    core:labop_6487502b-8c4d-5c97-932a-e6b54098f53b "conical-15"@en .
+
+:labop_2eb7b549-48c8-515a-925e-f3edbc8db960 a labw:labop_1d4c2a98-e5bd-5154-8fc8-3c33118e9019,
+        owl:NamedIndividual ;
+    labw:labop_102e11f9-bbc7-5ba7-8b99-e7c773bbf722 "None"^^xsd:decimal ;
+    labw:labop_310b66ee-7fde-5409-9db4-aa2f639c8d5f "None"^^xsd:decimal ;
+    labw:labop_360645fc-419c-54b2-ad91-3488723c86d9 8.0 ;
+    labw:labop_470dc19d-e3f7-57ff-be4a-ce60e2d08291 "None"^^xsd:decimal ;
+    labw:labop_6566af27-0790-5221-adcd-96cf059d1416 12.0 ;
+    labw:labop_7121bf4c-9c61-563b-924f-508202ea2844 "22-387-030"^^xsd:string ;
+    labw:labop_795abf15-9bbd-5ca5-8df9-103f6e9d86b3 "Fisher"^^xsd:string ;
+    labw:labop_e777604a-bf8b-5bd9-bba6-3afadc690f19 96.0 ;
+    core:labop_6487502b-8c4d-5c97-932a-e6b54098f53b "96-v-kf"@en .
+
+:labop_2f57b082-2346-56b0-93f3-5c0c00deea14 a labw:labop_1d4c2a98-e5bd-5154-8fc8-3c33118e9019,
+        owl:NamedIndividual ;
+    labw:labop_102e11f9-bbc7-5ba7-8b99-e7c773bbf722 "None"^^xsd:decimal ;
+    labw:labop_310b66ee-7fde-5409-9db4-aa2f639c8d5f "None"^^xsd:decimal ;
+    labw:labop_360645fc-419c-54b2-ad91-3488723c86d9 16.0 ;
+    labw:labop_470dc19d-e3f7-57ff-be4a-ce60e2d08291 "None"^^xsd:decimal ;
+    labw:labop_6566af27-0790-5221-adcd-96cf059d1416 24.0 ;
+    labw:labop_7121bf4c-9c61-563b-924f-508202ea2844 "3570"^^xsd:string ;
+    labw:labop_795abf15-9bbd-5ca5-8df9-103f6e9d86b3 "Corning"^^xsd:string ;
+    labw:labop_e777604a-bf8b-5bd9-bba6-3afadc690f19 384.0 ;
+    core:labop_6487502b-8c4d-5c97-932a-e6b54098f53b "384-flat-white-white-tc"@en .
+
+:labop_304b569e-f9b7-596d-ae46-c19221f92328 a labw:labop_1d4c2a98-e5bd-5154-8fc8-3c33118e9019,
+        owl:NamedIndividual ;
+    labw:labop_102e11f9-bbc7-5ba7-8b99-e7c773bbf722 "None"^^xsd:decimal ;
+    labw:labop_310b66ee-7fde-5409-9db4-aa2f639c8d5f "None"^^xsd:decimal ;
+    labw:labop_360645fc-419c-54b2-ad91-3488723c86d9 16.0 ;
+    labw:labop_470dc19d-e3f7-57ff-be4a-ce60e2d08291 "None"^^xsd:decimal ;
+    labw:labop_6566af27-0790-5221-adcd-96cf059d1416 24.0 ;
+    labw:labop_7121bf4c-9c61-563b-924f-508202ea2844 "3824"^^xsd:string ;
+    labw:labop_795abf15-9bbd-5ca5-8df9-103f6e9d86b3 "Corning"^^xsd:string ;
+    labw:labop_e777604a-bf8b-5bd9-bba6-3afadc690f19 384.0 ;
+    core:labop_6487502b-8c4d-5c97-932a-e6b54098f53b "384-flat-white-white-lv"@en .
+
+:labop_3298b5c8-a934-5349-ab1f-e54ec86b73b2 a labw:labop_1d4c2a98-e5bd-5154-8fc8-3c33118e9019,
+        owl:NamedIndividual ;
+    labw:labop_102e11f9-bbc7-5ba7-8b99-e7c773bbf722 "None"^^xsd:decimal ;
+    labw:labop_310b66ee-7fde-5409-9db4-aa2f639c8d5f "None"^^xsd:decimal ;
+    labw:labop_360645fc-419c-54b2-ad91-3488723c86d9 16.0 ;
+    labw:labop_470dc19d-e3f7-57ff-be4a-ce60e2d08291 "None"^^xsd:decimal ;
+    labw:labop_6566af27-0790-5221-adcd-96cf059d1416 24.0 ;
+    labw:labop_7121bf4c-9c61-563b-924f-508202ea2844 "MS-9384WZ"^^xsd:string ;
+    labw:labop_795abf15-9bbd-5ca5-8df9-103f6e9d86b3 "Sumitomo Bakelite Co."^^xsd:string ;
+    labw:labop_e777604a-bf8b-5bd9-bba6-3afadc690f19 384.0 ;
+    core:labop_6487502b-8c4d-5c97-932a-e6b54098f53b "384-ubottom-white-tc"@en .
+
+:labop_32defaf8-cf28-59ef-b18a-7170b1a63b47 a labw:labop_1d4c2a98-e5bd-5154-8fc8-3c33118e9019,
+        owl:NamedIndividual ;
+    labw:labop_102e11f9-bbc7-5ba7-8b99-e7c773bbf722 "None"^^xsd:decimal ;
+    labw:labop_310b66ee-7fde-5409-9db4-aa2f639c8d5f "None"^^xsd:decimal ;
+    labw:labop_360645fc-419c-54b2-ad91-3488723c86d9 32.0 ;
+    labw:labop_470dc19d-e3f7-57ff-be4a-ce60e2d08291 "None"^^xsd:decimal ;
+    labw:labop_6566af27-0790-5221-adcd-96cf059d1416 48.0 ;
+    labw:labop_7121bf4c-9c61-563b-924f-508202ea2844 "001-6969"^^xsd:string ;
+    labw:labop_795abf15-9bbd-5ca5-8df9-103f6e9d86b3 "Beckman"^^xsd:string ;
+    labw:labop_e777604a-bf8b-5bd9-bba6-3afadc690f19 1536.0 ;
+    core:labop_6487502b-8c4d-5c97-932a-e6b54098f53b "1536-echo-ldv-beckman-001-6969"@en .
+
+:labop_34ef6b32-1ae5-5219-bc6a-f4bd4bd2aedc a labw:labop_1d4c2a98-e5bd-5154-8fc8-3c33118e9019,
+        owl:NamedIndividual ;
+    labw:labop_102e11f9-bbc7-5ba7-8b99-e7c773bbf722 "None"^^xsd:decimal ;
+    labw:labop_310b66ee-7fde-5409-9db4-aa2f639c8d5f "None"^^xsd:decimal ;
+    labw:labop_360645fc-419c-54b2-ad91-3488723c86d9 1.0 ;
+    labw:labop_470dc19d-e3f7-57ff-be4a-ce60e2d08291 "None"^^xsd:decimal ;
+    labw:labop_6566af27-0790-5221-adcd-96cf059d1416 1.0 ;
+    labw:labop_7121bf4c-9c61-563b-924f-508202ea2844 "HR2767C"^^xsd:string ;
+    labw:labop_795abf15-9bbd-5ca5-8df9-103f6e9d86b3 "TradeWinds, Inc"^^xsd:string ;
+    labw:labop_e777604a-bf8b-5bd9-bba6-3afadc690f19 1.0 ;
+    core:labop_6487502b-8c4d-5c97-932a-e6b54098f53b "d1-vial"@en .
+
+:labop_3a3dec58-9669-5c5e-b74e-be29637b2943 a labw:labop_1d4c2a98-e5bd-5154-8fc8-3c33118e9019,
+        owl:NamedIndividual ;
+    labw:labop_102e11f9-bbc7-5ba7-8b99-e7c773bbf722 "None"^^xsd:decimal ;
+    labw:labop_310b66ee-7fde-5409-9db4-aa2f639c8d5f "None"^^xsd:decimal ;
+    labw:labop_360645fc-419c-54b2-ad91-3488723c86d9 1.0 ;
+    labw:labop_470dc19d-e3f7-57ff-be4a-ce60e2d08291 "None"^^xsd:decimal ;
+    labw:labop_6566af27-0790-5221-adcd-96cf059d1416 1.0 ;
+    labw:labop_7121bf4c-9c61-563b-924f-508202ea2844 "unknown"^^xsd:string ;
+    labw:labop_795abf15-9bbd-5ca5-8df9-103f6e9d86b3 "unknown"^^xsd:string ;
+    labw:labop_e777604a-bf8b-5bd9-bba6-3afadc690f19 1.0 ;
+    core:labop_6487502b-8c4d-5c97-932a-e6b54098f53b "mrv-medium"@en .
+
+:labop_44329015-214d-545c-b99d-cb66173b623d a labw:labop_1d4c2a98-e5bd-5154-8fc8-3c33118e9019,
+        owl:NamedIndividual ;
+    labw:labop_102e11f9-bbc7-5ba7-8b99-e7c773bbf722 "None"^^xsd:decimal ;
+    labw:labop_310b66ee-7fde-5409-9db4-aa2f639c8d5f "None"^^xsd:decimal ;
+    labw:labop_360645fc-419c-54b2-ad91-3488723c86d9 1.0 ;
+    labw:labop_470dc19d-e3f7-57ff-be4a-ce60e2d08291 "None"^^xsd:decimal ;
+    labw:labop_6566af27-0790-5221-adcd-96cf059d1416 1.0 ;
+    labw:labop_7121bf4c-9c61-563b-924f-508202ea2844 "res-sw96-hp"^^xsd:string ;
+    labw:labop_795abf15-9bbd-5ca5-8df9-103f6e9d86b3 "Axygen"^^xsd:string ;
+    labw:labop_e777604a-bf8b-5bd9-bba6-3afadc690f19 1.0 ;
+    core:labop_6487502b-8c4d-5c97-932a-e6b54098f53b "res-sw96-hp"@en .
+
+:labop_45a65e84-0cd1-5d59-9f17-b86024348dda a labw:labop_1d4c2a98-e5bd-5154-8fc8-3c33118e9019,
+        owl:NamedIndividual ;
+    labw:labop_102e11f9-bbc7-5ba7-8b99-e7c773bbf722 "None"^^xsd:decimal ;
+    labw:labop_310b66ee-7fde-5409-9db4-aa2f639c8d5f "None"^^xsd:decimal ;
+    labw:labop_360645fc-419c-54b2-ad91-3488723c86d9 8.0 ;
+    labw:labop_470dc19d-e3f7-57ff-be4a-ce60e2d08291 "None"^^xsd:decimal ;
+    labw:labop_6566af27-0790-5221-adcd-96cf059d1416 12.0 ;
+    labw:labop_7121bf4c-9c61-563b-924f-508202ea2844 "K15048G"^^xsd:string ;
+    labw:labop_795abf15-9bbd-5ca5-8df9-103f6e9d86b3 "Mesoscale"^^xsd:string ;
+    labw:labop_e777604a-bf8b-5bd9-bba6-3afadc690f19 96.0 ;
+    core:labop_6487502b-8c4d-5c97-932a-e6b54098f53b "96-10-spot-vplex-m-pro-inflamm1-MSD"@en .
+
+:labop_46c8a27a-4427-51da-84d7-6f226d454bc0 a labw:labop_1d4c2a98-e5bd-5154-8fc8-3c33118e9019,
+        owl:NamedIndividual ;
+    labw:labop_102e11f9-bbc7-5ba7-8b99-e7c773bbf722 "None"^^xsd:decimal ;
+    labw:labop_310b66ee-7fde-5409-9db4-aa2f639c8d5f "None"^^xsd:decimal ;
+    labw:labop_360645fc-419c-54b2-ad91-3488723c86d9 32.0 ;
+    labw:labop_470dc19d-e3f7-57ff-be4a-ce60e2d08291 "None"^^xsd:decimal ;
+    labw:labop_6566af27-0790-5221-adcd-96cf059d1416 48.0 ;
+    labw:labop_7121bf4c-9c61-563b-924f-508202ea2844 "3724"^^xsd:string ;
+    labw:labop_795abf15-9bbd-5ca5-8df9-103f6e9d86b3 "Corning"^^xsd:string ;
+    labw:labop_e777604a-bf8b-5bd9-bba6-3afadc690f19 1536.0 ;
+    core:labop_6487502b-8c4d-5c97-932a-e6b54098f53b "1536-ps-black-corning-3724"@en .
+
+:labop_49aa70a2-1dfc-5ce3-88c0-48c1623b8e38 a labw:labop_1d4c2a98-e5bd-5154-8fc8-3c33118e9019,
+        owl:NamedIndividual ;
+    labw:labop_102e11f9-bbc7-5ba7-8b99-e7c773bbf722 "None"^^xsd:decimal ;
+    labw:labop_310b66ee-7fde-5409-9db4-aa2f639c8d5f "None"^^xsd:decimal ;
+    labw:labop_360645fc-419c-54b2-ad91-3488723c86d9 16.0 ;
+    labw:labop_470dc19d-e3f7-57ff-be4a-ce60e2d08291 "None"^^xsd:decimal ;
+    labw:labop_6566af27-0790-5221-adcd-96cf059d1416 24.0 ;
+    labw:labop_7121bf4c-9c61-563b-924f-508202ea2844 "4513"^^xsd:string ;
+    labw:labop_795abf15-9bbd-5ca5-8df9-103f6e9d86b3 "Corning"^^xsd:string ;
+    labw:labop_e777604a-bf8b-5bd9-bba6-3afadc690f19 384.0 ;
+    core:labop_6487502b-8c4d-5c97-932a-e6b54098f53b "384-corning-4513-round-lv"@en .
+
+:labop_4adfeae2-33c8-5050-9634-a9b1e767a0b2 a labw:labop_1d4c2a98-e5bd-5154-8fc8-3c33118e9019,
+        owl:NamedIndividual ;
+    labw:labop_102e11f9-bbc7-5ba7-8b99-e7c773bbf722 "None"^^xsd:decimal ;
+    labw:labop_310b66ee-7fde-5409-9db4-aa2f639c8d5f "None"^^xsd:decimal ;
+    labw:labop_360645fc-419c-54b2-ad91-3488723c86d9 8.0 ;
+    labw:labop_470dc19d-e3f7-57ff-be4a-ce60e2d08291 "None"^^xsd:decimal ;
+    labw:labop_6566af27-0790-5221-adcd-96cf059d1416 12.0 ;
+    labw:labop_7121bf4c-9c61-563b-924f-508202ea2844 "353077"^^xsd:string ;
+    labw:labop_795abf15-9bbd-5ca5-8df9-103f6e9d86b3 "Corning"^^xsd:string ;
+    labw:labop_e777604a-bf8b-5bd9-bba6-3afadc690f19 96.0 ;
+    core:labop_6487502b-8c4d-5c97-932a-e6b54098f53b "96-ubottom-clear-tc"@en .
+
+:labop_4b166dbe-d99d-5091-abdd-95b83330ed3a a labw:labop_1d4c2a98-e5bd-5154-8fc8-3c33118e9019,
+        owl:NamedIndividual ;
+    labw:labop_102e11f9-bbc7-5ba7-8b99-e7c773bbf722 "None"^^xsd:decimal ;
+    labw:labop_310b66ee-7fde-5409-9db4-aa2f639c8d5f "None"^^xsd:decimal ;
+    labw:labop_360645fc-419c-54b2-ad91-3488723c86d9 "None"^^xsd:decimal ;
+    labw:labop_470dc19d-e3f7-57ff-be4a-ce60e2d08291 "None"^^xsd:decimal ;
+    labw:labop_6566af27-0790-5221-adcd-96cf059d1416 "None"^^xsd:decimal ;
+    labw:labop_7121bf4c-9c61-563b-924f-508202ea2844 "None"^^xsd:decimal ;
+    labw:labop_795abf15-9bbd-5ca5-8df9-103f6e9d86b3 "None"^^xsd:decimal ;
+    labw:labop_e777604a-bf8b-5bd9-bba6-3afadc690f19 "None"^^xsd:decimal ;
+    core:labop_6487502b-8c4d-5c97-932a-e6b54098f53b "2"@en .
+
+:labop_4b24eaf1-ccaf-5aaa-a347-ebab531e7e79 a labw:labop_1d4c2a98-e5bd-5154-8fc8-3c33118e9019,
+        owl:NamedIndividual ;
+    labw:labop_102e11f9-bbc7-5ba7-8b99-e7c773bbf722 "None"^^xsd:decimal ;
+    labw:labop_310b66ee-7fde-5409-9db4-aa2f639c8d5f "None"^^xsd:decimal ;
+    labw:labop_360645fc-419c-54b2-ad91-3488723c86d9 16.0 ;
+    labw:labop_470dc19d-e3f7-57ff-be4a-ce60e2d08291 "None"^^xsd:decimal ;
+    labw:labop_6566af27-0790-5221-adcd-96cf059d1416 24.0 ;
+    labw:labop_7121bf4c-9c61-563b-924f-508202ea2844 "6008280"^^xsd:string ;
+    labw:labop_795abf15-9bbd-5ca5-8df9-103f6e9d86b3 "PerkinElmer"^^xsd:string ;
+    labw:labop_e777604a-bf8b-5bd9-bba6-3afadc690f19 384.0 ;
+    core:labop_6487502b-8c4d-5c97-932a-e6b54098f53b "384-flat-white-white-proxiplate-plus"@en .
+
+:labop_4e018a96-9b39-5c78-8a86-5da8d6d5417a a labw:labop_1d4c2a98-e5bd-5154-8fc8-3c33118e9019,
+        owl:NamedIndividual ;
+    labw:labop_102e11f9-bbc7-5ba7-8b99-e7c773bbf722 "None"^^xsd:decimal ;
+    labw:labop_310b66ee-7fde-5409-9db4-aa2f639c8d5f "None"^^xsd:decimal ;
+    labw:labop_360645fc-419c-54b2-ad91-3488723c86d9 8.0 ;
+    labw:labop_470dc19d-e3f7-57ff-be4a-ce60e2d08291 "None"^^xsd:decimal ;
+    labw:labop_6566af27-0790-5221-adcd-96cf059d1416 12.0 ;
+    labw:labop_7121bf4c-9c61-563b-924f-508202ea2844 "3590"^^xsd:string ;
+    labw:labop_795abf15-9bbd-5ca5-8df9-103f6e9d86b3 "Costar"^^xsd:string ;
+    labw:labop_e777604a-bf8b-5bd9-bba6-3afadc690f19 96.0 ;
+    core:labop_6487502b-8c4d-5c97-932a-e6b54098f53b "96-flat-clear-costar-3590"@en .
+
+:labop_50185da6-ef4e-52ed-8cc0-b507b505e467 a labw:labop_1d4c2a98-e5bd-5154-8fc8-3c33118e9019,
+        owl:NamedIndividual ;
+    labw:labop_102e11f9-bbc7-5ba7-8b99-e7c773bbf722 "None"^^xsd:decimal ;
+    labw:labop_310b66ee-7fde-5409-9db4-aa2f639c8d5f "None"^^xsd:decimal ;
+    labw:labop_360645fc-419c-54b2-ad91-3488723c86d9 8.0 ;
+    labw:labop_470dc19d-e3f7-57ff-be4a-ce60e2d08291 "None"^^xsd:decimal ;
+    labw:labop_6566af27-0790-5221-adcd-96cf059d1416 1.0 ;
+    labw:labop_7121bf4c-9c61-563b-924f-508202ea2844 "res-mw8-hp"^^xsd:string ;
+    labw:labop_795abf15-9bbd-5ca5-8df9-103f6e9d86b3 "Axygen"^^xsd:string ;
+    labw:labop_e777604a-bf8b-5bd9-bba6-3afadc690f19 8.0 ;
+    core:labop_6487502b-8c4d-5c97-932a-e6b54098f53b "res-mw8-hp"@en .
+
+:labop_5888cd5c-7ba4-531e-a919-a149e499071b a labw:labop_1d4c2a98-e5bd-5154-8fc8-3c33118e9019,
+        owl:NamedIndividual ;
+    labw:labop_102e11f9-bbc7-5ba7-8b99-e7c773bbf722 "None"^^xsd:decimal ;
+    labw:labop_310b66ee-7fde-5409-9db4-aa2f639c8d5f "None"^^xsd:decimal ;
+    labw:labop_360645fc-419c-54b2-ad91-3488723c86d9 1.0 ;
+    labw:labop_470dc19d-e3f7-57ff-be4a-ce60e2d08291 "None"^^xsd:decimal ;
+    labw:labop_6566af27-0790-5221-adcd-96cf059d1416 12.0 ;
+    labw:labop_7121bf4c-9c61-563b-924f-508202ea2844 "res-mw12-hp"^^xsd:string ;
+    labw:labop_795abf15-9bbd-5ca5-8df9-103f6e9d86b3 "Axygen"^^xsd:string ;
+    labw:labop_e777604a-bf8b-5bd9-bba6-3afadc690f19 12.0 ;
+    core:labop_6487502b-8c4d-5c97-932a-e6b54098f53b "res-mw12-hp"@en .
+
+:labop_58dcb413-f46e-56f5-be1b-3617cc6ffe30 a labw:labop_1d4c2a98-e5bd-5154-8fc8-3c33118e9019,
+        owl:NamedIndividual ;
+    labw:labop_102e11f9-bbc7-5ba7-8b99-e7c773bbf722 "None"^^xsd:decimal ;
+    labw:labop_310b66ee-7fde-5409-9db4-aa2f639c8d5f "None"^^xsd:decimal ;
+    labw:labop_360645fc-419c-54b2-ad91-3488723c86d9 16.0 ;
+    labw:labop_470dc19d-e3f7-57ff-be4a-ce60e2d08291 "None"^^xsd:decimal ;
+    labw:labop_6566af27-0790-5221-adcd-96cf059d1416 24.0 ;
+    labw:labop_7121bf4c-9c61-563b-924f-508202ea2844 "3574"^^xsd:string ;
+    labw:labop_795abf15-9bbd-5ca5-8df9-103f6e9d86b3 "Corning"^^xsd:string ;
+    labw:labop_e777604a-bf8b-5bd9-bba6-3afadc690f19 384.0 ;
+    core:labop_6487502b-8c4d-5c97-932a-e6b54098f53b "384-flat-white-white-nbs"@en .
+
+:labop_591a3eff-0b02-5319-91e7-24ef45a6d39d a labw:labop_1d4c2a98-e5bd-5154-8fc8-3c33118e9019,
+        owl:NamedIndividual ;
+    labw:labop_102e11f9-bbc7-5ba7-8b99-e7c773bbf722 "None"^^xsd:decimal ;
+    labw:labop_310b66ee-7fde-5409-9db4-aa2f639c8d5f "None"^^xsd:decimal ;
+    labw:labop_360645fc-419c-54b2-ad91-3488723c86d9 16.0 ;
+    labw:labop_470dc19d-e3f7-57ff-be4a-ce60e2d08291 "None"^^xsd:decimal ;
+    labw:labop_6566af27-0790-5221-adcd-96cf059d1416 24.0 ;
+    labw:labop_7121bf4c-9c61-563b-924f-508202ea2844 "3575"^^xsd:string ;
+    labw:labop_795abf15-9bbd-5ca5-8df9-103f6e9d86b3 "Corning"^^xsd:string ;
+    labw:labop_e777604a-bf8b-5bd9-bba6-3afadc690f19 384.0 ;
+    core:labop_6487502b-8c4d-5c97-932a-e6b54098f53b "384-flat-black-black-nbs"@en .
+
+:labop_609c5c0e-c97a-560b-887a-75fd7af6a5df a labw:labop_1d4c2a98-e5bd-5154-8fc8-3c33118e9019,
+        owl:NamedIndividual ;
+    labw:labop_102e11f9-bbc7-5ba7-8b99-e7c773bbf722 "None"^^xsd:decimal ;
+    labw:labop_310b66ee-7fde-5409-9db4-aa2f639c8d5f "None"^^xsd:decimal ;
+    labw:labop_360645fc-419c-54b2-ad91-3488723c86d9 16.0 ;
+    labw:labop_470dc19d-e3f7-57ff-be4a-ce60e2d08291 "None"^^xsd:decimal ;
+    labw:labop_6566af27-0790-5221-adcd-96cf059d1416 24.0 ;
+    labw:labop_7121bf4c-9c61-563b-924f-508202ea2844 "330384"^^xsd:string ;
+    labw:labop_795abf15-9bbd-5ca5-8df9-103f6e9d86b3 "SPL Life Sciences"^^xsd:string ;
+    labw:labop_e777604a-bf8b-5bd9-bba6-3afadc690f19 384.0 ;
+    core:labop_6487502b-8c4d-5c97-932a-e6b54098f53b "384-flat-uv-ps"@en .
+
+:labop_61027e80-bc92-5c40-9292-1cd11d28a43d a labw:labop_1d4c2a98-e5bd-5154-8fc8-3c33118e9019,
+        owl:NamedIndividual ;
+    labw:labop_102e11f9-bbc7-5ba7-8b99-e7c773bbf722 "None"^^xsd:decimal ;
+    labw:labop_310b66ee-7fde-5409-9db4-aa2f639c8d5f "None"^^xsd:decimal ;
+    labw:labop_360645fc-419c-54b2-ad91-3488723c86d9 8.0 ;
+    labw:labop_470dc19d-e3f7-57ff-be4a-ce60e2d08291 "None"^^xsd:decimal ;
+    labw:labop_6566af27-0790-5221-adcd-96cf059d1416 12.0 ;
+    labw:labop_7121bf4c-9c61-563b-924f-508202ea2844 "136101"^^xsd:string ;
+    labw:labop_795abf15-9bbd-5ca5-8df9-103f6e9d86b3 "ThermoFisher"^^xsd:string ;
+    labw:labop_e777604a-bf8b-5bd9-bba6-3afadc690f19 96.0 ;
+    core:labop_6487502b-8c4d-5c97-932a-e6b54098f53b "96_flat_white_dc"@en .
+
+:labop_63687f7a-791b-5387-b2a1-417cf40135fc a labw:labop_1d4c2a98-e5bd-5154-8fc8-3c33118e9019,
+        owl:NamedIndividual ;
+    labw:labop_102e11f9-bbc7-5ba7-8b99-e7c773bbf722 "None"^^xsd:decimal ;
+    labw:labop_310b66ee-7fde-5409-9db4-aa2f639c8d5f "None"^^xsd:decimal ;
+    labw:labop_360645fc-419c-54b2-ad91-3488723c86d9 16.0 ;
+    labw:labop_470dc19d-e3f7-57ff-be4a-ce60e2d08291 "None"^^xsd:decimal ;
+    labw:labop_6566af27-0790-5221-adcd-96cf059d1416 24.0 ;
+    labw:labop_7121bf4c-9c61-563b-924f-508202ea2844 "3764"^^xsd:string ;
+    labw:labop_795abf15-9bbd-5ca5-8df9-103f6e9d86b3 "Corning"^^xsd:string ;
+    labw:labop_e777604a-bf8b-5bd9-bba6-3afadc690f19 384.0 ;
+    core:labop_6487502b-8c4d-5c97-932a-e6b54098f53b "384-flatbottom-black-clear-tc"@en .
+
+:labop_63cb2947-6e8c-5aff-abc4-380f474ea3ca a labw:labop_1d4c2a98-e5bd-5154-8fc8-3c33118e9019,
+        owl:NamedIndividual ;
+    labw:labop_102e11f9-bbc7-5ba7-8b99-e7c773bbf722 "None"^^xsd:decimal ;
+    labw:labop_310b66ee-7fde-5409-9db4-aa2f639c8d5f "None"^^xsd:decimal ;
+    labw:labop_360645fc-419c-54b2-ad91-3488723c86d9 1.0 ;
+    labw:labop_470dc19d-e3f7-57ff-be4a-ce60e2d08291 "None"^^xsd:decimal ;
+    labw:labop_6566af27-0790-5221-adcd-96cf059d1416 1.0 ;
+    labw:labop_7121bf4c-9c61-563b-924f-508202ea2844 "188261"^^xsd:string ;
+    labw:labop_795abf15-9bbd-5ca5-8df9-103f6e9d86b3 "Greiner"^^xsd:string ;
+    labw:labop_e777604a-bf8b-5bd9-bba6-3afadc690f19 1.0 ;
+    core:labop_6487502b-8c4d-5c97-932a-e6b54098f53b "tube-15"@en .
+
+:labop_650b9839-f274-5e87-8aaf-4c809233f3df a labw:labop_1d4c2a98-e5bd-5154-8fc8-3c33118e9019,
+        owl:NamedIndividual ;
+    labw:labop_102e11f9-bbc7-5ba7-8b99-e7c773bbf722 "None"^^xsd:decimal ;
+    labw:labop_310b66ee-7fde-5409-9db4-aa2f639c8d5f "None"^^xsd:decimal ;
+    labw:labop_360645fc-419c-54b2-ad91-3488723c86d9 16.0 ;
+    labw:labop_470dc19d-e3f7-57ff-be4a-ce60e2d08291 "None"^^xsd:decimal ;
+    labw:labop_6566af27-0790-5221-adcd-96cf059d1416 24.0 ;
+    labw:labop_7121bf4c-9c61-563b-924f-508202ea2844 "PP-0200"^^xsd:string ;
+    labw:labop_795abf15-9bbd-5ca5-8df9-103f6e9d86b3 "Labcyte"^^xsd:string ;
+    labw:labop_e777604a-bf8b-5bd9-bba6-3afadc690f19 384.0 ;
+    core:labop_6487502b-8c4d-5c97-932a-e6b54098f53b "384-echo"@en .
+
+:labop_66b35c55-234b-51be-b05b-c1503bd12ff5 a labw:labop_1d4c2a98-e5bd-5154-8fc8-3c33118e9019,
+        owl:NamedIndividual ;
+    labw:labop_102e11f9-bbc7-5ba7-8b99-e7c773bbf722 "None"^^xsd:decimal ;
+    labw:labop_310b66ee-7fde-5409-9db4-aa2f639c8d5f "None"^^xsd:decimal ;
+    labw:labop_360645fc-419c-54b2-ad91-3488723c86d9 8.0 ;
+    labw:labop_470dc19d-e3f7-57ff-be4a-ce60e2d08291 "None"^^xsd:decimal ;
+    labw:labop_6566af27-0790-5221-adcd-96cf059d1416 12.0 ;
+    labw:labop_7121bf4c-9c61-563b-924f-508202ea2844 "L15XA"^^xsd:string ;
+    labw:labop_795abf15-9bbd-5ca5-8df9-103f6e9d86b3 "Mesoscale"^^xsd:string ;
+    labw:labop_e777604a-bf8b-5bd9-bba6-3afadc690f19 96.0 ;
+    core:labop_6487502b-8c4d-5c97-932a-e6b54098f53b "96-multi-array-sector-uncoated-MSD"@en .
+
+:labop_6b22776a-3224-5812-bf71-83d9ce23ae38 a labw:labop_1d4c2a98-e5bd-5154-8fc8-3c33118e9019,
+        owl:NamedIndividual ;
+    labw:labop_102e11f9-bbc7-5ba7-8b99-e7c773bbf722 "None"^^xsd:decimal ;
+    labw:labop_310b66ee-7fde-5409-9db4-aa2f639c8d5f "None"^^xsd:decimal ;
+    labw:labop_360645fc-419c-54b2-ad91-3488723c86d9 16.0 ;
+    labw:labop_470dc19d-e3f7-57ff-be4a-ce60e2d08291 "None"^^xsd:decimal ;
+    labw:labop_6566af27-0790-5221-adcd-96cf059d1416 24.0 ;
+    labw:labop_7121bf4c-9c61-563b-924f-508202ea2844 "6007290"^^xsd:string ;
+    labw:labop_795abf15-9bbd-5ca5-8df9-103f6e9d86b3 "PerkinElmer"^^xsd:string ;
+    labw:labop_e777604a-bf8b-5bd9-bba6-3afadc690f19 384.0 ;
+    core:labop_6487502b-8c4d-5c97-932a-e6b54098f53b "384-flat-white-white-optiplate"@en .
+
+:labop_6ceaee21-25b7-57b4-8eb5-8b9edfb4749d a labw:labop_1d4c2a98-e5bd-5154-8fc8-3c33118e9019,
+        owl:NamedIndividual ;
+    labw:labop_102e11f9-bbc7-5ba7-8b99-e7c773bbf722 "None"^^xsd:decimal ;
+    labw:labop_310b66ee-7fde-5409-9db4-aa2f639c8d5f "None"^^xsd:decimal ;
+    labw:labop_360645fc-419c-54b2-ad91-3488723c86d9 8.0 ;
+    labw:labop_470dc19d-e3f7-57ff-be4a-ce60e2d08291 "None"^^xsd:decimal ;
+    labw:labop_6566af27-0790-5221-adcd-96cf059d1416 12.0 ;
+    labw:labop_7121bf4c-9c61-563b-924f-508202ea2844 "3894"^^xsd:string ;
+    labw:labop_795abf15-9bbd-5ca5-8df9-103f6e9d86b3 "Corning"^^xsd:string ;
+    labw:labop_e777604a-bf8b-5bd9-bba6-3afadc690f19 96.0 ;
+    core:labop_6487502b-8c4d-5c97-932a-e6b54098f53b "96-well-v-bottom"@en .
+
+:labop_70543c1d-a01f-52c1-aac7-d0b38091f6e1 a labw:labop_1d4c2a98-e5bd-5154-8fc8-3c33118e9019,
+        owl:NamedIndividual ;
+    labw:labop_102e11f9-bbc7-5ba7-8b99-e7c773bbf722 "None"^^xsd:decimal ;
+    labw:labop_310b66ee-7fde-5409-9db4-aa2f639c8d5f "None"^^xsd:decimal ;
+    labw:labop_360645fc-419c-54b2-ad91-3488723c86d9 16.0 ;
+    labw:labop_470dc19d-e3f7-57ff-be4a-ce60e2d08291 "None"^^xsd:decimal ;
+    labw:labop_6566af27-0790-5221-adcd-96cf059d1416 24.0 ;
+    labw:labop_7121bf4c-9c61-563b-924f-508202ea2844 "3657"^^xsd:string ;
+    labw:labop_795abf15-9bbd-5ca5-8df9-103f6e9d86b3 "Corning"^^xsd:string ;
+    labw:labop_e777604a-bf8b-5bd9-bba6-3afadc690f19 384.0 ;
+    core:labop_6487502b-8c4d-5c97-932a-e6b54098f53b "384-round-clear-clear"@en .
+
+:labop_71c0a9dc-d2b7-5245-8821-009fcd7a4778 a labw:labop_1d4c2a98-e5bd-5154-8fc8-3c33118e9019,
+        owl:NamedIndividual ;
+    labw:labop_102e11f9-bbc7-5ba7-8b99-e7c773bbf722 "None"^^xsd:decimal ;
+    labw:labop_310b66ee-7fde-5409-9db4-aa2f639c8d5f "None"^^xsd:decimal ;
+    labw:labop_360645fc-419c-54b2-ad91-3488723c86d9 1.0 ;
+    labw:labop_470dc19d-e3f7-57ff-be4a-ce60e2d08291 "None"^^xsd:decimal ;
+    labw:labop_6566af27-0790-5221-adcd-96cf059d1416 1.0 ;
+    labw:labop_7121bf4c-9c61-563b-924f-508202ea2844 "not_applicable"^^xsd:string ;
+    labw:labop_795abf15-9bbd-5ca5-8df9-103f6e9d86b3 "not_applicable"^^xsd:string ;
+    labw:labop_e777604a-bf8b-5bd9-bba6-3afadc690f19 1.0 ;
+    core:labop_6487502b-8c4d-5c97-932a-e6b54098f53b "flask-25"@en .
+
+:labop_75b83e28-b4e7-5eae-8c44-ea43d6929ec7 a labw:labop_1d4c2a98-e5bd-5154-8fc8-3c33118e9019,
+        owl:NamedIndividual ;
+    labw:labop_102e11f9-bbc7-5ba7-8b99-e7c773bbf722 "None"^^xsd:decimal ;
+    labw:labop_310b66ee-7fde-5409-9db4-aa2f639c8d5f "None"^^xsd:decimal ;
+    labw:labop_360645fc-419c-54b2-ad91-3488723c86d9 16.0 ;
+    labw:labop_470dc19d-e3f7-57ff-be4a-ce60e2d08291 "None"^^xsd:decimal ;
+    labw:labop_6566af27-0790-5221-adcd-96cf059d1416 24.0 ;
+    labw:labop_7121bf4c-9c61-563b-924f-508202ea2844 "4512"^^xsd:string ;
+    labw:labop_795abf15-9bbd-5ca5-8df9-103f6e9d86b3 "Corning"^^xsd:string ;
+    labw:labop_e777604a-bf8b-5bd9-bba6-3afadc690f19 384.0 ;
+    core:labop_6487502b-8c4d-5c97-932a-e6b54098f53b "384-corning-4512-round-lv"@en .
+
+:labop_7f399301-aeb4-5273-abdb-d0a4334ac141 a labw:labop_1d4c2a98-e5bd-5154-8fc8-3c33118e9019,
+        owl:NamedIndividual ;
+    labw:labop_102e11f9-bbc7-5ba7-8b99-e7c773bbf722 "None"^^xsd:decimal ;
+    labw:labop_310b66ee-7fde-5409-9db4-aa2f639c8d5f "None"^^xsd:decimal ;
+    labw:labop_360645fc-419c-54b2-ad91-3488723c86d9 32.0 ;
+    labw:labop_470dc19d-e3f7-57ff-be4a-ce60e2d08291 "None"^^xsd:decimal ;
+    labw:labop_6566af27-0790-5221-adcd-96cf059d1416 48.0 ;
+    labw:labop_7121bf4c-9c61-563b-924f-508202ea2844 "782073"^^xsd:string ;
+    labw:labop_795abf15-9bbd-5ca5-8df9-103f6e9d86b3 "Greiner"^^xsd:string ;
+    labw:labop_e777604a-bf8b-5bd9-bba6-3afadc690f19 1536.0 ;
+    core:labop_6487502b-8c4d-5c97-932a-e6b54098f53b "1536-white-tc"@en .
+
+:labop_82608f92-af4a-5917-8969-3d9c30958440 a labw:labop_1d4c2a98-e5bd-5154-8fc8-3c33118e9019,
+        owl:NamedIndividual ;
+    labw:labop_102e11f9-bbc7-5ba7-8b99-e7c773bbf722 "None"^^xsd:decimal ;
+    labw:labop_310b66ee-7fde-5409-9db4-aa2f639c8d5f "None"^^xsd:decimal ;
+    labw:labop_360645fc-419c-54b2-ad91-3488723c86d9 8.0 ;
+    labw:labop_470dc19d-e3f7-57ff-be4a-ce60e2d08291 "None"^^xsd:decimal ;
+    labw:labop_6566af27-0790-5221-adcd-96cf059d1416 12.0 ;
+    labw:labop_7121bf4c-9c61-563b-924f-508202ea2844 "22-387-031"^^xsd:string ;
+    labw:labop_795abf15-9bbd-5ca5-8df9-103f6e9d86b3 "Fisher"^^xsd:string ;
+    labw:labop_e777604a-bf8b-5bd9-bba6-3afadc690f19 96.0 ;
+    core:labop_6487502b-8c4d-5c97-932a-e6b54098f53b "96-deep-kf"@en .
+
+:labop_841bf106-0a89-5666-9f5f-5b1764cab3bb a labw:labop_1d4c2a98-e5bd-5154-8fc8-3c33118e9019,
+        owl:NamedIndividual ;
+    labw:labop_102e11f9-bbc7-5ba7-8b99-e7c773bbf722 "None"^^xsd:decimal ;
+    labw:labop_310b66ee-7fde-5409-9db4-aa2f639c8d5f "None"^^xsd:decimal ;
+    labw:labop_360645fc-419c-54b2-ad91-3488723c86d9 16.0 ;
+    labw:labop_470dc19d-e3f7-57ff-be4a-ce60e2d08291 "None"^^xsd:decimal ;
+    labw:labop_6566af27-0790-5221-adcd-96cf059d1416 24.0 ;
+    labw:labop_7121bf4c-9c61-563b-924f-508202ea2844 "4483285"^^xsd:string ;
+    labw:labop_795abf15-9bbd-5ca5-8df9-103f6e9d86b3 "ThermoFisher"^^xsd:string ;
+    labw:labop_e777604a-bf8b-5bd9-bba6-3afadc690f19 384.0 ;
+    core:labop_6487502b-8c4d-5c97-932a-e6b54098f53b "384-microamp-endura-optical-TF"@en .
+
+:labop_845af61e-12ab-5432-8de0-dec754b6dec2 a labw:labop_1d4c2a98-e5bd-5154-8fc8-3c33118e9019,
+        owl:NamedIndividual ;
+    labw:labop_102e11f9-bbc7-5ba7-8b99-e7c773bbf722 "None"^^xsd:decimal ;
+    labw:labop_310b66ee-7fde-5409-9db4-aa2f639c8d5f "None"^^xsd:decimal ;
+    labw:labop_360645fc-419c-54b2-ad91-3488723c86d9 1.0 ;
+    labw:labop_470dc19d-e3f7-57ff-be4a-ce60e2d08291 "None"^^xsd:decimal ;
+    labw:labop_6566af27-0790-5221-adcd-96cf059d1416 1.0 ;
+    labw:labop_7121bf4c-9c61-563b-924f-508202ea2844 "None"^^xsd:decimal ;
+    labw:labop_795abf15-9bbd-5ca5-8df9-103f6e9d86b3 "Schott"^^xsd:string ;
+    labw:labop_e777604a-bf8b-5bd9-bba6-3afadc690f19 1.0 ;
+    core:labop_6487502b-8c4d-5c97-932a-e6b54098f53b "bottle-250"@en .
+
+:labop_895f07c1-f42c-59bb-9e92-0898875d6d9b a labw:labop_1d4c2a98-e5bd-5154-8fc8-3c33118e9019,
+        owl:NamedIndividual ;
+    labw:labop_102e11f9-bbc7-5ba7-8b99-e7c773bbf722 "None"^^xsd:decimal ;
+    labw:labop_310b66ee-7fde-5409-9db4-aa2f639c8d5f "None"^^xsd:decimal ;
+    labw:labop_360645fc-419c-54b2-ad91-3488723c86d9 8.0 ;
+    labw:labop_470dc19d-e3f7-57ff-be4a-ce60e2d08291 "None"^^xsd:decimal ;
+    labw:labop_6566af27-0790-5221-adcd-96cf059d1416 12.0 ;
+    labw:labop_7121bf4c-9c61-563b-924f-508202ea2844 "MP51211"^^xsd:string ;
+    labw:labop_795abf15-9bbd-5ca5-8df9-103f6e9d86b3 "Micronic"^^xsd:string ;
+    labw:labop_e777604a-bf8b-5bd9-bba6-3afadc690f19 96.0 ;
+    core:labop_6487502b-8c4d-5c97-932a-e6b54098f53b "96-micronic"@en .
+
+:labop_898678fe-fd38-5e62-9da0-df970662ee06 a labw:labop_1d4c2a98-e5bd-5154-8fc8-3c33118e9019,
+        owl:NamedIndividual ;
+    labw:labop_102e11f9-bbc7-5ba7-8b99-e7c773bbf722 "None"^^xsd:decimal ;
+    labw:labop_310b66ee-7fde-5409-9db4-aa2f639c8d5f "None"^^xsd:decimal ;
+    labw:labop_360645fc-419c-54b2-ad91-3488723c86d9 1.0 ;
+    labw:labop_470dc19d-e3f7-57ff-be4a-ce60e2d08291 "None"^^xsd:decimal ;
+    labw:labop_6566af27-0790-5221-adcd-96cf059d1416 1.0 ;
+    labw:labop_7121bf4c-9c61-563b-924f-508202ea2844 "267060"^^xsd:string ;
+    labw:labop_795abf15-9bbd-5ca5-8df9-103f6e9d86b3 "Fisher"^^xsd:string ;
+    labw:labop_e777604a-bf8b-5bd9-bba6-3afadc690f19 1.0 ;
+    core:labop_6487502b-8c4d-5c97-932a-e6b54098f53b "1-flat"@en .
+
+:labop_8b3c1ae0-7735-5dc0-ab3b-28145ab29c19 a labw:labop_1d4c2a98-e5bd-5154-8fc8-3c33118e9019,
+        owl:NamedIndividual ;
+    labw:labop_102e11f9-bbc7-5ba7-8b99-e7c773bbf722 "None"^^xsd:decimal ;
+    labw:labop_310b66ee-7fde-5409-9db4-aa2f639c8d5f "None"^^xsd:decimal ;
+    labw:labop_360645fc-419c-54b2-ad91-3488723c86d9 8.0 ;
+    labw:labop_470dc19d-e3f7-57ff-be4a-ce60e2d08291 "None"^^xsd:decimal ;
+    labw:labop_6566af27-0790-5221-adcd-96cf059d1416 12.0 ;
+    labw:labop_7121bf4c-9c61-563b-924f-508202ea2844 "None"^^xsd:decimal ;
+    labw:labop_795abf15-9bbd-5ca5-8df9-103f6e9d86b3 "Chemspeed"^^xsd:string ;
+    labw:labop_e777604a-bf8b-5bd9-bba6-3afadc690f19 96.0 ;
+    core:labop_6487502b-8c4d-5c97-932a-e6b54098f53b "chemspeed-96-sealed-pin-rack"@en .
+
+:labop_8c26202c-ad47-5791-b734-addbf9ffa924 a labw:labop_1d4c2a98-e5bd-5154-8fc8-3c33118e9019,
+        owl:NamedIndividual ;
+    labw:labop_102e11f9-bbc7-5ba7-8b99-e7c773bbf722 "None"^^xsd:decimal ;
+    labw:labop_310b66ee-7fde-5409-9db4-aa2f639c8d5f "None"^^xsd:decimal ;
+    labw:labop_360645fc-419c-54b2-ad91-3488723c86d9 4.0 ;
+    labw:labop_470dc19d-e3f7-57ff-be4a-ce60e2d08291 "None"^^xsd:decimal ;
+    labw:labop_6566af27-0790-5221-adcd-96cf059d1416 6.0 ;
+    labw:labop_7121bf4c-9c61-563b-924f-508202ea2844 "EK-2053-S"^^xsd:string ;
+    labw:labop_795abf15-9bbd-5ca5-8df9-103f6e9d86b3 "E&K Scientific"^^xsd:string ;
+    labw:labop_e777604a-bf8b-5bd9-bba6-3afadc690f19 24.0 ;
+    core:labop_6487502b-8c4d-5c97-932a-e6b54098f53b "24-deep"@en .
+
+:labop_92b00d80-39b5-596c-844e-1bf02461a9ce a labw:labop_1d4c2a98-e5bd-5154-8fc8-3c33118e9019,
+        owl:NamedIndividual ;
+    labw:labop_102e11f9-bbc7-5ba7-8b99-e7c773bbf722 "None"^^xsd:decimal ;
+    labw:labop_310b66ee-7fde-5409-9db4-aa2f639c8d5f "None"^^xsd:decimal ;
+    labw:labop_360645fc-419c-54b2-ad91-3488723c86d9 16.0 ;
+    labw:labop_470dc19d-e3f7-57ff-be4a-ce60e2d08291 "None"^^xsd:decimal ;
+    labw:labop_6566af27-0790-5221-adcd-96cf059d1416 24.0 ;
+    labw:labop_7121bf4c-9c61-563b-924f-508202ea2844 "781280"^^xsd:string ;
+    labw:labop_795abf15-9bbd-5ca5-8df9-103f6e9d86b3 "Greiner"^^xsd:string ;
+    labw:labop_e777604a-bf8b-5bd9-bba6-3afadc690f19 384.0 ;
+    core:labop_6487502b-8c4d-5c97-932a-e6b54098f53b "384-v-clear-clear"@en .
+
+:labop_9b0659c3-0cb6-5c08-99ee-e0155eab2539 a labw:labop_1d4c2a98-e5bd-5154-8fc8-3c33118e9019,
+        owl:NamedIndividual ;
+    labw:labop_102e11f9-bbc7-5ba7-8b99-e7c773bbf722 "None"^^xsd:decimal ;
+    labw:labop_310b66ee-7fde-5409-9db4-aa2f639c8d5f "None"^^xsd:decimal ;
+    labw:labop_360645fc-419c-54b2-ad91-3488723c86d9 8.0 ;
+    labw:labop_470dc19d-e3f7-57ff-be4a-ce60e2d08291 "None"^^xsd:decimal ;
+    labw:labop_6566af27-0790-5221-adcd-96cf059d1416 12.0 ;
+    labw:labop_7121bf4c-9c61-563b-924f-508202ea2844 "3961"^^xsd:string ;
+    labw:labop_795abf15-9bbd-5ca5-8df9-103f6e9d86b3 "Corning"^^xsd:string ;
+    labw:labop_e777604a-bf8b-5bd9-bba6-3afadc690f19 96.0 ;
+    core:labop_6487502b-8c4d-5c97-932a-e6b54098f53b "96-deep"@en .
+
+:labop_9e93f04c-527b-5415-b284-61ba4f0a9f8c a labw:labop_1d4c2a98-e5bd-5154-8fc8-3c33118e9019,
+        owl:NamedIndividual ;
+    labw:labop_102e11f9-bbc7-5ba7-8b99-e7c773bbf722 "None"^^xsd:decimal ;
+    labw:labop_310b66ee-7fde-5409-9db4-aa2f639c8d5f "None"^^xsd:decimal ;
+    labw:labop_360645fc-419c-54b2-ad91-3488723c86d9 8.0 ;
+    labw:labop_470dc19d-e3f7-57ff-be4a-ce60e2d08291 "None"^^xsd:decimal ;
+    labw:labop_6566af27-0790-5221-adcd-96cf059d1416 12.0 ;
+    labw:labop_7121bf4c-9c61-563b-924f-508202ea2844 "3632"^^xsd:string ;
+    labw:labop_795abf15-9bbd-5ca5-8df9-103f6e9d86b3 "Corning"^^xsd:string ;
+    labw:labop_e777604a-bf8b-5bd9-bba6-3afadc690f19 96.0 ;
+    core:labop_6487502b-8c4d-5c97-932a-e6b54098f53b "96-flat"@en .
+
+:labop_abcdfdfc-83a9-56cc-9b73-2a6cfa0e09be a labw:labop_1d4c2a98-e5bd-5154-8fc8-3c33118e9019,
+        owl:NamedIndividual ;
+    labw:labop_102e11f9-bbc7-5ba7-8b99-e7c773bbf722 "None"^^xsd:decimal ;
+    labw:labop_310b66ee-7fde-5409-9db4-aa2f639c8d5f "None"^^xsd:decimal ;
+    labw:labop_360645fc-419c-54b2-ad91-3488723c86d9 1.0 ;
+    labw:labop_470dc19d-e3f7-57ff-be4a-ce60e2d08291 "None"^^xsd:decimal ;
+    labw:labop_6566af27-0790-5221-adcd-96cf059d1416 1.0 ;
+    labw:labop_7121bf4c-9c61-563b-924f-508202ea2844 "1405-8100"^^xsd:string ;
+    labw:labop_795abf15-9bbd-5ca5-8df9-103f6e9d86b3 "USA Scientific"^^xsd:string ;
+    labw:labop_e777604a-bf8b-5bd9-bba6-3afadc690f19 1.0 ;
+    core:labop_6487502b-8c4d-5c97-932a-e6b54098f53b "pcr-0.5"@en .
+
+:labop_ac5fc6d8-cac5-503a-938f-491587728160 a labw:labop_1d4c2a98-e5bd-5154-8fc8-3c33118e9019,
+        owl:NamedIndividual ;
+    labw:labop_102e11f9-bbc7-5ba7-8b99-e7c773bbf722 "None"^^xsd:decimal ;
+    labw:labop_310b66ee-7fde-5409-9db4-aa2f639c8d5f "None"^^xsd:decimal ;
+    labw:labop_360645fc-419c-54b2-ad91-3488723c86d9 16.0 ;
+    labw:labop_470dc19d-e3f7-57ff-be4a-ce60e2d08291 "None"^^xsd:decimal ;
+    labw:labop_6566af27-0790-5221-adcd-96cf059d1416 24.0 ;
+    labw:labop_7121bf4c-9c61-563b-924f-508202ea2844 "LPL-0200"^^xsd:string ;
+    labw:labop_795abf15-9bbd-5ca5-8df9-103f6e9d86b3 "Labcyte"^^xsd:string ;
+    labw:labop_e777604a-bf8b-5bd9-bba6-3afadc690f19 384.0 ;
+    core:labop_6487502b-8c4d-5c97-932a-e6b54098f53b "384-echo-ldv-plus"@en .
+
+:labop_b3693b79-61fe-51a9-a1f3-ac3382abd5a9 a labw:labop_1d4c2a98-e5bd-5154-8fc8-3c33118e9019,
+        owl:NamedIndividual ;
+    labw:labop_102e11f9-bbc7-5ba7-8b99-e7c773bbf722 "None"^^xsd:decimal ;
+    labw:labop_310b66ee-7fde-5409-9db4-aa2f639c8d5f "None"^^xsd:decimal ;
+    labw:labop_360645fc-419c-54b2-ad91-3488723c86d9 1.0 ;
+    labw:labop_470dc19d-e3f7-57ff-be4a-ce60e2d08291 "None"^^xsd:decimal ;
+    labw:labop_6566af27-0790-5221-adcd-96cf059d1416 1.0 ;
+    labw:labop_7121bf4c-9c61-563b-924f-508202ea2844 "unknown"^^xsd:string ;
+    labw:labop_795abf15-9bbd-5ca5-8df9-103f6e9d86b3 "unknown"^^xsd:string ;
+    labw:labop_e777604a-bf8b-5bd9-bba6-3afadc690f19 1.0 ;
+    core:labop_6487502b-8c4d-5c97-932a-e6b54098f53b "mrv-large"@en .
+
+:labop_b9e52c8a-8030-5d79-941e-6bbf8baee86e a labw:labop_1d4c2a98-e5bd-5154-8fc8-3c33118e9019,
+        owl:NamedIndividual ;
+    labw:labop_102e11f9-bbc7-5ba7-8b99-e7c773bbf722 "None"^^xsd:decimal ;
+    labw:labop_310b66ee-7fde-5409-9db4-aa2f639c8d5f "None"^^xsd:decimal ;
+    labw:labop_360645fc-419c-54b2-ad91-3488723c86d9 16.0 ;
+    labw:labop_470dc19d-e3f7-57ff-be4a-ce60e2d08291 "None"^^xsd:decimal ;
+    labw:labop_6566af27-0790-5221-adcd-96cf059d1416 24.0 ;
+    labw:labop_7121bf4c-9c61-563b-924f-508202ea2844 "6008260"^^xsd:string ;
+    labw:labop_795abf15-9bbd-5ca5-8df9-103f6e9d86b3 "PerkinElmer"^^xsd:string ;
+    labw:labop_e777604a-bf8b-5bd9-bba6-3afadc690f19 384.0 ;
+    core:labop_6487502b-8c4d-5c97-932a-e6b54098f53b "384-flat-black-black-proxiplate-plus-f"@en .
+
+:labop_cfb6b47e-215a-5fad-b1cc-6ab314812564 a labw:labop_1d4c2a98-e5bd-5154-8fc8-3c33118e9019,
+        owl:NamedIndividual ;
+    labw:labop_102e11f9-bbc7-5ba7-8b99-e7c773bbf722 "None"^^xsd:decimal ;
+    labw:labop_310b66ee-7fde-5409-9db4-aa2f639c8d5f "None"^^xsd:decimal ;
+    labw:labop_360645fc-419c-54b2-ad91-3488723c86d9 2.0 ;
+    labw:labop_470dc19d-e3f7-57ff-be4a-ce60e2d08291 "None"^^xsd:decimal ;
+    labw:labop_6566af27-0790-5221-adcd-96cf059d1416 3.0 ;
+    labw:labop_7121bf4c-9c61-563b-924f-508202ea2844 "30720113"^^xsd:string ;
+    labw:labop_795abf15-9bbd-5ca5-8df9-103f6e9d86b3 "Eppendorf"^^xsd:string ;
+    labw:labop_e777604a-bf8b-5bd9-bba6-3afadc690f19 6.0 ;
+    core:labop_6487502b-8c4d-5c97-932a-e6b54098f53b "6-flat-tc"@en .
+
+:labop_d002400e-1ded-5748-8ecf-18483d1fc572 a labw:labop_1d4c2a98-e5bd-5154-8fc8-3c33118e9019,
+        owl:NamedIndividual ;
+    labw:labop_102e11f9-bbc7-5ba7-8b99-e7c773bbf722 "None"^^xsd:decimal ;
+    labw:labop_310b66ee-7fde-5409-9db4-aa2f639c8d5f "None"^^xsd:decimal ;
+    labw:labop_360645fc-419c-54b2-ad91-3488723c86d9 16.0 ;
+    labw:labop_470dc19d-e3f7-57ff-be4a-ce60e2d08291 "None"^^xsd:decimal ;
+    labw:labop_6566af27-0790-5221-adcd-96cf059d1416 24.0 ;
+    labw:labop_7121bf4c-9c61-563b-924f-508202ea2844 "3763"^^xsd:string ;
+    labw:labop_795abf15-9bbd-5ca5-8df9-103f6e9d86b3 "Corning"^^xsd:string ;
+    labw:labop_e777604a-bf8b-5bd9-bba6-3afadc690f19 384.0 ;
+    core:labop_6487502b-8c4d-5c97-932a-e6b54098f53b "384-flat-white-clear"@en .
+
+:labop_d25c7d4b-e740-509d-b09e-de9b8f400876 a labw:labop_1d4c2a98-e5bd-5154-8fc8-3c33118e9019,
+        owl:NamedIndividual ;
+    labw:labop_102e11f9-bbc7-5ba7-8b99-e7c773bbf722 "None"^^xsd:decimal ;
+    labw:labop_310b66ee-7fde-5409-9db4-aa2f639c8d5f "None"^^xsd:decimal ;
+    labw:labop_360645fc-419c-54b2-ad91-3488723c86d9 16.0 ;
+    labw:labop_470dc19d-e3f7-57ff-be4a-ce60e2d08291 "None"^^xsd:decimal ;
+    labw:labop_6566af27-0790-5221-adcd-96cf059d1416 24.0 ;
+    labw:labop_7121bf4c-9c61-563b-924f-508202ea2844 "4514"^^xsd:string ;
+    labw:labop_795abf15-9bbd-5ca5-8df9-103f6e9d86b3 "Corning"^^xsd:string ;
+    labw:labop_e777604a-bf8b-5bd9-bba6-3afadc690f19 384.0 ;
+    core:labop_6487502b-8c4d-5c97-932a-e6b54098f53b "384-round-black-black-lv-nbs"@en .
+
+:labop_d399020b-5067-5c72-bf40-e8ad160d49b6 a labw:labop_1d4c2a98-e5bd-5154-8fc8-3c33118e9019,
+        owl:NamedIndividual ;
+    labw:labop_102e11f9-bbc7-5ba7-8b99-e7c773bbf722 "None"^^xsd:decimal ;
+    labw:labop_310b66ee-7fde-5409-9db4-aa2f639c8d5f "None"^^xsd:decimal ;
+    labw:labop_360645fc-419c-54b2-ad91-3488723c86d9 2.0 ;
+    labw:labop_470dc19d-e3f7-57ff-be4a-ce60e2d08291 "None"^^xsd:decimal ;
+    labw:labop_6566af27-0790-5221-adcd-96cf059d1416 3.0 ;
+    labw:labop_7121bf4c-9c61-563b-924f-508202ea2844 "30720016"^^xsd:string ;
+    labw:labop_795abf15-9bbd-5ca5-8df9-103f6e9d86b3 "Eppendorf"^^xsd:string ;
+    labw:labop_e777604a-bf8b-5bd9-bba6-3afadc690f19 6.0 ;
+    core:labop_6487502b-8c4d-5c97-932a-e6b54098f53b "6-flat"@en .
+
+:labop_d55aea7b-7a86-592e-9bac-1bef2750ac4c a labw:labop_1d4c2a98-e5bd-5154-8fc8-3c33118e9019,
+        owl:NamedIndividual ;
+    labw:labop_102e11f9-bbc7-5ba7-8b99-e7c773bbf722 "None"^^xsd:decimal ;
+    labw:labop_310b66ee-7fde-5409-9db4-aa2f639c8d5f "None"^^xsd:decimal ;
+    labw:labop_360645fc-419c-54b2-ad91-3488723c86d9 16.0 ;
+    labw:labop_470dc19d-e3f7-57ff-be4a-ce60e2d08291 "None"^^xsd:decimal ;
+    labw:labop_6566af27-0790-5221-adcd-96cf059d1416 24.0 ;
+    labw:labop_7121bf4c-9c61-563b-924f-508202ea2844 "140156"^^xsd:string ;
+    labw:labop_795abf15-9bbd-5ca5-8df9-103f6e9d86b3 "Thermo"^^xsd:string ;
+    labw:labop_e777604a-bf8b-5bd9-bba6-3afadc690f19 384.0 ;
+    core:labop_6487502b-8c4d-5c97-932a-e6b54098f53b "384-virtual-well-1-flat"@en .
+
+:labop_d6391933-31c9-5bdd-b995-d8faae9a7059 a labw:labop_1d4c2a98-e5bd-5154-8fc8-3c33118e9019,
+        owl:NamedIndividual ;
+    labw:labop_102e11f9-bbc7-5ba7-8b99-e7c773bbf722 "None"^^xsd:decimal ;
+    labw:labop_310b66ee-7fde-5409-9db4-aa2f639c8d5f "None"^^xsd:decimal ;
+    labw:labop_360645fc-419c-54b2-ad91-3488723c86d9 1.0 ;
+    labw:labop_470dc19d-e3f7-57ff-be4a-ce60e2d08291 "None"^^xsd:decimal ;
+    labw:labop_6566af27-0790-5221-adcd-96cf059d1416 1.0 ;
+    labw:labop_7121bf4c-9c61-563b-924f-508202ea2844 "HR1545C"^^xsd:string ;
+    labw:labop_795abf15-9bbd-5ca5-8df9-103f6e9d86b3 "TradeWinds, Inc"^^xsd:string ;
+    labw:labop_e777604a-bf8b-5bd9-bba6-3afadc690f19 1.0 ;
+    core:labop_6487502b-8c4d-5c97-932a-e6b54098f53b "a1-vial"@en .
+
+:labop_de813e60-4405-5749-9e27-d237789d9ce2 a labw:labop_1d4c2a98-e5bd-5154-8fc8-3c33118e9019,
+        owl:NamedIndividual ;
+    labw:labop_102e11f9-bbc7-5ba7-8b99-e7c773bbf722 "None"^^xsd:decimal ;
+    labw:labop_310b66ee-7fde-5409-9db4-aa2f639c8d5f "None"^^xsd:decimal ;
+    labw:labop_360645fc-419c-54b2-ad91-3488723c86d9 1.0 ;
+    labw:labop_470dc19d-e3f7-57ff-be4a-ce60e2d08291 "None"^^xsd:decimal ;
+    labw:labop_6566af27-0790-5221-adcd-96cf059d1416 1.0 ;
+    labw:labop_7121bf4c-9c61-563b-924f-508202ea2844 "HR2895C"^^xsd:string ;
+    labw:labop_795abf15-9bbd-5ca5-8df9-103f6e9d86b3 "TradeWinds, Inc"^^xsd:string ;
+    labw:labop_e777604a-bf8b-5bd9-bba6-3afadc690f19 1.0 ;
+    core:labop_6487502b-8c4d-5c97-932a-e6b54098f53b "d2-vial"@en .
+
+:labop_df936d31-b5f6-5fbc-a9f5-3d8a2a8bd057 a labw:labop_1d4c2a98-e5bd-5154-8fc8-3c33118e9019,
+        owl:NamedIndividual ;
+    labw:labop_102e11f9-bbc7-5ba7-8b99-e7c773bbf722 "None"^^xsd:decimal ;
+    labw:labop_310b66ee-7fde-5409-9db4-aa2f639c8d5f "None"^^xsd:decimal ;
+    labw:labop_360645fc-419c-54b2-ad91-3488723c86d9 16.0 ;
+    labw:labop_470dc19d-e3f7-57ff-be4a-ce60e2d08291 "None"^^xsd:decimal ;
+    labw:labop_6566af27-0790-5221-adcd-96cf059d1416 24.0 ;
+    labw:labop_7121bf4c-9c61-563b-924f-508202ea2844 "264573"^^xsd:string ;
+    labw:labop_795abf15-9bbd-5ca5-8df9-103f6e9d86b3 "ThermoFisher"^^xsd:string ;
+    labw:labop_e777604a-bf8b-5bd9-bba6-3afadc690f19 384.0 ;
+    core:labop_6487502b-8c4d-5c97-932a-e6b54098f53b "384-ubottom-clear-polypropylene-nunc-264573"@en .
+
+:labop_e4685444-e906-5e3b-81eb-4ce078367a95 a labw:labop_1d4c2a98-e5bd-5154-8fc8-3c33118e9019,
+        owl:NamedIndividual ;
+    labw:labop_102e11f9-bbc7-5ba7-8b99-e7c773bbf722 "None"^^xsd:decimal ;
+    labw:labop_310b66ee-7fde-5409-9db4-aa2f639c8d5f "None"^^xsd:decimal ;
+    labw:labop_360645fc-419c-54b2-ad91-3488723c86d9 1.0 ;
+    labw:labop_470dc19d-e3f7-57ff-be4a-ce60e2d08291 "None"^^xsd:decimal ;
+    labw:labop_6566af27-0790-5221-adcd-96cf059d1416 1.0 ;
+    labw:labop_7121bf4c-9c61-563b-924f-508202ea2844 "227270"^^xsd:string ;
+    labw:labop_795abf15-9bbd-5ca5-8df9-103f6e9d86b3 "Greiner"^^xsd:string ;
+    labw:labop_e777604a-bf8b-5bd9-bba6-3afadc690f19 1.0 ;
+    core:labop_6487502b-8c4d-5c97-932a-e6b54098f53b "conical-50"@en .
+
+:labop_e889a659-217c-5df9-8a5a-70debd34bc10 a labw:labop_1d4c2a98-e5bd-5154-8fc8-3c33118e9019,
+        owl:NamedIndividual ;
+    labw:labop_102e11f9-bbc7-5ba7-8b99-e7c773bbf722 "None"^^xsd:decimal ;
+    labw:labop_310b66ee-7fde-5409-9db4-aa2f639c8d5f "None"^^xsd:decimal ;
+    labw:labop_360645fc-419c-54b2-ad91-3488723c86d9 1.0 ;
+    labw:labop_470dc19d-e3f7-57ff-be4a-ce60e2d08291 "None"^^xsd:decimal ;
+    labw:labop_6566af27-0790-5221-adcd-96cf059d1416 1.0 ;
+    labw:labop_7121bf4c-9c61-563b-924f-508202ea2844 "not_applicable"^^xsd:string ;
+    labw:labop_795abf15-9bbd-5ca5-8df9-103f6e9d86b3 "not_applicable"^^xsd:string ;
+    labw:labop_e777604a-bf8b-5bd9-bba6-3afadc690f19 1.0 ;
+    core:labop_6487502b-8c4d-5c97-932a-e6b54098f53b "flask-250"@en .
+
+:labop_eb11a326-7155-52ac-8cd0-ccef5e57a36c a labw:labop_1d4c2a98-e5bd-5154-8fc8-3c33118e9019,
+        owl:NamedIndividual ;
+    labw:labop_102e11f9-bbc7-5ba7-8b99-e7c773bbf722 "None"^^xsd:decimal ;
+    labw:labop_310b66ee-7fde-5409-9db4-aa2f639c8d5f "None"^^xsd:decimal ;
+    labw:labop_360645fc-419c-54b2-ad91-3488723c86d9 8.0 ;
+    labw:labop_470dc19d-e3f7-57ff-be4a-ce60e2d08291 "None"^^xsd:decimal ;
+    labw:labop_6566af27-0790-5221-adcd-96cf059d1416 12.0 ;
+    labw:labop_7121bf4c-9c61-563b-924f-508202ea2844 "249944"^^xsd:string ;
+    labw:labop_795abf15-9bbd-5ca5-8df9-103f6e9d86b3 "Fisher"^^xsd:string ;
+    labw:labop_e777604a-bf8b-5bd9-bba6-3afadc690f19 96.0 ;
+    core:labop_6487502b-8c4d-5c97-932a-e6b54098f53b "96-vbottom-microwell"@en .
+
+:labop_ec1118d9-fdfd-5f05-9cc0-0f63b9055052 a labw:labop_1d4c2a98-e5bd-5154-8fc8-3c33118e9019,
+        owl:NamedIndividual ;
+    labw:labop_102e11f9-bbc7-5ba7-8b99-e7c773bbf722 "None"^^xsd:decimal ;
+    labw:labop_310b66ee-7fde-5409-9db4-aa2f639c8d5f "None"^^xsd:decimal ;
+    labw:labop_360645fc-419c-54b2-ad91-3488723c86d9 16.0 ;
+    labw:labop_470dc19d-e3f7-57ff-be4a-ce60e2d08291 "None"^^xsd:decimal ;
+    labw:labop_6566af27-0790-5221-adcd-96cf059d1416 24.0 ;
+    labw:labop_7121bf4c-9c61-563b-924f-508202ea2844 "LP-0200"^^xsd:string ;
+    labw:labop_795abf15-9bbd-5ca5-8df9-103f6e9d86b3 "Labcyte"^^xsd:string ;
+    labw:labop_e777604a-bf8b-5bd9-bba6-3afadc690f19 384.0 ;
+    core:labop_6487502b-8c4d-5c97-932a-e6b54098f53b "384-echo-ldv"@en .
+
+:labop_eecd6011-cedb-585d-aaba-ff59a0c283c8 a labw:labop_1d4c2a98-e5bd-5154-8fc8-3c33118e9019,
+        owl:NamedIndividual ;
+    labw:labop_102e11f9-bbc7-5ba7-8b99-e7c773bbf722 "None"^^xsd:decimal ;
+    labw:labop_310b66ee-7fde-5409-9db4-aa2f639c8d5f "None"^^xsd:decimal ;
+    labw:labop_360645fc-419c-54b2-ad91-3488723c86d9 8.0 ;
+    labw:labop_470dc19d-e3f7-57ff-be4a-ce60e2d08291 "None"^^xsd:decimal ;
+    labw:labop_6566af27-0790-5221-adcd-96cf059d1416 12.0 ;
+    labw:labop_7121bf4c-9c61-563b-924f-508202ea2844 "655077"^^xsd:string ;
+    labw:labop_795abf15-9bbd-5ca5-8df9-103f6e9d86b3 "Greiner"^^xsd:string ;
+    labw:labop_e777604a-bf8b-5bd9-bba6-3afadc690f19 96.0 ;
+    core:labop_6487502b-8c4d-5c97-932a-e6b54098f53b "96-flat-black-black-fluotrac-600"@en .
+
+:labop_f4ac6699-90bc-5ba0-b681-d9fc94a8dd51 a labw:labop_1d4c2a98-e5bd-5154-8fc8-3c33118e9019,
+        owl:NamedIndividual ;
+    labw:labop_102e11f9-bbc7-5ba7-8b99-e7c773bbf722 "None"^^xsd:decimal ;
+    labw:labop_310b66ee-7fde-5409-9db4-aa2f639c8d5f "None"^^xsd:decimal ;
+    labw:labop_360645fc-419c-54b2-ad91-3488723c86d9 32.0 ;
+    labw:labop_470dc19d-e3f7-57ff-be4a-ce60e2d08291 "None"^^xsd:decimal ;
+    labw:labop_6566af27-0790-5221-adcd-96cf059d1416 48.0 ;
+    labw:labop_7121bf4c-9c61-563b-924f-508202ea2844 "3727"^^xsd:string ;
+    labw:labop_795abf15-9bbd-5ca5-8df9-103f6e9d86b3 "Corning"^^xsd:string ;
+    labw:labop_e777604a-bf8b-5bd9-bba6-3afadc690f19 1536.0 ;
+    core:labop_6487502b-8c4d-5c97-932a-e6b54098f53b "1536-tc-white-corning-3727"@en .
+
+:labop_f62753e9-65fc-5e4e-978c-012af5393189 a labw:labop_1d4c2a98-e5bd-5154-8fc8-3c33118e9019,
+        owl:NamedIndividual ;
+    labw:labop_102e11f9-bbc7-5ba7-8b99-e7c773bbf722 "None"^^xsd:decimal ;
+    labw:labop_310b66ee-7fde-5409-9db4-aa2f639c8d5f "None"^^xsd:decimal ;
+    labw:labop_360645fc-419c-54b2-ad91-3488723c86d9 1.0 ;
+    labw:labop_470dc19d-e3f7-57ff-be4a-ce60e2d08291 "None"^^xsd:decimal ;
+    labw:labop_6566af27-0790-5221-adcd-96cf059d1416 1.0 ;
+    labw:labop_7121bf4c-9c61-563b-924f-508202ea2844 "None"^^xsd:decimal ;
+    labw:labop_795abf15-9bbd-5ca5-8df9-103f6e9d86b3 "unknown"^^xsd:string ;
+    labw:labop_e777604a-bf8b-5bd9-bba6-3afadc690f19 1.0 ;
+    core:labop_6487502b-8c4d-5c97-932a-e6b54098f53b "nmr-tube-5mm"@en .
+
+:labop_f85a8b2a-df61-54c9-a9f2-39207fcd1df4 a labw:labop_1d4c2a98-e5bd-5154-8fc8-3c33118e9019,
+        owl:NamedIndividual ;
+    labw:labop_102e11f9-bbc7-5ba7-8b99-e7c773bbf722 "None"^^xsd:decimal ;
+    labw:labop_310b66ee-7fde-5409-9db4-aa2f639c8d5f "None"^^xsd:decimal ;
+    labw:labop_360645fc-419c-54b2-ad91-3488723c86d9 8.0 ;
+    labw:labop_470dc19d-e3f7-57ff-be4a-ce60e2d08291 "None"^^xsd:decimal ;
+    labw:labop_6566af27-0790-5221-adcd-96cf059d1416 12.0 ;
+    labw:labop_7121bf4c-9c61-563b-924f-508202ea2844 "K15069L"^^xsd:string ;
+    labw:labop_795abf15-9bbd-5ca5-8df9-103f6e9d86b3 "Mesoscale"^^xsd:string ;
+    labw:labop_e777604a-bf8b-5bd9-bba6-3afadc690f19 96.0 ;
+    core:labop_6487502b-8c4d-5c97-932a-e6b54098f53b "96-10-spot-uplex-MSD"@en .
+
+:labop_f9b62170-e705-5576-97a3-3864710e5bdc a labw:labop_1d4c2a98-e5bd-5154-8fc8-3c33118e9019,
+        owl:NamedIndividual ;
+    labw:labop_102e11f9-bbc7-5ba7-8b99-e7c773bbf722 "None"^^xsd:decimal ;
+    labw:labop_310b66ee-7fde-5409-9db4-aa2f639c8d5f "None"^^xsd:decimal ;
+    labw:labop_360645fc-419c-54b2-ad91-3488723c86d9 1.0 ;
+    labw:labop_470dc19d-e3f7-57ff-be4a-ce60e2d08291 "None"^^xsd:decimal ;
+    labw:labop_6566af27-0790-5221-adcd-96cf059d1416 1.0 ;
+    labw:labop_7121bf4c-9c61-563b-924f-508202ea2844 "res-sw384-lp"^^xsd:string ;
+    labw:labop_795abf15-9bbd-5ca5-8df9-103f6e9d86b3 "Axygen"^^xsd:string ;
+    labw:labop_e777604a-bf8b-5bd9-bba6-3afadc690f19 1.0 ;
+    core:labop_6487502b-8c4d-5c97-932a-e6b54098f53b "res-sw384-lp"@en .
+
+:labop_f9c37ff6-a248-50c1-aeda-81ce43ca1edd a labw:labop_1d4c2a98-e5bd-5154-8fc8-3c33118e9019,
+        owl:NamedIndividual ;
+    labw:labop_102e11f9-bbc7-5ba7-8b99-e7c773bbf722 "None"^^xsd:decimal ;
+    labw:labop_310b66ee-7fde-5409-9db4-aa2f639c8d5f "None"^^xsd:decimal ;
+    labw:labop_360645fc-419c-54b2-ad91-3488723c86d9 8.0 ;
+    labw:labop_470dc19d-e3f7-57ff-be4a-ce60e2d08291 "None"^^xsd:decimal ;
+    labw:labop_6566af27-0790-5221-adcd-96cf059d1416 12.0 ;
+    labw:labop_7121bf4c-9c61-563b-924f-508202ea2844 "951020619"^^xsd:string ;
+    labw:labop_795abf15-9bbd-5ca5-8df9-103f6e9d86b3 "Eppendorf"^^xsd:string ;
+    labw:labop_e777604a-bf8b-5bd9-bba6-3afadc690f19 96.0 ;
+    core:labop_6487502b-8c4d-5c97-932a-e6b54098f53b "96-pcr"@en .
+
+:labop_fc5afaee-dc3c-50c3-a325-248a2e5cda8e a labw:labop_1d4c2a98-e5bd-5154-8fc8-3c33118e9019,
+        owl:NamedIndividual ;
+    labw:labop_102e11f9-bbc7-5ba7-8b99-e7c773bbf722 "None"^^xsd:decimal ;
+    labw:labop_310b66ee-7fde-5409-9db4-aa2f639c8d5f "None"^^xsd:decimal ;
+    labw:labop_360645fc-419c-54b2-ad91-3488723c86d9 8.0 ;
+    labw:labop_470dc19d-e3f7-57ff-be4a-ce60e2d08291 "None"^^xsd:decimal ;
+    labw:labop_6566af27-0790-5221-adcd-96cf059d1416 12.0 ;
+    labw:labop_7121bf4c-9c61-563b-924f-508202ea2844 "K152MSD"^^xsd:string ;
+    labw:labop_795abf15-9bbd-5ca5-8df9-103f6e9d86b3 "Mesoscale"^^xsd:string ;
+    labw:labop_e777604a-bf8b-5bd9-bba6-3afadc690f19 96.0 ;
+    core:labop_6487502b-8c4d-5c97-932a-e6b54098f53b "96-4-spot-mMIP3a-MSD"@en .
+
+:labop_fc87b9df-96da-5084-bdf2-99fe2cf61083 a labw:labop_1d4c2a98-e5bd-5154-8fc8-3c33118e9019,
+        owl:NamedIndividual ;
+    labw:labop_102e11f9-bbc7-5ba7-8b99-e7c773bbf722 "None"^^xsd:decimal ;
+    labw:labop_310b66ee-7fde-5409-9db4-aa2f639c8d5f "None"^^xsd:decimal ;
+    labw:labop_360645fc-419c-54b2-ad91-3488723c86d9 1.0 ;
+    labw:labop_470dc19d-e3f7-57ff-be4a-ce60e2d08291 "None"^^xsd:decimal ;
+    labw:labop_6566af27-0790-5221-adcd-96cf059d1416 1.0 ;
+    labw:labop_7121bf4c-9c61-563b-924f-508202ea2844 "unknown"^^xsd:string ;
+    labw:labop_795abf15-9bbd-5ca5-8df9-103f6e9d86b3 "unknown"^^xsd:string ;
+    labw:labop_e777604a-bf8b-5bd9-bba6-3afadc690f19 1.0 ;
+    core:labop_6487502b-8c4d-5c97-932a-e6b54098f53b "mrv-small"@en .
+
+:labop_fcb62d30-f97c-5790-b87c-32d24b0458fc a labw:labop_1d4c2a98-e5bd-5154-8fc8-3c33118e9019,
+        owl:NamedIndividual ;
+    labw:labop_102e11f9-bbc7-5ba7-8b99-e7c773bbf722 "None"^^xsd:decimal ;
+    labw:labop_310b66ee-7fde-5409-9db4-aa2f639c8d5f "None"^^xsd:decimal ;
+    labw:labop_360645fc-419c-54b2-ad91-3488723c86d9 8.0 ;
+    labw:labop_470dc19d-e3f7-57ff-be4a-ce60e2d08291 "None"^^xsd:decimal ;
+    labw:labop_6566af27-0790-5221-adcd-96cf059d1416 12.0 ;
+    labw:labop_7121bf4c-9c61-563b-924f-508202ea2844 "6511"^^xsd:string ;
+    labw:labop_795abf15-9bbd-5ca5-8df9-103f6e9d86b3 "Corning"^^xsd:string ;
+    labw:labop_e777604a-bf8b-5bd9-bba6-3afadc690f19 96.0 ;
+    core:labop_6487502b-8c4d-5c97-932a-e6b54098f53b "96-pcr-thermowell"@en .
+
