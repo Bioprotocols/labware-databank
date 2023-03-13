@@ -54,19 +54,21 @@ class LOLabwareABox:
             for index,row in labware_cat_df.iterrows():
                 print(row['Id'], "-- >", row['Manifacturer'], row['ProductID'] )
                 law = self.lolwt.Labware( row['Id'],
+                                        # ;Description;ImageLink/URL;UNSPSC;eClass;Vendor;CatalogueID;WellCount;ColumnCount;RowCount;LabwareLength/mm;LabwareWidth/mm;LabwareHeight/mm;Mass/g;LabwareMaterial;SurfaceTreatment;Color;WellVolume/ul;A1Position(col,row);WellDiameter/mm;WellColDistance/mm;WellRowDistance/mm;WellDepth/mm;WellShape;WellBottomShape;Liddable/bool;Lid((Manufacturer, ProdID));Applications;AcceptableLids
                                         hasManifacturer=row['Manifacturer'],
                                         hasProductID=row['ProductID'],
+                                        # LabWareType
                                         # Description
-                                        hasImageLink=row['ImageLink[URL]'],
+                                        hasImageLink=row['ImageLink/URL'],
                                         hasUNSPSC=row['UNSPSC'],
-                                        hasEClass=row['eCl@ss'],
+                                        hasEClass=row['eClass'],
                                         #hasVendorName=row['Vendor'],
                                         #hasVendorProductID=row['CatalogueNumber'],
                                         hasNumWells=row['WellCount'],
                                         hasNumCols=row['ColumnCount'],
                                         hasNumRows=row['RowCount'])
-                                        #hasLength=row['LabwareLength[mm]'],
-                                        #hasWidth=row['LabwareWidth[mm]'])
+                                        #hasLength=row['LabwareLength/mm'],
+                                        #hasWidth=row['LabwareWidth/mm'])
                 #                         hasHeight=row['LabwareHeight[mm]'],
                 #                         hasMass=row['Weight[g]'],
                 #                         # LabwareMaterial

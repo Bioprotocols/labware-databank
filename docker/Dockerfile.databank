@@ -16,7 +16,9 @@
 # to get the digest (=sha fingerprint) run:
 # docker images --digests | grep python
 
-FROM python:3.10-slim-buster
+#FROM python:3.10-slim-buster
+FROM tiangolo/uvicorn-gunicorn-fastapi:python3.8
+
 # to minimize image size one could build like (https://mherman.org/presentations/dockercon-2018/#39):
 # FROM python:3.6 as base
 # COPY requirements.txt /
@@ -84,6 +86,7 @@ RUN pip install --no-cache-dir --upgrade pip \
 WORKDIR ${PROJECT_ROOT}
 # copy entrypoint.sh
 
+COPY --chown=lara:lara ./app /app
 COPY --chown=lara:lara entrypoint_databank.sh ${PROJECT_ROOT}/entrypoint.sh
 
 # copy main lara-django script
@@ -97,4 +100,6 @@ RUN ls ${PROJECT_ROOT}
 EXPOSE 8000
 
 #CMD ["rdflib-endpoint", "serve", "--host", "0.0.0.0", "--port", "8000",  "*.ttl"]
-ENTRYPOINT exec "${PROJECT_ROOT}/entrypoint.sh"
+ENTRYPOINT ["uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "80"]
+
+#ENTRYPOINT exec "${PROJECT_ROOT}/entrypoint.sh"
