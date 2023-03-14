@@ -66,8 +66,8 @@ class LOLabwareABox:
                                         #hasVendorProductID=row['CatalogueNumber'],
                                         hasNumWells=row['WellCount'],
                                         hasNumCols=row['ColumnCount'],
-                                        hasNumRows=row['RowCount'])
-                                        #hasLength=row['LabwareLength/mm'],
+                                        hasNumRows=row['RowCount'],
+                                        hasLength=self.emmo.Length(length=row['LabwareLength/mm']))
                                         #hasWidth=row['LabwareWidth/mm'])
                 #                         hasHeight=row['LabwareHeight[mm]'],
                 #                         hasMass=row['Weight[g]'],

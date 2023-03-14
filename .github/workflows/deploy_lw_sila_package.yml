@@ -53,4 +53,5 @@ jobs:
         cd dist && echo "hash=$(sha256sum * | base64 -w0)" >> $GITHUB_OUTPUT
     - uses: actions/upload-artifact@0b7f8abb1508181956e8e162db84b466c27e18ce
       with:
-        path: ./dist
+        path: ./SiLA/dist
+        name: ${{ env.PACKAGE_NAME }}
