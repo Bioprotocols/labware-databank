@@ -67,11 +67,19 @@ def most_similar(query_results, ctx, part, eval_part):
     return query_results, ctx, part, eval_part
 
 
-example_query = """PREFIX myfunctions: <https://w3id.org/um/sparql-functions/>
+example_query_orig = """PREFIX myfunctions: <https://w3id.org/um/sparql-functions/>
 SELECT ?concat ?concatLength WHERE {
     BIND("First" AS ?first)
     BIND(myfunctions:custom_concat(?first, "last") AS ?concat)
 }"""
+
+example_query="""PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+SELECT * WHERE {
+    GRAPH ?g {
+        ?s ?p ?o .
+    }
+} LIMIT 100"""
 
 # Use ConjunctiveGraph to support nquads and graphs in SPARQL queries
 # identifier is the default graph
@@ -94,7 +102,7 @@ app = SparqlEndpoint(
     title="SPARQL endpoint for RDFLib graph",
     description="A SPARQL endpoint to serve machine learning models, or any other logic implemented in Python. \n[Source code](https://github.com/vemonet/rdflib-endpoint)",
     version="0.1.0",
-    public_url="https://service.openpredict.137.120.31.102.nip.io/sparql",
+    public_url="http://labware-databank:8000/sparql", # "https://service.openpredict.137.120.31.102.nip.io/sparql",
     cors_enabled=True,
     example_query=example_query,
 )

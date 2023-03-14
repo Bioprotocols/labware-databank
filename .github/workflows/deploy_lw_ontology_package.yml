@@ -16,9 +16,8 @@ on:
   # Run tests for any PRs.
   pull_request:
 
-#env:
-  # PACKAGE_NAME: labop_labware_sila
-
+env:
+  PACKAGE_NAME: labop_labware_ontology
 
 jobs:
   deploy:
