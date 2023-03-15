@@ -17,9 +17,7 @@ if TYPE_CHECKING:
 
 class LabwareQueryServiceClient:
     """
-
     SPARQL querying the Labware Ontology.
-
     """
 
     def SPARQLQuery(

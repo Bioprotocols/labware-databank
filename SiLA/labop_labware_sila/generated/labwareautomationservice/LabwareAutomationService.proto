@@ -8,15 +8,45 @@ package sila2.de.unigreifswald.labware.labwareautomationservice.v1;
 service LabwareAutomationService {
   /* Get Labware Dimensions. */
   rpc GetLabwareDimensions (sila2.de.unigreifswald.labware.labwareautomationservice.v1.GetLabwareDimensions_Parameters) returns (sila2.de.unigreifswald.labware.labwareautomationservice.v1.GetLabwareDimensions_Responses) {}
+  /* Get Gripping Height. */
+  rpc GetGrippingHeight (sila2.de.unigreifswald.labware.labwareautomationservice.v1.GetGrippingHeight_Parameters) returns (sila2.de.unigreifswald.labware.labwareautomationservice.v1.GetGrippingHeight_Responses) {}
+  /* Get Labware Well Volume. */
+  rpc GetLabwareWellVolume (sila2.de.unigreifswald.labware.labwareautomationservice.v1.GetLabwareWellVolume_Parameters) returns (sila2.de.unigreifswald.labware.labwareautomationservice.v1.GetLabwareWellVolume_Responses) {}
 }
 
 /* Parameters for GetLabwareDimensions */
 message GetLabwareDimensions_Parameters {
-  sila2.org.silastandard.String Vendor = 1;  /* Name of the labware vendor. */
-  sila2.org.silastandard.String ProductNumber = 2;  /* Product number of the labware. */
+  sila2.org.silastandard.String Manufacturer = 1;  /* Name of the labware Manufacturer. */
+  sila2.org.silastandard.String ProductID = 2;  /* Manufacturer's Product number of the labware. */
+  sila2.org.silastandard.String Unit = 3;  /* Unit of the dimensions, default is millimetre ["mm"]. */
 }
 
 /* Responses of GetLabwareDimensions */
 message GetLabwareDimensions_Responses {
-  sila2.org.silastandard.String Dimensions = 1;  /* Dimensions of the labware. */
+  sila2.org.silastandard.String Dimensions = 1;  /* Dimensions of the labware as JSON string. */
+}
+
+/* Parameters for GetGrippingHeight */
+message GetGrippingHeight_Parameters {
+  sila2.org.silastandard.String Manufacturer = 1;  /* Name of the labware Manufacturer. */
+  sila2.org.silastandard.String ProductID = 2;  /* Manufacturer's Product number of the labware. */
+  sila2.org.silastandard.String Unit = 3;  /* Unit of the gripping height, default is millimetre ["mm"]. */
+  sila2.org.silastandard.Boolean Lidded = 4;  /* True if the labware is lidded, false otherwise. */
+}
+
+/* Responses of GetGrippingHeight */
+message GetGrippingHeight_Responses {
+  sila2.org.silastandard.Real GrippingHeight = 1;  /* Gripping Height in the selected unit, depending on lidding state. */
+}
+
+/* Parameters for GetLabwareWellVolume */
+message GetLabwareWellVolume_Parameters {
+  sila2.org.silastandard.String Manufacturer = 1;  /* Name of the labware Manufacturer. */
+  sila2.org.silastandard.String ProductID = 2;  /* Manufacturer's Product number of the labware. */
+  sila2.org.silastandard.String Unit = 3;  /* Unit of the volume, default is microlitre ["µl"]. */
+}
+
+/* Responses of GetLabwareWellVolume */
+message GetLabwareWellVolume_Responses {
+  sila2.org.silastandard.Real Volume = 1;  /* Volume of the labware in defined unit. */
 }

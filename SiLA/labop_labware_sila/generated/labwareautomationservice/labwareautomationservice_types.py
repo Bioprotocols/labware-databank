@@ -7,5 +7,19 @@ from typing import NamedTuple
 class GetLabwareDimensions_Responses(NamedTuple):
     Dimensions: str
     """
-    Dimensions of the labware.
+    Dimensions of the labware as JSON string.
+    """
+
+
+class GetGrippingHeight_Responses(NamedTuple):
+    GrippingHeight: float
+    """
+    Gripping Height in the selected unit, depending on lidding state.
+    """
+
+
+class GetLabwareWellVolume_Responses(NamedTuple):
+    Volume: float
+    """
+    Volume of the labware in defined unit.
     """

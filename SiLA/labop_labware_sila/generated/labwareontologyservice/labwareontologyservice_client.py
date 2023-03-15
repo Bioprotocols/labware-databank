@@ -17,9 +17,7 @@ if TYPE_CHECKING:
 
 class LabwareOntologyServiceClient:
     """
-
     CRUD operations on the labware ontology.
-
     """
 
     def CreateLabware(

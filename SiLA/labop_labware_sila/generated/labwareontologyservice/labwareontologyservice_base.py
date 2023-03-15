@@ -17,9 +17,7 @@ class LabwareOntologyServiceBase(FeatureImplementationBase, ABC):
 
     def __init__(self, parent_server: Server):
         """
-
         CRUD operations on the labware ontology.
-
         """
         super().__init__(parent_server=parent_server)
 

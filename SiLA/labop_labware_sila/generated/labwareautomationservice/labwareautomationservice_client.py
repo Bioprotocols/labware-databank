@@ -11,21 +11,55 @@ from typing import TYPE_CHECKING
 if TYPE_CHECKING:
     from typing import Iterable, Optional
 
-    from labwareautomationservice_types import GetLabwareDimensions_Responses
+    from labwareautomationservice_types import (
+        GetGrippingHeight_Responses,
+        GetLabwareDimensions_Responses,
+        GetLabwareWellVolume_Responses,
+    )
     from sila2.client import ClientMetadataInstance
 
 
 class LabwareAutomationServiceClient:
     """
-
     Simplified query of the LabOP Labware ontology individuals.
-
     """
 
     def GetLabwareDimensions(
-        self, Vendor: str, ProductNumber: str, *, metadata: Optional[Iterable[ClientMetadataInstance]] = None
+        self,
+        Manufacturer: str,
+        ProductID: str,
+        Unit: str,
+        *,
+        metadata: Optional[Iterable[ClientMetadataInstance]] = None,
     ) -> GetLabwareDimensions_Responses:
         """
         Get Labware Dimensions.
+        """
+        ...
+
+    def GetGrippingHeight(
+        self,
+        Manufacturer: str,
+        ProductID: str,
+        Unit: str,
+        Lidded: bool,
+        *,
+        metadata: Optional[Iterable[ClientMetadataInstance]] = None,
+    ) -> GetGrippingHeight_Responses:
+        """
+        Get Gripping Height.
+        """
+        ...
+
+    def GetLabwareWellVolume(
+        self,
+        Manufacturer: str,
+        ProductID: str,
+        Unit: str,
+        *,
+        metadata: Optional[Iterable[ClientMetadataInstance]] = None,
+    ) -> GetLabwareWellVolume_Responses:
+        """
+        Get Labware Well Volume.
         """
         ...

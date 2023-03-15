@@ -6,7 +6,11 @@ from typing import TYPE_CHECKING
 
 from sila2.server import FeatureImplementationBase, MetadataDict
 
-from .labwareautomationservice_types import GetLabwareDimensions_Responses
+from .labwareautomationservice_types import (
+    GetGrippingHeight_Responses,
+    GetLabwareDimensions_Responses,
+    GetLabwareWellVolume_Responses,
+)
 
 if TYPE_CHECKING:
     from ...server import Server
@@ -17,29 +21,79 @@ class LabwareAutomationServiceBase(FeatureImplementationBase, ABC):
 
     def __init__(self, parent_server: Server):
         """
-
         Simplified query of the LabOP Labware ontology individuals.
-
         """
         super().__init__(parent_server=parent_server)
 
     @abstractmethod
     def GetLabwareDimensions(
-        self, Vendor: str, ProductNumber: str, *, metadata: MetadataDict
+        self, Manufacturer: str, ProductID: str, Unit: str, *, metadata: MetadataDict
     ) -> GetLabwareDimensions_Responses:
         """
         Get Labware Dimensions.
 
 
-        :param Vendor: Name of the labware vendor.
+        :param Manufacturer: Name of the labware Manufacturer.
 
-        :param ProductNumber: Product number of the labware.
+        :param ProductID: Manufacturer's Product number of the labware.
+
+        :param Unit: Unit of the dimensions, default is millimetre ["mm"].
 
         :param metadata: The SiLA Client Metadata attached to the call
 
         :return:
 
-            - Dimensions: Dimensions of the labware.
+            - Dimensions: Dimensions of the labware as JSON string.
+
+
+        """
+        pass
+
+    @abstractmethod
+    def GetGrippingHeight(
+        self, Manufacturer: str, ProductID: str, Unit: str, Lidded: bool, *, metadata: MetadataDict
+    ) -> GetGrippingHeight_Responses:
+        """
+        Get Gripping Height.
+
+
+        :param Manufacturer: Name of the labware Manufacturer.
+
+        :param ProductID: Manufacturer's Product number of the labware.
+
+        :param Unit: Unit of the gripping height, default is millimetre ["mm"].
+
+        :param Lidded: True if the labware is lidded, false otherwise.
+
+        :param metadata: The SiLA Client Metadata attached to the call
+
+        :return:
+
+            - GrippingHeight: Gripping Height in the selected unit, depending on lidding state.
+
+
+        """
+        pass
+
+    @abstractmethod
+    def GetLabwareWellVolume(
+        self, Manufacturer: str, ProductID: str, Unit: str, *, metadata: MetadataDict
+    ) -> GetLabwareWellVolume_Responses:
+        """
+        Get Labware Well Volume.
+
+
+        :param Manufacturer: Name of the labware Manufacturer.
+
+        :param ProductID: Manufacturer's Product number of the labware.
+
+        :param Unit: Unit of the volume, default is microlitre ["µl"].
+
+        :param metadata: The SiLA Client Metadata attached to the call
+
+        :return:
+
+            - Volume: Volume of the labware in defined unit.
 
 
         """

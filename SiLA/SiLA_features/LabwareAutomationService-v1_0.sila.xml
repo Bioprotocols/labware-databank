@@ -112,7 +112,7 @@
     <Parameter>
       <Identifier>Unit</Identifier>
       <DisplayName>Unit</DisplayName>
-      <Description>Unit of the volume, default is microlitre ["&#181;l"].</Description>
+      <Description>Unit of the volume, default is microlitre ["µl"].</Description>
       <DataType>
         <Basic>String</Basic>
       </DataType>

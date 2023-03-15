@@ -12,17 +12,17 @@ from .labwarequeryservice import LabwareQueryServiceClient
 
 
 class Client(SilaClient):
+    LabwareQueryService: LabwareQueryServiceClient
+
     LabwareAutomationService: LabwareAutomationServiceClient
 
     LabwareOntologyService: LabwareOntologyServiceClient
 
-    LabwareQueryService: LabwareQueryServiceClient
-
     _expected_features: Set[FullyQualifiedFeatureIdentifier] = {
         FullyQualifiedFeatureIdentifier("org.silastandard/core/SiLAService/v1"),
+        FullyQualifiedFeatureIdentifier("de.unigreifswald/labware/LabwareQueryService/v1"),
         FullyQualifiedFeatureIdentifier("de.unigreifswald/labware/LabwareAutomationService/v1"),
         FullyQualifiedFeatureIdentifier("de.unigreifswald/labware/LabwareOntologyService/v1"),
-        FullyQualifiedFeatureIdentifier("de.unigreifswald/labware/LabwareQueryService/v1"),
     }
 
     def __init__(self, *args, **kwargs):

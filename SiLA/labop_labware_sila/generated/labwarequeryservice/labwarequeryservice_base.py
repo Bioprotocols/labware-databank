@@ -17,9 +17,7 @@ class LabwareQueryServiceBase(FeatureImplementationBase, ABC):
 
     def __init__(self, parent_server: Server):
         """
-
         SPARQL querying the Labware Ontology.
-
         """
         super().__init__(parent_server=parent_server)
 

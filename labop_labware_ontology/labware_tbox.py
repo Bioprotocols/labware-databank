@@ -228,6 +228,9 @@ class LOLabwareTBox:
             class hasGrippingHeightWithLid(Labware >> self.emmo.Length, FunctionalProperty, ObjectProperty):
                 """Labware total hight, without  any additions, like lids etc. """
 
+            class hasGrippingPressure(Labware >> self.emmo.Pressure, FunctionalProperty, ObjectProperty):
+                """Labware max gripping pressure."""
+
             class hasRadiusXY(Labware >> self.emmo.Length, FunctionalProperty, ObjectProperty):
                 """Labware radius of a round shape in XY direction """
 

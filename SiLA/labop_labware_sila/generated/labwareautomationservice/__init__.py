@@ -2,11 +2,17 @@
 from .labwareautomationservice_base import LabwareAutomationServiceBase
 from .labwareautomationservice_client import LabwareAutomationServiceClient
 from .labwareautomationservice_feature import LabwareAutomationServiceFeature
-from .labwareautomationservice_types import GetLabwareDimensions_Responses
+from .labwareautomationservice_types import (
+    GetGrippingHeight_Responses,
+    GetLabwareDimensions_Responses,
+    GetLabwareWellVolume_Responses,
+)
 
 __all__ = [
     "LabwareAutomationServiceBase",
     "LabwareAutomationServiceFeature",
     "LabwareAutomationServiceClient",
     "GetLabwareDimensions_Responses",
+    "GetGrippingHeight_Responses",
+    "GetLabwareWellVolume_Responses",
 ]

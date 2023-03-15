@@ -3,9 +3,16 @@ from __future__ import annotations
 
 from typing import TYPE_CHECKING
 
+import logging
+
 from sila2.server import MetadataDict
 
-from ..generated.labwareautomationservice import GetLabwareDimensions_Responses, LabwareAutomationServiceBase
+from ..generated.labwareautomationservice import (
+    GetGrippingHeight_Responses,
+    GetLabwareDimensions_Responses,
+    GetLabwareWellVolume_Responses,
+    LabwareAutomationServiceBase,
+)
 
 if TYPE_CHECKING:
     from ..server import Server
@@ -16,6 +23,24 @@ class LabwareAutomationServiceImpl(LabwareAutomationServiceBase):
         super().__init__(parent_server=parent_server)
 
     def GetLabwareDimensions(
-        self, Vendor: str, ProductNumber: str, *, metadata: MetadataDict
+        self, Manufacturer: str, ProductID: str, Unit: str, *, metadata: MetadataDict
     ) -> GetLabwareDimensions_Responses:
+        raise NotImplementedError  # TODO
+
+    def GetGrippingHeight(
+        self, Manufacturer: str, ProductID: str, Unit: str, Lidded: bool, *, metadata: MetadataDict
+    ) -> GetGrippingHeight_Responses:
+
+        logging.debug(f"Manufacturer: {Manufacturer}, productID: {ProductID}, unit: {Unit}, lidded: {Lidded}")
+
+        if Lidded:
+            gripping_height = 33.0
+        else:
+            gripping_height = 42.0
+
+        return GetGrippingHeight_Responses(GrippingHeight=gripping_height)
+
+    def GetLabwareWellVolume(
+        self, Manufacturer: str, ProductID: str, Unit: str, *, metadata: MetadataDict
+    ) -> GetLabwareWellVolume_Responses:
         raise NotImplementedError  # TODO
