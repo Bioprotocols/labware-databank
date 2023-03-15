@@ -25,7 +25,13 @@ class LabwareAutomationServiceImpl(LabwareAutomationServiceBase):
     def GetLabwareDimensions(
         self, Manufacturer: str, ProductID: str, Unit: str, *, metadata: MetadataDict
     ) -> GetLabwareDimensions_Responses:
-        raise NotImplementedError  # TODO
+        
+        logging.debug(f"lw dimensions: Manufacturer: {Manufacturer}, productID: {ProductID}, unit: {Unit}")
+
+        lw_dimensions = { "Length": 127.0, "Width": 85.0, "Height": 42.0 }
+
+        return GetLabwareDimensions_Responses(Dimensions=str(lw_dimensions))
+
 
     def GetGrippingHeight(
         self, Manufacturer: str, ProductID: str, Unit: str, Lidded: bool, *, metadata: MetadataDict
@@ -43,4 +49,8 @@ class LabwareAutomationServiceImpl(LabwareAutomationServiceBase):
     def GetLabwareWellVolume(
         self, Manufacturer: str, ProductID: str, Unit: str, *, metadata: MetadataDict
     ) -> GetLabwareWellVolume_Responses:
-        raise NotImplementedError  # TODO
+        lw_well_volume = 1000.0
+
+        return GetLabwareWellVolume_Responses(Volume=lw_well_volume)
+
+
