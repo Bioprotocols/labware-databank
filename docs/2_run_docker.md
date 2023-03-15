@@ -17,7 +17,35 @@ wget https://raw.githubusercontent.com/labopmuc/labop_labware_ontology/master/do
 curl -O https://raw.githubusercontent.com/labopmuc/labop_labware_ontology/master/docker/docker-compose.yml
 ```
 
-to build the docker containers, run in the directory where the docker-compose file is located:
+## pull ready docker images from github
+
+* create personal github access token(classic):
+s. https://docs.github.com/en/packages/working-with-a-github-packages-registry/working-with-the-container-registry
+
+* register access token with
+
+echo "<my-token>" | (sudo) docker login ghcr.io -u <my-user-name> --password-stdin
+
+* pull the container from the github registry, execute in the directory, which contains the docker-compose.yml file:
+
+```bash
+docker-compose pull
+```
+
+to start the docker containers, run in the directory, which containes the docker-compose.yml file:
+
+```bash
+docker-compose up
+```
+ 
+
+
+## local build 
+
+* pull docker-compose.local.yml
+
+
+to build the docker containers locally, run in the directory where the docker-compose file is located:
 
 ```bash
 docker-compose build
