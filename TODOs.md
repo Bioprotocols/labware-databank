@@ -12,8 +12,8 @@
 ## infrastructure
 
   * labware docker: build according to SPARQL endpoint 
-  * SiLA package generation
-  * SiLA package deployment
+  * SiLA package generation: add version
+  * SiLA package deployment: add version
   * automatic documentation generation (ontology, graph)
 
   

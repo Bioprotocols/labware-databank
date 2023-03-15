@@ -1,3 +1,4 @@
+import glob
 import rdflib
 from rdflib import RDF, RDFS, ConjunctiveGraph, Literal, URIRef
 from rdflib.plugins.sparql.evalutils import _eval
@@ -83,10 +84,19 @@ SELECT * WHERE {
 
 # Use ConjunctiveGraph to support nquads and graphs in SPARQL queries
 # identifier is the default graph
-g = ConjunctiveGraph(
+g_orig = ConjunctiveGraph(
     # store="Oxigraph",
     identifier=URIRef("https://w3id.org/um/sparql-functions/graph/default"),
 )
+
+g = ConjunctiveGraph(store=store)
+    
+file_list = glob.glob("../*.ttl")
+print("ttl files: ", file_list)
+
+for file in file_list:
+    g.parse(file)
+
 
 # Example to add a nquad to the exposed graph
 g.add((URIRef("http://subject"), RDF.type, URIRef("http://object"), URIRef("http://graph")))
@@ -100,7 +110,8 @@ app = SparqlEndpoint(
         "https://w3id.org/um/sparql-functions/custom_concat": custom_concat,
     },
     title="SPARQL endpoint for RDFLib graph",
-    description="A SPARQL endpoint to serve machine learning models, or any other logic implemented in Python. \n[Source code](https://github.com/vemonet/rdflib-endpoint)",
+    #description="A SPARQL endpoint to serve machine learning models, or any other logic implemented in Python. \n[Source code](https://github.com/vemonet/rdflib-endpoint)",
+    description="A SPARQL endpoint to serve a labware ontology and details of individuals.",
     version="0.1.0",
     public_url="http://labware-databank:8000/sparql", # "https://service.openpredict.137.120.31.102.nip.io/sparql",
     cors_enabled=True,

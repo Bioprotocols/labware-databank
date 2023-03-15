@@ -1,3 +1,4 @@
 sila2
 rdflib-endpoint
-
+# SiLA Labware Databank server
+"git+https://github.com/bioprotocols/labware-databank.git#egg=labop_labware_sila&subdirectory=SiLA"

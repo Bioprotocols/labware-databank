@@ -100,6 +100,6 @@ RUN ls ${PROJECT_ROOT}
 EXPOSE 8000
 
 #CMD ["rdflib-endpoint", "serve", "--host", "0.0.0.0", "--port", "8000",  "*.ttl"]
-ENTRYPOINT ["uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "8000"]
+#ENTRYPOINT ["uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "8000"]
 
-#ENTRYPOINT exec "${PROJECT_ROOT}/entrypoint.sh"
+ENTRYPOINT exec "${PROJECT_ROOT}/entrypoint.sh"
