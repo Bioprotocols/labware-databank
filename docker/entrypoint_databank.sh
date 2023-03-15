@@ -19,4 +19,4 @@ fi
 
 echo "RDFlib endpoint started"
 echo "Starting SiLA server .... --host 0.0.0.0  @port 50052"
-labop_labware_sila --insecure --port 50052 &
+labop_labware_sila --insecure --port 50052
