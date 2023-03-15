@@ -92,7 +92,7 @@ g_orig = ConjunctiveGraph(
 store = "default"
 g = ConjunctiveGraph(store=store)
     
-file_list = glob.glob("../*.ttl")
+file_list = glob.glob("*.ttl")
 print("ttl files: ", file_list)
 
 for file in file_list:
