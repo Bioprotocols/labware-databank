@@ -18,10 +18,9 @@ services:
       #restart: unless-stopped
       #volumes:
       #  - :
-      #ports:
-      #  - 50052:50052
       ports:
-        - 8008:8000
+        - "8008:8000"
+        - "50052:50052"
       #expose:
       #  - 8000
       networks:
