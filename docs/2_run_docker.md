@@ -38,6 +38,13 @@ to start the docker containers, run in the directory, which containes the docker
 docker-compose up
 ```
  
+ ## debugging a docker container with docker compose
+
+to debug the docker container, open a bash in the container and run the following command:
+    
+    ```bash
+    docker-compose run --service-ports --rm labware-databank bash
+    ```
 
 
 ## local build 

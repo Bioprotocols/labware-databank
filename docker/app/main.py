@@ -89,9 +89,10 @@ g_orig = ConjunctiveGraph(
     identifier=URIRef("https://w3id.org/um/sparql-functions/graph/default"),
 )
 
+store = "default"
 g = ConjunctiveGraph(store=store)
     
-file_list = glob.glob("../*.ttl")
+file_list = glob.glob("*.ttl")
 print("ttl files: ", file_list)
 
 for file in file_list:

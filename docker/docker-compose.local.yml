@@ -32,7 +32,7 @@ services:
     jupyter:
       build:
         context: .
-        dockerfile: Dockerfile.jupyter
+        dockerfile: Dockerfile.jupyterlab
       #image: ghcr.io/bioprotocols/labop_labware_databank:develop
       #image: jupyter/base-notebook
       volumes:
