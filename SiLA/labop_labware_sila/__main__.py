@@ -74,7 +74,7 @@ def main(
                 with open(ca_export_file, "wb") as fp:
                     fp.write(server.generated_ca)
                 logger.info(f"Wrote generated CA to '{ca_export_file}'")
-        logger.info(f"Server startup complete with IP address {ip_address} at port {port} - in insecure mode: {insecure}, with discovery: {not disable_discovery} ")
+        logger.info(f"Server v0.0.1a startup complete with IP address {ip_address} at port {port} - in insecure mode: {insecure}, with discovery: {not disable_discovery} ")
 
         signal.signal(signal.SIGTERM, lambda *args: server.stop())
 
