@@ -74,6 +74,8 @@ ENV PATH="$VIRTUAL_ENV/bin:$PATH"
 RUN pip install --no-cache-dir --upgrade pip \
     && pip install --no-cache-dir -r $PROJECT_ROOT/requirements/base.txt
 
+#RUN apt-get update && apt-get install iputils-ping iproute2 telnet -y
+
 # Raspberry Pi installations
 # psutil is needed by ARM builds otherwise gevent and gunicorn fail to start
 

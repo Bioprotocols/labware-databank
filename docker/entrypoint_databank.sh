@@ -10,7 +10,7 @@ echo "workdir:"
 ls -Al
 echo "Starting databank uvicorn server"
 #uvicorn app.main:app --host 0.0.0.0 --port 8000 &
-#rdflib-endpoint serve --host 0.0.0.0 --port 8000 *.ttl &
+rdflib-endpoint serve --host 0.0.0.0 --port 8000 *.ttl &
 
 echo "workdir:"
 ls -Al /

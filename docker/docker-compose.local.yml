@@ -5,8 +5,8 @@
 
 version: '3.9'
 
-networks:
-  container-network:
+#networks:
+#  container-network:
     #driver: bridge
 
 services:
@@ -23,8 +23,8 @@ services:
         - "50052:50052"
       #expose:
       #  - 8000
-      networks:
-        - container-network
+      #networks:
+      #  - container-network
       #env_file:
       #  - ./.env.dev
       #command: 
@@ -41,8 +41,8 @@ services:
         - 8009:8888
       #expose:
       #  - 50052
-      networks:
-        - container-network
+      #networks:
+      #  - container-network
       #env_file:
       #  - ./.env.dev
       #command: 
