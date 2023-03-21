@@ -6,7 +6,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "labop_labware_ontology"
-version = "0.0.1"
+version = "0.0.2"
 readme = "README.md"
 license = {text = "MIT"}
 classifiers=[
