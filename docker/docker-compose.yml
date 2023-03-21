@@ -27,7 +27,7 @@ services:
       #  - 8000
       #networks:
       #  - container-network
-      env:
+      environment:
         - "SILA_SERVER=true"
       #env_file:
       #  - ./.env.dev
