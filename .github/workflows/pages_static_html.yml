@@ -34,10 +34,10 @@ jobs:
       - name: Setup Pages
         uses: actions/configure-pages@v3
         run: |
-        cd docs
-        echo "Building documentation ...."
-        make html
-        ls -Al
+          cd docs
+          echo "Building documentation ...."
+          make html
+          ls -Al
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v1
         with:
