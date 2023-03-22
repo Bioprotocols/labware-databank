@@ -12,3 +12,9 @@
     
     # running the sila server locally
     python -m labop_labware_sila --insecure
+
+
+    ## running SPARQL server
+
+    uvicorn app.main:app --host localhost --port 8007
+
