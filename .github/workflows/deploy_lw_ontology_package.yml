@@ -18,7 +18,7 @@ on:
 
 env:
   PACKAGE_VERSION: 0.0.1
-  PACKAGE_NAME: labop_labware_ontology-${{ env.PACKAGE_VERSION }}
+  PACKAGE_NAME: labop_labware_ontology-$PACKAGE_VERSION
 
 jobs:
   deploy:
