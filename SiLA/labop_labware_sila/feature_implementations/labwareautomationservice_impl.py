@@ -40,7 +40,7 @@ class LabwareAutomationServiceImpl(LabwareAutomationServiceBase):
         logging.debug(f"Manufacturer: {Manufacturer}, productID: {ProductID}, unit: {Unit}, lidded: {Lidded}")
 
         if Lidded:
-            gripping_height = 33.0
+            gripping_height = 33.333
         else:
             gripping_height = 42.0
 

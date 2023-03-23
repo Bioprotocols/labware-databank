@@ -1,4 +1,8 @@
+# importing form github
+# https://adamj.eu/tech/2019/03/11/pip-install-from-a-git-repository/
+# https://www.youtube.com/watch?v=c6IgzwFRf5I
 sila2
+pandas==1.4.1
 rdflib-endpoint
 # LabOP Labware Ontology
 git+https://github.com/bioprotocols/labware-databank@v0.0.2#egg=labop_labware_ontology
