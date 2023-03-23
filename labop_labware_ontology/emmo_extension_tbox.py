@@ -37,14 +37,15 @@ from labop_labware_ontology.emmo_utils import en, pl
 from labop_labware_ontology.export_ontology import export_ontology
 
 class EMMOExtensionTBox:
-    def __init__(self, emmo_ontology=None, emmo_url: str = None) -> None:
+    def __init__(self, emmo_filename: str = None, emmo_ontology=None, emmo_url: str = None) -> None:
 
         self.emmo = emmo_ontology
         self.emmo_url = emmo_url
         # --- ontology definition
 
-        # define the ontology
-        self.define_ontology()
+        if emmo_filename is None:
+            # define the ontology
+            self.define_ontology()
 
 
     def export(self, path: str = "../ontologies/", format='turtle') -> None:

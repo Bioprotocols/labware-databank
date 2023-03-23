@@ -38,7 +38,7 @@ from labop_labware_ontology import __version__ # Version of this ontology
 from labop_labware_ontology.export_ontology import export_ontology
 
 class LOLabwareTBox:
-    def __init__(self, emmo_world=None, emmo=None, emmo_url: str = None) -> None:
+    def __init__(self, lw_tbox_filename: str = None, emmo_world=None, emmo=None, emmo_url: str = None) -> None:
 
         self.emmo = emmo
         self.emmo_url = emmo_url
@@ -46,14 +46,19 @@ class LOLabwareTBox:
         self.lolwt_base_iri = 'http://www.labop.org/labware-t#'
         self.lolwt_version_iri = f'http://www.labop.org/{__version__}/labware'
 
-        self.lolwt = emmo_world.get_ontology(self.lolwt_base_iri)
+        if lw_tbox_filename is None:
+            self.lolwt = emmo_world.get_ontology(self.lolwt_base_iri)
+        else:
+            self.lolwt = emmo_world.get_ontology(lw_tbox_filename).load()
+
         self.emmo.imported_ontologies.append(self.lolwt)
         self.emmo.sync_python_names()
         
         # --- ontology definition
 
-        # define the ontology
-        self.define_ontology()
+        if lw_tbox_filename is None:
+            # define the ontology
+            self.define_ontology()
 
     def export(self, path: str = "../ontologies/", format='turtle') -> None:
         """save ontology """

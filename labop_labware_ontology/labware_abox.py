@@ -24,7 +24,7 @@ from labop_labware_ontology.emmo_utils import en, pl
 from labop_labware_ontology.export_ontology import export_ontology
 
 class LOLabwareABox:
-    def __init__(self, emmo_world=None, emmo=None, emmo_url: str = None, lw_tbox=None) -> None:
+    def __init__(self, lw_abox_filename:str = None, emmo_world=None, emmo=None, emmo_url: str = None, lw_tbox=None) -> None:
 
         # TDOO: move ontolgy definition to here
 
@@ -35,7 +35,11 @@ class LOLabwareABox:
         self.lolwa_base_iri = 'http://www.labop.org/labware-a#'
         self.lolwa_version_iri = f'http://www.labop.org/{__version__}/labware-a'
 
-        self.lolwa = emmo_world.get_ontology(self.lolwa_base_iri)
+        if lw_abox_filename is None:
+            self.lolwa = emmo_world.get_ontology(self.lolwa_base_iri)
+        else:
+            self.lolwa = emmo_world.get_ontology(lw_abox_filename).load()
+            
         self.emmo.imported_ontologies.append(self.lolwa)
         self.emmo.sync_python_names()
 

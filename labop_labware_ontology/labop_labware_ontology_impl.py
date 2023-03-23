@@ -32,7 +32,11 @@ from labop_labware_ontology.export_ontology import export_ontology
 logger = logging.getLogger(__name__)
 
 class LabwareInterface(LOLabwareInterface):
-    def __init__(self, db_path: str = None, db_name: str = None) -> None:
+    def __init__(self, db_path: str = None, 
+                 db_name: str = None,
+                 emmo_filename: str = None,
+                 lw_tbox_filename: str = None,
+                 lw_abox_filename: str = None) -> None:
         """Implementation of the LOLabwareInterface
         """
         db_name_full = None
@@ -58,9 +62,9 @@ class LabwareInterface(LOLabwareInterface):
         self.emmo_url = "emmo-development"  
         
         # in case of a local copy of EMMO
-        self.emmo_url_local = os.path.join(pathlib.Path(
-            __file__).parent.resolve(), "emmo")
-        if os.path.isfile(self.emmo_url_local + '.ttl'):
+        # self.emmo_url_local = os.path.join(pathlib.Path(
+        #     __file__).parent.resolve(), "emmo")  #self.emmo_url_local + '.ttl'
+        if os.path.isfile(emmo_filename):
             self.emmo_url = self.emmo_url_local
 
         # for persistent storage of ontology:
@@ -86,12 +90,12 @@ class LabwareInterface(LOLabwareInterface):
         self.emmo_ext_tbox = EMMOExtensionTBox(self.emmo, self.emmo_url)
 
         # create Labware Terminology box object
-        self.lolw_tbox = LOLabwareTBox(self.emmo_world, self.emmo, self.emmo_url)
+        self.lolw_tbox = LOLabwareTBox(lw_tbox_filename, self.emmo_world, self.emmo, self.emmo_url)
         
         #self.lolw.imported_ontologies.append(self.lolw_tbox.lolw)
         
         # create Labware Assertion Box  (ABox) object
-        self.lolw_abox = LOLabwareABox(emmo_world=self.emmo_world, emmo=self.emmo, emmo_url=self.emmo_url, lw_tbox=self.lolw_tbox)
+        self.lolw_abox = LOLabwareABox(lw_abox_filename, emmo_world=self.emmo_world, emmo=self.emmo, emmo_url=self.emmo_url, lw_tbox=self.lolw_tbox)
 
         #self.lolw.sync_python_names()
 

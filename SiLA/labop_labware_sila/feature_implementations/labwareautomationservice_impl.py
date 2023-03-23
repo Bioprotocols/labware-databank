@@ -25,7 +25,10 @@ class LabwareAutomationServiceImpl(LabwareAutomationServiceBase):
         super().__init__(parent_server=parent_server)
 
         # load all ontologies
-        self.labware_ontology = LabwareInterface()
+        # TODO: use paths
+        self.labware_ontology = LabwareInterface( emmo_filename='labop_labware_ontology.ttl', 
+                                                  lw_tbox_filename='labop_labware_tbox.ttl', 
+                                                  lw_abox_filename='labop_labware_abox.ttl')
         self.lw_abox = self.labware_ontology.lolw_abox.lolwa
 
 
