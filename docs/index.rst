@@ -7,6 +7,7 @@ Welcome to LabOP Labware Ontology's documentation!
    :caption: Contents:
 
    readme
+   ontologies
    installation
    usage
    source/modules

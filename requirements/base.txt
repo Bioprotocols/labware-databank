@@ -4,6 +4,7 @@
 sila2
 pandas==1.4.1
 rdflib-endpoint
+EMMontoPy
 # LabOP Labware Ontology
 git+https://github.com/bioprotocols/labware-databank@v0.0.2#egg=labop_labware_ontology
 labop_labware_ontology==0.0.2
