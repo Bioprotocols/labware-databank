@@ -34,7 +34,7 @@ logger = logging.getLogger(__name__)
 class LabwareInterface(LOLabwareInterface):
     def __init__(self, db_path: str = None, 
                  db_name: str = None,
-                 emmo_filename: str = None,
+                 emmo_filename: str = "",
                  lw_tbox_filename: str = None,
                  lw_abox_filename: str = None) -> None:
         """Implementation of the LOLabwareInterface
@@ -87,15 +87,15 @@ class LabwareInterface(LOLabwareInterface):
 
 
         # extending EMMO with Labware specific classes and properties
-        self.emmo_ext_tbox = EMMOExtensionTBox(self.emmo, self.emmo_url)
+        self.emmo_ext_tbox = EMMOExtensionTBox(emmo_filename=emmo_filename, emmo_ontology=self.emmo, emmo_url=self.emmo_url)
 
         # create Labware Terminology box object
-        self.lolw_tbox = LOLabwareTBox(lw_tbox_filename, self.emmo_world, self.emmo, self.emmo_url)
+        self.lolw_tbox = LOLabwareTBox(lw_tbox_filename=lw_tbox_filename, emmo_world=self.emmo_world, emmo=self.emmo, emmo_url=self.emmo_url)
         
         #self.lolw.imported_ontologies.append(self.lolw_tbox.lolw)
         
         # create Labware Assertion Box  (ABox) object
-        self.lolw_abox = LOLabwareABox(lw_abox_filename, emmo_world=self.emmo_world, emmo=self.emmo, emmo_url=self.emmo_url, lw_tbox=self.lolw_tbox)
+        self.lolw_abox = LOLabwareABox(lw_abox_filename=lw_abox_filename, emmo_world=self.emmo_world, emmo=self.emmo, emmo_url=self.emmo_url, lw_tbox=self.lolw_tbox)
 
         #self.lolw.sync_python_names()
 

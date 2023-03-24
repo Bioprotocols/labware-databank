@@ -22,14 +22,14 @@ email: mark.doerr@suni-greifswald.de
     term:labop_491691b0-5368-59d7-ab05-2654b00cd186 "LabOP-Labware"@en ;
     term:labop_d8c9835b-cded-51e5-a098-9ec1475e5824 "https://creativecommons.org/licenses/by/4.0/legalcode"@en ;
     term:labop_f6f34439-8e9f-573b-9761-7d62b1eb5dad "mark doerr"@en ;
-    owl:versionIRI <http://www.labop.org/0.0.1/labop_labware_tbox> ;
-    owl:versionInfo "0.0.1"@en .
+    owl:versionIRI <http://www.labop.org/0.0.2/labop_labware_tbox> ;
+    owl:versionInfo "0.0.2"@en .
 
 :labop_0ff72e72-b1d3-5873-921e-0fa3fe9bcdbb a owl:FunctionalProperty,
         owl:ObjectProperty ;
     emmo:labop_d1e9a166-fdc4-5ab0-be3a-23ede9e11070 "Labware radius of a round shape in XY direction "@en ;
     rdfs:domain :labop_1d4c2a98-e5bd-5154-8fc8-3c33118e9019 ;
-    rdfs:range <http://emmo.info/emmo-inferredlabop_719a638a-e204-51f4-9cb0-48549e5c34bc> ;
+    rdfs:range emmo:labop_7c655893-06a6-58c9-8fb1-0ed232cbc64d ;
     core:labop_6487502b-8c4d-5c97-932a-e6b54098f53b "hasRadiusZ"@en .
 
 :labop_102e11f9-bbc7-5ba7-8b99-e7c773bbf722 a owl:DatatypeProperty,
@@ -47,7 +47,7 @@ email: mark.doerr@suni-greifswald.de
 :labop_197e48a1-5e8c-5604-8781-40f7f78a0e66 a owl:DatatypeProperty,
         owl:FunctionalProperty ;
     emmo:labop_d1e9a166-fdc4-5ab0-be3a-23ede9e11070 "Labware relative length tolerance (= measured width/target width)."@en ;
-    rdfs:domain <http://emmo.info/emmo-inferredlabop_719a638a-e204-51f4-9cb0-48549e5c34bc> ;
+    rdfs:domain emmo:labop_7c655893-06a6-58c9-8fb1-0ed232cbc64d ;
     rdfs:range xsd:decimal ;
     core:labop_6487502b-8c4d-5c97-932a-e6b54098f53b "hasLengthTolerance"@en .
 
@@ -76,7 +76,7 @@ email: mark.doerr@suni-greifswald.de
         owl:ObjectProperty ;
     emmo:labop_d1e9a166-fdc4-5ab0-be3a-23ede9e11070 "Labware total hight, without  any additions, like lids etc. "@en ;
     rdfs:domain :labop_1d4c2a98-e5bd-5154-8fc8-3c33118e9019 ;
-    rdfs:range <http://emmo.info/emmo-inferredlabop_719a638a-e204-51f4-9cb0-48549e5c34bc> ;
+    rdfs:range emmo:labop_7c655893-06a6-58c9-8fb1-0ed232cbc64d ;
     core:labop_6487502b-8c4d-5c97-932a-e6b54098f53b "hasGrippingHeightWithLid"@en .
 
 :labop_4606e99e-76aa-5cbc-bbe7-2f1222be31d7 a owl:DatatypeProperty,
@@ -97,14 +97,14 @@ email: mark.doerr@suni-greifswald.de
         owl:ObjectProperty ;
     emmo:labop_d1e9a166-fdc4-5ab0-be3a-23ede9e11070 "Labware total hight, without  any additions, like lids etc. "@en ;
     rdfs:domain :labop_1d4c2a98-e5bd-5154-8fc8-3c33118e9019 ;
-    rdfs:range <http://emmo.info/emmo-inferredlabop_719a638a-e204-51f4-9cb0-48549e5c34bc> ;
+    rdfs:range emmo:labop_7c655893-06a6-58c9-8fb1-0ed232cbc64d ;
     core:labop_6487502b-8c4d-5c97-932a-e6b54098f53b "hasGrippingHeightLidding"@en .
 
 :labop_4942438f-0f92-58ff-8c65-596d76aa8a9b a owl:FunctionalProperty,
         owl:ObjectProperty ;
     emmo:labop_d1e9a166-fdc4-5ab0-be3a-23ede9e11070 "Labware total length, without  any additions, like lids etc."@en ;
     rdfs:domain :labop_1d4c2a98-e5bd-5154-8fc8-3c33118e9019 ;
-    rdfs:range <http://emmo.info/emmo-inferredlabop_719a638a-e204-51f4-9cb0-48549e5c34bc> ;
+    rdfs:range emmo:labop_7c655893-06a6-58c9-8fb1-0ed232cbc64d ;
     core:labop_6487502b-8c4d-5c97-932a-e6b54098f53b "hasLength"@en .
 
 :labop_4d2cf79a-18a2-5a15-bdda-7789d84f7292 a owl:DatatypeProperty,
@@ -123,45 +123,52 @@ email: mark.doerr@suni-greifswald.de
 
 :labop_614fa651-7b58-51fe-ab13-19088d5f8526 a owl:Class ;
     emmo:labop_d1e9a166-fdc4-5ab0-be3a-23ede9e11070 "Radius of a round bottom in z (hight) direction."@en ;
-    rdfs:subClassOf <http://emmo.info/emmo-inferredlabop_719a638a-e204-51f4-9cb0-48549e5c34bc> ;
+    rdfs:subClassOf emmo:labop_7c655893-06a6-58c9-8fb1-0ed232cbc64d ;
     core:labop_6487502b-8c4d-5c97-932a-e6b54098f53b "BottomRadiusZ"@en .
 
 :labop_676d559d-02bb-5227-8e55-5a1124718989 a owl:DatatypeProperty,
         owl:FunctionalProperty ;
     emmo:labop_d1e9a166-fdc4-5ab0-be3a-23ede9e11070 "Labware height tolerance."@en ;
-    rdfs:domain <http://emmo.info/emmo-inferredlabop_719a638a-e204-51f4-9cb0-48549e5c34bc> ;
+    rdfs:domain emmo:labop_7c655893-06a6-58c9-8fb1-0ed232cbc64d ;
     rdfs:range xsd:decimal ;
     core:labop_6487502b-8c4d-5c97-932a-e6b54098f53b "hasHeightTolerance"@en .
+
+:labop_6cd019eb-a71c-50a5-ad38-bedffdf520a9 a owl:FunctionalProperty,
+        owl:ObjectProperty ;
+    emmo:labop_d1e9a166-fdc4-5ab0-be3a-23ede9e11070 "Labware max gripping pressure."@en ;
+    rdfs:domain :labop_1d4c2a98-e5bd-5154-8fc8-3c33118e9019 ;
+    rdfs:range emmo:labop_bd1c311e-1477-5b31-9402-f385a7c2575d ;
+    core:labop_6487502b-8c4d-5c97-932a-e6b54098f53b "hasGrippingPressure"@en .
 
 :labop_75e8594c-c339-54bd-a68c-769cfe6d7855 a owl:FunctionalProperty,
         owl:ObjectProperty ;
     emmo:labop_d1e9a166-fdc4-5ab0-be3a-23ede9e11070 "Labware total hight, without  any additions, like lids etc. "@en ;
     rdfs:domain :labop_1d4c2a98-e5bd-5154-8fc8-3c33118e9019 ;
-    rdfs:range <http://emmo.info/emmo-inferredlabop_719a638a-e204-51f4-9cb0-48549e5c34bc> ;
+    rdfs:range emmo:labop_7c655893-06a6-58c9-8fb1-0ed232cbc64d ;
     core:labop_6487502b-8c4d-5c97-932a-e6b54098f53b "hasGrippingHeight"@en .
 
 :labop_76ec7e9e-f7d3-5125-9654-3ca413af8db0 a owl:Class ;
     emmo:labop_d1e9a166-fdc4-5ab0-be3a-23ede9e11070 "Well radius of a round well at the top opening in x-y plane."@en ;
-    rdfs:subClassOf <http://emmo.info/emmo-inferredlabop_719a638a-e204-51f4-9cb0-48549e5c34bc> ;
+    rdfs:subClassOf emmo:labop_7c655893-06a6-58c9-8fb1-0ed232cbc64d ;
     core:labop_6487502b-8c4d-5c97-932a-e6b54098f53b "TopRadiusXY"@en .
 
 :labop_79eb92b3-72d5-5cc2-b7f4-d1b2c3ab840f a owl:Class ;
     emmo:labop_d1e9a166-fdc4-5ab0-be3a-23ede9e11070 "Well total well depth=hight"@en ;
-    rdfs:subClassOf <http://emmo.info/emmo-inferredlabop_719a638a-e204-51f4-9cb0-48549e5c34bc> ;
+    rdfs:subClassOf emmo:labop_7c655893-06a6-58c9-8fb1-0ed232cbc64d ;
     core:labop_6487502b-8c4d-5c97-932a-e6b54098f53b "DepthWell"@en .
 
 :labop_90e743d1-69e7-5230-a9a3-31502bdde25f a owl:FunctionalProperty,
         owl:ObjectProperty ;
     emmo:labop_d1e9a166-fdc4-5ab0-be3a-23ede9e11070 "Labware total hight, without  any additions, like lids etc. "@en ;
     rdfs:domain :labop_1d4c2a98-e5bd-5154-8fc8-3c33118e9019 ;
-    rdfs:range <http://emmo.info/emmo-inferredlabop_719a638a-e204-51f4-9cb0-48549e5c34bc> ;
+    rdfs:range emmo:labop_7c655893-06a6-58c9-8fb1-0ed232cbc64d ;
     core:labop_6487502b-8c4d-5c97-932a-e6b54098f53b "hasHeight"@en .
 
 :labop_99819c07-7dd6-54e8-9618-9d69f5599afe a owl:FunctionalProperty,
         owl:ObjectProperty ;
     emmo:labop_d1e9a166-fdc4-5ab0-be3a-23ede9e11070 "Labware total width, without  any additions, like lids etc."@en ;
     rdfs:domain :labop_1d4c2a98-e5bd-5154-8fc8-3c33118e9019 ;
-    rdfs:range <http://emmo.info/emmo-inferredlabop_719a638a-e204-51f4-9cb0-48549e5c34bc> ;
+    rdfs:range emmo:labop_7c655893-06a6-58c9-8fb1-0ed232cbc64d ;
     core:labop_6487502b-8c4d-5c97-932a-e6b54098f53b "hasWidth"@en .
 
 :labop_9da87440-6661-5e35-b235-4a88eecdd071 a owl:DatatypeProperty,
@@ -182,19 +189,19 @@ email: mark.doerr@suni-greifswald.de
         owl:ObjectProperty ;
     emmo:labop_d1e9a166-fdc4-5ab0-be3a-23ede9e11070 "Labware radius of a round shape in XY direction "@en ;
     rdfs:domain :labop_1d4c2a98-e5bd-5154-8fc8-3c33118e9019 ;
-    rdfs:range <http://emmo.info/emmo-inferredlabop_719a638a-e204-51f4-9cb0-48549e5c34bc> ;
+    rdfs:range emmo:labop_7c655893-06a6-58c9-8fb1-0ed232cbc64d ;
     core:labop_6487502b-8c4d-5c97-932a-e6b54098f53b "hasRadiusXY"@en .
 
 :labop_be350462-d675-55b8-b008-8053db4e8333 a owl:DatatypeProperty,
         owl:FunctionalProperty ;
     emmo:labop_d1e9a166-fdc4-5ab0-be3a-23ede9e11070 "Labware relative width tolerance (= measured width/target width)."@en ;
-    rdfs:domain <http://emmo.info/emmo-inferredlabop_719a638a-e204-51f4-9cb0-48549e5c34bc> ;
+    rdfs:domain emmo:labop_7c655893-06a6-58c9-8fb1-0ed232cbc64d ;
     rdfs:range xsd:decimal ;
     core:labop_6487502b-8c4d-5c97-932a-e6b54098f53b "hasWidthTolerance"@en .
 
 :labop_c223f054-e921-5423-9b62-3d19c5161445 a owl:Class ;
     emmo:labop_d1e9a166-fdc4-5ab0-be3a-23ede9e11070 "Radius of a round bottom in xy plane / direction."@en ;
-    rdfs:subClassOf <http://emmo.info/emmo-inferredlabop_719a638a-e204-51f4-9cb0-48549e5c34bc> ;
+    rdfs:subClassOf emmo:labop_7c655893-06a6-58c9-8fb1-0ed232cbc64d ;
     core:labop_6487502b-8c4d-5c97-932a-e6b54098f53b "BottomRadiusXY"@en .
 
 :labop_c740a1d4-7867-5d6a-9db6-6ceaa92acecd a owl:Class ;
@@ -290,7 +297,7 @@ email: mark.doerr@suni-greifswald.de
 
 :labop_e9a79238-6198-50c9-9599-a8168d278322 a owl:Class ;
     emmo:labop_d1e9a166-fdc4-5ab0-be3a-23ede9e11070 "Depth of cone from beginning of conical shape."@en ;
-    rdfs:subClassOf <http://emmo.info/emmo-inferredlabop_719a638a-e204-51f4-9cb0-48549e5c34bc> ;
+    rdfs:subClassOf emmo:labop_7c655893-06a6-58c9-8fb1-0ed232cbc64d ;
     core:labop_6487502b-8c4d-5c97-932a-e6b54098f53b "ConeDepth"@en .
 
 :labop_f3cfc6a9-5914-58a8-a85c-4a4219b97dc0 a owl:DatatypeProperty,
@@ -309,7 +316,7 @@ email: mark.doerr@suni-greifswald.de
 
 :labop_0f8b1a08-707a-5941-ae31-21232cef51f7 a owl:Class ;
     emmo:labop_d1e9a166-fdc4-5ab0-be3a-23ede9e11070 "Total Labware volume "@en ;
-    rdfs:subClassOf <http://emmo.info/emmo-inferredlabop_4ae9e887-4b53-549c-89aa-c2c10ff35d5b> ;
+    rdfs:subClassOf emmo:labop_045c4863-88c2-586a-89e3-50cee58f75b9 ;
     core:labop_6487502b-8c4d-5c97-932a-e6b54098f53b "WellVolume"@en .
 
 :labop_1c2951ae-5f9f-58f2-8ac0-fe1fea2a39e3 a owl:DatatypeProperty,
@@ -323,7 +330,7 @@ email: mark.doerr@suni-greifswald.de
         owl:ObjectProperty ;
     emmo:labop_d1e9a166-fdc4-5ab0-be3a-23ede9e11070 "Septum penetration force"@en ;
     rdfs:domain :labop_1d4c2a98-e5bd-5154-8fc8-3c33118e9019 ;
-    rdfs:range <http://emmo.info/emmo-inferredlabop_1a953602-6f32-5660-9004-3e1ed7512c0c> ;
+    rdfs:range emmo:labop_e1965552-bc7f-543a-ad0c-17dc8d39a2d2 ;
     core:labop_6487502b-8c4d-5c97-932a-e6b54098f53b "hasSeptumPenetrationForce"@en .
 
 :labop_24908c61-0564-5961-a09c-a01feb0a6639 a owl:DatatypeProperty,
@@ -482,7 +489,7 @@ email: mark.doerr@suni-greifswald.de
 
 :labop_a7445579-3955-5e91-a5fa-284d668bb94e a owl:Class ;
     emmo:labop_d1e9a166-fdc4-5ab0-be3a-23ede9e11070 "wWll-to-well distance in row direction"@en ;
-    rdfs:subClassOf <http://emmo.info/emmo-inferredlabop_719a638a-e204-51f4-9cb0-48549e5c34bc> ;
+    rdfs:subClassOf emmo:labop_7c655893-06a6-58c9-8fb1-0ed232cbc64d ;
     core:labop_6487502b-8c4d-5c97-932a-e6b54098f53b "WellDistRow"@en .
 
 :labop_b441bf24-6f7f-5295-83bf-33338e579fce a owl:DatatypeProperty ;
@@ -514,14 +521,14 @@ email: mark.doerr@suni-greifswald.de
 
 :labop_c950b55d-3d97-54c3-93ad-0ea98462a3d0 a owl:Class ;
     emmo:labop_d1e9a166-fdc4-5ab0-be3a-23ede9e11070 "\"Well-to-well distance in column direction"@en ;
-    rdfs:subClassOf <http://emmo.info/emmo-inferredlabop_719a638a-e204-51f4-9cb0-48549e5c34bc> ;
+    rdfs:subClassOf emmo:labop_7c655893-06a6-58c9-8fb1-0ed232cbc64d ;
     core:labop_6487502b-8c4d-5c97-932a-e6b54098f53b "WellDistCol"@en .
 
 :labop_ccba7794-6244-59bd-aa4a-b95f7fdf8a30 a owl:FunctionalProperty,
         owl:ObjectProperty ;
     emmo:labop_d1e9a166-fdc4-5ab0-be3a-23ede9e11070 "Max sheer force of the Labware, e.g. during centrifugation"@en ;
     rdfs:domain :labop_1d4c2a98-e5bd-5154-8fc8-3c33118e9019 ;
-    rdfs:range <http://emmo.info/emmo-inferredlabop_1a953602-6f32-5660-9004-3e1ed7512c0c> ;
+    rdfs:range emmo:labop_e1965552-bc7f-543a-ad0c-17dc8d39a2d2 ;
     core:labop_6487502b-8c4d-5c97-932a-e6b54098f53b "hasMaxSheerForce"@en .
 
 :labop_dc7d3c33-0983-56d6-bac0-505baa4e9b8d a owl:DatatypeProperty,

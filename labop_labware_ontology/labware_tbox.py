@@ -43,11 +43,11 @@ class LOLabwareTBox:
         self.emmo = emmo
         self.emmo_url = emmo_url
         
-        self.lolwt_base_iri = 'http://www.labop.org/labware-t#'
+        self.base_iri = 'http://www.labop.org/labware-t#'
         self.lolwt_version_iri = f'http://www.labop.org/{__version__}/labware'
 
         if lw_tbox_filename is None:
-            self.lolwt = emmo_world.get_ontology(self.lolwt_base_iri)
+            self.lolwt = emmo_world.get_ontology(self.base_iri)
         else:
             self.lolwt = emmo_world.get_ontology(lw_tbox_filename).load()
 
