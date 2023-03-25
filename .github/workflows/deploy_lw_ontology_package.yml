@@ -17,7 +17,7 @@ on:
   pull_request:
 
 env:
-  PACKAGE_VERSION: 0.0.2
+  PACKAGE_VERSION: 0.0.3
   PACKAGE_NAME: labop_labware_ontology-$PACKAGE_VERSION
 
 jobs:
