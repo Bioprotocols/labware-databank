@@ -36,16 +36,21 @@ class LOLabwareABox:
         self.base_iri = 'http://www.labop.org/labware-a#'
         self.lolwa_version_iri = f'http://www.labop.org/{__version__}/labware-a'
 
+        print("LOLabwareABox:lw_abox_filename:", lw_abox_filename)
+
         if lw_abox_filename is None:
             self.lolwa = emmo_world.get_ontology(self.base_iri)
         else:
+            print("loading ontology from file: ", lw_abox_filename, " ...")
             self.lolwa = emmo_world.get_ontology(lw_abox_filename).load()
+            print(" ##### classes:", list(self.lolwa.classes()))  
 
         self.emmo.imported_ontologies.append(self.lolwa)
         self.emmo.sync_python_names()
 
-    def export(self, path: str = "../ontologies/", format='turtle') -> None:
+    def export(self, path: str = ".", format='turtle') -> None:
         """save ontology """
+        print("LOLabwareABox:export: path:", path)
         export_ontology(ontology=self.lolwa, path=path, onto_base_filename='labop_labware_abox', format=format, emmo_url=self.emmo_url)
 
 
@@ -62,10 +67,10 @@ class LOLabwareABox:
         # create the labware individuals
         with self.lolwa:
             for index,row in labware_cat_df.iterrows():
-                print( self.clean_id(row['Id']), "-- >", row['Manifacturer'], row['ProductID'], row['UNSPSC'], "EC: ", row['eClass'] )
+                print( self.clean_id(row['Id']), "-- >", row['Manufacturer'], row['ProductID'], row['UNSPSC'], "EC: ", row['eClass'] )
                 law = self.lolwt.Labware( self.clean_id(row['Id']),
                                         # ;Description;ImageLink/URL;UNSPSC;eClass;Vendor;CatalogueID;WellCount;ColumnCount;RowCount;LabwareLength/mm;LabwareWidth/mm;LabwareHeight/mm;Mass/g;LabwareMaterial;SurfaceTreatment;Color;WellVolume/ul;A1Position(col,row);WellDiameter/mm;WellColDistance/mm;WellRowDistance/mm;WellDepth/mm;WellShape;WellBottomShape;Liddable/bool;Lid((Manufacturer, ProdID));Applications;AcceptableLids
-                                        hasManifacturer=row['Manifacturer'],
+                                        hasManufacturer=row['Manufacturer'],
                                         hasProductID=row['ProductID'] if row['ProductID'] is not np.nan else "unknown",
                                         # LabWareType
                                         # Description

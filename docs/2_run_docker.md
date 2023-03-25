@@ -20,7 +20,25 @@ curl -O https://raw.githubusercontent.com/labopmuc/labop_labware_ontology/master
 ## pull ready docker images from github
 
 * create personal github access token(classic):
+
+https://github.com/settings/tokens/new
+
+select the following scopes:
+ read:packages
+
 s. https://docs.github.com/en/packages/working-with-a-github-packages-registry/working-with-the-container-registry
+
+
+### troubleshooting
+
+In case you get an access denied error, remove the docker login credentials from the docker config file:
+
+```bash
+   (sudo) docker logout ghcr.io
+   # or 
+   (sudo) docker logout ghcr
+```
+
 
 * register access token with
 

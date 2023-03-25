@@ -46,6 +46,8 @@ class LOLabwareTBox:
         self.base_iri = 'http://www.labop.org/labware-t#'
         self.lolwt_version_iri = f'http://www.labop.org/{__version__}/labware'
 
+        print("LOLabwareTBox:lw_tbox_filename:", lw_tbox_filename)
+
         if lw_tbox_filename is None:
             self.lolwt = emmo_world.get_ontology(self.base_iri)
         else:
@@ -58,9 +60,10 @@ class LOLabwareTBox:
 
         if lw_tbox_filename is None:
             # define the ontology
+            print("++++++ defining ontology")
             self.define_ontology()
 
-    def export(self, path: str = "../ontologies/", format='turtle') -> None:
+    def export(self, path: str = ".", format='turtle') -> None:
         """save ontology """
         export_ontology(ontology=self.lolwt, path=path, onto_base_filename='labop_labware_tbox', format=format, emmo_url=self.emmo_url)
 
@@ -305,7 +308,7 @@ class LOLabwareTBox:
 
             # Production Properties / Metadata
 
-            class hasManifacturer(Labware >> str, FunctionalProperty):
+            class hasManufacturer(Labware >> str, FunctionalProperty):
                  """Name of the Manufacturer """
             
             class isProductType(Labware >> str, FunctionalProperty):
@@ -427,7 +430,7 @@ class LOLabwareTBox:
                                 & hasColorRGB.value("#FFFFFF") & hasMaterial.value("polystyrene") & hasMass.value(0) 
                                 & hasMaxSheerForce.value(0) & hasCoatingMaterial.value("N/A") & hasSetptum.value(False) 
                                 & hasSeptumMaterial.value("N/A") & hasSeptumPenetrationForce.value(0) & isLiddable.value(False) & isStackable.value(True) 
-                                & isSealable.value(False) & hasManifacturer.value("N/A") & isProductType.value("N/A") & hasModelID.value("N/A") & hasProductID.value("N/A") ]
+                                & isSealable.value(False) & hasManufacturer.value("N/A") & isProductType.value("N/A") & hasModelID.value("N/A") & hasProductID.value("N/A") ]
                 
             
 

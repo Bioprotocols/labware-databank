@@ -65,7 +65,7 @@ class LabwareInterface(LOLabwareInterface):
         # self.emmo_url_local = os.path.join(pathlib.Path(
         #     __file__).parent.resolve(), "emmo")  #self.emmo_url_local + '.ttl'
         if os.path.isfile(emmo_filename):
-            self.emmo_url = self.emmo_url_local
+            self.emmo_url = emmo_filename #self.emmo_url_local
 
         # for persistent storage of ontology:
         
@@ -79,6 +79,7 @@ class LabwareInterface(LOLabwareInterface):
             self.emmo_world = World()
 
         # create EMMO ontology object 
+        print("Loading EMMO ontology from: ", self.emmo_url, " ...")
         self.emmo = self.emmo_world.get_ontology(self.emmo_url)
         self.emmo.load()               # reload_if_newer = True
         self.emmo.sync_python_names()  # synchronize annotations
@@ -99,11 +100,13 @@ class LabwareInterface(LOLabwareInterface):
 
         #self.lolw.sync_python_names()
 
-    def export_ontologies(self, path: str = "../ontologies/", format='turtle') -> None:
+    def export_ontologies(self, csv_filename:str = None, path: str = ".", format='turtle') -> None:
         """save all ontologies """
 
         self.emmo_ext_tbox.export(path=path, format=format)
         self.lolw_tbox.export(path=path, format=format)
+        if csv_filename is not None:
+            self.lolw_abox.import_csv(csv_filename)
         self.lolw_abox.export(path=path, format=format)
 
 

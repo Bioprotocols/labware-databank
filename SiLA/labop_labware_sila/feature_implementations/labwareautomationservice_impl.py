@@ -25,10 +25,12 @@ class LabwareAutomationServiceImpl(LabwareAutomationServiceBase):
         super().__init__(parent_server=parent_server)
 
         # load all ontologies
-        # TODO: use paths
-        self.labware_ontology = LabwareInterface( emmo_filename='labop_labware_ontology.ttl', 
-                                                  lw_tbox_filename='labop_labware_tbox.ttl', 
-                                                  lw_abox_filename='labop_labware_abox.ttl')
+       
+        print("**** ------", self.parent_server.emmo_filename)
+
+        self.labware_ontology = LabwareInterface( emmo_filename=self.parent_server.emmo_filename, 
+                                                  lw_tbox_filename=self.parent_server.lw_tbox_filename, 
+                                                  lw_abox_filename=self.parent_server.lw_abox_filename)
         self.lw_abox = self.labware_ontology.lolw_abox.lolwa
 
 
@@ -39,9 +41,9 @@ class LabwareAutomationServiceImpl(LabwareAutomationServiceBase):
         logging.debug(f"lw dimensions: Manufacturer: {Manufacturer}, productID: {ProductID}, unit: {Unit}")
 
         try:
-            res = self.lw_abox.search(hasManifacturer=Manufacturer, hasProductID=ProductID)
+            res = self.lw_abox.search(hasManufacturer=Manufacturer, hasProductID=ProductID)[0]
             print(res)
-            lw_dimensions = { "Length": res.hasLength.length, "Width": res.hasWidth.width, "Height": res.hasHeight.height }
+            lw_dimensions = { "Length": res.hasLength.length, "Width": res.hasWidth.length, "Height": res.hasHeight.length }
             return GetLabwareDimensions_Responses(Dimensions=str(lw_dimensions))
         except Exception as e:
             logging.error(f"Error: {e}")
@@ -56,11 +58,11 @@ class LabwareAutomationServiceImpl(LabwareAutomationServiceBase):
         logging.debug(f"Manufacturer: {Manufacturer}, productID: {ProductID}, unit: {Unit}, lidded: {Lidded}")
 
         try:
-            res = self.lw_abox.search(hasManifacturer=Manufacturer, hasProductID=ProductID)
+            res = self.lw_abox.search(hasManufacturer=Manufacturer, hasProductID=ProductID)[0]
             if Lidded:
-                return GetGrippingHeight_Responses(GrippingHeight=res.hasGrippingHeightWithLid.height)
+                return GetGrippingHeight_Responses(GrippingHeight=res.hasGrippingHeightWithLid.length)
             else:
-                return GetGrippingHeight_Responses(GrippingHeight=res.hasGrippingHeight.height)
+                return GetGrippingHeight_Responses(GrippingHeight=res.hasGrippingHeight.length)
         except Exception as e:
             logging.error(f"Error: {e}")
             # TODO: raise error
@@ -74,7 +76,7 @@ class LabwareAutomationServiceImpl(LabwareAutomationServiceBase):
         
 
         try:
-            res = self.lw_abox.search(hasManifacturer = Manufacturer, hasProductID = ProductID)
+            res = self.lw_abox.search(hasManifacturer = Manufacturer, hasProductID = ProductID)[0]
             return GetLabwareWellVolume_Responses(Volume=res.hasWellVolume.volume)
         except Exception as e:
             logging.error(f"Error: {e}")

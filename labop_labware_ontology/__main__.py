@@ -42,6 +42,10 @@ def parse_command_line():
     )
 
     parser.add_argument(
+        "-p", "--output-path", action="store", help="save all labware ontologies in the given output path"
+    )
+
+    parser.add_argument(
         "-f", "--output-format", action="store", help="save all labware ontologies in the given format [turtle, owl, rdf, xml, n3, nt, json-ld]"
     )
 
@@ -69,7 +73,7 @@ def main():
     
     lolw = LabwareInterface()
     if args.output_format:
-        lolw.save_ontologies(format=args.output_format)
+        lolw.export_ontologies(csv_filename=args.import_csv, path=args.output_path, format=args.output_format)
     #logging.debug(greeting)
     
     return 0
