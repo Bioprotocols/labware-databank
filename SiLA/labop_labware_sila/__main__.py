@@ -35,6 +35,12 @@ def main(
     ca_export_file: Optional[str] = Option(
         None, help="When using a self-signed certificate, write the generated CA to this file"
     ),
+    # ontology file paths
+    emmo_filename: str = Option('./labop_labware_emmo.ttl', "--emmo", help="EMMO ontology path and filename"),
+    lw_tbox_filename: str = Option('./labop_labware_tbox.ttl', "--tbox", help="Labware TBox path and filename"),
+    lw_abox_filename: str = Option('./labop_labware_abox.ttl',  "--abox", help="Labware ABox path and filename"),
+    
+    # logging / debug options
     quiet: bool = Option(False, "--quiet", help="Only log errors"),
     verbose: bool = Option(False, "--verbose", help="Enable verbose logging"),
     debug: bool = Option(False, "--debug", help="Enable debug logging"),
@@ -52,12 +58,14 @@ def main(
     private_key = open(private_key_file, "rb").read() if private_key_file is not None else None
     ca_for_discovery = open(ca_file_for_discovery, "rb").read() if ca_file_for_discovery is not None else None
     parsed_server_uuid = UUID(server_uuid) if server_uuid is not None else None
-
+    
     # logging setup
     initialize_logging(quiet=quiet, verbose=verbose, debug=debug)
 
     # run server
-    server = Server(server_uuid=parsed_server_uuid)
+    server = Server(server_uuid=parsed_server_uuid, emmo_filename = emmo_filename,
+        lw_tbox_filename = lw_tbox_filename,
+        lw_abox_filename = lw_abox_filename)
     try:
         if insecure:
             server.start_insecure(ip_address, port, enable_discovery=not disable_discovery)
@@ -76,6 +84,8 @@ def main(
                 logger.info(f"Wrote generated CA to '{ca_export_file}'")
         logger.info(f"Server v0.0.1a startup complete with IP address {ip_address} at port {port} - in insecure mode: {insecure}, with discovery: {not disable_discovery} ")
 
+
+        # handle SIGTERM
         signal.signal(signal.SIGTERM, lambda *args: server.stop())
 
         try:

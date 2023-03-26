@@ -25,7 +25,12 @@ class LabwareAutomationServiceImpl(LabwareAutomationServiceBase):
         super().__init__(parent_server=parent_server)
 
         # load all ontologies
-        self.labware_ontology = LabwareInterface()
+       
+        print("**** ------", self.parent_server.emmo_filename)
+
+        self.labware_ontology = LabwareInterface( emmo_filename=self.parent_server.emmo_filename, 
+                                                  lw_tbox_filename=self.parent_server.lw_tbox_filename, 
+                                                  lw_abox_filename=self.parent_server.lw_abox_filename)
         self.lw_abox = self.labware_ontology.lolw_abox.lolwa
 
 
@@ -36,15 +41,14 @@ class LabwareAutomationServiceImpl(LabwareAutomationServiceBase):
         logging.debug(f"lw dimensions: Manufacturer: {Manufacturer}, productID: {ProductID}, unit: {Unit}")
 
         try:
-            res = self.lw_abox.search(hasManifacturer = Manufacturer, hasProductID = ProductID)
+            res = self.lw_abox.search(hasManufacturer=Manufacturer, hasProductID=ProductID)[0]
+            print(res)
+            lw_dimensions = { "Length": res.hasLength.length, "Width": res.hasWidth.length, "Height": res.hasHeight.length }
+            return GetLabwareDimensions_Responses(Dimensions=str(lw_dimensions))
         except Exception as e:
             logging.error(f"Error: {e}")
             # TODO: raise error
             return GetLabwareDimensions_Responses(Dimensions="{}")
-
-        lw_dimensions = { "Length": res.hasLength.length, "Width": res.hasWidth.width, "Height": res.hasHeight.height }
-
-        return GetLabwareDimensions_Responses(Dimensions=str(lw_dimensions))
         
 
     def GetGrippingHeight(
@@ -53,18 +57,32 @@ class LabwareAutomationServiceImpl(LabwareAutomationServiceBase):
 
         logging.debug(f"Manufacturer: {Manufacturer}, productID: {ProductID}, unit: {Unit}, lidded: {Lidded}")
 
-        if Lidded:
-            gripping_height = 33.333
-        else:
-            gripping_height = 42.0
+        try:
+            res = self.lw_abox.search(hasManufacturer=Manufacturer, hasProductID=ProductID)[0]
+            if Lidded:
+                return GetGrippingHeight_Responses(GrippingHeight=res.hasGrippingHeightWithLid.length)
+            else:
+                return GetGrippingHeight_Responses(GrippingHeight=res.hasGrippingHeight.length)
+        except Exception as e:
+            logging.error(f"Error: {e}")
+            # TODO: raise error
+            return GetGrippingHeight_Responses(GrippingHeight=0.0)
+        
 
-        return GetGrippingHeight_Responses(GrippingHeight=gripping_height)
 
     def GetLabwareWellVolume(
         self, Manufacturer: str, ProductID: str, Unit: str, *, metadata: MetadataDict
     ) -> GetLabwareWellVolume_Responses:
-        lw_well_volume = 1000.0
+        
 
-        return GetLabwareWellVolume_Responses(Volume=lw_well_volume)
+        try:
+            res = self.lw_abox.search(hasManifacturer = Manufacturer, hasProductID = ProductID)[0]
+            return GetLabwareWellVolume_Responses(Volume=res.hasWellVolume.volume)
+        except Exception as e:
+            logging.error(f"Error: {e}")
+            # TODO: raise error
+            return GetLabwareWellVolume_Responses(Volume=0.0)
+
+        
 
 

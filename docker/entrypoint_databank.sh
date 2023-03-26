@@ -29,3 +29,4 @@ fi
 echo "RDFlib endpoint started"
 echo "Starting SiLA server .... --host 0.0.0.0  @port 50052"
 python -m labop_labware_sila --insecure --verbose --port 50052
+

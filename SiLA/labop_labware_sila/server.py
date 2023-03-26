@@ -14,7 +14,7 @@ from .generated.labwarequeryservice import LabwareQueryServiceFeature
 
 
 class Server(SilaServer):
-    def __init__(self, server_uuid: Optional[UUID] = None):
+    def __init__(self, server_uuid: Optional[UUID] = None, emmo_filename: str = None, lw_tbox_filename: str = None, lw_abox_filename: str = None):
         # TODO: fill in your server information
         super().__init__(
             server_name="TODO",
@@ -24,6 +24,12 @@ class Server(SilaServer):
             server_vendor_url="https://gitlab.com/SiLA2/sila_python",
             server_uuid=server_uuid,
         )
+
+        self.emmo_filename = emmo_filename
+        self.lw_tbox_filename = lw_tbox_filename
+        self.lw_abox_filename = lw_abox_filename
+
+        print("---->", self.emmo_filename, self.lw_tbox_filename, self.lw_abox_filename)
 
         self.labwareautomationservice = LabwareAutomationServiceImpl(self)
         self.set_feature_implementation(LabwareAutomationServiceFeature, self.labwareautomationservice)

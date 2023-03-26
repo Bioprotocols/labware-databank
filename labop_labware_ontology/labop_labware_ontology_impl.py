@@ -18,7 +18,8 @@ import logging
 from ontopy import World
 from ontopy.utils import write_catalog
 
-#import owlready2
+from owlready2 import onto_path
+
 
 from labop_labware_ontology.labop_labware_ontology_interface import LOLabwareInterface
 from labop_labware_ontology import __version__  # Version of this ontology
@@ -32,7 +33,12 @@ from labop_labware_ontology.export_ontology import export_ontology
 logger = logging.getLogger(__name__)
 
 class LabwareInterface(LOLabwareInterface):
-    def __init__(self, db_path: str = None, db_name: str = None) -> None:
+    def __init__(self, db_path: str = None, 
+                 db_name: str = None,
+                 ontology_path: str = None,
+                 emmo_filename: str = None,
+                 lw_tbox_filename: str = None,
+                 lw_abox_filename: str = None) -> None:
         """Implementation of the LOLabwareInterface
         """
         db_name_full = None
@@ -55,13 +61,16 @@ class LabwareInterface(LOLabwareInterface):
         }
 
         # using latest EMMO ontology
-        self.emmo_url = "emmo-development"  
+        self.emmo_url = "emmo-development"
+
+        if ontology_path is not None:
+            onto_path.append(ontology_path)
         
         # in case of a local copy of EMMO
-        self.emmo_url_local = os.path.join(pathlib.Path(
-            __file__).parent.resolve(), "emmo")
-        if os.path.isfile(self.emmo_url_local + '.ttl'):
-            self.emmo_url = self.emmo_url_local
+        # self.emmo_url_local = os.path.join(pathlib.Path(
+        #     __file__).parent.resolve(), "emmo")  #self.emmo_url_local + '.ttl'
+        #if emmo_filename is not None and os.path.isfile(emmo_filename):
+        #    self.emmo_url = emmo_filename #self.emmo_url_local
 
         # for persistent storage of ontology:
         
@@ -75,7 +84,11 @@ class LabwareInterface(LOLabwareInterface):
             self.emmo_world = World()
 
         # create EMMO ontology object 
-        self.emmo = self.emmo_world.get_ontology(self.emmo_url)
+        print("Loading EMMO ontology from: ", self.emmo_url, " ...")
+        if emmo_filename is not None and os.path.isfile(emmo_filename):
+            self.emmo = self.emmo_world.get_ontology(emmo_filename)
+        else:
+            self.emmo = self.emmo_world.get_ontology(self.emmo_url)
         self.emmo.load()               # reload_if_newer = True
         self.emmo.sync_python_names()  # synchronize annotations
         self.emmo.base_iri = self.emmo.base_iri.rstrip('/#')
@@ -83,19 +96,22 @@ class LabwareInterface(LOLabwareInterface):
 
 
         # extending EMMO with Labware specific classes and properties
-        self.emmo_ext_tbox = EMMOExtensionTBox(self.emmo, self.emmo_url)
+        self.emmo_ext_tbox = EMMOExtensionTBox(emmo_filename=emmo_filename, emmo_ontology=self.emmo, emmo_url=self.emmo_url)
 
         # create Labware Terminology box object
-        self.lolw_tbox = LOLabwareTBox(self.emmo_world, self.emmo, self.emmo_url)
+        self.lolw_tbox = LOLabwareTBox(lw_tbox_filename=lw_tbox_filename, emmo_world=self.emmo_world, emmo=self.emmo, emmo_url=self.emmo_url)
+        
+        lwt = self.lolw_tbox.lolwt.Labware.iri
+        print(lwt)
         
         #self.lolw.imported_ontologies.append(self.lolw_tbox.lolw)
         
         # create Labware Assertion Box  (ABox) object
-        self.lolw_abox = LOLabwareABox(emmo_world=self.emmo_world, emmo=self.emmo, emmo_url=self.emmo_url, lw_tbox=self.lolw_tbox)
+        self.lolw_abox = LOLabwareABox(lw_abox_filename=lw_abox_filename, emmo_world=self.emmo_world, emmo=self.emmo, emmo_url=self.emmo_url, lw_tbox=self.lolw_tbox)
 
         #self.lolw.sync_python_names()
 
-    def export_ontologies(self, path: str = "../ontologies/", format='turtle') -> None:
+    def export_ontologies(self, path: str = ".", format='turtle') -> None:
         """save all ontologies """
 
         self.emmo_ext_tbox.export(path=path, format=format)

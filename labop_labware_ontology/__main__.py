@@ -20,6 +20,7 @@ ________________________________________________________________________
 import argparse
 import sys
 import logging
+import time
 from labop_labware_ontology import __version__
 
 from labop_labware_ontology.labop_labware_ontology_impl import LabwareInterface
@@ -39,6 +40,10 @@ def parse_command_line():
 
     parser.add_argument(
         "-i", "--import-csv", action="store", default="labware_catalogue.csv", help="import labware csv catalogue file"
+    )
+
+    parser.add_argument(
+        "-p", "--output-path", action="store", help="save all labware ontologies in the given output path"
     )
 
     parser.add_argument(
@@ -69,7 +74,9 @@ def main():
     
     lolw = LabwareInterface()
     if args.output_format:
-        lolw.save_ontologies(format=args.output_format)
+        if args.import_csv is not None:
+            lolw.lolw_abox.import_csv(args.import_csv)
+            lolw.export_ontologies(path=args.output_path, format=args.output_format)
     #logging.debug(greeting)
     
     return 0

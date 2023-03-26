@@ -38,24 +38,31 @@ from labop_labware_ontology import __version__ # Version of this ontology
 from labop_labware_ontology.export_ontology import export_ontology
 
 class LOLabwareTBox:
-    def __init__(self, emmo_world=None, emmo=None, emmo_url: str = None) -> None:
+    def __init__(self, lw_tbox_filename: str = None, emmo_world=None, emmo=None, emmo_url: str = None) -> None:
 
         self.emmo = emmo
         self.emmo_url = emmo_url
         
-        self.lolwt_base_iri = 'http://www.labop.org/labware-t#'
-        self.lolwt_version_iri = f'http://www.labop.org/{__version__}/labware'
+        self.base_iri = 'http://www.labop.org/labop_labware_tbox'
 
-        self.lolwt = emmo_world.get_ontology(self.lolwt_base_iri)
+        print("LOLabwareTBox:lw_tbox_filename:", lw_tbox_filename)
+
+        if lw_tbox_filename is None:
+            self.lolwt = emmo_world.get_ontology(self.base_iri)
+        else:
+            self.lolwt = emmo_world.get_ontology(lw_tbox_filename).load()
+
         self.emmo.imported_ontologies.append(self.lolwt)
         self.emmo.sync_python_names()
         
         # --- ontology definition
 
-        # define the ontology
-        self.define_ontology()
+        if lw_tbox_filename is None:
+            # define the ontology
+            print("++++++ defining ontology")
+            self.define_ontology()
 
-    def export(self, path: str = "../ontologies/", format='turtle') -> None:
+    def export(self, path: str = ".", format='turtle') -> None:
         """save ontology """
         export_ontology(ontology=self.lolwt, path=path, onto_base_filename='labop_labware_tbox', format=format, emmo_url=self.emmo_url)
 
@@ -300,7 +307,7 @@ class LOLabwareTBox:
 
             # Production Properties / Metadata
 
-            class hasManifacturer(Labware >> str, FunctionalProperty):
+            class hasManufacturer(Labware >> str, FunctionalProperty):
                  """Name of the Manufacturer """
             
             class isProductType(Labware >> str, FunctionalProperty):
@@ -422,7 +429,7 @@ class LOLabwareTBox:
                                 & hasColorRGB.value("#FFFFFF") & hasMaterial.value("polystyrene") & hasMass.value(0) 
                                 & hasMaxSheerForce.value(0) & hasCoatingMaterial.value("N/A") & hasSetptum.value(False) 
                                 & hasSeptumMaterial.value("N/A") & hasSeptumPenetrationForce.value(0) & isLiddable.value(False) & isStackable.value(True) 
-                                & isSealable.value(False) & hasManifacturer.value("N/A") & isProductType.value("N/A") & hasModelID.value("N/A") & hasProductID.value("N/A") ]
+                                & isSealable.value(False) & hasManufacturer.value("N/A") & isProductType.value("N/A") & hasModelID.value("N/A") & hasProductID.value("N/A") ]
                 
             
 
