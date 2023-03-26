@@ -43,8 +43,7 @@ class LOLabwareTBox:
         self.emmo = emmo
         self.emmo_url = emmo_url
         
-        self.base_iri = 'http://www.labop.org/labware-t#'
-        self.lolwt_version_iri = f'http://www.labop.org/{__version__}/labware'
+        self.base_iri = 'http://www.labop.org/labop_labware_tbox'
 
         print("LOLabwareTBox:lw_tbox_filename:", lw_tbox_filename)
 

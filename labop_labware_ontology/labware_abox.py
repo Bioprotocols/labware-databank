@@ -23,6 +23,7 @@ import numpy as np
 from labop_labware_ontology import __version__ # Version of this ontology
 from labop_labware_ontology.emmo_utils import en, pl
 from labop_labware_ontology.export_ontology import export_ontology
+from owlready2 import set_log_level
 
 class LOLabwareABox:
     def __init__(self, lw_abox_filename:str = None, emmo_world=None, emmo=None, emmo_url: str = None, lw_tbox=None) -> None:
@@ -33,9 +34,8 @@ class LOLabwareABox:
         self.emmo_url = emmo_url
         self.lolwt = lw_tbox.lolwt
         
-        self.base_iri = 'http://www.labop.org/labware-a#'
-        self.lolwa_version_iri = f'http://www.labop.org/{__version__}/labware-a'
-
+        self.base_iri = 'http://www.labop.org/labop_labware_abox'
+       
         print("LOLabwareABox:lw_abox_filename:", lw_abox_filename)
 
         if lw_abox_filename is None:
@@ -47,6 +47,8 @@ class LOLabwareABox:
 
         self.emmo.imported_ontologies.append(self.lolwa)
         self.emmo.sync_python_names()
+
+        print("========= tbox classes:", list(self.lolwt.classes()), self.lolwt.Labware.iri)
 
     def export(self, path: str = ".", format='turtle') -> None:
         """save ontology """
@@ -60,11 +62,19 @@ class LOLabwareABox:
 
 
     def import_csv(self, csv_filename="labware_catalogue.csv"):
+
+        print("##### - ab base iri:", self.lolwt.Labware.iri)
         
         labware_cat_df = pd.read_csv(csv_filename, delimiter=";")
         labware_cat_df = labware_cat_df.reset_index()  # make sure indexes pair with number of rows
 
         # create the labware individuals
+        set_log_level(8)
+
+        print("##### - tb base iri:", self.lolwt.base_iri)
+        print("##### - ab base iri:", self.lolwa.base_iri)
+        print("##### - ab base iri:", self.lolwt.Labware.iri)
+        
         with self.lolwa:
             for index,row in labware_cat_df.iterrows():
                 print( self.clean_id(row['Id']), "-- >", row['Manufacturer'], row['ProductID'], row['UNSPSC'], "EC: ", row['eClass'] )
@@ -85,14 +95,14 @@ class LOLabwareABox:
                                         hasLength=self.emmo.Length(length=row['LabwareLength/mm']) if row['LabwareLength/mm'] is not np.nan else 0,
                                         hasWidth=self.emmo.Length(length=row['LabwareWidth/mm']) if row['LabwareWidth/mm'] is not np.nan else 0,
                                         hasHeight=self.emmo.Length(length=row['LabwareHeight/mm']) if row['LabwareHeight/mm'] is not np.nan else 0,
-                                        hasGrippingHeight=self.emmo.Length(length=float(row['LabwareHeight/mm']) - 2 )  if row['LabwareHeight/mm'] is not np.nan else 0,
+                                        #hasGrippingHeight=self.emmo.Length(length=float(row['LabwareHeight/mm']) - 2 )  if row['LabwareHeight/mm'] is not np.nan else 0,
                 #                         hasMass=row['Weight[g]'],
                 #                         # LabwareMaterial
                 #                         # SurfaceTreatment;
                 #                         # Color
                 #                         hasColorDescription=row['Color'],
                 #                         # WellVolume[ul]
-                                        hasWellVolume=row['WellVolume/ul'] if row['WellVolume/ul'] is not np.nan else 0,
+                                        #hasWellVolume=row['WellVolume/ul'] if row['WellVolume/ul'] is not np.nan else 0,
                 #                         # A1Position[col,row];
                 #                         hasA1Position=row['A1Position[col,row]'],
                 #                         # WellColDistance[mm]

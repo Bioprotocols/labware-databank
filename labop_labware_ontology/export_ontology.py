@@ -40,10 +40,9 @@ def export_ontology(ontology = None, path: str = None,
         # ontology file ending dictionary, based on rdflib formats
         onto_file_ending = { 'turtle': '.ttl', 'rdfxml': '.rdf', 'owlxml': '.owl', 'ntriples': '.nt', 'json-ld': '.jsonld' }
 
-
         onto_filename_full = os.path.join(path, onto_base_filename) + onto_file_ending[format]
         
-        print("base iri: ---->", onto_filename_full, ontology.base_iri)
+        print("base / ver. iri: ---->", onto_filename_full, ontology.base_iri)
 
         # Save new ontology as owl
         ontology.sync_attributes(name_policy='uuid', 

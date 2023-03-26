@@ -20,6 +20,7 @@ ________________________________________________________________________
 import argparse
 import sys
 import logging
+import time
 from labop_labware_ontology import __version__
 
 from labop_labware_ontology.labop_labware_ontology_impl import LabwareInterface
@@ -73,7 +74,9 @@ def main():
     
     lolw = LabwareInterface()
     if args.output_format:
-        lolw.export_ontologies(csv_filename=args.import_csv, path=args.output_path, format=args.output_format)
+        if args.import_csv is not None:
+            lolw.lolw_abox.import_csv(args.import_csv)
+            lolw.export_ontologies(path=args.output_path, format=args.output_format)
     #logging.debug(greeting)
     
     return 0

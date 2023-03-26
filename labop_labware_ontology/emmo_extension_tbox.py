@@ -48,7 +48,7 @@ class EMMOExtensionTBox:
             self.define_ontology()
 
 
-    def export(self, path: str = "../ontologies/", format='turtle') -> None:
+    def export(self, path: str = ".", format='turtle') -> None:
         """save ontology """
         export_ontology(ontology=self.emmo, path=path, onto_base_filename='labop_labware_emmo', format=format, emmo_url=self.emmo_url)
     
