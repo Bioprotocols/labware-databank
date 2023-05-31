@@ -156,9 +156,9 @@ class EMMOExtensionTBox:
                 #referenceUnit = self.emmo.NewtonPerMetre
                 # 
                 
-            class ThermalConductivity:
-                """Thermal Conductivity of a substance"""
-                wikipediaEntry = en("https://en.wikipedia.org/wiki/Thermal_conductivity")
+            # class ThermalConductivity:
+            #     """Thermal Conductivity of a substance"""
+            #     wikipediaEntry = en("https://en.wikipedia.org/wiki/Thermal_conductivity")
 
 
             class ElectricConductance(self.emmo.ElectricConductance):
@@ -180,9 +180,9 @@ class EMMOExtensionTBox:
 
                 #referenceUnit = self.emmo.JoulePerSquareMetre
 
-            class Hardness:
-                """Hardness of a substance"""
-                wikipediaEntry = en("https://en.wikipedia.org/wiki/Hardness")
+            # class Hardness:
+            #     """Hardness of a substance"""
+            #     wikipediaEntry = en("https://en.wikipedia.org/wiki/Hardness")
 
                 #referenceUnit = self.emmo.ShoreD
 
@@ -212,18 +212,18 @@ class EMMOExtensionTBox:
 
             # optical properties
             
-            class RefractiveIndex:
-                """Refractive Index of a substance"""
-                wikipediaEntry = en("https://en.wikipedia.org/wiki/Refractive_index")
+            # class RefractiveIndex:
+            #     """Refractive Index of a substance"""
+            #     wikipediaEntry = en("https://en.wikipedia.org/wiki/Refractive_index")
 
             
-            class ColorCMYK:
-                """Color in CMYK color model format."""
-                wikipediaEntry = en("https://en.wikipedia.org/wiki/CMYK_color_model")
+            # class ColorCMYK:
+            #     """Color in CMYK color model format."""
+            #     wikipediaEntry = en("https://en.wikipedia.org/wiki/CMYK_color_model")
 
-            class AbsorptionSpectrum:
-                """Absorption Spectrum of a substance"""
-                wikipediaEntry = en("https://en.wikipedia.org/wiki/Absorption_spectrum")
+            # class AbsorptionSpectrum:
+            #     """Absorption Spectrum of a substance"""
+            #     wikipediaEntry = en("https://en.wikipedia.org/wiki/Absorption_spectrum")
 
                 
             # AllDisjoint([Length, Volume, Mass, Force, Torque, Density, 
@@ -234,46 +234,46 @@ class EMMOExtensionTBox:
 
             # Coordinate Systems
 
-            class CoordinateSystem:
-                """Coordinate System"""
-                wikipediaEntry = en("https://en.wikipedia.org/wiki/Coordinate_system")
+            # class CoordinateSystem:
+            #     """Coordinate System"""
+            #     wikipediaEntry = en("https://en.wikipedia.org/wiki/Coordinate_system")
 
-            class CartesianCoordinateSystem(CoordinateSystem):
-                """Cartesian Coordinate System"""
-                wikipediaEntry = en("https://en.wikipedia.org/wiki/Cartesian_coordinate_system")
+            # class CartesianCoordinateSystem(CoordinateSystem):
+            #     """Cartesian Coordinate System"""
+            #     wikipediaEntry = en("https://en.wikipedia.org/wiki/Cartesian_coordinate_system")
 
-            class CylindricalCoordinateSystem(CoordinateSystem):
-                """Cylindrical Coordinate System"""
-                wikipediaEntry = en("https://en.wikipedia.org/wiki/Cylindrical_coordinate_system")
+            # class CylindricalCoordinateSystem(CoordinateSystem):
+            #     """Cylindrical Coordinate System"""
+            #     wikipediaEntry = en("https://en.wikipedia.org/wiki/Cylindrical_coordinate_system")
 
-            class SphericalCoordinateSystem(CoordinateSystem):
-                """Spherical Coordinate System"""
-                wikipediaEntry = en("https://en.wikipedia.org/wiki/Spherical_coordinate_system")
+            # class SphericalCoordinateSystem(CoordinateSystem):
+            #     """Spherical Coordinate System"""
+            #     wikipediaEntry = en("https://en.wikipedia.org/wiki/Spherical_coordinate_system")
 
-            class PolarCoordinateSystem(CoordinateSystem):
-                """Polar Coordinate System"""
-                wikipediaEntry = en("https://en.wikipedia.org/wiki/Polar_coordinate_system")
+            # class PolarCoordinateSystem(CoordinateSystem):
+            #     """Polar Coordinate System"""
+            #     wikipediaEntry = en("https://en.wikipedia.org/wiki/Polar_coordinate_system")
 
             # Quaternions
 
-            class Quaternion:
-                """Quaternion"""
-                wikipediaEntry = en("https://en.wikipedia.org/wiki/Quaternion")
+            # class Quaternion:
+            #     """Quaternion"""
+            #     wikipediaEntry = en("https://en.wikipedia.org/wiki/Quaternion")
 
-            class QuaternionRotation(Quaternion):
-                """Quaternion Rotation"""
-                wikipediaEntry = en("https://en.wikipedia.org/wiki/Quaternion#Rotation")
+            # class QuaternionRotation(Quaternion):
+            #     """Quaternion Rotation"""
+            #     wikipediaEntry = en("https://en.wikipedia.org/wiki/Quaternion#Rotation")
 
-            class QuaternionTranslation(Quaternion):
-                """Quaternion Translation"""
-                wikipediaEntry = en("https://en.wikipedia.org/wiki/Quaternion#Translation")
+            # class QuaternionTranslation(Quaternion):
+            #     """Quaternion Translation"""
+            #     wikipediaEntry = en("https://en.wikipedia.org/wiki/Quaternion#Translation")
 
 
             # Coordinate System Transformations
 
-            class CoordinateSystemTransformation:
-                """Coordinate System Transformation"""
-                wikipediaEntry = en("https://en.wikipedia.org/wiki/Coordinate_system_transformation")
+            # class CoordinateSystemTransformation:
+            #     """Coordinate System Transformation"""
+            #     wikipediaEntry = en("https://en.wikipedia.org/wiki/Coordinate_system_transformation")
 
                 
 
@@ -293,17 +293,17 @@ class EMMOExtensionTBox:
                 # pyhsical properties
                 viscosity = Viscosity()
                 surfaceTension = SurfaceTension()
-                thermalConductivity = ThermalConductivity()
+                # thermalConductivity = ThermalConductivity()
                 electricConductance = ElectricConductance()
                 tensileStrength = TensileStrength()
                 impactStrength = ImpactStrength()
-                hardness = Hardness()
+                # hardness = Hardness()
                 modulusOfElasticity = ModulusOfElasticity()
                 
                 # optical properties
-                refractiveIndex = RefractiveIndex()
-                colorCMYK = ColorCMYK()
-                absorptionSpectrum = AbsorptionSpectrum()
+                # refractiveIndex = RefractiveIndex()
+                # colorCMYK = ColorCMYK()
+                # absorptionSpectrum = AbsorptionSpectrum()
 
            
           

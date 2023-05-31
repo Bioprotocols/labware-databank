@@ -34,7 +34,7 @@ class LOLabwareABox:
         self.emmo_url = emmo_url
         self.lolwt = lw_tbox.lolwt
         
-        self.base_iri = 'http://www.labop.org/labop_labware_abox'
+        self.base_iri = 'http://www.labop.org/labop_labware_abox#'
        
         print("LOLabwareABox:lw_abox_filename:", lw_abox_filename)
 

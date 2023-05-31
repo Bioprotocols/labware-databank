@@ -24,7 +24,7 @@ from labop_labware_ontology.emmo_utils import en, pl
 
 def export_ontology(ontology = None, path: str = None, 
                     onto_base_filename: str = None, 
-                    format='turtle', emmo_url: str = "http://emmo.info/emmo#") -> None:
+                    format='owl', emmo_url: str = "http://emmo.info/emmo#") -> None:
         """Export/save the ontology to file.
 
         :param filename: Filename to save the ontology to.
@@ -38,7 +38,7 @@ def export_ontology(ontology = None, path: str = None,
         # self.lolw_ttl_filename = f'{output_filename_base}-v{__version__}.ttl'
 
         # ontology file ending dictionary, based on rdflib formats
-        onto_file_ending = { 'turtle': '.ttl', 'rdfxml': '.rdf', 'owlxml': '.owl', 'ntriples': '.nt', 'json-ld': '.jsonld' }
+        onto_file_ending = { 'turtle': '.ttl', 'xml': '.rdf', 'owl': '.owl', 'ntriples': '.nt', 'json-ld': '.jsonld' }
 
         onto_filename_full = os.path.join(path, onto_base_filename) + onto_file_ending[format]
         
