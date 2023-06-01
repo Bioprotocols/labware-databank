@@ -52,8 +52,9 @@ class LOLabwareTBox:
         else:
             self.lolwt = emmo_world.get_ontology(lw_tbox_filename).load()
 
-        self.emmo.imported_ontologies.append(self.lolwt)
-        self.emmo.sync_python_names()
+        self.lolwt.imported_ontologies.append(self.emmo)
+        self.lolwt.sync_attributes(name_policy="uuid", name_prefix="LOLWT_")
+        self.lolwt.sync_python_names()
         
         # --- ontology definition
 
@@ -175,7 +176,7 @@ class LOLabwareTBox:
 
             # Basic ------
 
-            class Labware(self.lolwt.Device):
+            class Labware(self.emmo.Device):
                 """Labware is a utility device that all experiments are done with and which is not actively measuring. Examples: a container, a pipette tip, a reactor, ... """
                 wikipediaEntry = en("https://en.wikipedia.org/wiki/Labware")
 

@@ -45,8 +45,9 @@ class LOLabwareABox:
             self.lolwa = emmo_world.get_ontology(lw_abox_filename).load()
             print(" ##### classes:", list(self.lolwa.classes()))  
 
-        self.emmo.imported_ontologies.append(self.lolwa)
-        self.emmo.sync_python_names()
+        self.lolwa.imported_ontologies.append(self.emmo)
+        self.lolwt.sync_attributes(name_policy="uuid", name_prefix="LOLWT_")
+        self.lolwa.sync_python_names()
 
         print("========= tbox classes:", list(self.lolwt.classes()), self.lolwt.Labware.iri)
 

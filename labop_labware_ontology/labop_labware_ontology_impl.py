@@ -35,10 +35,11 @@ logger = logging.getLogger(__name__)
 class LabwareInterface(LOLabwareInterface):
     def __init__(self, db_path: str = None, 
                  db_name: str = None,
-                 ontology_path: str = None,
+                 ontology_path: str = '.',
                  emmo_filename: str = None,
                  lw_tbox_filename: str = None,
-                 lw_abox_filename: str = None) -> None:
+                 export_tbox: bool = False,
+                 lw_abox_filename: str = None,) -> None:
         """Implementation of the LOLabwareInterface
         """
         db_name_full = None
@@ -104,18 +105,23 @@ class LabwareInterface(LOLabwareInterface):
         lwt = self.lolw_tbox.lolwt.Labware.iri
         print(lwt)
         
+        if export_tbox: 
+            #self.lolw_tbox.lolwt.save('labop_labware_emmo.ttl', format='turtle')
+
+            export_ontology(ontology=self.lolw_tbox.lolwt, path=ontology_path, onto_base_filename='labop_labware_tbox', format='turtle', emmo_url="http://emmo.info/emmo#")
+
         #self.lolw.imported_ontologies.append(self.lolw_tbox.lolw)
         
         # create Labware Assertion Box  (ABox) object
         self.lolw_abox = LOLabwareABox(lw_abox_filename=lw_abox_filename, emmo_world=self.emmo_world, emmo=self.emmo, emmo_url=self.emmo_url, lw_tbox=self.lolw_tbox)
 
         #self.lolw.sync_python_names()
-
+        
     def export_ontologies(self, path: str = ".", format='turtle') -> None:
         """save all ontologies """
 
-        self.emmo_ext_tbox.export(path=path, format=format)
-        self.lolw_tbox.export(path=path, format=format)
+        #self.emmo_ext_tbox.export(path=path, format=format)
+        #self.lolw_tbox.export(path=path, format=format)
         self.lolw_abox.export(path=path, format=format)
 
 
