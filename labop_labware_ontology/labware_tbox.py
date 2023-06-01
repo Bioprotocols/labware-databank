@@ -176,6 +176,27 @@ class LOLabwareTBox:
 
             # Basic ------
 
+            class Manufacturer(self.emmo.Thing):
+                """Labware Manufacturer"""
+
+                # URL of the manufacturer website
+                # alternative names 
+                # create Individuals for each manufacturer
+
+            class Model2D(self.emmo.Thing):
+                """2D model of the labware in X format. SVG ?"""
+
+                # URL of the model
+                # string representation of the model
+
+            class Model3D(self.emmo.Thing):
+                """3D model of the labware in X format. STL ?"""
+                wikipediaEntry = en("https://en.wikipedia.org/wiki/3D_modeling")
+
+                # URL of the model
+                # string representation of the model
+
+
             class Labware(self.emmo.Device):
                 """Labware is a utility device that all experiments are done with and which is not actively measuring. Examples: a container, a pipette tip, a reactor, ... """
                 wikipediaEntry = en("https://en.wikipedia.org/wiki/Labware")
@@ -266,9 +287,11 @@ class LOLabwareTBox:
             class hasCoatingMaterial(Labware >> str, FunctionalProperty):
                 """Labware coating material"""
 
-            
-            class hasColorDescription(Labware >> str, FunctionalProperty):
+            class hasColorDescription(Labware >> str):
                 """Labware color description, e.g. white, black, opaque, blue, transparent, ..."""
+
+            class isTransparent(Labware >> bool, FunctionalProperty):
+                """Labware is transparent in the visible range between 380 and 780 nm"""
 
             class hasColorRGB(Labware >> str, FunctionalProperty):
                 """Labware color in RGB hex encoding"""
@@ -308,7 +331,7 @@ class LOLabwareTBox:
 
             # Production Properties / Metadata
 
-            class hasManufacturer(Labware >> str, FunctionalProperty):
+            class hasManufacturer(Labware >> Manufacturer, FunctionalProperty):
                  """Name of the Manufacturer """
             
             class isProductType(Labware >> str, FunctionalProperty):
@@ -329,7 +352,7 @@ class LOLabwareTBox:
                 """Labware A1 position"""
 
             class hasWellDistRow(Labware >> float, FunctionalProperty):
-                """wWll-to-well distance in row direction"""
+                """Well-to-well distance in row direction"""
             
             class hasWellDistCol(Labware >> float, FunctionalProperty):
                 """"Well-to-well distance in column direction"""
@@ -365,10 +388,10 @@ class LOLabwareTBox:
             class hasShapePolygonZ(Labware >> str, FunctionalProperty):
                 """Generalized shape polygon for more complex well shapes, in z direction = rotation axis."""
 
-            class hasShapeModel2D(Labware >> str, FunctionalProperty):
+            class hasShapeModel2D(Labware >> Model2D, FunctionalProperty, ObjectProperty):
                 """2D model of Well shape"""
 
-            class hasShapeModel3D(Labware >> str, FunctionalProperty):
+            class hasShapeModel3D(Labware >> Model3D, FunctionalProperty, ObjectProperty):
                 """3D model of Well shape"""
 
             class hasImageLink(Labware >> str, FunctionalProperty):
