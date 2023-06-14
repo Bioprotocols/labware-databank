@@ -1,0 +1,1529 @@
+@prefix : <http://www.labop.org/labop_labware_abox#> .
+@prefix emmo: <http://emmo.info/> .
+@prefix labo: <http://www.labop.org/labop_labware_tbox#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://www.labop.org/labop_labware_abox> a owl:Ontology ;
+    owl:imports emmo:emmo-inferred .
+
+:1_flat a labo:LOLWA_6f9e9dd4-7332-5f6a-8506-c1d58005ba84,
+        owl:NamedIndividual ;
+    labo:LOLWA_08fac96e-e6ac-5b90-b82f-dc275da228ca "267060"^^xsd:string ;
+    labo:LOLWA_56e2c727-c8df-53f5-8efe-5aa1c6485107 :length178 ;
+    labo:LOLWA_60236412-46fe-5f12-a3d5-a555d274fee0 1 ;
+    labo:LOLWA_72c1f5e5-6f71-5417-a5aa-2f51dcf7bfe9 1 ;
+    labo:LOLWA_c4f05f55-7626-5446-9dbf-f9ef627bc922 :length179 ;
+    labo:LOLWA_da8ac160-7c8f-563c-acae-0af53bbf7cd2 1 ;
+    labo:LOLWA_f1c17d57-6bcc-5723-a22b-2252c09f98a3 :length180 .
+
+:24_deep a labo:LOLWA_6f9e9dd4-7332-5f6a-8506-c1d58005ba84,
+        owl:NamedIndividual ;
+    labo:LOLWA_08fac96e-e6ac-5b90-b82f-dc275da228ca "EK-2053-S"^^xsd:string ;
+    labo:LOLWA_56e2c727-c8df-53f5-8efe-5aa1c6485107 :length190 ;
+    labo:LOLWA_60236412-46fe-5f12-a3d5-a555d274fee0 4 ;
+    labo:LOLWA_72c1f5e5-6f71-5417-a5aa-2f51dcf7bfe9 6 ;
+    labo:LOLWA_c4f05f55-7626-5446-9dbf-f9ef627bc922 :length191 ;
+    labo:LOLWA_da8ac160-7c8f-563c-acae-0af53bbf7cd2 24 ;
+    labo:LOLWA_f1c17d57-6bcc-5723-a22b-2252c09f98a3 :length192 .
+
+:6_flat_tc a labo:LOLWA_6f9e9dd4-7332-5f6a-8506-c1d58005ba84,
+        owl:NamedIndividual ;
+    labo:LOLWA_08fac96e-e6ac-5b90-b82f-dc275da228ca "30720113"^^xsd:string ;
+    labo:LOLWA_56e2c727-c8df-53f5-8efe-5aa1c6485107 :length94 ;
+    labo:LOLWA_60236412-46fe-5f12-a3d5-a555d274fee0 2 ;
+    labo:LOLWA_72c1f5e5-6f71-5417-a5aa-2f51dcf7bfe9 3 ;
+    labo:LOLWA_c4f05f55-7626-5446-9dbf-f9ef627bc922 :length95 ;
+    labo:LOLWA_da8ac160-7c8f-563c-acae-0af53bbf7cd2 6 ;
+    labo:LOLWA_f1c17d57-6bcc-5723-a22b-2252c09f98a3 :length96 .
+
+:a1_vial a labo:LOLWA_6f9e9dd4-7332-5f6a-8506-c1d58005ba84,
+        owl:NamedIndividual ;
+    labo:LOLWA_08fac96e-e6ac-5b90-b82f-dc275da228ca "HR1545C"^^xsd:string ;
+    labo:LOLWA_56e2c727-c8df-53f5-8efe-5aa1c6485107 :length214 ;
+    labo:LOLWA_60236412-46fe-5f12-a3d5-a555d274fee0 1 ;
+    labo:LOLWA_72c1f5e5-6f71-5417-a5aa-2f51dcf7bfe9 1 ;
+    labo:LOLWA_c4f05f55-7626-5446-9dbf-f9ef627bc922 :length215 ;
+    labo:LOLWA_da8ac160-7c8f-563c-acae-0af53bbf7cd2 1 ;
+    labo:LOLWA_f1c17d57-6bcc-5723-a22b-2252c09f98a3 :length216 .
+
+:bottle_250 a labo:LOLWA_6f9e9dd4-7332-5f6a-8506-c1d58005ba84,
+        owl:NamedIndividual ;
+    labo:LOLWA_08fac96e-e6ac-5b90-b82f-dc275da228ca "unknown"^^xsd:string ;
+    labo:LOLWA_56e2c727-c8df-53f5-8efe-5aa1c6485107 :length40 ;
+    labo:LOLWA_60236412-46fe-5f12-a3d5-a555d274fee0 1 ;
+    labo:LOLWA_72c1f5e5-6f71-5417-a5aa-2f51dcf7bfe9 1 ;
+    labo:LOLWA_c4f05f55-7626-5446-9dbf-f9ef627bc922 :length41 ;
+    labo:LOLWA_da8ac160-7c8f-563c-acae-0af53bbf7cd2 1 ;
+    labo:LOLWA_f1c17d57-6bcc-5723-a22b-2252c09f98a3 :length42 .
+
+:bottle_500 a labo:LOLWA_6f9e9dd4-7332-5f6a-8506-c1d58005ba84,
+        owl:NamedIndividual ;
+    labo:LOLWA_08fac96e-e6ac-5b90-b82f-dc275da228ca "not_applicable"^^xsd:string ;
+    labo:LOLWA_56e2c727-c8df-53f5-8efe-5aa1c6485107 :length115 ;
+    labo:LOLWA_60236412-46fe-5f12-a3d5-a555d274fee0 1 ;
+    labo:LOLWA_72c1f5e5-6f71-5417-a5aa-2f51dcf7bfe9 1 ;
+    labo:LOLWA_c4f05f55-7626-5446-9dbf-f9ef627bc922 :length116 ;
+    labo:LOLWA_da8ac160-7c8f-563c-acae-0af53bbf7cd2 1 ;
+    labo:LOLWA_f1c17d57-6bcc-5723-a22b-2252c09f98a3 :length117 .
+
+:chemspeed_mtp_96_sealed_pin_rack a labo:LOLWA_6f9e9dd4-7332-5f6a-8506-c1d58005ba84,
+        owl:NamedIndividual ;
+    labo:LOLWA_08fac96e-e6ac-5b90-b82f-dc275da228ca "unknown"^^xsd:string ;
+    labo:LOLWA_56e2c727-c8df-53f5-8efe-5aa1c6485107 :length25 ;
+    labo:LOLWA_60236412-46fe-5f12-a3d5-a555d274fee0 8 ;
+    labo:LOLWA_72c1f5e5-6f71-5417-a5aa-2f51dcf7bfe9 12 ;
+    labo:LOLWA_c4f05f55-7626-5446-9dbf-f9ef627bc922 :length26 ;
+    labo:LOLWA_da8ac160-7c8f-563c-acae-0af53bbf7cd2 96 ;
+    labo:LOLWA_f1c17d57-6bcc-5723-a22b-2252c09f98a3 :length27 .
+
+:chemspeed_sealed_pin a labo:LOLWA_6f9e9dd4-7332-5f6a-8506-c1d58005ba84,
+        owl:NamedIndividual ;
+    labo:LOLWA_08fac96e-e6ac-5b90-b82f-dc275da228ca "unknown"^^xsd:string ;
+    labo:LOLWA_56e2c727-c8df-53f5-8efe-5aa1c6485107 :length199 ;
+    labo:LOLWA_60236412-46fe-5f12-a3d5-a555d274fee0 1 ;
+    labo:LOLWA_72c1f5e5-6f71-5417-a5aa-2f51dcf7bfe9 1 ;
+    labo:LOLWA_c4f05f55-7626-5446-9dbf-f9ef627bc922 :length200 ;
+    labo:LOLWA_da8ac160-7c8f-563c-acae-0af53bbf7cd2 1 ;
+    labo:LOLWA_f1c17d57-6bcc-5723-a22b-2252c09f98a3 :length201 .
+
+:conical_15 a labo:LOLWA_6f9e9dd4-7332-5f6a-8506-c1d58005ba84,
+        owl:NamedIndividual ;
+    labo:LOLWA_08fac96e-e6ac-5b90-b82f-dc275da228ca "188261"^^xsd:string ;
+    labo:LOLWA_56e2c727-c8df-53f5-8efe-5aa1c6485107 :length76 ;
+    labo:LOLWA_60236412-46fe-5f12-a3d5-a555d274fee0 1 ;
+    labo:LOLWA_72c1f5e5-6f71-5417-a5aa-2f51dcf7bfe9 1 ;
+    labo:LOLWA_c4f05f55-7626-5446-9dbf-f9ef627bc922 :length77 ;
+    labo:LOLWA_da8ac160-7c8f-563c-acae-0af53bbf7cd2 1 ;
+    labo:LOLWA_f1c17d57-6bcc-5723-a22b-2252c09f98a3 :length78 .
+
+:conical_50 a labo:LOLWA_6f9e9dd4-7332-5f6a-8506-c1d58005ba84,
+        owl:NamedIndividual ;
+    labo:LOLWA_08fac96e-e6ac-5b90-b82f-dc275da228ca "227270"^^xsd:string ;
+    labo:LOLWA_56e2c727-c8df-53f5-8efe-5aa1c6485107 :length10 ;
+    labo:LOLWA_60236412-46fe-5f12-a3d5-a555d274fee0 1 ;
+    labo:LOLWA_72c1f5e5-6f71-5417-a5aa-2f51dcf7bfe9 1 ;
+    labo:LOLWA_c4f05f55-7626-5446-9dbf-f9ef627bc922 :length11 ;
+    labo:LOLWA_da8ac160-7c8f-563c-acae-0af53bbf7cd2 1 ;
+    labo:LOLWA_f1c17d57-6bcc-5723-a22b-2252c09f98a3 :length12 .
+
+:d1_vial a labo:LOLWA_6f9e9dd4-7332-5f6a-8506-c1d58005ba84,
+        owl:NamedIndividual ;
+    labo:LOLWA_08fac96e-e6ac-5b90-b82f-dc275da228ca "HR2767C"^^xsd:string ;
+    labo:LOLWA_56e2c727-c8df-53f5-8efe-5aa1c6485107 :length235 ;
+    labo:LOLWA_60236412-46fe-5f12-a3d5-a555d274fee0 1 ;
+    labo:LOLWA_72c1f5e5-6f71-5417-a5aa-2f51dcf7bfe9 1 ;
+    labo:LOLWA_c4f05f55-7626-5446-9dbf-f9ef627bc922 :length236 ;
+    labo:LOLWA_da8ac160-7c8f-563c-acae-0af53bbf7cd2 1 ;
+    labo:LOLWA_f1c17d57-6bcc-5723-a22b-2252c09f98a3 :length237 .
+
+:d2_vial a labo:LOLWA_6f9e9dd4-7332-5f6a-8506-c1d58005ba84,
+        owl:NamedIndividual ;
+    labo:LOLWA_08fac96e-e6ac-5b90-b82f-dc275da228ca "HR2895C"^^xsd:string ;
+    labo:LOLWA_56e2c727-c8df-53f5-8efe-5aa1c6485107 :length223 ;
+    labo:LOLWA_60236412-46fe-5f12-a3d5-a555d274fee0 1 ;
+    labo:LOLWA_72c1f5e5-6f71-5417-a5aa-2f51dcf7bfe9 1 ;
+    labo:LOLWA_c4f05f55-7626-5446-9dbf-f9ef627bc922 :length224 ;
+    labo:LOLWA_da8ac160-7c8f-563c-acae-0af53bbf7cd2 1 ;
+    labo:LOLWA_f1c17d57-6bcc-5723-a22b-2252c09f98a3 :length225 .
+
+:flask_25 a labo:LOLWA_6f9e9dd4-7332-5f6a-8506-c1d58005ba84,
+        owl:NamedIndividual ;
+    labo:LOLWA_08fac96e-e6ac-5b90-b82f-dc275da228ca "not_applicable"^^xsd:string ;
+    labo:LOLWA_56e2c727-c8df-53f5-8efe-5aa1c6485107 :length229 ;
+    labo:LOLWA_60236412-46fe-5f12-a3d5-a555d274fee0 1 ;
+    labo:LOLWA_72c1f5e5-6f71-5417-a5aa-2f51dcf7bfe9 1 ;
+    labo:LOLWA_c4f05f55-7626-5446-9dbf-f9ef627bc922 :length230 ;
+    labo:LOLWA_da8ac160-7c8f-563c-acae-0af53bbf7cd2 1 ;
+    labo:LOLWA_f1c17d57-6bcc-5723-a22b-2252c09f98a3 :length231 .
+
+:flask_250 a labo:LOLWA_6f9e9dd4-7332-5f6a-8506-c1d58005ba84,
+        owl:NamedIndividual ;
+    labo:LOLWA_08fac96e-e6ac-5b90-b82f-dc275da228ca "not_applicable"^^xsd:string ;
+    labo:LOLWA_56e2c727-c8df-53f5-8efe-5aa1c6485107 :length145 ;
+    labo:LOLWA_60236412-46fe-5f12-a3d5-a555d274fee0 1 ;
+    labo:LOLWA_72c1f5e5-6f71-5417-a5aa-2f51dcf7bfe9 1 ;
+    labo:LOLWA_c4f05f55-7626-5446-9dbf-f9ef627bc922 :length146 ;
+    labo:LOLWA_da8ac160-7c8f-563c-acae-0af53bbf7cd2 1 ;
+    labo:LOLWA_f1c17d57-6bcc-5723-a22b-2252c09f98a3 :length147 .
+
+:hplc_vial a labo:LOLWA_6f9e9dd4-7332-5f6a-8506-c1d58005ba84,
+        owl:NamedIndividual ;
+    labo:LOLWA_08fac96e-e6ac-5b90-b82f-dc275da228ca "unknown"^^xsd:string ;
+    labo:LOLWA_56e2c727-c8df-53f5-8efe-5aa1c6485107 :length97 ;
+    labo:LOLWA_60236412-46fe-5f12-a3d5-a555d274fee0 1 ;
+    labo:LOLWA_72c1f5e5-6f71-5417-a5aa-2f51dcf7bfe9 1 ;
+    labo:LOLWA_c4f05f55-7626-5446-9dbf-f9ef627bc922 :length98 ;
+    labo:LOLWA_da8ac160-7c8f-563c-acae-0af53bbf7cd2 1 ;
+    labo:LOLWA_f1c17d57-6bcc-5723-a22b-2252c09f98a3 :length99 .
+
+:micro_1.5 a labo:LOLWA_6f9e9dd4-7332-5f6a-8506-c1d58005ba84,
+        owl:NamedIndividual ;
+    labo:LOLWA_08fac96e-e6ac-5b90-b82f-dc275da228ca "1615-5500"^^xsd:string ;
+    labo:LOLWA_56e2c727-c8df-53f5-8efe-5aa1c6485107 :length124 ;
+    labo:LOLWA_60236412-46fe-5f12-a3d5-a555d274fee0 1 ;
+    labo:LOLWA_72c1f5e5-6f71-5417-a5aa-2f51dcf7bfe9 1 ;
+    labo:LOLWA_c4f05f55-7626-5446-9dbf-f9ef627bc922 :length125 ;
+    labo:LOLWA_da8ac160-7c8f-563c-acae-0af53bbf7cd2 1 ;
+    labo:LOLWA_f1c17d57-6bcc-5723-a22b-2252c09f98a3 :length126 .
+
+:micro_2.0 a labo:LOLWA_6f9e9dd4-7332-5f6a-8506-c1d58005ba84,
+        owl:NamedIndividual ;
+    labo:LOLWA_08fac96e-e6ac-5b90-b82f-dc275da228ca "280200"^^xsd:string ;
+    labo:LOLWA_56e2c727-c8df-53f5-8efe-5aa1c6485107 :length82 ;
+    labo:LOLWA_60236412-46fe-5f12-a3d5-a555d274fee0 1 ;
+    labo:LOLWA_72c1f5e5-6f71-5417-a5aa-2f51dcf7bfe9 1 ;
+    labo:LOLWA_c4f05f55-7626-5446-9dbf-f9ef627bc922 :length83 ;
+    labo:LOLWA_da8ac160-7c8f-563c-acae-0af53bbf7cd2 1 ;
+    labo:LOLWA_f1c17d57-6bcc-5723-a22b-2252c09f98a3 :length84 .
+
+:mrv_large a labo:LOLWA_6f9e9dd4-7332-5f6a-8506-c1d58005ba84,
+        owl:NamedIndividual ;
+    labo:LOLWA_08fac96e-e6ac-5b90-b82f-dc275da228ca "unknown"^^xsd:string ;
+    labo:LOLWA_56e2c727-c8df-53f5-8efe-5aa1c6485107 :length238 ;
+    labo:LOLWA_60236412-46fe-5f12-a3d5-a555d274fee0 1 ;
+    labo:LOLWA_72c1f5e5-6f71-5417-a5aa-2f51dcf7bfe9 1 ;
+    labo:LOLWA_c4f05f55-7626-5446-9dbf-f9ef627bc922 :length239 ;
+    labo:LOLWA_da8ac160-7c8f-563c-acae-0af53bbf7cd2 1 ;
+    labo:LOLWA_f1c17d57-6bcc-5723-a22b-2252c09f98a3 :length240 .
+
+:mrv_medium a labo:LOLWA_6f9e9dd4-7332-5f6a-8506-c1d58005ba84,
+        owl:NamedIndividual ;
+    labo:LOLWA_08fac96e-e6ac-5b90-b82f-dc275da228ca "unknown"^^xsd:string ;
+    labo:LOLWA_56e2c727-c8df-53f5-8efe-5aa1c6485107 :length136 ;
+    labo:LOLWA_60236412-46fe-5f12-a3d5-a555d274fee0 1 ;
+    labo:LOLWA_72c1f5e5-6f71-5417-a5aa-2f51dcf7bfe9 1 ;
+    labo:LOLWA_c4f05f55-7626-5446-9dbf-f9ef627bc922 :length137 ;
+    labo:LOLWA_da8ac160-7c8f-563c-acae-0af53bbf7cd2 1 ;
+    labo:LOLWA_f1c17d57-6bcc-5723-a22b-2252c09f98a3 :length138 .
+
+:mrv_small a labo:LOLWA_6f9e9dd4-7332-5f6a-8506-c1d58005ba84,
+        owl:NamedIndividual ;
+    labo:LOLWA_08fac96e-e6ac-5b90-b82f-dc275da228ca "unknown"^^xsd:string ;
+    labo:LOLWA_56e2c727-c8df-53f5-8efe-5aa1c6485107 :length88 ;
+    labo:LOLWA_60236412-46fe-5f12-a3d5-a555d274fee0 1 ;
+    labo:LOLWA_72c1f5e5-6f71-5417-a5aa-2f51dcf7bfe9 1 ;
+    labo:LOLWA_c4f05f55-7626-5446-9dbf-f9ef627bc922 :length89 ;
+    labo:LOLWA_da8ac160-7c8f-563c-acae-0af53bbf7cd2 1 ;
+    labo:LOLWA_f1c17d57-6bcc-5723-a22b-2252c09f98a3 :length90 .
+
+:mtp_1536_echo_ldv_beckman_001_6969 a labo:LOLWA_6f9e9dd4-7332-5f6a-8506-c1d58005ba84,
+        owl:NamedIndividual ;
+    labo:LOLWA_08fac96e-e6ac-5b90-b82f-dc275da228ca "001-6969"^^xsd:string ;
+    labo:LOLWA_56e2c727-c8df-53f5-8efe-5aa1c6485107 :length133 ;
+    labo:LOLWA_60236412-46fe-5f12-a3d5-a555d274fee0 32 ;
+    labo:LOLWA_72c1f5e5-6f71-5417-a5aa-2f51dcf7bfe9 48 ;
+    labo:LOLWA_c4f05f55-7626-5446-9dbf-f9ef627bc922 :length134 ;
+    labo:LOLWA_da8ac160-7c8f-563c-acae-0af53bbf7cd2 1536 ;
+    labo:LOLWA_f1c17d57-6bcc-5723-a22b-2252c09f98a3 :length135 .
+
+:mtp_1536_ps_black_corning_3724 a labo:LOLWA_6f9e9dd4-7332-5f6a-8506-c1d58005ba84,
+        owl:NamedIndividual ;
+    labo:LOLWA_08fac96e-e6ac-5b90-b82f-dc275da228ca "3724"^^xsd:string ;
+    labo:LOLWA_56e2c727-c8df-53f5-8efe-5aa1c6485107 :length91 ;
+    labo:LOLWA_60236412-46fe-5f12-a3d5-a555d274fee0 32 ;
+    labo:LOLWA_72c1f5e5-6f71-5417-a5aa-2f51dcf7bfe9 48 ;
+    labo:LOLWA_c4f05f55-7626-5446-9dbf-f9ef627bc922 :length92 ;
+    labo:LOLWA_da8ac160-7c8f-563c-acae-0af53bbf7cd2 1536 ;
+    labo:LOLWA_f1c17d57-6bcc-5723-a22b-2252c09f98a3 :length93 .
+
+:mtp_1536_tc_white_corning_3727 a labo:LOLWA_6f9e9dd4-7332-5f6a-8506-c1d58005ba84,
+        owl:NamedIndividual ;
+    labo:LOLWA_08fac96e-e6ac-5b90-b82f-dc275da228ca "3727"^^xsd:string ;
+    labo:LOLWA_56e2c727-c8df-53f5-8efe-5aa1c6485107 :length205 ;
+    labo:LOLWA_60236412-46fe-5f12-a3d5-a555d274fee0 32 ;
+    labo:LOLWA_72c1f5e5-6f71-5417-a5aa-2f51dcf7bfe9 48 ;
+    labo:LOLWA_c4f05f55-7626-5446-9dbf-f9ef627bc922 :length206 ;
+    labo:LOLWA_da8ac160-7c8f-563c-acae-0af53bbf7cd2 1536 ;
+    labo:LOLWA_f1c17d57-6bcc-5723-a22b-2252c09f98a3 :length207 .
+
+:mtp_1536_white_tc a labo:LOLWA_6f9e9dd4-7332-5f6a-8506-c1d58005ba84,
+        owl:NamedIndividual ;
+    labo:LOLWA_08fac96e-e6ac-5b90-b82f-dc275da228ca "782073"^^xsd:string ;
+    labo:LOLWA_56e2c727-c8df-53f5-8efe-5aa1c6485107 :length208 ;
+    labo:LOLWA_60236412-46fe-5f12-a3d5-a555d274fee0 32 ;
+    labo:LOLWA_72c1f5e5-6f71-5417-a5aa-2f51dcf7bfe9 48 ;
+    labo:LOLWA_c4f05f55-7626-5446-9dbf-f9ef627bc922 :length209 ;
+    labo:LOLWA_da8ac160-7c8f-563c-acae-0af53bbf7cd2 1536 ;
+    labo:LOLWA_f1c17d57-6bcc-5723-a22b-2252c09f98a3 :length210 .
+
+:mtp_384_6_flat a labo:LOLWA_6f9e9dd4-7332-5f6a-8506-c1d58005ba84,
+        owl:NamedIndividual ;
+    labo:LOLWA_08fac96e-e6ac-5b90-b82f-dc275da228ca "30720016"^^xsd:string ;
+    labo:LOLWA_56e2c727-c8df-53f5-8efe-5aa1c6485107 :length130 ;
+    labo:LOLWA_60236412-46fe-5f12-a3d5-a555d274fee0 2 ;
+    labo:LOLWA_72c1f5e5-6f71-5417-a5aa-2f51dcf7bfe9 3 ;
+    labo:LOLWA_c4f05f55-7626-5446-9dbf-f9ef627bc922 :length131 ;
+    labo:LOLWA_da8ac160-7c8f-563c-acae-0af53bbf7cd2 6 ;
+    labo:LOLWA_f1c17d57-6bcc-5723-a22b-2252c09f98a3 :length132 .
+
+:mtp_384_corning_4512_round_lv a labo:LOLWA_6f9e9dd4-7332-5f6a-8506-c1d58005ba84,
+        owl:NamedIndividual ;
+    labo:LOLWA_08fac96e-e6ac-5b90-b82f-dc275da228ca "4512"^^xsd:string ;
+    labo:LOLWA_56e2c727-c8df-53f5-8efe-5aa1c6485107 :length28 ;
+    labo:LOLWA_60236412-46fe-5f12-a3d5-a555d274fee0 16 ;
+    labo:LOLWA_72c1f5e5-6f71-5417-a5aa-2f51dcf7bfe9 24 ;
+    labo:LOLWA_c4f05f55-7626-5446-9dbf-f9ef627bc922 :length29 ;
+    labo:LOLWA_da8ac160-7c8f-563c-acae-0af53bbf7cd2 384 ;
+    labo:LOLWA_f1c17d57-6bcc-5723-a22b-2252c09f98a3 :length30 .
+
+:mtp_384_corning_4513_round_lv a labo:LOLWA_6f9e9dd4-7332-5f6a-8506-c1d58005ba84,
+        owl:NamedIndividual ;
+    labo:LOLWA_08fac96e-e6ac-5b90-b82f-dc275da228ca "4513"^^xsd:string ;
+    labo:LOLWA_56e2c727-c8df-53f5-8efe-5aa1c6485107 :length19 ;
+    labo:LOLWA_60236412-46fe-5f12-a3d5-a555d274fee0 16 ;
+    labo:LOLWA_72c1f5e5-6f71-5417-a5aa-2f51dcf7bfe9 24 ;
+    labo:LOLWA_c4f05f55-7626-5446-9dbf-f9ef627bc922 :length20 ;
+    labo:LOLWA_da8ac160-7c8f-563c-acae-0af53bbf7cd2 384 ;
+    labo:LOLWA_f1c17d57-6bcc-5723-a22b-2252c09f98a3 :length21 .
+
+:mtp_384_echo a labo:LOLWA_6f9e9dd4-7332-5f6a-8506-c1d58005ba84,
+        owl:NamedIndividual ;
+    labo:LOLWA_08fac96e-e6ac-5b90-b82f-dc275da228ca "PP-0200"^^xsd:string ;
+    labo:LOLWA_56e2c727-c8df-53f5-8efe-5aa1c6485107 :length31 ;
+    labo:LOLWA_60236412-46fe-5f12-a3d5-a555d274fee0 16 ;
+    labo:LOLWA_72c1f5e5-6f71-5417-a5aa-2f51dcf7bfe9 24 ;
+    labo:LOLWA_c4f05f55-7626-5446-9dbf-f9ef627bc922 :length32 ;
+    labo:LOLWA_da8ac160-7c8f-563c-acae-0af53bbf7cd2 384 ;
+    labo:LOLWA_f1c17d57-6bcc-5723-a22b-2252c09f98a3 :length33 .
+
+:mtp_384_echo_ldv a labo:LOLWA_6f9e9dd4-7332-5f6a-8506-c1d58005ba84,
+        owl:NamedIndividual ;
+    labo:LOLWA_08fac96e-e6ac-5b90-b82f-dc275da228ca "LP-0200"^^xsd:string ;
+    labo:LOLWA_56e2c727-c8df-53f5-8efe-5aa1c6485107 :length172 ;
+    labo:LOLWA_60236412-46fe-5f12-a3d5-a555d274fee0 16 ;
+    labo:LOLWA_72c1f5e5-6f71-5417-a5aa-2f51dcf7bfe9 24 ;
+    labo:LOLWA_c4f05f55-7626-5446-9dbf-f9ef627bc922 :length173 ;
+    labo:LOLWA_da8ac160-7c8f-563c-acae-0af53bbf7cd2 384 ;
+    labo:LOLWA_f1c17d57-6bcc-5723-a22b-2252c09f98a3 :length174 .
+
+:mtp_384_echo_ldv_plus a labo:LOLWA_6f9e9dd4-7332-5f6a-8506-c1d58005ba84,
+        owl:NamedIndividual ;
+    labo:LOLWA_08fac96e-e6ac-5b90-b82f-dc275da228ca "LPL-0200"^^xsd:string ;
+    labo:LOLWA_56e2c727-c8df-53f5-8efe-5aa1c6485107 :length157 ;
+    labo:LOLWA_60236412-46fe-5f12-a3d5-a555d274fee0 16 ;
+    labo:LOLWA_72c1f5e5-6f71-5417-a5aa-2f51dcf7bfe9 24 ;
+    labo:LOLWA_c4f05f55-7626-5446-9dbf-f9ef627bc922 :length158 ;
+    labo:LOLWA_da8ac160-7c8f-563c-acae-0af53bbf7cd2 384 ;
+    labo:LOLWA_f1c17d57-6bcc-5723-a22b-2252c09f98a3 :length159 .
+
+:mtp_384_flat a labo:LOLWA_6f9e9dd4-7332-5f6a-8506-c1d58005ba84,
+        owl:NamedIndividual ;
+    labo:LOLWA_08fac96e-e6ac-5b90-b82f-dc275da228ca "3706"^^xsd:string ;
+    labo:LOLWA_56e2c727-c8df-53f5-8efe-5aa1c6485107 :length187 ;
+    labo:LOLWA_60236412-46fe-5f12-a3d5-a555d274fee0 16 ;
+    labo:LOLWA_72c1f5e5-6f71-5417-a5aa-2f51dcf7bfe9 24 ;
+    labo:LOLWA_c4f05f55-7626-5446-9dbf-f9ef627bc922 :length188 ;
+    labo:LOLWA_da8ac160-7c8f-563c-acae-0af53bbf7cd2 384 ;
+    labo:LOLWA_f1c17d57-6bcc-5723-a22b-2252c09f98a3 :length189 .
+
+:mtp_384_flat_black_black_nbs a labo:LOLWA_6f9e9dd4-7332-5f6a-8506-c1d58005ba84,
+        owl:NamedIndividual ;
+    labo:LOLWA_08fac96e-e6ac-5b90-b82f-dc275da228ca "3575"^^xsd:string ;
+    labo:LOLWA_56e2c727-c8df-53f5-8efe-5aa1c6485107 :length109 ;
+    labo:LOLWA_60236412-46fe-5f12-a3d5-a555d274fee0 16 ;
+    labo:LOLWA_72c1f5e5-6f71-5417-a5aa-2f51dcf7bfe9 24 ;
+    labo:LOLWA_c4f05f55-7626-5446-9dbf-f9ef627bc922 :length110 ;
+    labo:LOLWA_da8ac160-7c8f-563c-acae-0af53bbf7cd2 384 ;
+    labo:LOLWA_f1c17d57-6bcc-5723-a22b-2252c09f98a3 :length111 .
+
+:mtp_384_flat_black_black_proxiplate_plus_f a labo:LOLWA_6f9e9dd4-7332-5f6a-8506-c1d58005ba84,
+        owl:NamedIndividual ;
+    labo:LOLWA_08fac96e-e6ac-5b90-b82f-dc275da228ca "6008260"^^xsd:string ;
+    labo:LOLWA_56e2c727-c8df-53f5-8efe-5aa1c6485107 :length184 ;
+    labo:LOLWA_60236412-46fe-5f12-a3d5-a555d274fee0 16 ;
+    labo:LOLWA_72c1f5e5-6f71-5417-a5aa-2f51dcf7bfe9 24 ;
+    labo:LOLWA_c4f05f55-7626-5446-9dbf-f9ef627bc922 :length185 ;
+    labo:LOLWA_da8ac160-7c8f-563c-acae-0af53bbf7cd2 384 ;
+    labo:LOLWA_f1c17d57-6bcc-5723-a22b-2252c09f98a3 :length186 .
+
+:mtp_384_flat_clear_clear a labo:LOLWA_6f9e9dd4-7332-5f6a-8506-c1d58005ba84,
+        owl:NamedIndividual ;
+    labo:LOLWA_08fac96e-e6ac-5b90-b82f-dc275da228ca "3700"^^xsd:string ;
+    labo:LOLWA_56e2c727-c8df-53f5-8efe-5aa1c6485107 :length193 ;
+    labo:LOLWA_60236412-46fe-5f12-a3d5-a555d274fee0 16 ;
+    labo:LOLWA_72c1f5e5-6f71-5417-a5aa-2f51dcf7bfe9 24 ;
+    labo:LOLWA_c4f05f55-7626-5446-9dbf-f9ef627bc922 :length194 ;
+    labo:LOLWA_da8ac160-7c8f-563c-acae-0af53bbf7cd2 384 ;
+    labo:LOLWA_f1c17d57-6bcc-5723-a22b-2252c09f98a3 :length195 .
+
+:mtp_384_flat_uv_ps a labo:LOLWA_6f9e9dd4-7332-5f6a-8506-c1d58005ba84,
+        owl:NamedIndividual ;
+    labo:LOLWA_08fac96e-e6ac-5b90-b82f-dc275da228ca "330384"^^xsd:string ;
+    labo:LOLWA_56e2c727-c8df-53f5-8efe-5aa1c6485107 :length211 ;
+    labo:LOLWA_60236412-46fe-5f12-a3d5-a555d274fee0 16 ;
+    labo:LOLWA_72c1f5e5-6f71-5417-a5aa-2f51dcf7bfe9 24 ;
+    labo:LOLWA_c4f05f55-7626-5446-9dbf-f9ef627bc922 :length212 ;
+    labo:LOLWA_da8ac160-7c8f-563c-acae-0af53bbf7cd2 384 ;
+    labo:LOLWA_f1c17d57-6bcc-5723-a22b-2252c09f98a3 :length213 .
+
+:mtp_384_flat_white_clear a labo:LOLWA_6f9e9dd4-7332-5f6a-8506-c1d58005ba84,
+        owl:NamedIndividual ;
+    labo:LOLWA_08fac96e-e6ac-5b90-b82f-dc275da228ca "3763"^^xsd:string ;
+    labo:LOLWA_56e2c727-c8df-53f5-8efe-5aa1c6485107 :length148 ;
+    labo:LOLWA_60236412-46fe-5f12-a3d5-a555d274fee0 16 ;
+    labo:LOLWA_72c1f5e5-6f71-5417-a5aa-2f51dcf7bfe9 24 ;
+    labo:LOLWA_c4f05f55-7626-5446-9dbf-f9ef627bc922 :length149 ;
+    labo:LOLWA_da8ac160-7c8f-563c-acae-0af53bbf7cd2 384 ;
+    labo:LOLWA_f1c17d57-6bcc-5723-a22b-2252c09f98a3 :length150 .
+
+:mtp_384_flat_white_white_lv a labo:LOLWA_6f9e9dd4-7332-5f6a-8506-c1d58005ba84,
+        owl:NamedIndividual ;
+    labo:LOLWA_08fac96e-e6ac-5b90-b82f-dc275da228ca "3824"^^xsd:string ;
+    labo:LOLWA_56e2c727-c8df-53f5-8efe-5aa1c6485107 :length58 ;
+    labo:LOLWA_60236412-46fe-5f12-a3d5-a555d274fee0 16 ;
+    labo:LOLWA_72c1f5e5-6f71-5417-a5aa-2f51dcf7bfe9 24 ;
+    labo:LOLWA_c4f05f55-7626-5446-9dbf-f9ef627bc922 :length59 ;
+    labo:LOLWA_da8ac160-7c8f-563c-acae-0af53bbf7cd2 384 ;
+    labo:LOLWA_f1c17d57-6bcc-5723-a22b-2252c09f98a3 :length60 .
+
+:mtp_384_flat_white_white_nbs a labo:LOLWA_6f9e9dd4-7332-5f6a-8506-c1d58005ba84,
+        owl:NamedIndividual ;
+    labo:LOLWA_08fac96e-e6ac-5b90-b82f-dc275da228ca "3574"^^xsd:string ;
+    labo:LOLWA_56e2c727-c8df-53f5-8efe-5aa1c6485107 :length13 ;
+    labo:LOLWA_60236412-46fe-5f12-a3d5-a555d274fee0 16 ;
+    labo:LOLWA_72c1f5e5-6f71-5417-a5aa-2f51dcf7bfe9 24 ;
+    labo:LOLWA_c4f05f55-7626-5446-9dbf-f9ef627bc922 :length14 ;
+    labo:LOLWA_da8ac160-7c8f-563c-acae-0af53bbf7cd2 384 ;
+    labo:LOLWA_f1c17d57-6bcc-5723-a22b-2252c09f98a3 :length15 .
+
+:mtp_384_flat_white_white_optiplate a labo:LOLWA_6f9e9dd4-7332-5f6a-8506-c1d58005ba84,
+        owl:NamedIndividual ;
+    labo:LOLWA_08fac96e-e6ac-5b90-b82f-dc275da228ca "6007290"^^xsd:string ;
+    labo:LOLWA_56e2c727-c8df-53f5-8efe-5aa1c6485107 :length16 ;
+    labo:LOLWA_60236412-46fe-5f12-a3d5-a555d274fee0 16 ;
+    labo:LOLWA_72c1f5e5-6f71-5417-a5aa-2f51dcf7bfe9 24 ;
+    labo:LOLWA_c4f05f55-7626-5446-9dbf-f9ef627bc922 :length17 ;
+    labo:LOLWA_da8ac160-7c8f-563c-acae-0af53bbf7cd2 384 ;
+    labo:LOLWA_f1c17d57-6bcc-5723-a22b-2252c09f98a3 :length18 .
+
+:mtp_384_flat_white_white_proxiplate_plus a labo:LOLWA_6f9e9dd4-7332-5f6a-8506-c1d58005ba84,
+        owl:NamedIndividual ;
+    labo:LOLWA_08fac96e-e6ac-5b90-b82f-dc275da228ca "6008280"^^xsd:string ;
+    labo:LOLWA_56e2c727-c8df-53f5-8efe-5aa1c6485107 :length139 ;
+    labo:LOLWA_60236412-46fe-5f12-a3d5-a555d274fee0 16 ;
+    labo:LOLWA_72c1f5e5-6f71-5417-a5aa-2f51dcf7bfe9 24 ;
+    labo:LOLWA_c4f05f55-7626-5446-9dbf-f9ef627bc922 :length140 ;
+    labo:LOLWA_da8ac160-7c8f-563c-acae-0af53bbf7cd2 384 ;
+    labo:LOLWA_f1c17d57-6bcc-5723-a22b-2252c09f98a3 :length141 .
+
+:mtp_384_flat_white_white_tc a labo:LOLWA_6f9e9dd4-7332-5f6a-8506-c1d58005ba84,
+        owl:NamedIndividual ;
+    labo:LOLWA_08fac96e-e6ac-5b90-b82f-dc275da228ca "3570"^^xsd:string ;
+    labo:LOLWA_56e2c727-c8df-53f5-8efe-5aa1c6485107 :length106 ;
+    labo:LOLWA_60236412-46fe-5f12-a3d5-a555d274fee0 16 ;
+    labo:LOLWA_72c1f5e5-6f71-5417-a5aa-2f51dcf7bfe9 24 ;
+    labo:LOLWA_c4f05f55-7626-5446-9dbf-f9ef627bc922 :length107 ;
+    labo:LOLWA_da8ac160-7c8f-563c-acae-0af53bbf7cd2 384 ;
+    labo:LOLWA_f1c17d57-6bcc-5723-a22b-2252c09f98a3 :length108 .
+
+:mtp_384_flatbottom_black_clear_tc a labo:LOLWA_6f9e9dd4-7332-5f6a-8506-c1d58005ba84,
+        owl:NamedIndividual ;
+    labo:LOLWA_08fac96e-e6ac-5b90-b82f-dc275da228ca "3764"^^xsd:string ;
+    labo:LOLWA_56e2c727-c8df-53f5-8efe-5aa1c6485107 :length52 ;
+    labo:LOLWA_60236412-46fe-5f12-a3d5-a555d274fee0 16 ;
+    labo:LOLWA_72c1f5e5-6f71-5417-a5aa-2f51dcf7bfe9 24 ;
+    labo:LOLWA_c4f05f55-7626-5446-9dbf-f9ef627bc922 :length53 ;
+    labo:LOLWA_da8ac160-7c8f-563c-acae-0af53bbf7cd2 384 ;
+    labo:LOLWA_f1c17d57-6bcc-5723-a22b-2252c09f98a3 :length54 .
+
+:mtp_384_microamp_endura_optical_tf a labo:LOLWA_6f9e9dd4-7332-5f6a-8506-c1d58005ba84,
+        owl:NamedIndividual ;
+    labo:LOLWA_08fac96e-e6ac-5b90-b82f-dc275da228ca "4483285"^^xsd:string ;
+    labo:LOLWA_56e2c727-c8df-53f5-8efe-5aa1c6485107 :length217 ;
+    labo:LOLWA_60236412-46fe-5f12-a3d5-a555d274fee0 16 ;
+    labo:LOLWA_72c1f5e5-6f71-5417-a5aa-2f51dcf7bfe9 24 ;
+    labo:LOLWA_c4f05f55-7626-5446-9dbf-f9ef627bc922 :length218 ;
+    labo:LOLWA_da8ac160-7c8f-563c-acae-0af53bbf7cd2 384 ;
+    labo:LOLWA_f1c17d57-6bcc-5723-a22b-2252c09f98a3 :length219 .
+
+:mtp_384_pcr a labo:LOLWA_6f9e9dd4-7332-5f6a-8506-c1d58005ba84,
+        owl:NamedIndividual ;
+    labo:LOLWA_08fac96e-e6ac-5b90-b82f-dc275da228ca "951020539"^^xsd:string ;
+    labo:LOLWA_56e2c727-c8df-53f5-8efe-5aa1c6485107 :length1 ;
+    labo:LOLWA_60236412-46fe-5f12-a3d5-a555d274fee0 16 ;
+    labo:LOLWA_72c1f5e5-6f71-5417-a5aa-2f51dcf7bfe9 24 ;
+    labo:LOLWA_c4f05f55-7626-5446-9dbf-f9ef627bc922 :length2 ;
+    labo:LOLWA_da8ac160-7c8f-563c-acae-0af53bbf7cd2 384 ;
+    labo:LOLWA_f1c17d57-6bcc-5723-a22b-2252c09f98a3 :length3 .
+
+:mtp_384_round_black_black_lv_nbs a labo:LOLWA_6f9e9dd4-7332-5f6a-8506-c1d58005ba84,
+        owl:NamedIndividual ;
+    labo:LOLWA_08fac96e-e6ac-5b90-b82f-dc275da228ca "4514"^^xsd:string ;
+    labo:LOLWA_56e2c727-c8df-53f5-8efe-5aa1c6485107 :length175 ;
+    labo:LOLWA_60236412-46fe-5f12-a3d5-a555d274fee0 16 ;
+    labo:LOLWA_72c1f5e5-6f71-5417-a5aa-2f51dcf7bfe9 24 ;
+    labo:LOLWA_c4f05f55-7626-5446-9dbf-f9ef627bc922 :length176 ;
+    labo:LOLWA_da8ac160-7c8f-563c-acae-0af53bbf7cd2 384 ;
+    labo:LOLWA_f1c17d57-6bcc-5723-a22b-2252c09f98a3 :length177 .
+
+:mtp_384_round_clear_clear a labo:LOLWA_6f9e9dd4-7332-5f6a-8506-c1d58005ba84,
+        owl:NamedIndividual ;
+    labo:LOLWA_08fac96e-e6ac-5b90-b82f-dc275da228ca "3657"^^xsd:string ;
+    labo:LOLWA_56e2c727-c8df-53f5-8efe-5aa1c6485107 :length127 ;
+    labo:LOLWA_60236412-46fe-5f12-a3d5-a555d274fee0 16 ;
+    labo:LOLWA_72c1f5e5-6f71-5417-a5aa-2f51dcf7bfe9 24 ;
+    labo:LOLWA_c4f05f55-7626-5446-9dbf-f9ef627bc922 :length128 ;
+    labo:LOLWA_da8ac160-7c8f-563c-acae-0af53bbf7cd2 384 ;
+    labo:LOLWA_f1c17d57-6bcc-5723-a22b-2252c09f98a3 :length129 .
+
+:mtp_384_ubottom_black_clear_tc a labo:LOLWA_6f9e9dd4-7332-5f6a-8506-c1d58005ba84,
+        owl:NamedIndividual ;
+    labo:LOLWA_08fac96e-e6ac-5b90-b82f-dc275da228ca "3830"^^xsd:string ;
+    labo:LOLWA_56e2c727-c8df-53f5-8efe-5aa1c6485107 :length64 ;
+    labo:LOLWA_60236412-46fe-5f12-a3d5-a555d274fee0 16 ;
+    labo:LOLWA_72c1f5e5-6f71-5417-a5aa-2f51dcf7bfe9 24 ;
+    labo:LOLWA_c4f05f55-7626-5446-9dbf-f9ef627bc922 :length65 ;
+    labo:LOLWA_da8ac160-7c8f-563c-acae-0af53bbf7cd2 384 ;
+    labo:LOLWA_f1c17d57-6bcc-5723-a22b-2252c09f98a3 :length66 .
+
+:mtp_384_ubottom_clear_polypropylene_nunc_264573 a labo:LOLWA_6f9e9dd4-7332-5f6a-8506-c1d58005ba84,
+        owl:NamedIndividual ;
+    labo:LOLWA_08fac96e-e6ac-5b90-b82f-dc275da228ca "264573"^^xsd:string ;
+    labo:LOLWA_56e2c727-c8df-53f5-8efe-5aa1c6485107 :length169 ;
+    labo:LOLWA_60236412-46fe-5f12-a3d5-a555d274fee0 16 ;
+    labo:LOLWA_72c1f5e5-6f71-5417-a5aa-2f51dcf7bfe9 24 ;
+    labo:LOLWA_c4f05f55-7626-5446-9dbf-f9ef627bc922 :length170 ;
+    labo:LOLWA_da8ac160-7c8f-563c-acae-0af53bbf7cd2 384 ;
+    labo:LOLWA_f1c17d57-6bcc-5723-a22b-2252c09f98a3 :length171 .
+
+:mtp_384_ubottom_white_tc a labo:LOLWA_6f9e9dd4-7332-5f6a-8506-c1d58005ba84,
+        owl:NamedIndividual ;
+    labo:LOLWA_08fac96e-e6ac-5b90-b82f-dc275da228ca "MS-9384WZ"^^xsd:string ;
+    labo:LOLWA_56e2c727-c8df-53f5-8efe-5aa1c6485107 :length232 ;
+    labo:LOLWA_60236412-46fe-5f12-a3d5-a555d274fee0 16 ;
+    labo:LOLWA_72c1f5e5-6f71-5417-a5aa-2f51dcf7bfe9 24 ;
+    labo:LOLWA_c4f05f55-7626-5446-9dbf-f9ef627bc922 :length233 ;
+    labo:LOLWA_da8ac160-7c8f-563c-acae-0af53bbf7cd2 384 ;
+    labo:LOLWA_f1c17d57-6bcc-5723-a22b-2252c09f98a3 :length234 .
+
+:mtp_384_v_clear_clear a labo:LOLWA_6f9e9dd4-7332-5f6a-8506-c1d58005ba84,
+        owl:NamedIndividual ;
+    labo:LOLWA_08fac96e-e6ac-5b90-b82f-dc275da228ca "781280"^^xsd:string ;
+    labo:LOLWA_56e2c727-c8df-53f5-8efe-5aa1c6485107 :length202 ;
+    labo:LOLWA_60236412-46fe-5f12-a3d5-a555d274fee0 16 ;
+    labo:LOLWA_72c1f5e5-6f71-5417-a5aa-2f51dcf7bfe9 24 ;
+    labo:LOLWA_c4f05f55-7626-5446-9dbf-f9ef627bc922 :length203 ;
+    labo:LOLWA_da8ac160-7c8f-563c-acae-0af53bbf7cd2 384 ;
+    labo:LOLWA_f1c17d57-6bcc-5723-a22b-2252c09f98a3 :length204 .
+
+:mtp_384_virtual_well_1_flat a labo:LOLWA_6f9e9dd4-7332-5f6a-8506-c1d58005ba84,
+        owl:NamedIndividual ;
+    labo:LOLWA_08fac96e-e6ac-5b90-b82f-dc275da228ca "140156"^^xsd:string ;
+    labo:LOLWA_56e2c727-c8df-53f5-8efe-5aa1c6485107 :length163 ;
+    labo:LOLWA_60236412-46fe-5f12-a3d5-a555d274fee0 16 ;
+    labo:LOLWA_72c1f5e5-6f71-5417-a5aa-2f51dcf7bfe9 24 ;
+    labo:LOLWA_c4f05f55-7626-5446-9dbf-f9ef627bc922 :length164 ;
+    labo:LOLWA_da8ac160-7c8f-563c-acae-0af53bbf7cd2 384 ;
+    labo:LOLWA_f1c17d57-6bcc-5723-a22b-2252c09f98a3 :length165 .
+
+:mtp_96_10_spot_uplex_msd a labo:LOLWA_6f9e9dd4-7332-5f6a-8506-c1d58005ba84,
+        owl:NamedIndividual ;
+    labo:LOLWA_08fac96e-e6ac-5b90-b82f-dc275da228ca "K15069L"^^xsd:string ;
+    labo:LOLWA_56e2c727-c8df-53f5-8efe-5aa1c6485107 :length61 ;
+    labo:LOLWA_60236412-46fe-5f12-a3d5-a555d274fee0 8 ;
+    labo:LOLWA_72c1f5e5-6f71-5417-a5aa-2f51dcf7bfe9 12 ;
+    labo:LOLWA_c4f05f55-7626-5446-9dbf-f9ef627bc922 :length62 ;
+    labo:LOLWA_da8ac160-7c8f-563c-acae-0af53bbf7cd2 96 ;
+    labo:LOLWA_f1c17d57-6bcc-5723-a22b-2252c09f98a3 :length63 .
+
+:mtp_96_10_spot_vplex_m_pro_inflamm1_msd a labo:LOLWA_6f9e9dd4-7332-5f6a-8506-c1d58005ba84,
+        owl:NamedIndividual ;
+    labo:LOLWA_08fac96e-e6ac-5b90-b82f-dc275da228ca "K15048G"^^xsd:string ;
+    labo:LOLWA_56e2c727-c8df-53f5-8efe-5aa1c6485107 :length4 ;
+    labo:LOLWA_60236412-46fe-5f12-a3d5-a555d274fee0 8 ;
+    labo:LOLWA_72c1f5e5-6f71-5417-a5aa-2f51dcf7bfe9 12 ;
+    labo:LOLWA_c4f05f55-7626-5446-9dbf-f9ef627bc922 :length5 ;
+    labo:LOLWA_da8ac160-7c8f-563c-acae-0af53bbf7cd2 96 ;
+    labo:LOLWA_f1c17d57-6bcc-5723-a22b-2252c09f98a3 :length6 .
+
+:mtp_96_4_spot_mmip3a_msd a labo:LOLWA_6f9e9dd4-7332-5f6a-8506-c1d58005ba84,
+        owl:NamedIndividual ;
+    labo:LOLWA_08fac96e-e6ac-5b90-b82f-dc275da228ca "K152MSD"^^xsd:string ;
+    labo:LOLWA_56e2c727-c8df-53f5-8efe-5aa1c6485107 :length55 ;
+    labo:LOLWA_60236412-46fe-5f12-a3d5-a555d274fee0 8 ;
+    labo:LOLWA_72c1f5e5-6f71-5417-a5aa-2f51dcf7bfe9 12 ;
+    labo:LOLWA_c4f05f55-7626-5446-9dbf-f9ef627bc922 :length56 ;
+    labo:LOLWA_da8ac160-7c8f-563c-acae-0af53bbf7cd2 96 ;
+    labo:LOLWA_f1c17d57-6bcc-5723-a22b-2252c09f98a3 :length57 .
+
+:mtp_96_deep a labo:LOLWA_6f9e9dd4-7332-5f6a-8506-c1d58005ba84,
+        owl:NamedIndividual ;
+    labo:LOLWA_08fac96e-e6ac-5b90-b82f-dc275da228ca "3961"^^xsd:string ;
+    labo:LOLWA_56e2c727-c8df-53f5-8efe-5aa1c6485107 :length220 ;
+    labo:LOLWA_60236412-46fe-5f12-a3d5-a555d274fee0 8 ;
+    labo:LOLWA_72c1f5e5-6f71-5417-a5aa-2f51dcf7bfe9 12 ;
+    labo:LOLWA_c4f05f55-7626-5446-9dbf-f9ef627bc922 :length221 ;
+    labo:LOLWA_da8ac160-7c8f-563c-acae-0af53bbf7cd2 96 ;
+    labo:LOLWA_f1c17d57-6bcc-5723-a22b-2252c09f98a3 :length222 .
+
+:mtp_96_deep_kf a labo:LOLWA_6f9e9dd4-7332-5f6a-8506-c1d58005ba84,
+        owl:NamedIndividual ;
+    labo:LOLWA_08fac96e-e6ac-5b90-b82f-dc275da228ca "22-387-031"^^xsd:string ;
+    labo:LOLWA_56e2c727-c8df-53f5-8efe-5aa1c6485107 :length103 ;
+    labo:LOLWA_60236412-46fe-5f12-a3d5-a555d274fee0 8 ;
+    labo:LOLWA_72c1f5e5-6f71-5417-a5aa-2f51dcf7bfe9 12 ;
+    labo:LOLWA_c4f05f55-7626-5446-9dbf-f9ef627bc922 :length104 ;
+    labo:LOLWA_da8ac160-7c8f-563c-acae-0af53bbf7cd2 96 ;
+    labo:LOLWA_f1c17d57-6bcc-5723-a22b-2252c09f98a3 :length105 .
+
+:mtp_96_flat a labo:LOLWA_6f9e9dd4-7332-5f6a-8506-c1d58005ba84,
+        owl:NamedIndividual ;
+    labo:LOLWA_08fac96e-e6ac-5b90-b82f-dc275da228ca "3632"^^xsd:string ;
+    labo:LOLWA_56e2c727-c8df-53f5-8efe-5aa1c6485107 :length70 ;
+    labo:LOLWA_60236412-46fe-5f12-a3d5-a555d274fee0 8 ;
+    labo:LOLWA_72c1f5e5-6f71-5417-a5aa-2f51dcf7bfe9 12 ;
+    labo:LOLWA_c4f05f55-7626-5446-9dbf-f9ef627bc922 :length71 ;
+    labo:LOLWA_da8ac160-7c8f-563c-acae-0af53bbf7cd2 96 ;
+    labo:LOLWA_f1c17d57-6bcc-5723-a22b-2252c09f98a3 :length72 .
+
+:mtp_96_flat_black_black_fluotrac_600 a labo:LOLWA_6f9e9dd4-7332-5f6a-8506-c1d58005ba84,
+        owl:NamedIndividual ;
+    labo:LOLWA_08fac96e-e6ac-5b90-b82f-dc275da228ca "655077"^^xsd:string ;
+    labo:LOLWA_56e2c727-c8df-53f5-8efe-5aa1c6485107 :length73 ;
+    labo:LOLWA_60236412-46fe-5f12-a3d5-a555d274fee0 8 ;
+    labo:LOLWA_72c1f5e5-6f71-5417-a5aa-2f51dcf7bfe9 12 ;
+    labo:LOLWA_c4f05f55-7626-5446-9dbf-f9ef627bc922 :length74 ;
+    labo:LOLWA_da8ac160-7c8f-563c-acae-0af53bbf7cd2 96 ;
+    labo:LOLWA_f1c17d57-6bcc-5723-a22b-2252c09f98a3 :length75 .
+
+:mtp_96_flat_clear_clear_tc a labo:LOLWA_6f9e9dd4-7332-5f6a-8506-c1d58005ba84,
+        owl:NamedIndividual ;
+    labo:LOLWA_08fac96e-e6ac-5b90-b82f-dc275da228ca "30730119"^^xsd:string ;
+    labo:LOLWA_56e2c727-c8df-53f5-8efe-5aa1c6485107 :length151 ;
+    labo:LOLWA_60236412-46fe-5f12-a3d5-a555d274fee0 8 ;
+    labo:LOLWA_72c1f5e5-6f71-5417-a5aa-2f51dcf7bfe9 12 ;
+    labo:LOLWA_c4f05f55-7626-5446-9dbf-f9ef627bc922 :length152 ;
+    labo:LOLWA_da8ac160-7c8f-563c-acae-0af53bbf7cd2 96 ;
+    labo:LOLWA_f1c17d57-6bcc-5723-a22b-2252c09f98a3 :length153 .
+
+:mtp_96_flat_clear_costar_3590 a labo:LOLWA_6f9e9dd4-7332-5f6a-8506-c1d58005ba84,
+        owl:NamedIndividual ;
+    labo:LOLWA_08fac96e-e6ac-5b90-b82f-dc275da228ca "3590"^^xsd:string ;
+    labo:LOLWA_56e2c727-c8df-53f5-8efe-5aa1c6485107 :length34 ;
+    labo:LOLWA_60236412-46fe-5f12-a3d5-a555d274fee0 8 ;
+    labo:LOLWA_72c1f5e5-6f71-5417-a5aa-2f51dcf7bfe9 12 ;
+    labo:LOLWA_c4f05f55-7626-5446-9dbf-f9ef627bc922 :length35 ;
+    labo:LOLWA_da8ac160-7c8f-563c-acae-0af53bbf7cd2 96 ;
+    labo:LOLWA_f1c17d57-6bcc-5723-a22b-2252c09f98a3 :length36 .
+
+:mtp_96_flat_uv a labo:LOLWA_6f9e9dd4-7332-5f6a-8506-c1d58005ba84,
+        owl:NamedIndividual ;
+    labo:LOLWA_08fac96e-e6ac-5b90-b82f-dc275da228ca "3635"^^xsd:string ;
+    labo:LOLWA_56e2c727-c8df-53f5-8efe-5aa1c6485107 :length37 ;
+    labo:LOLWA_60236412-46fe-5f12-a3d5-a555d274fee0 8 ;
+    labo:LOLWA_72c1f5e5-6f71-5417-a5aa-2f51dcf7bfe9 12 ;
+    labo:LOLWA_c4f05f55-7626-5446-9dbf-f9ef627bc922 :length38 ;
+    labo:LOLWA_da8ac160-7c8f-563c-acae-0af53bbf7cd2 96 ;
+    labo:LOLWA_f1c17d57-6bcc-5723-a22b-2252c09f98a3 :length39 .
+
+:mtp_96_flat_uv_ps a labo:LOLWA_6f9e9dd4-7332-5f6a-8506-c1d58005ba84,
+        owl:NamedIndividual ;
+    labo:LOLWA_08fac96e-e6ac-5b90-b82f-dc275da228ca "33096"^^xsd:string ;
+    labo:LOLWA_56e2c727-c8df-53f5-8efe-5aa1c6485107 :length79 ;
+    labo:LOLWA_60236412-46fe-5f12-a3d5-a555d274fee0 8 ;
+    labo:LOLWA_72c1f5e5-6f71-5417-a5aa-2f51dcf7bfe9 12 ;
+    labo:LOLWA_c4f05f55-7626-5446-9dbf-f9ef627bc922 :length80 ;
+    labo:LOLWA_da8ac160-7c8f-563c-acae-0af53bbf7cd2 96 ;
+    labo:LOLWA_f1c17d57-6bcc-5723-a22b-2252c09f98a3 :length81 .
+
+:mtp_96_flat_white_dc a labo:LOLWA_6f9e9dd4-7332-5f6a-8506-c1d58005ba84,
+        owl:NamedIndividual ;
+    labo:LOLWA_08fac96e-e6ac-5b90-b82f-dc275da228ca "136101"^^xsd:string ;
+    labo:LOLWA_56e2c727-c8df-53f5-8efe-5aa1c6485107 :length49 ;
+    labo:LOLWA_60236412-46fe-5f12-a3d5-a555d274fee0 8 ;
+    labo:LOLWA_72c1f5e5-6f71-5417-a5aa-2f51dcf7bfe9 12 ;
+    labo:LOLWA_c4f05f55-7626-5446-9dbf-f9ef627bc922 :length50 ;
+    labo:LOLWA_da8ac160-7c8f-563c-acae-0af53bbf7cd2 96 ;
+    labo:LOLWA_f1c17d57-6bcc-5723-a22b-2252c09f98a3 :length51 .
+
+:mtp_96_micronic a labo:LOLWA_6f9e9dd4-7332-5f6a-8506-c1d58005ba84,
+        owl:NamedIndividual ;
+    labo:LOLWA_08fac96e-e6ac-5b90-b82f-dc275da228ca "MP51211"^^xsd:string ;
+    labo:LOLWA_56e2c727-c8df-53f5-8efe-5aa1c6485107 :length166 ;
+    labo:LOLWA_60236412-46fe-5f12-a3d5-a555d274fee0 8 ;
+    labo:LOLWA_72c1f5e5-6f71-5417-a5aa-2f51dcf7bfe9 12 ;
+    labo:LOLWA_c4f05f55-7626-5446-9dbf-f9ef627bc922 :length167 ;
+    labo:LOLWA_da8ac160-7c8f-563c-acae-0af53bbf7cd2 96 ;
+    labo:LOLWA_f1c17d57-6bcc-5723-a22b-2252c09f98a3 :length168 .
+
+:mtp_96_multi_array_sector_uncoated_msd a labo:LOLWA_6f9e9dd4-7332-5f6a-8506-c1d58005ba84,
+        owl:NamedIndividual ;
+    labo:LOLWA_08fac96e-e6ac-5b90-b82f-dc275da228ca "L15XA"^^xsd:string ;
+    labo:LOLWA_56e2c727-c8df-53f5-8efe-5aa1c6485107 :length196 ;
+    labo:LOLWA_60236412-46fe-5f12-a3d5-a555d274fee0 8 ;
+    labo:LOLWA_72c1f5e5-6f71-5417-a5aa-2f51dcf7bfe9 12 ;
+    labo:LOLWA_c4f05f55-7626-5446-9dbf-f9ef627bc922 :length197 ;
+    labo:LOLWA_da8ac160-7c8f-563c-acae-0af53bbf7cd2 96 ;
+    labo:LOLWA_f1c17d57-6bcc-5723-a22b-2252c09f98a3 :length198 .
+
+:mtp_96_pcr a labo:LOLWA_6f9e9dd4-7332-5f6a-8506-c1d58005ba84,
+        owl:NamedIndividual ;
+    labo:LOLWA_08fac96e-e6ac-5b90-b82f-dc275da228ca "951020619"^^xsd:string ;
+    labo:LOLWA_56e2c727-c8df-53f5-8efe-5aa1c6485107 :length121 ;
+    labo:LOLWA_60236412-46fe-5f12-a3d5-a555d274fee0 8 ;
+    labo:LOLWA_72c1f5e5-6f71-5417-a5aa-2f51dcf7bfe9 12 ;
+    labo:LOLWA_c4f05f55-7626-5446-9dbf-f9ef627bc922 :length122 ;
+    labo:LOLWA_da8ac160-7c8f-563c-acae-0af53bbf7cd2 96 ;
+    labo:LOLWA_f1c17d57-6bcc-5723-a22b-2252c09f98a3 :length123 .
+
+:mtp_96_pcr_fs_clear a labo:LOLWA_6f9e9dd4-7332-5f6a-8506-c1d58005ba84,
+        owl:NamedIndividual ;
+    labo:LOLWA_08fac96e-e6ac-5b90-b82f-dc275da228ca "PCR-96-FS-C"^^xsd:string ;
+    labo:LOLWA_56e2c727-c8df-53f5-8efe-5aa1c6485107 :length85 ;
+    labo:LOLWA_60236412-46fe-5f12-a3d5-a555d274fee0 8 ;
+    labo:LOLWA_72c1f5e5-6f71-5417-a5aa-2f51dcf7bfe9 12 ;
+    labo:LOLWA_c4f05f55-7626-5446-9dbf-f9ef627bc922 :length86 ;
+    labo:LOLWA_da8ac160-7c8f-563c-acae-0af53bbf7cd2 96 ;
+    labo:LOLWA_f1c17d57-6bcc-5723-a22b-2252c09f98a3 :length87 .
+
+:mtp_96_pcr_thermowell a labo:LOLWA_6f9e9dd4-7332-5f6a-8506-c1d58005ba84,
+        owl:NamedIndividual ;
+    labo:LOLWA_08fac96e-e6ac-5b90-b82f-dc275da228ca "6511"^^xsd:string ;
+    labo:LOLWA_56e2c727-c8df-53f5-8efe-5aa1c6485107 :length118 ;
+    labo:LOLWA_60236412-46fe-5f12-a3d5-a555d274fee0 8 ;
+    labo:LOLWA_72c1f5e5-6f71-5417-a5aa-2f51dcf7bfe9 12 ;
+    labo:LOLWA_c4f05f55-7626-5446-9dbf-f9ef627bc922 :length119 ;
+    labo:LOLWA_da8ac160-7c8f-563c-acae-0af53bbf7cd2 96 ;
+    labo:LOLWA_f1c17d57-6bcc-5723-a22b-2252c09f98a3 :length120 .
+
+:mtp_96_ubottom_clear_tc a labo:LOLWA_6f9e9dd4-7332-5f6a-8506-c1d58005ba84,
+        owl:NamedIndividual ;
+    labo:LOLWA_08fac96e-e6ac-5b90-b82f-dc275da228ca "353077"^^xsd:string ;
+    labo:LOLWA_56e2c727-c8df-53f5-8efe-5aa1c6485107 :length100 ;
+    labo:LOLWA_60236412-46fe-5f12-a3d5-a555d274fee0 8 ;
+    labo:LOLWA_72c1f5e5-6f71-5417-a5aa-2f51dcf7bfe9 12 ;
+    labo:LOLWA_c4f05f55-7626-5446-9dbf-f9ef627bc922 :length101 ;
+    labo:LOLWA_da8ac160-7c8f-563c-acae-0af53bbf7cd2 96 ;
+    labo:LOLWA_f1c17d57-6bcc-5723-a22b-2252c09f98a3 :length102 .
+
+:mtp_96_v_kf a labo:LOLWA_6f9e9dd4-7332-5f6a-8506-c1d58005ba84,
+        owl:NamedIndividual ;
+    labo:LOLWA_08fac96e-e6ac-5b90-b82f-dc275da228ca "22-387-030"^^xsd:string ;
+    labo:LOLWA_56e2c727-c8df-53f5-8efe-5aa1c6485107 :length22 ;
+    labo:LOLWA_60236412-46fe-5f12-a3d5-a555d274fee0 8 ;
+    labo:LOLWA_72c1f5e5-6f71-5417-a5aa-2f51dcf7bfe9 12 ;
+    labo:LOLWA_c4f05f55-7626-5446-9dbf-f9ef627bc922 :length23 ;
+    labo:LOLWA_da8ac160-7c8f-563c-acae-0af53bbf7cd2 96 ;
+    labo:LOLWA_f1c17d57-6bcc-5723-a22b-2252c09f98a3 :length24 .
+
+:mtp_96_vbottom_microwell a labo:LOLWA_6f9e9dd4-7332-5f6a-8506-c1d58005ba84,
+        owl:NamedIndividual ;
+    labo:LOLWA_08fac96e-e6ac-5b90-b82f-dc275da228ca "249944"^^xsd:string ;
+    labo:LOLWA_56e2c727-c8df-53f5-8efe-5aa1c6485107 :length181 ;
+    labo:LOLWA_60236412-46fe-5f12-a3d5-a555d274fee0 8 ;
+    labo:LOLWA_72c1f5e5-6f71-5417-a5aa-2f51dcf7bfe9 12 ;
+    labo:LOLWA_c4f05f55-7626-5446-9dbf-f9ef627bc922 :length182 ;
+    labo:LOLWA_da8ac160-7c8f-563c-acae-0af53bbf7cd2 96 ;
+    labo:LOLWA_f1c17d57-6bcc-5723-a22b-2252c09f98a3 :length183 .
+
+:mtp_96_well_v_bottom a labo:LOLWA_6f9e9dd4-7332-5f6a-8506-c1d58005ba84,
+        owl:NamedIndividual ;
+    labo:LOLWA_08fac96e-e6ac-5b90-b82f-dc275da228ca "3894"^^xsd:string ;
+    labo:LOLWA_56e2c727-c8df-53f5-8efe-5aa1c6485107 :length142 ;
+    labo:LOLWA_60236412-46fe-5f12-a3d5-a555d274fee0 8 ;
+    labo:LOLWA_72c1f5e5-6f71-5417-a5aa-2f51dcf7bfe9 12 ;
+    labo:LOLWA_c4f05f55-7626-5446-9dbf-f9ef627bc922 :length143 ;
+    labo:LOLWA_da8ac160-7c8f-563c-acae-0af53bbf7cd2 96 ;
+    labo:LOLWA_f1c17d57-6bcc-5723-a22b-2252c09f98a3 :length144 .
+
+:nmr_tube_5mm a labo:LOLWA_6f9e9dd4-7332-5f6a-8506-c1d58005ba84,
+        owl:NamedIndividual ;
+    labo:LOLWA_08fac96e-e6ac-5b90-b82f-dc275da228ca "unknown"^^xsd:string ;
+    labo:LOLWA_56e2c727-c8df-53f5-8efe-5aa1c6485107 :length43 ;
+    labo:LOLWA_60236412-46fe-5f12-a3d5-a555d274fee0 1 ;
+    labo:LOLWA_72c1f5e5-6f71-5417-a5aa-2f51dcf7bfe9 1 ;
+    labo:LOLWA_c4f05f55-7626-5446-9dbf-f9ef627bc922 :length44 ;
+    labo:LOLWA_da8ac160-7c8f-563c-acae-0af53bbf7cd2 1 ;
+    labo:LOLWA_f1c17d57-6bcc-5723-a22b-2252c09f98a3 :length45 .
+
+:pcr_0.5 a labo:LOLWA_6f9e9dd4-7332-5f6a-8506-c1d58005ba84,
+        owl:NamedIndividual ;
+    labo:LOLWA_08fac96e-e6ac-5b90-b82f-dc275da228ca "1405-8100"^^xsd:string ;
+    labo:LOLWA_56e2c727-c8df-53f5-8efe-5aa1c6485107 :length67 ;
+    labo:LOLWA_60236412-46fe-5f12-a3d5-a555d274fee0 1 ;
+    labo:LOLWA_72c1f5e5-6f71-5417-a5aa-2f51dcf7bfe9 1 ;
+    labo:LOLWA_c4f05f55-7626-5446-9dbf-f9ef627bc922 :length68 ;
+    labo:LOLWA_da8ac160-7c8f-563c-acae-0af53bbf7cd2 1 ;
+    labo:LOLWA_f1c17d57-6bcc-5723-a22b-2252c09f98a3 :length69 .
+
+:res_mw12_hp a labo:LOLWA_6f9e9dd4-7332-5f6a-8506-c1d58005ba84,
+        owl:NamedIndividual ;
+    labo:LOLWA_08fac96e-e6ac-5b90-b82f-dc275da228ca "res-mw12-hp"^^xsd:string ;
+    labo:LOLWA_56e2c727-c8df-53f5-8efe-5aa1c6485107 :length226 ;
+    labo:LOLWA_60236412-46fe-5f12-a3d5-a555d274fee0 1 ;
+    labo:LOLWA_72c1f5e5-6f71-5417-a5aa-2f51dcf7bfe9 12 ;
+    labo:LOLWA_c4f05f55-7626-5446-9dbf-f9ef627bc922 :length227 ;
+    labo:LOLWA_da8ac160-7c8f-563c-acae-0af53bbf7cd2 12 ;
+    labo:LOLWA_f1c17d57-6bcc-5723-a22b-2252c09f98a3 :length228 .
+
+:res_mw8_hp a labo:LOLWA_6f9e9dd4-7332-5f6a-8506-c1d58005ba84,
+        owl:NamedIndividual ;
+    labo:LOLWA_08fac96e-e6ac-5b90-b82f-dc275da228ca "res-mw8-hp"^^xsd:string ;
+    labo:LOLWA_56e2c727-c8df-53f5-8efe-5aa1c6485107 :length160 ;
+    labo:LOLWA_60236412-46fe-5f12-a3d5-a555d274fee0 8 ;
+    labo:LOLWA_72c1f5e5-6f71-5417-a5aa-2f51dcf7bfe9 1 ;
+    labo:LOLWA_c4f05f55-7626-5446-9dbf-f9ef627bc922 :length161 ;
+    labo:LOLWA_da8ac160-7c8f-563c-acae-0af53bbf7cd2 8 ;
+    labo:LOLWA_f1c17d57-6bcc-5723-a22b-2252c09f98a3 :length162 .
+
+:res_swmtp_384_lp a labo:LOLWA_6f9e9dd4-7332-5f6a-8506-c1d58005ba84,
+        owl:NamedIndividual ;
+    labo:LOLWA_08fac96e-e6ac-5b90-b82f-dc275da228ca "res-sw384-lp"^^xsd:string ;
+    labo:LOLWA_56e2c727-c8df-53f5-8efe-5aa1c6485107 :length154 ;
+    labo:LOLWA_60236412-46fe-5f12-a3d5-a555d274fee0 1 ;
+    labo:LOLWA_72c1f5e5-6f71-5417-a5aa-2f51dcf7bfe9 1 ;
+    labo:LOLWA_c4f05f55-7626-5446-9dbf-f9ef627bc922 :length155 ;
+    labo:LOLWA_da8ac160-7c8f-563c-acae-0af53bbf7cd2 1 ;
+    labo:LOLWA_f1c17d57-6bcc-5723-a22b-2252c09f98a3 :length156 .
+
+:res_swmtp_96_hp a labo:LOLWA_6f9e9dd4-7332-5f6a-8506-c1d58005ba84,
+        owl:NamedIndividual ;
+    labo:LOLWA_08fac96e-e6ac-5b90-b82f-dc275da228ca "res-sw96-hp"^^xsd:string ;
+    labo:LOLWA_56e2c727-c8df-53f5-8efe-5aa1c6485107 :length46 ;
+    labo:LOLWA_60236412-46fe-5f12-a3d5-a555d274fee0 1 ;
+    labo:LOLWA_72c1f5e5-6f71-5417-a5aa-2f51dcf7bfe9 1 ;
+    labo:LOLWA_c4f05f55-7626-5446-9dbf-f9ef627bc922 :length47 ;
+    labo:LOLWA_da8ac160-7c8f-563c-acae-0af53bbf7cd2 1 ;
+    labo:LOLWA_f1c17d57-6bcc-5723-a22b-2252c09f98a3 :length48 .
+
+:single_vbottom_microwell a labo:LOLWA_6f9e9dd4-7332-5f6a-8506-c1d58005ba84,
+        owl:NamedIndividual ;
+    labo:LOLWA_08fac96e-e6ac-5b90-b82f-dc275da228ca "unknown"^^xsd:string ;
+    labo:LOLWA_56e2c727-c8df-53f5-8efe-5aa1c6485107 :length7 ;
+    labo:LOLWA_60236412-46fe-5f12-a3d5-a555d274fee0 1 ;
+    labo:LOLWA_72c1f5e5-6f71-5417-a5aa-2f51dcf7bfe9 1 ;
+    labo:LOLWA_c4f05f55-7626-5446-9dbf-f9ef627bc922 :length8 ;
+    labo:LOLWA_da8ac160-7c8f-563c-acae-0af53bbf7cd2 1 ;
+    labo:LOLWA_f1c17d57-6bcc-5723-a22b-2252c09f98a3 :length9 .
+
+:tube_15 a labo:LOLWA_6f9e9dd4-7332-5f6a-8506-c1d58005ba84,
+        owl:NamedIndividual ;
+    labo:LOLWA_08fac96e-e6ac-5b90-b82f-dc275da228ca "188261"^^xsd:string ;
+    labo:LOLWA_56e2c727-c8df-53f5-8efe-5aa1c6485107 :length112 ;
+    labo:LOLWA_60236412-46fe-5f12-a3d5-a555d274fee0 1 ;
+    labo:LOLWA_72c1f5e5-6f71-5417-a5aa-2f51dcf7bfe9 1 ;
+    labo:LOLWA_c4f05f55-7626-5446-9dbf-f9ef627bc922 :length113 ;
+    labo:LOLWA_da8ac160-7c8f-563c-acae-0af53bbf7cd2 1 ;
+    labo:LOLWA_f1c17d57-6bcc-5723-a22b-2252c09f98a3 :length114 .
+
+:length1 a emmo:emmo-inferredLength,
+        owl:NamedIndividual .
+
+:length10 a emmo:emmo-inferredLength,
+        owl:NamedIndividual .
+
+:length100 a emmo:emmo-inferredLength,
+        owl:NamedIndividual .
+
+:length101 a emmo:emmo-inferredLength,
+        owl:NamedIndividual .
+
+:length102 a emmo:emmo-inferredLength,
+        owl:NamedIndividual .
+
+:length103 a emmo:emmo-inferredLength,
+        owl:NamedIndividual .
+
+:length104 a emmo:emmo-inferredLength,
+        owl:NamedIndividual .
+
+:length105 a emmo:emmo-inferredLength,
+        owl:NamedIndividual .
+
+:length106 a emmo:emmo-inferredLength,
+        owl:NamedIndividual .
+
+:length107 a emmo:emmo-inferredLength,
+        owl:NamedIndividual .
+
+:length108 a emmo:emmo-inferredLength,
+        owl:NamedIndividual .
+
+:length109 a emmo:emmo-inferredLength,
+        owl:NamedIndividual .
+
+:length11 a emmo:emmo-inferredLength,
+        owl:NamedIndividual .
+
+:length110 a emmo:emmo-inferredLength,
+        owl:NamedIndividual .
+
+:length111 a emmo:emmo-inferredLength,
+        owl:NamedIndividual .
+
+:length112 a emmo:emmo-inferredLength,
+        owl:NamedIndividual .
+
+:length113 a emmo:emmo-inferredLength,
+        owl:NamedIndividual .
+
+:length114 a emmo:emmo-inferredLength,
+        owl:NamedIndividual .
+
+:length115 a emmo:emmo-inferredLength,
+        owl:NamedIndividual .
+
+:length116 a emmo:emmo-inferredLength,
+        owl:NamedIndividual .
+
+:length117 a emmo:emmo-inferredLength,
+        owl:NamedIndividual .
+
+:length118 a emmo:emmo-inferredLength,
+        owl:NamedIndividual .
+
+:length119 a emmo:emmo-inferredLength,
+        owl:NamedIndividual .
+
+:length12 a emmo:emmo-inferredLength,
+        owl:NamedIndividual .
+
+:length120 a emmo:emmo-inferredLength,
+        owl:NamedIndividual .
+
+:length121 a emmo:emmo-inferredLength,
+        owl:NamedIndividual .
+
+:length122 a emmo:emmo-inferredLength,
+        owl:NamedIndividual .
+
+:length123 a emmo:emmo-inferredLength,
+        owl:NamedIndividual .
+
+:length124 a emmo:emmo-inferredLength,
+        owl:NamedIndividual .
+
+:length125 a emmo:emmo-inferredLength,
+        owl:NamedIndividual .
+
+:length126 a emmo:emmo-inferredLength,
+        owl:NamedIndividual .
+
+:length127 a emmo:emmo-inferredLength,
+        owl:NamedIndividual .
+
+:length128 a emmo:emmo-inferredLength,
+        owl:NamedIndividual .
+
+:length129 a emmo:emmo-inferredLength,
+        owl:NamedIndividual .
+
+:length13 a emmo:emmo-inferredLength,
+        owl:NamedIndividual .
+
+:length130 a emmo:emmo-inferredLength,
+        owl:NamedIndividual .
+
+:length131 a emmo:emmo-inferredLength,
+        owl:NamedIndividual .
+
+:length132 a emmo:emmo-inferredLength,
+        owl:NamedIndividual .
+
+:length133 a emmo:emmo-inferredLength,
+        owl:NamedIndividual .
+
+:length134 a emmo:emmo-inferredLength,
+        owl:NamedIndividual .
+
+:length135 a emmo:emmo-inferredLength,
+        owl:NamedIndividual .
+
+:length136 a emmo:emmo-inferredLength,
+        owl:NamedIndividual .
+
+:length137 a emmo:emmo-inferredLength,
+        owl:NamedIndividual .
+
+:length138 a emmo:emmo-inferredLength,
+        owl:NamedIndividual .
+
+:length139 a emmo:emmo-inferredLength,
+        owl:NamedIndividual .
+
+:length14 a emmo:emmo-inferredLength,
+        owl:NamedIndividual .
+
+:length140 a emmo:emmo-inferredLength,
+        owl:NamedIndividual .
+
+:length141 a emmo:emmo-inferredLength,
+        owl:NamedIndividual .
+
+:length142 a emmo:emmo-inferredLength,
+        owl:NamedIndividual .
+
+:length143 a emmo:emmo-inferredLength,
+        owl:NamedIndividual .
+
+:length144 a emmo:emmo-inferredLength,
+        owl:NamedIndividual .
+
+:length145 a emmo:emmo-inferredLength,
+        owl:NamedIndividual .
+
+:length146 a emmo:emmo-inferredLength,
+        owl:NamedIndividual .
+
+:length147 a emmo:emmo-inferredLength,
+        owl:NamedIndividual .
+
+:length148 a emmo:emmo-inferredLength,
+        owl:NamedIndividual .
+
+:length149 a emmo:emmo-inferredLength,
+        owl:NamedIndividual .
+
+:length15 a emmo:emmo-inferredLength,
+        owl:NamedIndividual .
+
+:length150 a emmo:emmo-inferredLength,
+        owl:NamedIndividual .
+
+:length151 a emmo:emmo-inferredLength,
+        owl:NamedIndividual .
+
+:length152 a emmo:emmo-inferredLength,
+        owl:NamedIndividual .
+
+:length153 a emmo:emmo-inferredLength,
+        owl:NamedIndividual .
+
+:length154 a emmo:emmo-inferredLength,
+        owl:NamedIndividual .
+
+:length155 a emmo:emmo-inferredLength,
+        owl:NamedIndividual .
+
+:length156 a emmo:emmo-inferredLength,
+        owl:NamedIndividual .
+
+:length157 a emmo:emmo-inferredLength,
+        owl:NamedIndividual .
+
+:length158 a emmo:emmo-inferredLength,
+        owl:NamedIndividual .
+
+:length159 a emmo:emmo-inferredLength,
+        owl:NamedIndividual .
+
+:length16 a emmo:emmo-inferredLength,
+        owl:NamedIndividual .
+
+:length160 a emmo:emmo-inferredLength,
+        owl:NamedIndividual .
+
+:length161 a emmo:emmo-inferredLength,
+        owl:NamedIndividual .
+
+:length162 a emmo:emmo-inferredLength,
+        owl:NamedIndividual .
+
+:length163 a emmo:emmo-inferredLength,
+        owl:NamedIndividual .
+
+:length164 a emmo:emmo-inferredLength,
+        owl:NamedIndividual .
+
+:length165 a emmo:emmo-inferredLength,
+        owl:NamedIndividual .
+
+:length166 a emmo:emmo-inferredLength,
+        owl:NamedIndividual .
+
+:length167 a emmo:emmo-inferredLength,
+        owl:NamedIndividual .
+
+:length168 a emmo:emmo-inferredLength,
+        owl:NamedIndividual .
+
+:length169 a emmo:emmo-inferredLength,
+        owl:NamedIndividual .
+
+:length17 a emmo:emmo-inferredLength,
+        owl:NamedIndividual .
+
+:length170 a emmo:emmo-inferredLength,
+        owl:NamedIndividual .
+
+:length171 a emmo:emmo-inferredLength,
+        owl:NamedIndividual .
+
+:length172 a emmo:emmo-inferredLength,
+        owl:NamedIndividual .
+
+:length173 a emmo:emmo-inferredLength,
+        owl:NamedIndividual .
+
+:length174 a emmo:emmo-inferredLength,
+        owl:NamedIndividual .
+
+:length175 a emmo:emmo-inferredLength,
+        owl:NamedIndividual .
+
+:length176 a emmo:emmo-inferredLength,
+        owl:NamedIndividual .
+
+:length177 a emmo:emmo-inferredLength,
+        owl:NamedIndividual .
+
+:length178 a emmo:emmo-inferredLength,
+        owl:NamedIndividual .
+
+:length179 a emmo:emmo-inferredLength,
+        owl:NamedIndividual .
+
+:length18 a emmo:emmo-inferredLength,
+        owl:NamedIndividual .
+
+:length180 a emmo:emmo-inferredLength,
+        owl:NamedIndividual .
+
+:length181 a emmo:emmo-inferredLength,
+        owl:NamedIndividual .
+
+:length182 a emmo:emmo-inferredLength,
+        owl:NamedIndividual .
+
+:length183 a emmo:emmo-inferredLength,
+        owl:NamedIndividual .
+
+:length184 a emmo:emmo-inferredLength,
+        owl:NamedIndividual .
+
+:length185 a emmo:emmo-inferredLength,
+        owl:NamedIndividual .
+
+:length186 a emmo:emmo-inferredLength,
+        owl:NamedIndividual .
+
+:length187 a emmo:emmo-inferredLength,
+        owl:NamedIndividual .
+
+:length188 a emmo:emmo-inferredLength,
+        owl:NamedIndividual .
+
+:length189 a emmo:emmo-inferredLength,
+        owl:NamedIndividual .
+
+:length19 a emmo:emmo-inferredLength,
+        owl:NamedIndividual .
+
+:length190 a emmo:emmo-inferredLength,
+        owl:NamedIndividual .
+
+:length191 a emmo:emmo-inferredLength,
+        owl:NamedIndividual .
+
+:length192 a emmo:emmo-inferredLength,
+        owl:NamedIndividual .
+
+:length193 a emmo:emmo-inferredLength,
+        owl:NamedIndividual .
+
+:length194 a emmo:emmo-inferredLength,
+        owl:NamedIndividual .
+
+:length195 a emmo:emmo-inferredLength,
+        owl:NamedIndividual .
+
+:length196 a emmo:emmo-inferredLength,
+        owl:NamedIndividual .
+
+:length197 a emmo:emmo-inferredLength,
+        owl:NamedIndividual .
+
+:length198 a emmo:emmo-inferredLength,
+        owl:NamedIndividual .
+
+:length199 a emmo:emmo-inferredLength,
+        owl:NamedIndividual .
+
+:length2 a emmo:emmo-inferredLength,
+        owl:NamedIndividual .
+
+:length20 a emmo:emmo-inferredLength,
+        owl:NamedIndividual .
+
+:length200 a emmo:emmo-inferredLength,
+        owl:NamedIndividual .
+
+:length201 a emmo:emmo-inferredLength,
+        owl:NamedIndividual .
+
+:length202 a emmo:emmo-inferredLength,
+        owl:NamedIndividual .
+
+:length203 a emmo:emmo-inferredLength,
+        owl:NamedIndividual .
+
+:length204 a emmo:emmo-inferredLength,
+        owl:NamedIndividual .
+
+:length205 a emmo:emmo-inferredLength,
+        owl:NamedIndividual .
+
+:length206 a emmo:emmo-inferredLength,
+        owl:NamedIndividual .
+
+:length207 a emmo:emmo-inferredLength,
+        owl:NamedIndividual .
+
+:length208 a emmo:emmo-inferredLength,
+        owl:NamedIndividual .
+
+:length209 a emmo:emmo-inferredLength,
+        owl:NamedIndividual .
+
+:length21 a emmo:emmo-inferredLength,
+        owl:NamedIndividual .
+
+:length210 a emmo:emmo-inferredLength,
+        owl:NamedIndividual .
+
+:length211 a emmo:emmo-inferredLength,
+        owl:NamedIndividual .
+
+:length212 a emmo:emmo-inferredLength,
+        owl:NamedIndividual .
+
+:length213 a emmo:emmo-inferredLength,
+        owl:NamedIndividual .
+
+:length214 a emmo:emmo-inferredLength,
+        owl:NamedIndividual .
+
+:length215 a emmo:emmo-inferredLength,
+        owl:NamedIndividual .
+
+:length216 a emmo:emmo-inferredLength,
+        owl:NamedIndividual .
+
+:length217 a emmo:emmo-inferredLength,
+        owl:NamedIndividual .
+
+:length218 a emmo:emmo-inferredLength,
+        owl:NamedIndividual .
+
+:length219 a emmo:emmo-inferredLength,
+        owl:NamedIndividual .
+
+:length22 a emmo:emmo-inferredLength,
+        owl:NamedIndividual .
+
+:length220 a emmo:emmo-inferredLength,
+        owl:NamedIndividual .
+
+:length221 a emmo:emmo-inferredLength,
+        owl:NamedIndividual .
+
+:length222 a emmo:emmo-inferredLength,
+        owl:NamedIndividual .
+
+:length223 a emmo:emmo-inferredLength,
+        owl:NamedIndividual .
+
+:length224 a emmo:emmo-inferredLength,
+        owl:NamedIndividual .
+
+:length225 a emmo:emmo-inferredLength,
+        owl:NamedIndividual .
+
+:length226 a emmo:emmo-inferredLength,
+        owl:NamedIndividual .
+
+:length227 a emmo:emmo-inferredLength,
+        owl:NamedIndividual .
+
+:length228 a emmo:emmo-inferredLength,
+        owl:NamedIndividual .
+
+:length229 a emmo:emmo-inferredLength,
+        owl:NamedIndividual .
+
+:length23 a emmo:emmo-inferredLength,
+        owl:NamedIndividual .
+
+:length230 a emmo:emmo-inferredLength,
+        owl:NamedIndividual .
+
+:length231 a emmo:emmo-inferredLength,
+        owl:NamedIndividual .
+
+:length232 a emmo:emmo-inferredLength,
+        owl:NamedIndividual .
+
+:length233 a emmo:emmo-inferredLength,
+        owl:NamedIndividual .
+
+:length234 a emmo:emmo-inferredLength,
+        owl:NamedIndividual .
+
+:length235 a emmo:emmo-inferredLength,
+        owl:NamedIndividual .
+
+:length236 a emmo:emmo-inferredLength,
+        owl:NamedIndividual .
+
+:length237 a emmo:emmo-inferredLength,
+        owl:NamedIndividual .
+
+:length238 a emmo:emmo-inferredLength,
+        owl:NamedIndividual .
+
+:length239 a emmo:emmo-inferredLength,
+        owl:NamedIndividual .
+
+:length24 a emmo:emmo-inferredLength,
+        owl:NamedIndividual .
+
+:length240 a emmo:emmo-inferredLength,
+        owl:NamedIndividual .
+
+:length25 a emmo:emmo-inferredLength,
+        owl:NamedIndividual .
+
+:length26 a emmo:emmo-inferredLength,
+        owl:NamedIndividual .
+
+:length27 a emmo:emmo-inferredLength,
+        owl:NamedIndividual .
+
+:length28 a emmo:emmo-inferredLength,
+        owl:NamedIndividual .
+
+:length29 a emmo:emmo-inferredLength,
+        owl:NamedIndividual .
+
+:length3 a emmo:emmo-inferredLength,
+        owl:NamedIndividual .
+
+:length30 a emmo:emmo-inferredLength,
+        owl:NamedIndividual .
+
+:length31 a emmo:emmo-inferredLength,
+        owl:NamedIndividual .
+
+:length32 a emmo:emmo-inferredLength,
+        owl:NamedIndividual .
+
+:length33 a emmo:emmo-inferredLength,
+        owl:NamedIndividual .
+
+:length34 a emmo:emmo-inferredLength,
+        owl:NamedIndividual .
+
+:length35 a emmo:emmo-inferredLength,
+        owl:NamedIndividual .
+
+:length36 a emmo:emmo-inferredLength,
+        owl:NamedIndividual .
+
+:length37 a emmo:emmo-inferredLength,
+        owl:NamedIndividual .
+
+:length38 a emmo:emmo-inferredLength,
+        owl:NamedIndividual .
+
+:length39 a emmo:emmo-inferredLength,
+        owl:NamedIndividual .
+
+:length4 a emmo:emmo-inferredLength,
+        owl:NamedIndividual .
+
+:length40 a emmo:emmo-inferredLength,
+        owl:NamedIndividual .
+
+:length41 a emmo:emmo-inferredLength,
+        owl:NamedIndividual .
+
+:length42 a emmo:emmo-inferredLength,
+        owl:NamedIndividual .
+
+:length43 a emmo:emmo-inferredLength,
+        owl:NamedIndividual .
+
+:length44 a emmo:emmo-inferredLength,
+        owl:NamedIndividual .
+
+:length45 a emmo:emmo-inferredLength,
+        owl:NamedIndividual .
+
+:length46 a emmo:emmo-inferredLength,
+        owl:NamedIndividual .
+
+:length47 a emmo:emmo-inferredLength,
+        owl:NamedIndividual .
+
+:length48 a emmo:emmo-inferredLength,
+        owl:NamedIndividual .
+
+:length49 a emmo:emmo-inferredLength,
+        owl:NamedIndividual .
+
+:length5 a emmo:emmo-inferredLength,
+        owl:NamedIndividual .
+
+:length50 a emmo:emmo-inferredLength,
+        owl:NamedIndividual .
+
+:length51 a emmo:emmo-inferredLength,
+        owl:NamedIndividual .
+
+:length52 a emmo:emmo-inferredLength,
+        owl:NamedIndividual .
+
+:length53 a emmo:emmo-inferredLength,
+        owl:NamedIndividual .
+
+:length54 a emmo:emmo-inferredLength,
+        owl:NamedIndividual .
+
+:length55 a emmo:emmo-inferredLength,
+        owl:NamedIndividual .
+
+:length56 a emmo:emmo-inferredLength,
+        owl:NamedIndividual .
+
+:length57 a emmo:emmo-inferredLength,
+        owl:NamedIndividual .
+
+:length58 a emmo:emmo-inferredLength,
+        owl:NamedIndividual .
+
+:length59 a emmo:emmo-inferredLength,
+        owl:NamedIndividual .
+
+:length6 a emmo:emmo-inferredLength,
+        owl:NamedIndividual .
+
+:length60 a emmo:emmo-inferredLength,
+        owl:NamedIndividual .
+
+:length61 a emmo:emmo-inferredLength,
+        owl:NamedIndividual .
+
+:length62 a emmo:emmo-inferredLength,
+        owl:NamedIndividual .
+
+:length63 a emmo:emmo-inferredLength,
+        owl:NamedIndividual .
+
+:length64 a emmo:emmo-inferredLength,
+        owl:NamedIndividual .
+
+:length65 a emmo:emmo-inferredLength,
+        owl:NamedIndividual .
+
+:length66 a emmo:emmo-inferredLength,
+        owl:NamedIndividual .
+
+:length67 a emmo:emmo-inferredLength,
+        owl:NamedIndividual .
+
+:length68 a emmo:emmo-inferredLength,
+        owl:NamedIndividual .
+
+:length69 a emmo:emmo-inferredLength,
+        owl:NamedIndividual .
+
+:length7 a emmo:emmo-inferredLength,
+        owl:NamedIndividual .
+
+:length70 a emmo:emmo-inferredLength,
+        owl:NamedIndividual .
+
+:length71 a emmo:emmo-inferredLength,
+        owl:NamedIndividual .
+
+:length72 a emmo:emmo-inferredLength,
+        owl:NamedIndividual .
+
+:length73 a emmo:emmo-inferredLength,
+        owl:NamedIndividual .
+
+:length74 a emmo:emmo-inferredLength,
+        owl:NamedIndividual .
+
+:length75 a emmo:emmo-inferredLength,
+        owl:NamedIndividual .
+
+:length76 a emmo:emmo-inferredLength,
+        owl:NamedIndividual .
+
+:length77 a emmo:emmo-inferredLength,
+        owl:NamedIndividual .
+
+:length78 a emmo:emmo-inferredLength,
+        owl:NamedIndividual .
+
+:length79 a emmo:emmo-inferredLength,
+        owl:NamedIndividual .
+
+:length8 a emmo:emmo-inferredLength,
+        owl:NamedIndividual .
+
+:length80 a emmo:emmo-inferredLength,
+        owl:NamedIndividual .
+
+:length81 a emmo:emmo-inferredLength,
+        owl:NamedIndividual .
+
+:length82 a emmo:emmo-inferredLength,
+        owl:NamedIndividual .
+
+:length83 a emmo:emmo-inferredLength,
+        owl:NamedIndividual .
+
+:length84 a emmo:emmo-inferredLength,
+        owl:NamedIndividual .
+
+:length85 a emmo:emmo-inferredLength,
+        owl:NamedIndividual .
+
+:length86 a emmo:emmo-inferredLength,
+        owl:NamedIndividual .
+
+:length87 a emmo:emmo-inferredLength,
+        owl:NamedIndividual .
+
+:length88 a emmo:emmo-inferredLength,
+        owl:NamedIndividual .
+
+:length89 a emmo:emmo-inferredLength,
+        owl:NamedIndividual .
+
+:length9 a emmo:emmo-inferredLength,
+        owl:NamedIndividual .
+
+:length90 a emmo:emmo-inferredLength,
+        owl:NamedIndividual .
+
+:length91 a emmo:emmo-inferredLength,
+        owl:NamedIndividual .
+
+:length92 a emmo:emmo-inferredLength,
+        owl:NamedIndividual .
+
+:length93 a emmo:emmo-inferredLength,
+        owl:NamedIndividual .
+
+:length94 a emmo:emmo-inferredLength,
+        owl:NamedIndividual .
+
+:length95 a emmo:emmo-inferredLength,
+        owl:NamedIndividual .
+
+:length96 a emmo:emmo-inferredLength,
+        owl:NamedIndividual .
+
+:length97 a emmo:emmo-inferredLength,
+        owl:NamedIndividual .
+
+:length98 a emmo:emmo-inferredLength,
+        owl:NamedIndividual .
+
+:length99 a emmo:emmo-inferredLength,
+        owl:NamedIndividual .
+

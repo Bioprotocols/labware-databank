@@ -43,10 +43,10 @@ class LOLabwareABox:
         else:
             print("loading ontology from file: ", lw_abox_filename, " ...")
             self.lolwa = emmo_world.get_ontology(lw_abox_filename).load()
-            print(" ##### classes:", list(self.lolwa.classes()))  
+            print(" ##### classes:", list(self.lolwa.classes())) 
 
         self.lolwa.imported_ontologies.append(self.emmo)
-        self.lolwt.sync_attributes(name_policy="uuid", name_prefix="LOLWT_")
+        self.lolwt.sync_attributes(name_policy="uuid", name_prefix="LOLWA_")
         self.lolwa.sync_python_names()
 
         print("========= tbox classes:", list(self.lolwt.classes()), self.lolwt.Labware.iri)
@@ -81,7 +81,7 @@ class LOLabwareABox:
                 print( self.clean_id(row['Id']), "-- >", row['Manufacturer'], row['ProductID'], row['UNSPSC'], "EC: ", row['eClass'] )
                 law = self.lolwt.Labware( self.clean_id(row['Id']),
                                         # ;Description;ImageLink/URL;UNSPSC;eClass;Vendor;CatalogueID;WellCount;ColumnCount;RowCount;LabwareLength/mm;LabwareWidth/mm;LabwareHeight/mm;Mass/g;LabwareMaterial;SurfaceTreatment;Color;WellVolume/ul;A1Position(col,row);WellDiameter/mm;WellColDistance/mm;WellRowDistance/mm;WellDepth/mm;WellShape;WellBottomShape;Liddable/bool;Lid((Manufacturer, ProdID));Applications;AcceptableLids
-                                        hasManufacturer=row['Manufacturer'],
+                                       # hasManufacturer=row['Manufacturer'],
                                         hasProductID=row['ProductID'] if row['ProductID'] is not np.nan else "unknown",
                                         # LabWareType
                                         # Description

@@ -52,8 +52,7 @@ email: mark.doerr@suni-greifswald.de
     rdfs:range xsd:decimal ;
     skos:prefLabel "hasLengthTolerance"@en .
 
-:labop_253d3d8f-aa5f-538b-9c70-6c4c275f0163 a owl:DatatypeProperty,
-        owl:FunctionalProperty ;
+:labop_253d3d8f-aa5f-538b-9c70-6c4c275f0163 a owl:DatatypeProperty ;
     emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 "Labware color description, e.g. white, black, opaque, blue, transparent, ..."@en ;
     rdfs:domain :labop_1d4c2a98-e5bd-5154-8fc8-3c33118e9019 ;
     rdfs:range xsd:string ;
@@ -308,11 +307,18 @@ email: mark.doerr@suni-greifswald.de
     rdfs:range xsd:string ;
     skos:prefLabel "hasA1Position"@en .
 
-:labop_0a01364b-3379-5120-8c42-2944c8d8c04c a owl:DatatypeProperty,
+:labop_f9caf64b-2259-5887-a846-f59658a5759a a owl:DatatypeProperty,
         owl:FunctionalProperty ;
+    emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 "Labware is transparent in the visible range between 380 and 780 nm"@en ;
+    rdfs:domain :labop_1d4c2a98-e5bd-5154-8fc8-3c33118e9019 ;
+    rdfs:range xsd:boolean ;
+    skos:prefLabel "isTransparent"@en .
+
+:labop_0a01364b-3379-5120-8c42-2944c8d8c04c a owl:FunctionalProperty,
+        owl:ObjectProperty ;
     emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 "3D model of Well shape"@en ;
     rdfs:domain :labop_1d4c2a98-e5bd-5154-8fc8-3c33118e9019 ;
-    rdfs:range xsd:string ;
+    rdfs:range :labop_712849c9-893a-5902-9858-663cb9451c1e ;
     skos:prefLabel "hasShapeModel3D"@en .
 
 :labop_0f8b1a08-707a-5941-ae31-21232cef51f7 a owl:Class ;
@@ -432,9 +438,14 @@ email: mark.doerr@suni-greifswald.de
     rdfs:range xsd:string ;
     skos:prefLabel "hasProductID"@en .
 
+:labop_712849c9-893a-5902-9858-663cb9451c1e a owl:Class ;
+    emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 "3D model of the labware in X format. STL ?"@en ;
+    rdfs:subClassOf owl:Thing ;
+    skos:prefLabel "Model3D"@en .
+
 :labop_71b68d12-f079-5318-bbc9-5c1282825a54 a owl:DatatypeProperty,
         owl:FunctionalProperty ;
-    emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 "wWll-to-well distance in row direction"@en ;
+    emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 "Well-to-well distance in row direction"@en ;
     rdfs:domain :labop_1d4c2a98-e5bd-5154-8fc8-3c33118e9019 ;
     rdfs:range xsd:decimal ;
     skos:prefLabel "hasWellDistRow"@en .
@@ -499,6 +510,11 @@ email: mark.doerr@suni-greifswald.de
     rdfs:range xsd:boolean ;
     skos:prefLabel "isLiddable"@en .
 
+:labop_bfde4952-1a5a-555a-b097-aaad5e001b74 a owl:Class ;
+    emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 "Labware Manufacturer"@en ;
+    rdfs:subClassOf owl:Thing ;
+    skos:prefLabel "Manufacturer"@en .
+
 :labop_c29c7399-f254-5730-90a9-17fb19e8aee6 a owl:DatatypeProperty,
         owl:FunctionalProperty ;
     emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 "Total Labware volume "@en ;
@@ -513,11 +529,11 @@ email: mark.doerr@suni-greifswald.de
     rdfs:range xsd:string ;
     skos:prefLabel "hasShapeWell"@en .
 
-:labop_c42b0b6f-570e-5e17-a000-552f4a7d2dfd a owl:DatatypeProperty,
-        owl:FunctionalProperty ;
+:labop_c42b0b6f-570e-5e17-a000-552f4a7d2dfd a owl:FunctionalProperty,
+        owl:ObjectProperty ;
     emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 "Name of the Manufacturer "@en ;
     rdfs:domain :labop_1d4c2a98-e5bd-5154-8fc8-3c33118e9019 ;
-    rdfs:range xsd:string ;
+    rdfs:range :labop_bfde4952-1a5a-555a-b097-aaad5e001b74 ;
     skos:prefLabel "hasManufacturer"@en .
 
 :labop_c950b55d-3d97-54c3-93ad-0ea98462a3d0 a owl:Class ;
@@ -553,12 +569,17 @@ email: mark.doerr@suni-greifswald.de
     rdfs:range xsd:integer ;
     skos:prefLabel "hasNumWells"@en .
 
-:labop_ee4213b2-cd8b-50c1-8732-88504c4bd47a a owl:DatatypeProperty,
-        owl:FunctionalProperty ;
+:labop_ee4213b2-cd8b-50c1-8732-88504c4bd47a a owl:FunctionalProperty,
+        owl:ObjectProperty ;
     emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 "2D model of Well shape"@en ;
     rdfs:domain :labop_1d4c2a98-e5bd-5154-8fc8-3c33118e9019 ;
-    rdfs:range xsd:string ;
+    rdfs:range :labop_f60b71ff-c0b7-5fbd-bd18-ab4bb7b23c68 ;
     skos:prefLabel "hasShapeModel2D"@en .
+
+:labop_f60b71ff-c0b7-5fbd-bd18-ab4bb7b23c68 a owl:Class ;
+    emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 "2D model of the labware in X format. SVG ?"@en ;
+    rdfs:subClassOf owl:Thing ;
+    skos:prefLabel "Model2D"@en .
 
 :labop_f89e593f-2fc4-5a8a-819c-e698faf6d746 a owl:DatatypeProperty,
         owl:FunctionalProperty ;
