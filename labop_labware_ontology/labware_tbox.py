@@ -182,19 +182,23 @@ class LOLabwareTBox:
                 # URL of the manufacturer website
                 # alternative names 
                 # create Individuals for each manufacturer
+                manufacturerURL = ""
+                primaryName = ""
+                alternativeNames = []
+
 
             class Model2D(self.emmo.Thing):
                 """2D model of the labware in X format. SVG ?"""
 
-                # URL of the model
-                # string representation of the model
+                modelURL = ""    # URL to the model
+                model2D = ""     # 2D model as string representation of the model
 
             class Model3D(self.emmo.Thing):
                 """3D model of the labware in X format. STL ?"""
                 wikipediaEntry = en("https://en.wikipedia.org/wiki/3D_modeling")
 
-                # URL of the model
-                # string representation of the model
+                modelURL = ""    # URL to the model
+                model3D = ""     # 3D model as string representation of the model
 
 
             class Labware(self.emmo.Device):
@@ -429,7 +433,7 @@ class LOLabwareTBox:
             
             # further properties:
 
-            # lengthAtEdge, lengthOverall, isSLAS1-2004complian
+            # lengthAtEdge, lengthOverall, isSLAS1-2004compliant
 
             # isSLAS1-2004compliant
 
@@ -441,6 +445,76 @@ class LOLabwareTBox:
             # can be used for faster type testing
             # ===================================================
 
+            class SLAS_1_2004_Plate(Labware):
+                """Microtiter Plate according to SLAS 4-2004 standard"""
+                equivalent_to = [ Labware & hasNumCols.value(12) &  hasNumRows.value(8) & hasNumWells.value(96) 
+                                & hasWellVolume.value(100) & hasWellDistRow.value(9) & hasWellDistCol.value(9) 
+                                & hasDepthWell.value(14.5) & hasShapeWell.value("round") & hasShapeWellBottom.value("flat") 
+                                & hasTopRadiusXY.value(4.5) & hasBottomRadiusXY.value(4.5) & hasBottomRadiusZ.value(0) 
+                                & hasConeAngle.value(0) & hasConeDepth.value(0) & hasShapePolygonXY.value(0) 
+                                & hasShapePolygonZ.value(0) & hasShapeModel2D.value("circle") & hasShapeModel3D.value("cylinder") 
+                                & hasScrewCap.value(False) & hasScrewCapMaterial.value("N/A") & hasScrewCapColor.value("N/A") 
+                                & hasColorRGB.value("#FFFFFF") & hasMaterial.value("polystyrene") & hasMass.value(0) 
+                                & hasMaxSheerForce.value(0) & hasCoatingMaterial.value("N/A") & hasSetptum.value(False) 
+                                & hasSeptumMaterial.value("N/A") & hasSeptumPenetrationForce.value(0) & isLiddable.value(False) & isStackable.value(True) 
+                                & isSealable.value(False) & hasManufacturer.value("N/A") & isProductType.value("N/A") & hasModelID.value("N/A") & hasProductID.value("N/A") ]
+                
+            class SLAS_2_2004_4_Plate(Labware):
+                """Microtiter Plate according to SLAS 4-2004 standard"""
+                equivalent_to = [ Labware & hasNumCols.value(12) &  hasNumRows.value(8) & hasNumWells.value(96) 
+                                & hasWellVolume.value(100) & hasWellDistRow.value(9) & hasWellDistCol.value(9) 
+                                & hasDepthWell.value(14.5) & hasShapeWell.value("round") & hasShapeWellBottom.value("flat") 
+                                & hasTopRadiusXY.value(4.5) & hasBottomRadiusXY.value(4.5) & hasBottomRadiusZ.value(0) 
+                                & hasConeAngle.value(0) & hasConeDepth.value(0) & hasShapePolygonXY.value(0) 
+                                & hasShapePolygonZ.value(0) & hasShapeModel2D.value("circle") & hasShapeModel3D.value("cylinder") 
+                                & hasScrewCap.value(False) & hasScrewCapMaterial.value("N/A") & hasScrewCapColor.value("N/A") 
+                                & hasColorRGB.value("#FFFFFF") & hasMaterial.value("polystyrene") & hasMass.value(0) 
+                                & hasMaxSheerForce.value(0) & hasCoatingMaterial.value("N/A") & hasSetptum.value(False) 
+                                & hasSeptumMaterial.value("N/A") & hasSeptumPenetrationForce.value(0) & isLiddable.value(False) & isStackable.value(True) 
+                                & isSealable.value(False) & hasManufacturer.value("N/A") & isProductType.value("N/A") & hasModelID.value("N/A") & hasProductID.value("N/A") ]
+                
+            class SLAS_2_2004_4_1_Plate(Labware):
+                """Microtiter Plate according to SLAS 4-2004 standard"""
+                equivalent_to = [ Labware & hasNumCols.value(12) &  hasNumRows.value(8) & hasNumWells.value(96) 
+                                & hasWellVolume.value(100) & hasWellDistRow.value(9) & hasWellDistCol.value(9) 
+                                & hasDepthWell.value(14.5) & hasShapeWell.value("round") & hasShapeWellBottom.value("flat") 
+                                & hasTopRadiusXY.value(4.5) & hasBottomRadiusXY.value(4.5) & hasBottomRadiusZ.value(0) 
+                                & hasConeAngle.value(0) & hasConeDepth.value(0) & hasShapePolygonXY.value(0) 
+                                & hasShapePolygonZ.value(0) & hasShapeModel2D.value("circle") & hasShapeModel3D.value("cylinder") 
+                                & hasScrewCap.value(False) & hasScrewCapMaterial.value("N/A") & hasScrewCapColor.value("N/A") 
+                                & hasColorRGB.value("#FFFFFF") & hasMaterial.value("polystyrene") & hasMass.value(0) 
+                                & hasMaxSheerForce.value(0) & hasCoatingMaterial.value("N/A") & hasSetptum.value(False) 
+                                & hasSeptumMaterial.value("N/A") & hasSeptumPenetrationForce.value(0) & isLiddable.value(False) & isStackable.value(True) 
+                                & isSealable.value(False) & hasManufacturer.value("N/A") & isProductType.value("N/A") & hasModelID.value("N/A") & hasProductID.value("N/A") ]
+
+            class SLAS_4_2004_Plate(Labware):
+                """96 Well Microtiter Plate according to SLAS 4-2004 standard"""
+                equivalent_to = [ Labware & hasNumCols.value(12) &  hasNumRows.value(8) & hasNumWells.value(96) 
+                                & hasWellVolume.value(100) & hasWellDistRow.value(9) & hasWellDistCol.value(9) 
+                                & hasDepthWell.value(14.5) & hasShapeWell.value("round") & hasShapeWellBottom.value("flat") 
+                                & hasTopRadiusXY.value(4.5) & hasBottomRadiusXY.value(4.5) & hasBottomRadiusZ.value(0) 
+                                & hasConeAngle.value(0) & hasConeDepth.value(0) & hasShapePolygonXY.value(0) 
+                                & hasShapePolygonZ.value(0) & hasShapeModel2D.value("circle") & hasShapeModel3D.value("cylinder") 
+                                & hasScrewCap.value(False) & hasScrewCapMaterial.value("N/A") & hasScrewCapColor.value("N/A") 
+                                & hasColorRGB.value("#FFFFFF") & hasMaterial.value("polystyrene") & hasMass.value(0) 
+                                & hasMaxSheerForce.value(0) & hasCoatingMaterial.value("N/A") & hasSetptum.value(False) 
+                                & hasSeptumMaterial.value("N/A") & hasSeptumPenetrationForce.value(0) & isLiddable.value(False) & isStackable.value(True) 
+                                & isSealable.value(False) & hasManufacturer.value("N/A") & isProductType.value("N/A") & hasModelID.value("N/A") & hasProductID.value("N/A") ]
+                
+            class SLAS_1_2004_96_Well_Plate(Labware):
+                """96 Well Microtiter Plate according to SLAS 4-2004 standard"""
+                equivalent_to = [ Labware & hasNumCols.value(12) &  hasNumRows.value(8) & hasNumWells.value(96) 
+                                & hasWellVolume.value(100) & hasWellDistRow.value(9) & hasWellDistCol.value(9) 
+                                & hasDepthWell.value(14.5) & hasShapeWell.value("round") & hasShapeWellBottom.value("flat") 
+                                & hasTopRadiusXY.value(4.5) & hasBottomRadiusXY.value(4.5) & hasBottomRadiusZ.value(0) 
+                                & hasConeAngle.value(0) & hasConeDepth.value(0) & hasShapePolygonXY.value(0) 
+                                & hasShapePolygonZ.value(0) & hasShapeModel2D.value("circle") & hasShapeModel3D.value("cylinder") 
+                                & hasScrewCap.value(False) & hasScrewCapMaterial.value("N/A") & hasScrewCapColor.value("N/A") 
+                                & hasColorRGB.value("#FFFFFF") & hasMaterial.value("polystyrene") & hasMass.value(0) 
+                                & hasMaxSheerForce.value(0) & hasCoatingMaterial.value("N/A") & hasSetptum.value(False) 
+                                & hasSeptumMaterial.value("N/A") & hasSeptumPenetrationForce.value(0) & isLiddable.value(False) & isStackable.value(True) 
+                                & isSealable.value(False) & hasManufacturer.value("N/A") & isProductType.value("N/A") & hasModelID.value("N/A") & hasProductID.value("N/A") ]
+                
             class SLAS_4_2004_96_Well_Plate(Labware):
                 """96 Well Microtiter Plate according to SLAS 4-2004 standard"""
                 equivalent_to = [ Labware & hasNumCols.value(12) &  hasNumRows.value(8) & hasNumWells.value(96) 

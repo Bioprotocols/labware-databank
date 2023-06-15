@@ -81,7 +81,7 @@ class LOLabwareABox:
                 print( self.clean_id(row['Id']), "-- >", row['Manufacturer'], row['ProductID'], row['UNSPSC'], "EC: ", row['eClass'] )
                 law = self.lolwt.Labware( self.clean_id(row['Id']),
                                         # ;Description;ImageLink/URL;UNSPSC;eClass;Vendor;CatalogueID;WellCount;ColumnCount;RowCount;LabwareLength/mm;LabwareWidth/mm;LabwareHeight/mm;Mass/g;LabwareMaterial;SurfaceTreatment;Color;WellVolume/ul;A1Position(col,row);WellDiameter/mm;WellColDistance/mm;WellRowDistance/mm;WellDepth/mm;WellShape;WellBottomShape;Liddable/bool;Lid((Manufacturer, ProdID));Applications;AcceptableLids
-                                       # hasManufacturer=row['Manufacturer'],
+                                        hasManufacturer=self.lolwt.Manufacturer(primaryName=row['Manufacturer']),
                                         hasProductID=row['ProductID'] if row['ProductID'] is not np.nan else "unknown",
                                         # LabWareType
                                         # Description
