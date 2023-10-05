@@ -14,7 +14,7 @@ from ..generated.labwareautomationservice import (
     LabwareAutomationServiceBase,
 )
 
-from labop_labware_ontology.labop_labware_ontology_impl import LabwareInterface
+from labop_labware_ontology.labop_labware_ontology_impl import LabwareDBInterface
 
 if TYPE_CHECKING:
     from ..server import Server
@@ -28,7 +28,7 @@ class LabwareAutomationServiceImpl(LabwareAutomationServiceBase):
        
         print("**** ------", self.parent_server.emmo_filename)
 
-        self.labware_ontology = LabwareInterface( emmo_filename=self.parent_server.emmo_filename, 
+        self.labware_ontology = LabwareDBInterface( emmo_filename=self.parent_server.emmo_filename, 
                                                   lw_tbox_filename=self.parent_server.lw_tbox_filename, 
                                                   lw_abox_filename=self.parent_server.lw_abox_filename)
         self.lw_abox = self.labware_ontology.lolw_abox.lolwa

@@ -22,7 +22,7 @@ ________________________________________________________________________
 # here is a 
 from abc import ABCMeta, abstractclassmethod
 
-class LOLabwareInterface(metaclass=ABCMeta):
+class LOLabwareDBInterface(metaclass=ABCMeta):
     """ LabOP Labware Ontology formal Interface
         TODO: test, if ABC baseclass is working
     """

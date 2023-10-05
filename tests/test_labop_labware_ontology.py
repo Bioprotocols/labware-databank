@@ -2,8 +2,8 @@
 """Tests for `labop_labware_ontology` package."""
 # pylint: disable=redefined-outer-name
 from labop_labware_ontology import __version__
-from labop_labware_ontology.labop_labware_ontology_interface import LOLabwareInterface
-from labop_labware_ontology.labop_labware_ontology_impl import LabwareInterface
+from labop_labware_ontology.labop_labware_ontology_interface import LOLabwareDBInterface
+from labop_labware_ontology.labop_labware_ontology_impl import LabwareDBInterface
 
 def test_version():
     """Sample pytest test function."""
@@ -12,12 +12,12 @@ def test_version():
 def test_LOLabwareInterface():
     """ testing the formal interface (GreeterInterface)
     """
-    assert issubclass(LabwareInterface, LOLabwareInterface)
+    assert issubclass(LabwareDBInterface, LOLabwareDBInterface)
 
 def test_LabwareInterface():
-    """ Testing LabwareInterface class
+    """ Testing LabwareDBInterface class
     """
-    lwi = LabwareInterface()
+    lwi = LabwareDBInterface()
      
     assert lwi.lolw_tbox.lolwt_base_iri == 'http://www.labop.org/labware-t#'
 

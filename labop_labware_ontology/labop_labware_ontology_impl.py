@@ -4,7 +4,7 @@
 
 * Labop labware interface implementation *
 
-:details:  Main module LabwareInterface implementation.
+:details:  Main module LabwareDBInterface implementation.
 
 .. note:: -
 .. todo:: - 
@@ -21,7 +21,7 @@ from ontopy.utils import write_catalog
 from owlready2 import onto_path
 
 
-from labop_labware_ontology.labop_labware_ontology_interface import LOLabwareInterface
+from labop_labware_ontology.labop_labware_ontology_interface import LOLabwareDBInterface
 from labop_labware_ontology import __version__  # Version of this ontology
 
 from labop_labware_ontology.emmo_extension_tbox import EMMOExtensionTBox
@@ -32,7 +32,7 @@ from labop_labware_ontology.export_ontology import export_ontology
 
 logger = logging.getLogger(__name__)
 
-class LabwareInterface(LOLabwareInterface):
+class LabwareDBInterface(LOLabwareDBInterface):
     def __init__(self, db_path: str = None, 
                  db_name: str = None,
                  ontology_path: str = '.',
@@ -40,7 +40,7 @@ class LabwareInterface(LOLabwareInterface):
                  lw_tbox_filename: str = None,
                  export_tbox: bool = False,
                  lw_abox_filename: str = None,) -> None:
-        """Implementation of the LOLabwareInterface
+        """Implementation of the LOLabwareDBInterface
         """
         db_name_full = None
 
@@ -92,7 +92,7 @@ class LabwareInterface(LOLabwareInterface):
             self.emmo = self.emmo_world.get_ontology(self.emmo_url)
         self.emmo.load()               # reload_if_newer = True
         self.emmo.sync_python_names()  # synchronize annotations
-        self.emmo.base_iri = self.emmo.base_iri.rstrip('/#')
+        #self.emmo.base_iri = self.emmo.base_iri.rstrip('/#')
         self.catalog_mappings = {self.emmo.base_iri: self.emmo_url}
 
 
@@ -108,7 +108,12 @@ class LabwareInterface(LOLabwareInterface):
         if export_tbox: 
             #self.lolw_tbox.lolwt.save('labop_labware_emmo.ttl', format='turtle')
 
-            export_ontology(ontology=self.lolw_tbox.lolwt, path=ontology_path, onto_base_filename='labop_labware_tbox', format='turtle', emmo_url="http://emmo.info/emmo#")
+            self.emmo_ext_tbox.emmo.save('labop_labware_emmo_ext.ttl', format='turtle')
+            #self.emmo_ext_tbox.export(path=ontology_path) #, onto_base_filename='labop_labware_emmo', format='turtle', emmo_url="http://emmo.info/emmo#")
+
+            self.lolw_tbox.lolwt.save('labop_labware_tbox.ttl', format='turtle')
+
+            #export_ontology(ontology=self.lolw_tbox.lolwt, path=ontology_path, onto_base_filename='labop_labware_tbox', format='turtle', emmo_url="http://emmo.info/emmo#")
 
         #self.lolw.imported_ontologies.append(self.lolw_tbox.lolw)
         
@@ -122,7 +127,7 @@ class LabwareInterface(LOLabwareInterface):
 
         #self.emmo_ext_tbox.export(path=path, format=format)
         #self.lolw_tbox.export(path=path, format=format)
-        self.lolw_abox.export(path=path, format=format)
+        self.lolw_abox.export(path=path+"labop_labware_abox.ttl", format=format)
 
 
 

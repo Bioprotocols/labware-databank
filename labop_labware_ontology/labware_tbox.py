@@ -24,6 +24,8 @@ ________________________________________________________________________
 
 
 import os
+import argparse
+import sys
 import pathlib
 import logging
 
@@ -32,36 +34,33 @@ from ontopy.utils import write_catalog
 
 from labop_labware_ontology.emmo_utils import en, pl
 
-from owlready2 import DatatypeProperty, FunctionalProperty, ObjectProperty, AllDisjoint
+from owlready2 import DatatypeProperty, FunctionalProperty, ObjectProperty, AllDisjoint, Thing
 
 from labop_labware_ontology import __version__ # Version of this ontology
 from labop_labware_ontology.export_ontology import export_ontology
 
+#from labop_labware_ontology.emmo_extension_tbox import EMMOExtensionTBox
+
 class LOLabwareTBox:
-    def __init__(self, lw_tbox_filename: str = None, emmo_world=None, emmo=None, emmo_url: str = None) -> None:
+    def __init__(self,
+                 emmo_world=None, 
+                 emmo=None, 
+                 emmo_url: str = None) -> None:
 
         self.emmo = emmo
+        self.emmo_world = emmo_world
         self.emmo_url = emmo_url
         
-        self.base_iri = 'http://www.labop.org/labop_labware_tbox#'
-
-        print("LOLabwareTBox:lw_tbox_filename:", lw_tbox_filename)
-
-        if lw_tbox_filename is None:
-            self.lolwt = emmo_world.get_ontology(self.base_iri)
-        else:
-            self.lolwt = emmo_world.get_ontology(lw_tbox_filename).load()
-
-        self.lolwt.imported_ontologies.append(self.emmo)
-        self.lolwt.sync_attributes(name_policy="uuid", name_prefix="LOLWT_")
-        self.lolwt.sync_python_names()
+        self.lolwt_base_iri = 'http://www.labop.org/labop_labware_tbox#'
         
-        # --- ontology definition
+        self.lolwt = self.emmo_world.get_ontology(self.lolwt_base_iri)
+        #self.lolwt.sync_attributes(name_policy="uuid", name_prefix="LOLWT_")
 
-        if lw_tbox_filename is None:
-            # define the ontology
-            print("++++++ defining ontology")
-            self.define_ontology()
+        self.lolwt.sync_python_names()
+        # --- ontology definition
+        self.define_ontology()
+
+        self.emmo.imported_ontologies.append(self.lolwt)
 
     def export(self, path: str = ".", format='turtle') -> None:
         """save ontology """
@@ -75,17 +74,29 @@ class LOLabwareTBox:
 
             # Terminology Components (TBox) 
 
+            class MeltingPoint(self.emmo.ThermodynamicTemperature):
+                """Melting Point of a substance"""
+                wikipediaEntry = en("https://en.wikipedia.org/wiki/Melting_point")
+
+            class BoilingPoint(self.emmo.ThermodynamicTemperature):
+                """Boiling Point of a substance"""
+                wikipediaEntry = en("https://en.wikipedia.org/wiki/Boiling_point")
+
+            class FlashPoint(self.emmo.ThermodynamicTemperature):
+                """Flash Point of a substance"""
+                wikipediaEntry = en("https://en.wikipedia.org/wiki/Flash_point")
+
 
             # labware visual representation
             
-            class ModelIcon:
+            class ModelIcon(self.emmo.Thing):
                 """Icon of the labware in X format. SVG ?"""
             
 
-            class Model2D:
+            class Model2D(self.emmo.Thing):
                 """2D model of the labware in X format. SVG ?"""
 
-            class Model3D:
+            class Model3D(self.emmo.Thing):
                 """3D model of the labware in X format. STL ?"""
                 wikipediaEntry = en("https://en.wikipedia.org/wiki/3D_modeling")
 
@@ -111,10 +122,10 @@ class LOLabwareTBox:
             class DepthWell(self.emmo.Length):
                 """Well total well depth=hight"""
             
-            class ShapeWell:
+            class ShapeWell(self.emmo.Thing):
                 """Well overall / top well shape,e.g. round, square, buffeled,..."""
             
-            class ShapeWellBottom:
+            class ShapeWellBottom(self.emmo.Thing):
                 """Well, bottom shape, flat, round, conical-"""
 
             class TopRadiusXY(self.emmo.Length):
@@ -132,16 +143,16 @@ class LOLabwareTBox:
             class ConeDepth(self.emmo.Length):
                 """Depth of cone from beginning of conical shape."""
 
-            class ShapePolygonXY:
+            class ShapePolygonXY(self.emmo.Thing):
                 """Generalized shape polygon for more complex well shapes, in xy plane / direction."""
 
-            class ShapePolygonZ:
+            class ShapePolygonZ(self.emmo.Thing):
                 """Generalized shape polygon for more complex well shapes, in z direction = rotation axis."""
 
-            class ShapeModel2D:
+            class ShapeModel2D(self.emmo.Thing):
                 """2D model of Well shape"""
 
-            class ShapeModel3D:
+            class ShapeModel3D(self.emmo.Thing):
                 """3D model of Well shape"""
 
             class FirstInteractionPosition(self.emmo.Vector):
@@ -154,27 +165,34 @@ class LOLabwareTBox:
             # Labware Vendor related properties
             # =================================
 
-            class Vendor:
+            class Vendor(self.emmo.Thing):
                 """Labware Vendor"""
 
-            class VendorProductNumber:
+            class VendorProductNumber(self.emmo.Thing):
                 """Labware Vendor Product Number"""
 
             # UNSPSC
-            class UNSPSC:
+            class UNSPSC(self.emmo.Thing):
                 """United Nations Standard Products and Services Code (UNSPSC) for labware"""
                 wikipediaEntry = en("https://en.wikipedia.org/wiki/UNSPSC")
 
             # eCl@ss
-            class EClass:
+            class EClass(self.emmo.Thing):
                 """eCl@ss for labware"""
                 wikipediaEntry = en("https://en.wikipedia.org/wiki/EClass")
 
+            
 
             # Labware Classes
             # ====================
 
-            # Basic ------
+            # Basic properties
+
+            class hasName(self.emmo.Symbol):
+                """Name of something"""
+                primaryName = []
+                alternativeNames = []
+
 
             class Manufacturer(self.emmo.Thing):
                 """Labware Manufacturer"""
@@ -183,8 +201,17 @@ class LOLabwareTBox:
                 # alternative names 
                 # create Individuals for each manufacturer
                 manufacturerURL = ""
-                primaryName = ""
-                alternativeNames = []
+                hasName
+
+            class SKU(self.emmo.Thing):
+                """Stock Keeping Unit (SKU) for labware"""
+                wikipediaEntry = en("https://en.wikipedia.org/wiki/Stock_keeping_unit")
+                
+                # Vendor or Manufacturer
+                # Vendor SKU
+                # Manufacturer SKU
+                # buissiness ontology for SKU - http://purl.org/goodrelations/v1#hasStockKeepingUnit
+
 
 
             class Model2D(self.emmo.Thing):
@@ -235,6 +262,10 @@ class LOLabwareTBox:
 
             class hasLength(Labware >> self.emmo.Length, FunctionalProperty, ObjectProperty):
                 """Labware total length, without  any additions, like lids etc."""
+                # alternativeNames = ["has horizontal depth"]
+                # check definitions and common usage of length, width, height, depth, diameter, radius, ...
+                # https://www.wikidata.org/wiki/Property:P5524
+
                 
 
             class hasLengthTolerance(self.emmo.Length >> float, FunctionalProperty, DatatypeProperty):
@@ -242,6 +273,8 @@ class LOLabwareTBox:
             
             class hasWidth(Labware >> self.emmo.Length, FunctionalProperty, ObjectProperty):
                 """Labware total width, without  any additions, like lids etc."""
+                # 
+                
             
             class hasWidthTolerance(self.emmo.Length >> float, FunctionalProperty, DatatypeProperty):
                 """Labware relative width tolerance (= measured width/target width)."""
@@ -533,10 +566,75 @@ class LOLabwareTBox:
 
             
 
-                
+def parse_command_line():
+    """ Looking for command line arguments"""
 
+    description = "oso_data"
+    parser = argparse.ArgumentParser(description=description)
+
+    parser.add_argument("_", nargs="*")
+
+    # ontologie output format
+
+    parser.add_argument('-p', '--path', type=str, default='.',
+                        help='output path (default: ".")')
+
+    parser.add_argument('-f', '--format', type=str, default='turtle',
+                        help='output format (default: turtle)')
+
+    parser.add_argument('-v', '--version', action='version', version='%(prog)s ' + __version__)
+
+    # add more arguments here
+
+    return parser.parse_args()
             
+def main():
+    """Console script for oso_data."""
+        # or use logging.INFO (=20) or logging.ERROR (=30) for less output
+    logging.basicConfig(
+        format='%(levelname)-4s| %(module)s.%(funcName)s: %(message)s', level=logging.DEBUG)
+    
+    
+    args = parse_command_line()
+        
+    if len(sys.argv) <= 2:
+        logging.debug("no arguments provided !")
+        return -1
+
+    print("Arguments: " + str(args._))
+    
+    logger = logging.getLogger(__name__)
+
+    EMMO_url = "https://emmo-repo.github.io/versions/1.0.0-beta5/emmo-inferred.ttl"
+    
+
+    # loading EMMO ontology
+    emmo_world = World()
+
+    emmo_filename = os.getenv("EMMO_FILENAME", default=EMMO_url)
+        
+    print("==== emmo env set to: ", emmo_filename )
+
+    if emmo_filename is not None:
+        emmo = emmo_world.get_ontology(emmo_filename)    
+    
+    emmo.load()               # reload_if_newer = True
+    emmo.sync_python_names()  # synchronize annotations
+    #self.emmo.base_iri = self.emmo.base_iri.rstrip('/#')
+    #self.catalog_mappings = {self.emmo.base_iri: emmo_url}
+
+    lolw_tbox = LOLabwareTBox( emmo_url = EMMO_url,
+                            emmo_world=emmo_world,
+                            emmo=emmo)
+
+    if args.path and args.format:
+        lolw_tbox.export(path=args.path, format=args.format)
+
+        logger.info("LOLW instance created")
+
+        return 0
 
 
+if __name__ == "__main__":
 
-            
+    sys.exit(main())  # pragma: no cover

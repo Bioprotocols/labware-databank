@@ -23,7 +23,7 @@ import logging
 import time
 from labop_labware_ontology import __version__
 
-from labop_labware_ontology.labop_labware_ontology_impl import LabwareInterface
+from labop_labware_ontology.labop_labware_ontology_impl import LabwareDBInterface
 
 logging.basicConfig(
     format="%(levelname)-4s| %(module)s.%(funcName)s: %(message)s",
@@ -72,7 +72,7 @@ def main():
     print("Arguments: " + str(args._))
     print("Replace this message by putting your code into labop_labware_ontology.__main__")
     
-    lolw = LabwareInterface()
+    lolw = LabwareDBInterface()
     if args.output_format:
         if args.import_csv is not None:
             lolw.lolw_abox.import_csv(args.import_csv)

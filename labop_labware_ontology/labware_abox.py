@@ -54,7 +54,8 @@ class LOLabwareABox:
     def export(self, path: str = ".", format='turtle') -> None:
         """save ontology """
         print("LOLabwareABox:export: path:", path)
-        export_ontology(ontology=self.lolwa, path=path, onto_base_filename='labop_labware_abox', format=format, emmo_url=self.emmo_url)
+        self.lolwa.save(path, format=format)
+        #export_ontology(ontology=self.lolwa, path=path, onto_base_filename='labop_labware_abox', format=format, emmo_url=self.emmo_url)
 
 
     # cleaning id string, by replace - with _ and removing spaces, stripping and lowercasing
@@ -75,13 +76,20 @@ class LOLabwareABox:
         print("##### - tb base iri:", self.lolwt.base_iri)
         print("##### - ab base iri:", self.lolwa.base_iri)
         print("##### - ab base iri:", self.lolwt.Labware.iri)
-        
+
         with self.lolwa:
+            manufacturer_dict = {}
+
             for index,row in labware_cat_df.iterrows():
                 print( self.clean_id(row['Id']), "-- >", row['Manufacturer'], row['ProductID'], row['UNSPSC'], "EC: ", row['eClass'] )
+
+                # create the manufacturer
+                if row['Manufacturer'] not in manufacturer_dict:
+                    manufacturer_dict[row['Manufacturer']] = self.lolwt.Manufacturer(self.lolwt.hasName(primaryName=row['Manufacturer']))
+
                 law = self.lolwt.Labware( self.clean_id(row['Id']),
                                         # ;Description;ImageLink/URL;UNSPSC;eClass;Vendor;CatalogueID;WellCount;ColumnCount;RowCount;LabwareLength/mm;LabwareWidth/mm;LabwareHeight/mm;Mass/g;LabwareMaterial;SurfaceTreatment;Color;WellVolume/ul;A1Position(col,row);WellDiameter/mm;WellColDistance/mm;WellRowDistance/mm;WellDepth/mm;WellShape;WellBottomShape;Liddable/bool;Lid((Manufacturer, ProdID));Applications;AcceptableLids
-                                        hasManufacturer=self.lolwt.Manufacturer(primaryName=row['Manufacturer']),
+                                        hasManufacturer=manufacturer_dict[row['Manufacturer']],
                                         hasProductID=row['ProductID'] if row['ProductID'] is not np.nan else "unknown",
                                         # LabWareType
                                         # Description
@@ -90,8 +98,8 @@ class LOLabwareABox:
                                         #hasEClass=row['eClass'] if row['eClass'] is not np.nan else "unknown",
                                         #hasVendorName=row['Vendor'],
                                         #hasVendorProductID=row['CatalogueNumber'],
-                                        hasNumWells=row['WellCount'] if row['WellCount'] is not np.nan else 0,
-                                        hasNumCols=row['ColumnCount'] if row['ColumnCount'] is not np.nan else 0,
+                                        hasNumWells=row['WellCount'] if row['WellCount'] is not np.nan else None, # TODO: check if this is correct
+                                        hasNumCols=row['ColumnCount'] if row['ColumnCount'] is not np.nan else 0, # TODO: should be None
                                         hasNumRows=row['RowCount'] if row['RowCount'] is not np.nan else 0,
                                         hasLength=self.emmo.Length(length=row['LabwareLength/mm']) if row['LabwareLength/mm'] is not np.nan else 0,
                                         hasWidth=self.emmo.Length(length=row['LabwareWidth/mm']) if row['LabwareWidth/mm'] is not np.nan else 0,
