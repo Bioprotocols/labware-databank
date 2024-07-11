@@ -111,6 +111,8 @@ docker run -it # -p 8888:8888 -v $(pwd):/home/jovyan/work labop_labware_ontology
 to debug the docker container, run:
 
 ```bash
+docker compose -f docker-compose.local.yml exec labware-databank bash
+
 docker run -it --entrypoint /bin/bash labop_labware_ontology
 ```
 

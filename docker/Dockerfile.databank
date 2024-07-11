@@ -93,7 +93,7 @@ COPY --chown=lara:lara entrypoint_databank.sh ${PROJECT_ROOT}/entrypoint.sh
 RUN  chmod +x ${PROJECT_ROOT}/entrypoint.sh
 
 # copy main lara-django script
-COPY --chown=lara:lara ontologies ${PROJECT_ROOT}/
+COPY --chown=lara:lara ontologies ${PROJECT_ROOT}/ontologies
 #COPY  --chown=lara:lara --from=production-build ${VIRTUAL_ENV} ./venv
 
 USER lara

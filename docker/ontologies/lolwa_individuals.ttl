@@ -1,0 +1,263 @@
+@prefix : <http://www.labop.org/labop_labware_abox#> .
+@prefix ns1: <http://www.labop.org/labop_labware_tbox#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://www.labop.org/labop_labware_abox> a owl:Ontology ;
+    owl:imports <http://www.labop.org/labop_labware_tbox> .
+
+:bottle_250 a ns1:Labware,
+        owl:NamedIndividual ;
+    ns1:hasManufacturer :Schott ;
+    ns1:hasNumCols 1 ;
+    ns1:hasNumRows 1 ;
+    ns1:hasNumWells 1 ;
+    ns1:hasProductID "unknown"^^xsd:string ;
+    ns1:hasVendorName "None"^^xsd:decimal .
+
+:chemspeed_mtp_96_sealed_pin_rack a ns1:Labware,
+        owl:NamedIndividual ;
+    ns1:hasManufacturer :Chemspeed ;
+    ns1:hasNumCols 12 ;
+    ns1:hasNumRows 8 ;
+    ns1:hasNumWells 96 ;
+    ns1:hasProductID "unknown"^^xsd:string ;
+    ns1:hasVendorName "None"^^xsd:decimal .
+
+:conical_50 a ns1:Labware,
+        owl:NamedIndividual ;
+    ns1:hasManufacturer :Greiner ;
+    ns1:hasNumCols 1 ;
+    ns1:hasNumRows 1 ;
+    ns1:hasNumWells 1 ;
+    ns1:hasProductID "227270"^^xsd:string ;
+    ns1:hasVendorName "None"^^xsd:decimal .
+
+:mtp_384_corning_4512_round_lv a ns1:Labware,
+        owl:NamedIndividual ;
+    ns1:hasManufacturer :Corning ;
+    ns1:hasNumCols 24 ;
+    ns1:hasNumRows 16 ;
+    ns1:hasNumWells 384 ;
+    ns1:hasProductID "4512"^^xsd:string ;
+    ns1:hasVendorName "None"^^xsd:decimal .
+
+:mtp_384_corning_4513_round_lv a ns1:Labware,
+        owl:NamedIndividual ;
+    ns1:hasManufacturer :Corning ;
+    ns1:hasNumCols 24 ;
+    ns1:hasNumRows 16 ;
+    ns1:hasNumWells 384 ;
+    ns1:hasProductID "4513"^^xsd:string ;
+    ns1:hasVendorName "None"^^xsd:decimal .
+
+:mtp_384_echo a ns1:Labware,
+        owl:NamedIndividual ;
+    ns1:hasManufacturer :Labcyte ;
+    ns1:hasNumCols 24 ;
+    ns1:hasNumRows 16 ;
+    ns1:hasNumWells 384 ;
+    ns1:hasProductID "PP-0200"^^xsd:string ;
+    ns1:hasVendorName "None"^^xsd:decimal .
+
+:mtp_384_flat_white_white_lv a ns1:Labware,
+        owl:NamedIndividual ;
+    ns1:hasManufacturer :Corning ;
+    ns1:hasNumCols 24 ;
+    ns1:hasNumRows 16 ;
+    ns1:hasNumWells 384 ;
+    ns1:hasProductID "3824"^^xsd:string ;
+    ns1:hasVendorName "None"^^xsd:decimal .
+
+:mtp_384_flat_white_white_nbs a ns1:Labware,
+        owl:NamedIndividual ;
+    ns1:hasManufacturer :Corning ;
+    ns1:hasNumCols 24 ;
+    ns1:hasNumRows 16 ;
+    ns1:hasNumWells 384 ;
+    ns1:hasProductID "3574"^^xsd:string ;
+    ns1:hasVendorName "None"^^xsd:decimal .
+
+:mtp_384_flat_white_white_optiplate a ns1:Labware,
+        owl:NamedIndividual ;
+    ns1:hasManufacturer :PerkinElmer ;
+    ns1:hasNumCols 24 ;
+    ns1:hasNumRows 16 ;
+    ns1:hasNumWells 384 ;
+    ns1:hasProductID "6007290"^^xsd:string ;
+    ns1:hasVendorName "None"^^xsd:decimal .
+
+:mtp_384_flatbottom_black_clear_tc a ns1:Labware,
+        owl:NamedIndividual ;
+    ns1:hasManufacturer :Corning ;
+    ns1:hasNumCols 24 ;
+    ns1:hasNumRows 16 ;
+    ns1:hasNumWells 384 ;
+    ns1:hasProductID "3764"^^xsd:string ;
+    ns1:hasVendorName "None"^^xsd:decimal .
+
+:mtp_384_pcr a ns1:Labware,
+        owl:NamedIndividual ;
+    ns1:hasManufacturer :Eppendorf ;
+    ns1:hasNumCols 24 ;
+    ns1:hasNumRows 16 ;
+    ns1:hasNumWells 384 ;
+    ns1:hasProductID "951020539"^^xsd:string ;
+    ns1:hasVendorName "AvantorSciences"^^xsd:string .
+
+:mtp_384_ubottom_black_clear_tc a ns1:Labware,
+        owl:NamedIndividual ;
+    ns1:hasManufacturer :Corning ;
+    ns1:hasNumCols 24 ;
+    ns1:hasNumRows 16 ;
+    ns1:hasNumWells 384 ;
+    ns1:hasProductID "3830"^^xsd:string ;
+    ns1:hasVendorName "None"^^xsd:decimal .
+
+:mtp_96_10_spot_uplex_msd a ns1:Labware,
+        owl:NamedIndividual ;
+    ns1:hasManufacturer :Mesoscale ;
+    ns1:hasNumCols 12 ;
+    ns1:hasNumRows 8 ;
+    ns1:hasNumWells 96 ;
+    ns1:hasProductID "K15069L"^^xsd:string ;
+    ns1:hasVendorName "None"^^xsd:decimal .
+
+:mtp_96_10_spot_vplex_m_pro_inflamm1_msd a ns1:Labware,
+        owl:NamedIndividual ;
+    ns1:hasManufacturer :Mesoscale ;
+    ns1:hasNumCols 12 ;
+    ns1:hasNumRows 8 ;
+    ns1:hasNumWells 96 ;
+    ns1:hasProductID "K15048G"^^xsd:string ;
+    ns1:hasVendorName "FisherScientific"^^xsd:string .
+
+:mtp_96_4_spot_mmip3a_msd a ns1:Labware,
+        owl:NamedIndividual ;
+    ns1:hasManufacturer :Mesoscale ;
+    ns1:hasNumCols 12 ;
+    ns1:hasNumRows 8 ;
+    ns1:hasNumWells 96 ;
+    ns1:hasProductID "K152MSD"^^xsd:string ;
+    ns1:hasVendorName "None"^^xsd:decimal .
+
+:mtp_96_flat a ns1:Labware,
+        owl:NamedIndividual ;
+    ns1:hasManufacturer :Corning ;
+    ns1:hasNumCols 12 ;
+    ns1:hasNumRows 8 ;
+    ns1:hasNumWells 96 ;
+    ns1:hasProductID "3632"^^xsd:string ;
+    ns1:hasVendorName "None"^^xsd:decimal .
+
+:mtp_96_flat_black_black_fluotrac_600 a ns1:Labware,
+        owl:NamedIndividual ;
+    ns1:hasManufacturer :Greiner ;
+    ns1:hasNumCols 12 ;
+    ns1:hasNumRows 8 ;
+    ns1:hasNumWells 96 ;
+    ns1:hasProductID "655077"^^xsd:string ;
+    ns1:hasVendorName "None"^^xsd:decimal .
+
+:mtp_96_flat_clear_costar_3590 a ns1:Labware,
+        owl:NamedIndividual ;
+    ns1:hasManufacturer :Costar ;
+    ns1:hasNumCols 12 ;
+    ns1:hasNumRows 8 ;
+    ns1:hasNumWells 96 ;
+    ns1:hasProductID "3590"^^xsd:string ;
+    ns1:hasVendorName "None"^^xsd:decimal .
+
+:mtp_96_flat_uv a ns1:Labware,
+        owl:NamedIndividual ;
+    ns1:hasManufacturer :Corning ;
+    ns1:hasNumCols 12 ;
+    ns1:hasNumRows 8 ;
+    ns1:hasNumWells 96 ;
+    ns1:hasProductID "3635"^^xsd:string ;
+    ns1:hasVendorName "None"^^xsd:decimal .
+
+:mtp_96_flat_white_dc a ns1:Labware,
+        owl:NamedIndividual ;
+    ns1:hasManufacturer :ThermoFisher ;
+    ns1:hasNumCols 12 ;
+    ns1:hasNumRows 8 ;
+    ns1:hasNumWells 96 ;
+    ns1:hasProductID "136101"^^xsd:string ;
+    ns1:hasVendorName "None"^^xsd:decimal .
+
+:mtp_96_v_kf a ns1:Labware,
+        owl:NamedIndividual ;
+    ns1:hasManufacturer :Fisher ;
+    ns1:hasNumCols 12 ;
+    ns1:hasNumRows 8 ;
+    ns1:hasNumWells 96 ;
+    ns1:hasProductID "22-387-030"^^xsd:string ;
+    ns1:hasVendorName "None"^^xsd:decimal .
+
+:nmr_tube_5mm a ns1:Labware,
+        owl:NamedIndividual ;
+    ns1:hasManufacturer :unknown ;
+    ns1:hasNumCols 1 ;
+    ns1:hasNumRows 1 ;
+    ns1:hasNumWells 1 ;
+    ns1:hasProductID "unknown"^^xsd:string ;
+    ns1:hasVendorName "None"^^xsd:decimal .
+
+:res_swmtp_96_hp a ns1:Labware,
+        owl:NamedIndividual ;
+    ns1:hasManufacturer :Axygen ;
+    ns1:hasNumCols 1 ;
+    ns1:hasNumRows 1 ;
+    ns1:hasNumWells 1 ;
+    ns1:hasProductID "res-sw96-hp"^^xsd:string ;
+    ns1:hasVendorName "None"^^xsd:decimal .
+
+:single_vbottom_microwell a ns1:Labware,
+        owl:NamedIndividual ;
+    ns1:hasManufacturer :unknown ;
+    ns1:hasNumCols 1 ;
+    ns1:hasNumRows 1 ;
+    ns1:hasNumWells 1 ;
+    ns1:hasProductID "unknown"^^xsd:string ;
+    ns1:hasVendorName "VWR"^^xsd:string .
+
+:Axygen a ns1:Manufacturer,
+        owl:NamedIndividual .
+
+:Chemspeed a ns1:Manufacturer,
+        owl:NamedIndividual .
+
+:Costar a ns1:Manufacturer,
+        owl:NamedIndividual .
+
+:Eppendorf a ns1:Manufacturer,
+        owl:NamedIndividual .
+
+:Fisher a ns1:Manufacturer,
+        owl:NamedIndividual .
+
+:Labcyte a ns1:Manufacturer,
+        owl:NamedIndividual .
+
+:PerkinElmer a ns1:Manufacturer,
+        owl:NamedIndividual .
+
+:Schott a ns1:Manufacturer,
+        owl:NamedIndividual .
+
+:ThermoFisher a ns1:Manufacturer,
+        owl:NamedIndividual .
+
+:Greiner a ns1:Manufacturer,
+        owl:NamedIndividual .
+
+:unknown a ns1:Manufacturer,
+        owl:NamedIndividual .
+
+:Mesoscale a ns1:Manufacturer,
+        owl:NamedIndividual .
+
+:Corning a ns1:Manufacturer,
+        owl:NamedIndividual .
+

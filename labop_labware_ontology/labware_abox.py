@@ -46,7 +46,9 @@ class LOLabwareABox:
             print(" ##### classes:", list(self.lolwa.classes())) 
 
         self.lolwa.imported_ontologies.append(self.emmo)
-        self.lolwt.sync_attributes(name_policy="uuid", name_prefix="LOLWA_")
+        self.lolwa.imported_ontologies.append(self.lolwt)
+
+        self.lolwt.sync_attributes(name_policy=None, name_prefix="LOLWA_")
         self.lolwa.sync_python_names()
 
         print("========= tbox classes:", list(self.lolwt.classes()), self.lolwt.Labware.iri)
@@ -54,8 +56,11 @@ class LOLabwareABox:
     def export(self, path: str = ".", format='turtle') -> None:
         """save ontology """
         print("LOLabwareABox:export: path:", path)
-        self.lolwa.save(path, format=format)
-        #export_ontology(ontology=self.lolwa, path=path, onto_base_filename='labop_labware_abox', format=format, emmo_url=self.emmo_url)
+        #self.lolwa.save(path, format=format)
+
+        #self.lolwa.sync_attributes(name_policy=None, name_prefix="LOLWA_")
+        # self.lolwa.sync_python_names()
+        export_ontology(ontology=self.lolwa, path=path, onto_base_filename='labop_labware_abox', format=format, emmo_url=self.emmo_url)
 
 
     # cleaning id string, by replace - with _ and removing spaces, stripping and lowercasing
@@ -77,20 +82,24 @@ class LOLabwareABox:
         print("##### - ab base iri:", self.lolwa.base_iri)
         print("##### - ab base iri:", self.lolwt.Labware.iri)
 
-        with self.lolwa:
+        #lolwt = self.lolwa.get_namespace('http://www.labop.org/labop_labware_tbox#')
+
+        with self.lolwa: 
             manufacturer_dict = {}
+            
 
             for index,row in labware_cat_df.iterrows():
-                print( self.clean_id(row['Id']), "-- >", row['Manufacturer'], row['ProductID'], row['UNSPSC'], "EC: ", row['eClass'] )
+                #print( self.clean_id(row['Id']), "-- >", row['Manufacturer'], row['ProductID'], row['UNSPSC'], "EC: ", row['eClass'] )
+                print( self.clean_id(row['Id']), "-- >", row['Manufacturer'], row['ProductID'], row['WellCount'] )
 
                 # create the manufacturer
-                if row['Manufacturer'] not in manufacturer_dict:
-                    manufacturer_dict[row['Manufacturer']] = self.lolwt.Manufacturer(self.lolwt.hasName(primaryName=row['Manufacturer']))
+                # if row['Manufacturer'] not in manufacturer_dict:
+                #     manufacturer_dict[row['Manufacturer']] = self.lolwt.Manufacturer(self.lolwt.hasName(primaryName=row['Manufacturer']))
 
                 law = self.lolwt.Labware( self.clean_id(row['Id']),
                                         # ;Description;ImageLink/URL;UNSPSC;eClass;Vendor;CatalogueID;WellCount;ColumnCount;RowCount;LabwareLength/mm;LabwareWidth/mm;LabwareHeight/mm;Mass/g;LabwareMaterial;SurfaceTreatment;Color;WellVolume/ul;A1Position(col,row);WellDiameter/mm;WellColDistance/mm;WellRowDistance/mm;WellDepth/mm;WellShape;WellBottomShape;Liddable/bool;Lid((Manufacturer, ProdID));Applications;AcceptableLids
-                                        hasManufacturer=manufacturer_dict[row['Manufacturer']],
-                                        hasProductID=row['ProductID'] if row['ProductID'] is not np.nan else "unknown",
+                                        #hasManufacturer=manufacturer_dict[row['Manufacturer']],
+                                        #hasProductID=row['ProductID'] if row['ProductID'] is not np.nan else "unknown",
                                         # LabWareType
                                         # Description
                                         #hasImageLink=row['ImageLink/URL'] if row['ImageLink/URL'] is not np.nan else "http://",
@@ -101,9 +110,9 @@ class LOLabwareABox:
                                         hasNumWells=row['WellCount'] if row['WellCount'] is not np.nan else None, # TODO: check if this is correct
                                         hasNumCols=row['ColumnCount'] if row['ColumnCount'] is not np.nan else 0, # TODO: should be None
                                         hasNumRows=row['RowCount'] if row['RowCount'] is not np.nan else 0,
-                                        hasLength=self.emmo.Length(length=row['LabwareLength/mm']) if row['LabwareLength/mm'] is not np.nan else 0,
-                                        hasWidth=self.emmo.Length(length=row['LabwareWidth/mm']) if row['LabwareWidth/mm'] is not np.nan else 0,
-                                        hasHeight=self.emmo.Length(length=row['LabwareHeight/mm']) if row['LabwareHeight/mm'] is not np.nan else 0,
+                                        #hasLength=self.emmo.Length(length=row['LabwareLength/mm']) if row['LabwareLength/mm'] is not np.nan else 0,
+                                        #hasWidth=self.emmo.Length(length=row['LabwareWidth/mm']) if row['LabwareWidth/mm'] is not np.nan else 0,
+                                        #hasHeight=self.emmo.Length(length=row['LabwareHeight/mm']) if row['LabwareHeight/mm'] is not np.nan else 0,
                                         #hasGrippingHeight=self.emmo.Length(length=float(row['LabwareHeight/mm']) - 2 )  if row['LabwareHeight/mm'] is not np.nan else 0,
                 #                         hasMass=row['Weight[g]'],
                 #                         # LabwareMaterial
@@ -130,4 +139,10 @@ class LOLabwareABox:
                 #                         # Applications;
                 #                         # Notes
                                     )
-                
+                #law.hasManufacturer = manufacturer_dict[row['Manufacturer']]
+                #law.hasNumWells = row['WellCount'] if row['WellCount'] is not np.nan else None
+                #law.hasNumCols = row['ColumnCount'] if row['ColumnCount'] is not np.nan else 0
+                #law.hasNumRows = row['RowCount'] if row['RowCount'] is not np.nan else 0
+                #law.hasLength = self.emmo.Length(length=row['LabwareLength/mm']) if row['LabwareLength/mm'] is not np.nan else 0
+                #law.hasWidth = self.emmo.Length(length=row['LabwareWidth/mm']) if row['LabwareWidth/mm'] is not np.nan else 0
+                #law.hasHeight = self.emmo.Length(length=row['LabwareHeight/mm']) if row['LabwareHeight/mm'] is not np.nan else 0

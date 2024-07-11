@@ -20,7 +20,7 @@ ________________________________________________________________________
 
 
 # here is a 
-from abc import ABCMeta, abstractclassmethod
+from abc import ABCMeta, abstractmethod
 
 class LOLabwareDBInterface(metaclass=ABCMeta):
     """ LabOP Labware Ontology formal Interface
@@ -32,7 +32,8 @@ class LOLabwareDBInterface(metaclass=ABCMeta):
                 callable(subclass.export_ontologies) or 
                 NotImplemented)
         
-    @abstractclassmethod 
+    @classmethod
+    @abstractmethod 
     def export_ontologies(self, ontology=None, path: str = None, 
                           onto_base_filename : str = None,  
                           format: str ='turtle', emmo_url:str = "") -> None:

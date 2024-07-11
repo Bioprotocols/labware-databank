@@ -1,3 +1,4 @@
+import os
 import glob
 import rdflib
 from rdflib import RDF, RDFS, ConjunctiveGraph, Literal, URIRef
@@ -92,8 +93,10 @@ g_orig = ConjunctiveGraph(
 store = "default"
 g = ConjunctiveGraph(store=store)
     
-file_list = glob.glob("*.ttl")
-print("ttl files: ", file_list)
+file_list = glob.glob("/opt/labwaredb/ontologies/*.ttl")
+print("curr dir:", os.getcwd())
+print("#### ttl files: ", file_list)
+
 
 for file in file_list:
     g.parse(file)

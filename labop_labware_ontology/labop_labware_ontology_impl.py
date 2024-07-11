@@ -62,7 +62,7 @@ class LabwareDBInterface(LOLabwareDBInterface):
         }
 
         # using latest EMMO ontology
-        self.emmo_url = "emmo-development"
+        self.emmo_url = "https://emmo-repo.github.io/versions/1.0.0-beta7/emmo-inferred.ttl" #"emmo-development"
 
         if ontology_path is not None:
             onto_path.append(ontology_path)
@@ -97,10 +97,10 @@ class LabwareDBInterface(LOLabwareDBInterface):
 
 
         # extending EMMO with Labware specific classes and properties
-        self.emmo_ext_tbox = EMMOExtensionTBox(emmo_filename=emmo_filename, emmo_ontology=self.emmo, emmo_url=self.emmo_url)
+        #self.emmo_ext_tbox = EMMOExtensionTBox(emmo_filename=emmo_filename, emmo_ontology=self.emmo, emmo_url=self.emmo_url)
 
         # create Labware Terminology box object
-        self.lolw_tbox = LOLabwareTBox(lw_tbox_filename=lw_tbox_filename, emmo_world=self.emmo_world, emmo=self.emmo, emmo_url=self.emmo_url)
+        self.lolw_tbox = LOLabwareTBox(emmo_world=self.emmo_world, emmo=self.emmo, emmo_url=self.emmo_url)
         
         lwt = self.lolw_tbox.lolwt.Labware.iri
         print(lwt)
@@ -108,7 +108,7 @@ class LabwareDBInterface(LOLabwareDBInterface):
         if export_tbox: 
             #self.lolw_tbox.lolwt.save('labop_labware_emmo.ttl', format='turtle')
 
-            self.emmo_ext_tbox.emmo.save('labop_labware_emmo_ext.ttl', format='turtle')
+            #self.emmo_ext_tbox.emmo.save('labop_labware_emmo_ext.ttl', format='turtle')
             #self.emmo_ext_tbox.export(path=ontology_path) #, onto_base_filename='labop_labware_emmo', format='turtle', emmo_url="http://emmo.info/emmo#")
 
             self.lolw_tbox.lolwt.save('labop_labware_tbox.ttl', format='turtle')
@@ -127,7 +127,7 @@ class LabwareDBInterface(LOLabwareDBInterface):
 
         #self.emmo_ext_tbox.export(path=path, format=format)
         #self.lolw_tbox.export(path=path, format=format)
-        self.lolw_abox.export(path=path+"labop_labware_abox.ttl", format=format)
+        self.lolw_abox.export(path=path, format=format)
 
 
 

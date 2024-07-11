@@ -3,12 +3,17 @@
 
 # Labop jupyter notebook entrypoint script
 
+source /opt/labwaredb/venv/bin/activate
+
+pip list
+
 echo "Starting databank uvicorn server"
 # rdflib-endpoint serve --host 0.0.0.0 --port 8000 *.ttl &
 cd /opt/labwaredb
 echo "workdir:"
 ls -Al
-echo "Starting databank uvicorn server"
+echo "Starting databank uvicorn server 1a"
+#uvicorn app.main:app --host 0.0.0.0 --port 8000 
 uvicorn app.main:app --host 0.0.0.0 --port 8000 &
 #rdflib-endpoint serve --host 0.0.0.0 --port 8000 *.ttl &
 
@@ -27,6 +32,6 @@ if [ "$SILA_SERVER" = "true" ]; then
 fi
 
 echo "RDFlib endpoint started"
-echo "Starting SiLA server .... --host 0.0.0.0  @port 50052"
+echo "Starting SiLA server ....host 0.0.0.0  @port 50052"
 python -m labop_labware_sila --insecure --verbose --port 50052
 

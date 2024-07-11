@@ -1,58 +1,40 @@
 @prefix : <http://www.labop.org/labop_labware_tbox#> .
-@prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<http://www.labop.org/labop_labware_tbox> a owl:Ontology ;
-    dcterms:abstract """None
- This ontology is released under the Creative Commons Attribution 4.0 International license (CC BY 4.0)
-"""@en ;
-    dcterms:contributor "mark doerr, Robert Goldman, Timmothy (Tim) Fallon"@en ;
-    dcterms:creator "mark doerr"@en ;
-    dcterms:license "https://creativecommons.org/licenses/by/4.0/"@en ;
-    dcterms:publisher "mark doerr"@en ;
-    dcterms:title "None"@en ;
-    rdfs:comment """Contacts:
- mark doerr 
- mark.doerr@uni-greifswald.de
-
-"""@en,
-        "The EMMO requires FaCT++ reasoner plugin in order to visualize allinferences and class hierarchy (ctrl+R hotkey in Protege)."@en,
-        "This ontology is generated with data from the EMMOntoPy Python package."@en ;
-    owl:versionIRI <https://labop.org/0.0.3/labop_labware_tbox> ;
-    owl:versionInfo "0.0.3"@en .
+<http://www.labop.org/labop_labware_tbox> a owl:Ontology .
 
 :BoilingPoint a owl:Class ;
-    rdfs:subClassOf <http://emmo.info/emmo#EMMO_affe07e4_e9bc_4852_86c6_69e26182a17f> .
+    rdfs:subClassOf <https://w3id.org/emmo#EMMO_affe07e4_e9bc_4852_86c6_69e26182a17f> .
 
 :BottomRadiusXY a owl:Class ;
-    rdfs:subClassOf <http://emmo.info/emmo#EMMO_cd2cd0de_e0cc_4ef1_b27e_2e88db027bac> .
+    rdfs:subClassOf <https://w3id.org/emmo#EMMO_cd2cd0de_e0cc_4ef1_b27e_2e88db027bac> .
 
 :BottomRadiusZ a owl:Class ;
-    rdfs:subClassOf <http://emmo.info/emmo#EMMO_cd2cd0de_e0cc_4ef1_b27e_2e88db027bac> .
+    rdfs:subClassOf <https://w3id.org/emmo#EMMO_cd2cd0de_e0cc_4ef1_b27e_2e88db027bac> .
 
 :ConeAngle a owl:Class ;
-    rdfs:subClassOf <http://emmo.info/emmo#EMMO_f3dd74c0_f480_49e8_9764_33b78638c235> .
+    rdfs:subClassOf <https://w3id.org/emmo#EMMO_f3dd74c0_f480_49e8_9764_33b78638c235> .
 
 :ConeDepth a owl:Class ;
-    rdfs:subClassOf <http://emmo.info/emmo#EMMO_cd2cd0de_e0cc_4ef1_b27e_2e88db027bac> .
+    rdfs:subClassOf <https://w3id.org/emmo#EMMO_cd2cd0de_e0cc_4ef1_b27e_2e88db027bac> .
 
 :DepthWell a owl:Class ;
-    rdfs:subClassOf <http://emmo.info/emmo#EMMO_cd2cd0de_e0cc_4ef1_b27e_2e88db027bac> .
+    rdfs:subClassOf <https://w3id.org/emmo#EMMO_cd2cd0de_e0cc_4ef1_b27e_2e88db027bac> .
 
 :EClass a owl:Class ;
     rdfs:subClassOf owl:Thing .
 
 :FirstInteractionPosition a owl:Class ;
-    rdfs:subClassOf <http://emmo.info/emmo#EMMO_06658d8d_dcde_4fc9_aae1_17f71c0bcdec> .
+    rdfs:subClassOf <https://w3id.org/emmo#EMMO_06658d8d_dcde_4fc9_aae1_17f71c0bcdec> .
 
 :FlashPoint a owl:Class ;
-    rdfs:subClassOf <http://emmo.info/emmo#EMMO_affe07e4_e9bc_4852_86c6_69e26182a17f> .
+    rdfs:subClassOf <https://w3id.org/emmo#EMMO_affe07e4_e9bc_4852_86c6_69e26182a17f> .
 
 :MeltingPoint a owl:Class ;
-    rdfs:subClassOf <http://emmo.info/emmo#EMMO_affe07e4_e9bc_4852_86c6_69e26182a17f> .
+    rdfs:subClassOf <https://w3id.org/emmo#EMMO_affe07e4_e9bc_4852_86c6_69e26182a17f> .
 
 :ModelIcon a owl:Class ;
     rdfs:subClassOf owl:Thing .
@@ -541,7 +523,7 @@
     rdfs:subClassOf owl:Thing .
 
 :TopRadiusXY a owl:Class ;
-    rdfs:subClassOf <http://emmo.info/emmo#EMMO_cd2cd0de_e0cc_4ef1_b27e_2e88db027bac> .
+    rdfs:subClassOf <https://w3id.org/emmo#EMMO_cd2cd0de_e0cc_4ef1_b27e_2e88db027bac> .
 
 :UNSPSC a owl:Class ;
     rdfs:subClassOf owl:Thing .
@@ -574,31 +556,31 @@
 :hasGrippingHeight a owl:FunctionalProperty,
         owl:ObjectProperty ;
     rdfs:domain :Labware ;
-    rdfs:range <http://emmo.info/emmo#EMMO_cd2cd0de_e0cc_4ef1_b27e_2e88db027bac> .
+    rdfs:range <https://w3id.org/emmo#EMMO_cd2cd0de_e0cc_4ef1_b27e_2e88db027bac> .
 
 :hasGrippingHeightLidding a owl:FunctionalProperty,
         owl:ObjectProperty ;
     rdfs:domain :Labware ;
-    rdfs:range <http://emmo.info/emmo#EMMO_cd2cd0de_e0cc_4ef1_b27e_2e88db027bac> .
+    rdfs:range <https://w3id.org/emmo#EMMO_cd2cd0de_e0cc_4ef1_b27e_2e88db027bac> .
 
 :hasGrippingHeightWithLid a owl:FunctionalProperty,
         owl:ObjectProperty ;
     rdfs:domain :Labware ;
-    rdfs:range <http://emmo.info/emmo#EMMO_cd2cd0de_e0cc_4ef1_b27e_2e88db027bac> .
+    rdfs:range <https://w3id.org/emmo#EMMO_cd2cd0de_e0cc_4ef1_b27e_2e88db027bac> .
 
 :hasGrippingPressure a owl:FunctionalProperty,
         owl:ObjectProperty ;
     rdfs:domain :Labware ;
-    rdfs:range <http://emmo.info/emmo#EMMO_50a44256_9dc5_434b_bad4_74a4d9a29989> .
+    rdfs:range <https://w3id.org/emmo#EMMO_50a44256_9dc5_434b_bad4_74a4d9a29989> .
 
 :hasHeight a owl:FunctionalProperty,
         owl:ObjectProperty ;
     rdfs:domain :Labware ;
-    rdfs:range <http://emmo.info/emmo#EMMO_cd2cd0de_e0cc_4ef1_b27e_2e88db027bac> .
+    rdfs:range <https://w3id.org/emmo#EMMO_cd2cd0de_e0cc_4ef1_b27e_2e88db027bac> .
 
 :hasHeightTolerance a owl:DatatypeProperty,
         owl:FunctionalProperty ;
-    rdfs:domain <http://emmo.info/emmo#EMMO_cd2cd0de_e0cc_4ef1_b27e_2e88db027bac> ;
+    rdfs:domain <https://w3id.org/emmo#EMMO_cd2cd0de_e0cc_4ef1_b27e_2e88db027bac> ;
     rdfs:range xsd:decimal .
 
 :hasHightLidded a owl:DatatypeProperty,
@@ -624,25 +606,25 @@
 :hasLength a owl:FunctionalProperty,
         owl:ObjectProperty ;
     rdfs:domain :Labware ;
-    rdfs:range <http://emmo.info/emmo#EMMO_cd2cd0de_e0cc_4ef1_b27e_2e88db027bac> .
+    rdfs:range <https://w3id.org/emmo#EMMO_cd2cd0de_e0cc_4ef1_b27e_2e88db027bac> .
 
 :hasLengthTolerance a owl:DatatypeProperty,
         owl:FunctionalProperty ;
-    rdfs:domain <http://emmo.info/emmo#EMMO_cd2cd0de_e0cc_4ef1_b27e_2e88db027bac> ;
+    rdfs:domain <https://w3id.org/emmo#EMMO_cd2cd0de_e0cc_4ef1_b27e_2e88db027bac> ;
     rdfs:range xsd:decimal .
 
 :hasName a owl:Class ;
-    rdfs:subClassOf <http://emmo.info/emmo#EMMO_a1083d0a_c1fb_471f_8e20_a98f881ad527> .
+    rdfs:subClassOf <https://w3id.org/emmo#EMMO_a1083d0a_c1fb_471f_8e20_a98f881ad527> .
 
 :hasRadiusXY a owl:FunctionalProperty,
         owl:ObjectProperty ;
     rdfs:domain :Labware ;
-    rdfs:range <http://emmo.info/emmo#EMMO_cd2cd0de_e0cc_4ef1_b27e_2e88db027bac> .
+    rdfs:range <https://w3id.org/emmo#EMMO_cd2cd0de_e0cc_4ef1_b27e_2e88db027bac> .
 
 :hasRadiusZ a owl:FunctionalProperty,
         owl:ObjectProperty ;
     rdfs:domain :Labware ;
-    rdfs:range <http://emmo.info/emmo#EMMO_cd2cd0de_e0cc_4ef1_b27e_2e88db027bac> .
+    rdfs:range <https://w3id.org/emmo#EMMO_cd2cd0de_e0cc_4ef1_b27e_2e88db027bac> .
 
 :hasUNSPSC a owl:DatatypeProperty,
         owl:FunctionalProperty ;
@@ -667,11 +649,11 @@
 :hasWidth a owl:FunctionalProperty,
         owl:ObjectProperty ;
     rdfs:domain :Labware ;
-    rdfs:range <http://emmo.info/emmo#EMMO_cd2cd0de_e0cc_4ef1_b27e_2e88db027bac> .
+    rdfs:range <https://w3id.org/emmo#EMMO_cd2cd0de_e0cc_4ef1_b27e_2e88db027bac> .
 
 :hasWidthTolerance a owl:DatatypeProperty,
         owl:FunctionalProperty ;
-    rdfs:domain <http://emmo.info/emmo#EMMO_cd2cd0de_e0cc_4ef1_b27e_2e88db027bac> ;
+    rdfs:domain <https://w3id.org/emmo#EMMO_cd2cd0de_e0cc_4ef1_b27e_2e88db027bac> ;
     rdfs:range xsd:decimal .
 
 :isTransparent a owl:DatatypeProperty,
@@ -689,13 +671,13 @@
     rdfs:subClassOf owl:Thing .
 
 :WellDistCol a owl:Class ;
-    rdfs:subClassOf <http://emmo.info/emmo#EMMO_cd2cd0de_e0cc_4ef1_b27e_2e88db027bac> .
+    rdfs:subClassOf <https://w3id.org/emmo#EMMO_cd2cd0de_e0cc_4ef1_b27e_2e88db027bac> .
 
 :WellDistRow a owl:Class ;
-    rdfs:subClassOf <http://emmo.info/emmo#EMMO_cd2cd0de_e0cc_4ef1_b27e_2e88db027bac> .
+    rdfs:subClassOf <https://w3id.org/emmo#EMMO_cd2cd0de_e0cc_4ef1_b27e_2e88db027bac> .
 
 :WellVolume a owl:Class ;
-    rdfs:subClassOf <http://emmo.info/emmo#EMMO_f1a51559_aa3d_43a0_9327_918039f0dfed> .
+    rdfs:subClassOf <https://w3id.org/emmo#EMMO_f1a51559_aa3d_43a0_9327_918039f0dfed> .
 
 :hasBottomRadiusXY a owl:DatatypeProperty,
         owl:FunctionalProperty ;
@@ -749,27 +731,12 @@
 :hasMaxSheerForce a owl:FunctionalProperty,
         owl:ObjectProperty ;
     rdfs:domain :Labware ;
-    rdfs:range <http://emmo.info/emmo#EMMO_1f087811_06cb_42d5_90fb_25d0e7e068ef> .
+    rdfs:range <https://w3id.org/emmo#EMMO_1f087811_06cb_42d5_90fb_25d0e7e068ef> .
 
 :hasModelID a owl:DatatypeProperty,
         owl:FunctionalProperty ;
     rdfs:domain :Labware ;
     rdfs:range xsd:string .
-
-:hasNumCols a owl:DatatypeProperty,
-        owl:FunctionalProperty ;
-    rdfs:domain :Labware ;
-    rdfs:range xsd:integer .
-
-:hasNumRows a owl:DatatypeProperty,
-        owl:FunctionalProperty ;
-    rdfs:domain :Labware ;
-    rdfs:range xsd:integer .
-
-:hasNumWells a owl:DatatypeProperty,
-        owl:FunctionalProperty ;
-    rdfs:domain :Labware ;
-    rdfs:range xsd:integer .
 
 :hasProductID a owl:DatatypeProperty,
         owl:FunctionalProperty ;
@@ -799,7 +766,7 @@
 :hasSeptumPenetrationForce a owl:FunctionalProperty,
         owl:ObjectProperty ;
     rdfs:domain :Labware ;
-    rdfs:range <http://emmo.info/emmo#EMMO_1f087811_06cb_42d5_90fb_25d0e7e068ef> .
+    rdfs:range <https://w3id.org/emmo#EMMO_1f087811_06cb_42d5_90fb_25d0e7e068ef> .
 
 :hasSetptum a owl:DatatypeProperty,
         owl:FunctionalProperty ;
@@ -876,8 +843,32 @@
     rdfs:domain :Labware ;
     rdfs:range xsd:boolean .
 
+:hasNumCols a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    rdfs:domain :Labware ;
+    rdfs:range xsd:integer .
+
+:hasNumRows a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    rdfs:domain :Labware ;
+    rdfs:range xsd:integer .
+
+:hasNumWells a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    rdfs:domain :Labware ;
+    rdfs:range xsd:integer .
+
 :Labware a owl:Class ;
-    rdfs:subClassOf <http://emmo.info/emmo#EMMO_494b372c_cfdf_47d3_a4de_5e037c540de8> .
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty :hasNumRows ;
+            owl:someValuesFrom xsd:integer ],
+        [ a owl:Restriction ;
+            owl:onProperty :hasNumWells ;
+            owl:someValuesFrom xsd:integer ],
+        [ a owl:Restriction ;
+            owl:onProperty :hasNumCols ;
+            owl:someValuesFrom xsd:integer ],
+        <https://w3id.org/emmo#EMMO_494b372c_cfdf_47d3_a4de_5e037c540de8> .
 
 [] a owl:AllDisjointClasses ;
     owl:members ( :WellVolume :WellDistRow :WellDistCol ) .

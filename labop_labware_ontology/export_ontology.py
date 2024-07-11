@@ -52,9 +52,9 @@ def export_ontology(ontology = None,
         print("base / ver. iri: ---->", onto_filename_full, ontology.base_iri)
 
         # Save new ontology as owl
-        # ontology.sync_attributes(name_policy='uuid', 
-        #                          class_docstring='elucidation',
-        #                          name_prefix='labop_')
+        # ontology.sync_attributes(name_policy=None, 
+        #                          #class_docstring='elucidation',
+        #                          name_prefix='LOLWA_')
         
         version_iri = f"{base_iri}/{__version__}/{onto_base_filename}"
 
@@ -86,7 +86,6 @@ def export_ontology(ontology = None,
        
         ontology.save(onto_filename_full, overwrite=True, format=format)
 
-        #olw.save(labop_measurement_owl_filename, overwrite=True)
         #!write_catalog(self.lolw_tbox.catalog_mappings)
         # olw.sync_reasoner()
         # olw.save('olw-measurement-inferred.ttl', overwrite=True)

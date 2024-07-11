@@ -111,7 +111,7 @@ class LOLabwareTBox:
                 """Total Labware volume """
 
             class WellDistRow(self.emmo.Length):
-                """wWll-to-well distance in row direction"""
+                """Well-to-well distance in row direction"""
             
             class WellDistCol(self.emmo.Length):
                 """"Well-to-well distance in column direction"""
@@ -188,11 +188,16 @@ class LOLabwareTBox:
 
             # Basic properties
 
-            class hasName(self.emmo.Symbol):
+            class Manufacturer(self.emmo.Thing):
+                pass
+
+            class EntityName(self.emmo.Symbol):
                 """Name of something"""
-                primaryName = []
+                primaryName = ""
                 alternativeNames = []
 
+            class hasName(Manufacturer >> EntityName, FunctionalProperty, ObjectProperty):
+                """Name of something"""
 
             class Manufacturer(self.emmo.Thing):
                 """Labware Manufacturer"""
@@ -232,9 +237,11 @@ class LOLabwareTBox:
                 """Labware is a utility device that all experiments are done with and which is not actively measuring. Examples: a container, a pipette tip, a reactor, ... """
                 wikipediaEntry = en("https://en.wikipedia.org/wiki/Labware")
 
-                # is_a = [self.lolw.has_Material.some(str),
-                #         self.lolw.has_NumCols.some(int),
-                #         self.lolw.has_NumRows.some(int)]
+                #self.lolw.has_Material.some(str),
+
+                # is_a = [ self.lolwt.has_NumWells.some(int),
+                #         self.lolwt.has_NumCols.some(int),
+                #         self.lolwt.has_NumRows.some(int)]
 
             #  Relations / Properties
             # ========================
@@ -303,46 +310,46 @@ class LOLabwareTBox:
             class hasRadiusZ(Labware >> self.emmo.Length, FunctionalProperty, ObjectProperty):
                 """Labware radius of a round shape in XY direction """
 
-            class hasVolume(Labware >> float, FunctionalProperty):
+            class hasVolume(Labware >> float, FunctionalProperty, DatatypeProperty):
                 """Total Labware volume """
 
-            class hasHightLidded(Labware >> float, FunctionalProperty):
+            class hasHightLidded(Labware >> float, FunctionalProperty, DatatypeProperty):
                 """Labware total hight, with additions, like lids etc."""
 
-            class hasHightStacked(Labware >> float, FunctionalProperty):
+            class hasHightStacked(Labware >> float, FunctionalProperty, DatatypeProperty):
                 """Labware stacking height without any additions, like lids."""
 
-            class hasHightStackedLidded(Labware >> float, FunctionalProperty):
+            class hasHightStackedLidded(Labware >> float, FunctionalProperty, DatatypeProperty):
                 """Labware stacking height with additions, like lids."""
 
-            class hasMass(Labware >> float, FunctionalProperty):
+            class hasMass(Labware >> float, FunctionalProperty, DatatypeProperty):
                 """Mass of the Labware """
 
-            class hasMaxSheerForce(Labware >> self.emmo.Force, FunctionalProperty):
+            class hasMaxSheerForce(Labware >> self.emmo.Force, FunctionalProperty, ObjectProperty):
                 """Max sheer force of the Labware, e.g. during centrifugation"""
 
-            class hasCoatingMaterial(Labware >> str, FunctionalProperty):
+            class hasCoatingMaterial(Labware >> str, FunctionalProperty, DatatypeProperty):
                 """Labware coating material"""
 
-            class hasColorDescription(Labware >> str):
+            class hasColorDescription(Labware >> str, DatatypeProperty):
                 """Labware color description, e.g. white, black, opaque, blue, transparent, ..."""
 
-            class isTransparent(Labware >> bool, FunctionalProperty):
+            class isTransparent(Labware >> bool, FunctionalProperty, DatatypeProperty):
                 """Labware is transparent in the visible range between 380 and 780 nm"""
 
-            class hasColorRGB(Labware >> str, FunctionalProperty):
+            class hasColorRGB(Labware >> str, FunctionalProperty, DatatypeProperty):
                 """Labware color in RGB hex encoding"""
 
-            class isLiddable(Labware >> bool, FunctionalProperty):
+            class isLiddable(Labware >> bool, FunctionalProperty, DatatypeProperty):
                 """labware is liddable"""
 
-            class isStackable(Labware >> bool, FunctionalProperty):
+            class isStackable(Labware >> bool, FunctionalProperty, DatatypeProperty):
                 """labware is stackable"""
 
-            class isSealable(Labware >> bool, FunctionalProperty):
+            class isSealable(Labware >> bool, FunctionalProperty, DatatypeProperty):
                 """container is sealable"""
 
-            class hasSetptum(Labware >> bool, FunctionalProperty):
+            class hasSetptum(Labware >> bool, FunctionalProperty, DatatypeProperty):
                 """Setptum of the Labware"""
 
             class hasMaterial(Labware >> str, DatatypeProperty):
@@ -357,41 +364,41 @@ class LOLabwareTBox:
 
             # multiwell labware
 
-            class hasNumCols(Labware >> int, FunctionalProperty):
+            class hasNumCols(Labware >> int, FunctionalProperty, DatatypeProperty):
                 """Number of Columns of muti-well labware"""
 
-            class hasNumRows(Labware >> int, FunctionalProperty):
+            class hasNumRows(Labware >> int, FunctionalProperty, DatatypeProperty):
                 """Number of Rows of Labware"""
 
-            class hasNumWells(Labware >> int, FunctionalProperty):
+            class hasNumWells(Labware >> int, FunctionalProperty, DatatypeProperty):
                 """Number of Wells of muti-well labware"""
 
             # Production Properties / Metadata
 
-            class hasManufacturer(Labware >> Manufacturer, FunctionalProperty):
+            class hasManufacturer(Labware >> Manufacturer, FunctionalProperty, ObjectProperty ):
                  """Name of the Manufacturer """
             
-            class isProductType(Labware >> str, FunctionalProperty):
+            class isProductType(Labware >> str, FunctionalProperty, DatatypeProperty):
                 """Labware product Type"""
 
-            class hasModelID(Labware >> str, FunctionalProperty):
+            class hasModelID(Labware >> str, FunctionalProperty, DatatypeProperty):
                 """Labware model ID/number"""
 
-            class hasProductID(Labware >> str, FunctionalProperty):
+            class hasProductID(Labware >> str, FunctionalProperty, DatatypeProperty):
                 """Manufacturer Product ID/Number of the Labware"""
 
             # multiwell labware properties
 
-            class hasWellVolume(Labware >> float, FunctionalProperty):
+            class hasWellVolume(Labware >> float, FunctionalProperty, DatatypeProperty):
                 """Total Labware volume """
 
-            class hasA1Position(Labware >> str, FunctionalProperty):
-                """Labware A1 position"""
+            class hasA1Position(Labware >> str, FunctionalProperty, DatatypeProperty):
+                """TODO: improve definition !!! Labware A1 position """
 
-            class hasWellDistRow(Labware >> float, FunctionalProperty):
+            class hasWellDistRow(Labware >> float, FunctionalProperty, DatatypeProperty):
                 """Well-to-well distance in row direction"""
             
-            class hasWellDistCol(Labware >> float, FunctionalProperty):
+            class hasWellDistCol(Labware >> float, FunctionalProperty, DatatypeProperty):
                 """"Well-to-well distance in column direction"""
 
             # Well properties of labware with wells
@@ -470,7 +477,16 @@ class LOLabwareTBox:
 
             # isSLAS1-2004compliant
 
-            
+            class Labware(self.emmo.Device):
+                """Labware is a utility device that all experiments are done with and which is not actively measuring. Examples: a container, a pipette tip, a reactor, ... """
+                wikipediaEntry = en("https://en.wikipedia.org/wiki/Labware")
+
+                #self.lolw.has_Material.some(str),
+
+                is_a = [ self.emmo.Device, 
+                        hasNumWells.some(int),
+                        hasNumCols.some(int),
+                        hasNumRows.some(int)]
 
             # all disjoined properties
 

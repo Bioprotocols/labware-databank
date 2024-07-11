@@ -7,7 +7,10 @@
 * Main module command line interface *
 
 :details:  Main module command line interface. 
-           !!! Warning: it should have a diffent name than the package name.
+           !!! Warning: it should have a different name than the package name.
+
+           example usage:
+           python -m labop_labware_ontology -i labware_catalogues/labop_labware_catalog_mini.csv -p ontologies/
 
 .. note:: -
 .. todo:: - 
@@ -43,11 +46,15 @@ def parse_command_line():
     )
 
     parser.add_argument(
-        "-p", "--output-path", action="store", help="save all labware ontologies in the given output path"
+        "-p", "--output-path", 
+        default=".",
+        action="store", help="save all labware ontologies in the given output path"
     )
 
     parser.add_argument(
-        "-f", "--output-format", action="store", help="save all labware ontologies in the given format [turtle, owl, rdf, xml, n3, nt, json-ld]"
+        "-f", "--output-format", action="store",
+        default="turtle", 
+        help="save all labware ontologies in the given format [turtle, owl, rdf, xml, n3, nt, json-ld]"
     )
 
     parser.add_argument('-v', '--version', action='version', version='%(prog)s ' + __version__)

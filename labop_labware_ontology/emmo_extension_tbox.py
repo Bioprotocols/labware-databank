@@ -28,7 +28,7 @@ from ontopy import World
 from ontopy.utils import write_catalog
 
 #import owlready2
-from owlready2 import DatatypeProperty, FunctionalProperty, ObjectProperty, AllDisjoint
+from owlready2 import DatatypeProperty, FunctionalProperty, ObjectProperty, AllDisjoint, Thing
 
 from labop_labware_ontology import __version__ # Version of this ontology
 
@@ -103,14 +103,6 @@ class EMMOExtensionTBox:
                 # add reference SI unit
                 referenceUnit = self.emmo.Kilogram
 
-            class MolecularWeight:
-                """Molecular Weight
-                extends EMMO: """
-                wikipediaEntry = en("https://en.wikipedia.org/wiki/Molecular_weight")
-
-                # add reference SI unit
-                #referenceUnit = self.emmo.KilogramPerMole
-
             class Density(self.emmo.Density):
                 """Density 
                 extends EMMO:Density """
@@ -143,7 +135,7 @@ class EMMOExtensionTBox:
                 # reference SI unit
                 referenceUnit = self.emmo.NewtonMetre
 
-            class Viscosity:
+            class Viscosity(self.emmo.Quantity):
                 """Viscosity of a substance"""
                 wikipediaEntry = en("https://en.wikipedia.org/wiki/Viscosity")
 
@@ -280,11 +272,11 @@ class EMMOExtensionTBox:
             # substance extension of EMMO 
             # ===========================
 
-            class Substance(self.emmo.ChemicalSubstance):
+            class ChemicalSubstance(self.emmo.ChemicalSubstance):
                 """Polymer, properties, like solvent tolerance, transparency, ...."""
                 wikipediaEntry = en("https://en.wikipedia.org/wiki/Substance")
 
-                molecularWeight = MolecularWeight()
+                molecularWeight = self.emmo.MolarMass()
                 density = Density()
                 meltingPoint = MeltingPoint()
                 boilingPoint = BoilingPoint()
